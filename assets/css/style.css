@@ -642,6 +642,27 @@ p {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.img-fluid1 {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .img-fluid1 {
+    filter: grayscale(1) !important;
+    -webkit-filter: grayscale(1) !important;
+    -webkit-transition: all 0.5s ease !important;
+    -moz-transition: all 0.5s ease !important;
+    -ms-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+  }
+
+  .img-fluid1:hover {
+    filter: none !important;
+    -webkit-filter: none !important;
+    }
+}
+
 #portfolio {
   position: relative;
   padding-bottom: 50px;
