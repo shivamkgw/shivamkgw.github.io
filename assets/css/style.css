@@ -660,6 +660,8 @@ p {
   .img-fluid1:hover {
     filter: none !important;
     -webkit-filter: none !important;
+    transform: scale(1.1);
+    border-radius: 1000px;
     }
 }
 
