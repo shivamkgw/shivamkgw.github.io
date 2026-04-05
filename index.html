@@ -340,11 +340,30 @@
     }
     .r-card {
       border-radius: 8px;
-      padding: 32px 28px;
+      padding: 0;
       border: 1px solid var(--border);
       background: var(--card-bg);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .r-card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: grayscale(15%);
+    }
+    .r-card-body {
+      padding: 24px 24px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .r-card.featured .r-card-body {
+      background: var(--green);
     }
     .r-card.featured {
       background: var(--green);
@@ -386,6 +405,21 @@
       line-height: 1;
       pointer-events: none;
     }
+    .conf-logos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .conf-logos img {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.7;
+      filter: grayscale(30%);
+    }
+    .r-card.featured .conf-logos img { filter: brightness(10) grayscale(100%); opacity: 0.5; }
 
     /* ── TOOLS ── */
     .tools {
@@ -653,7 +687,7 @@
         <p>
           &#127968; &nbsp; Amsterdam, Netherlands<br>
           &#127979; &nbsp; University of Amsterdam<br>
-          &#9993; &nbsp; s.kumar@uva.nl
+          &#9993; &nbsp; [your.email@uva.nl]
         </p>
       </div>
       <div class="tag-row">
@@ -677,24 +711,39 @@
     <div class="research-grid">
 
       <div class="r-card featured">
-        <span class="r-tag">Current &middot; 2024</span>
-        <h4>The DIGEST Project</h4>
-        <p>€18k Seed Grant, Co-Lead. A spatiotemporal modelling framework to decode gut microbiome dynamics in early life and their downstream effects on the gut-brain axis.</p>
-        <div class="r-bg-text">D</div>
+        <div class="r-card-body">
+          <span class="r-tag">Current &middot; 2024</span>
+          <h4>The DIGEST Project</h4>
+          <p>€18k Seed Grant, Co-Lead. A spatiotemporal modelling framework to decode gut microbiome dynamics in early life and their downstream effects on the gut-brain axis.</p>
+          <div class="conf-logos">
+            <img src="assets/img/portfolio/Conferences/FSP2024.png" alt="FSP 2024">
+            <img src="assets/img/portfolio/Conferences/CDSA.png" alt="CDSA">
+          </div>
+          <div class="r-bg-text">D</div>
+        </div>
       </div>
 
       <div class="r-card">
-        <span class="r-tag">MS Thesis &middot; IISER TVM</span>
-        <h4>Complex Networks &amp; Time-Delayed Systems</h4>
-        <p>Synchronisation and stability in coupled oscillator networks under delayed feedback. Derived analytical bounds validated against large-scale simulations.</p>
-        <div class="r-bg-text">N</div>
+        <img class="r-card-img" src="assets/img/portfolio/Projects/iisertpt.jpg" alt="IISER TVM">
+        <div class="r-card-body">
+          <span class="r-tag">MS Thesis &middot; IISER TVM</span>
+          <h4>Complex Networks &amp; Time-Delayed Systems</h4>
+          <p>Synchronisation and stability in coupled oscillator networks under delayed feedback. Derived analytical bounds validated against large-scale simulations.</p>
+          <div class="conf-logos">
+            <img src="assets/img/portfolio/Conferences/CNSD.jpg" alt="CNSD 2022">
+          </div>
+          <div class="r-bg-text">N</div>
+        </div>
       </div>
 
       <div class="r-card">
-        <span class="r-tag">iGEM 2021 &middot; Gold Medal</span>
-        <h4>Computational Synthetic Biology</h4>
-        <p>Led the computational modelling sub-team. Built ODE-based gene-circuit models, ran parameter sensitivity analyses, integrated predictions with the wet-lab design loop.</p>
-        <div class="r-bg-text">G</div>
+        <img class="r-card-img" src="assets/img/portfolio/Projects/iGEM.jpg" alt="iGEM 2021">
+        <div class="r-card-body">
+          <span class="r-tag">iGEM 2021 &middot; Gold Medal</span>
+          <h4>Computational Synthetic Biology</h4>
+          <p>Led the computational modelling sub-team. Built ODE-based gene-circuit models, ran parameter sensitivity analyses, integrated predictions with the wet-lab design loop.</p>
+          <div class="r-bg-text">G</div>
+        </div>
       </div>
 
     </div>
@@ -770,13 +819,6 @@
             <span>Computational lead, gene-circuit ODE modelling</span>
           </div>
         </li>
-        <li>
-          <span class="tl-year">2018 –</span>
-          <div class="tl-body">
-            <strong>First-Class Cricket &mdash; Ranji Trophy</strong>
-            <span>Uttar Pradesh squad</span>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -786,11 +828,10 @@
     <div class="scrapbook-inner">
       <div>
         <h2 class="section-script">Scrapbook</h2>
-        <p>When I'm away from the terminal — First-Class Cricket (Ranji Trophy), guitar, and street photography. The rest lives on a separate page.</p>
+        <p>When I'm away from the terminal — guitar and street photography. The rest lives on a separate page.</p>
         <a href="scrapbook.html" class="btn-scrap">Open the scrapbook &rarr;</a>
       </div>
       <div class="hobby-list">
-        <div class="hobby"><span class="hobby-icon">&#127955;</span> Ranji Trophy Cricket</div>
         <div class="hobby"><span class="hobby-icon">&#127928;</span> Guitar</div>
         <div class="hobby"><span class="hobby-icon">&#128247;</span> Street Photography</div>
       </div>
