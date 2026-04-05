@@ -377,6 +377,7 @@
     .research > *:not(.art-overlay),
     .tools > *:not(.art-overlay),
     .timeline-section > *:not(.art-overlay) { position: relative; z-index: 1; }
+    [data-theme="dark"] .timeline-sticky { background: var(--cream); }
 
     /* ── ABOUT ── */
     .about {
@@ -633,111 +634,115 @@
       color: var(--text);
     }
 
-    /* ── TIMELINE (horizontal) ── */
-    .timeline-section {
-      padding: 80px 0 80px 60px;
-      max-width: none;
+    /* ── TIMELINE (scroll-linked horizontal pan) ── */
+    .timeline-outer {
+      position: relative;
+      /* height set by JS based on track width */
+    }
+    .timeline-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       overflow: hidden;
+      background: var(--cream);
+    }
+    [data-theme="dark"] .timeline-sticky { background: var(--cream); }
+
+    .timeline-section {
+      padding: 0 0 0 80px;
+      max-width: none;
+      position: relative;
     }
     .timeline-section .section-header {
-      margin-bottom: 56px;
-      padding-right: 60px;
-      max-width: 1100px;
+      margin-bottom: 52px;
     }
 
-    /* Scrollable track */
     .tl-track {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       position: relative;
-      overflow-x: auto;
-      overflow-y: visible;
-      padding: 0 80px 40px 0;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
+      padding: 0 120px 0 0;
+      will-change: transform;
     }
-    .tl-track::-webkit-scrollbar { display: none; }
 
-    /* Horizontal line drawn left→right */
+    /* Horizontal line */
     .tl-track::before {
       content: '';
       position: absolute;
       left: 0; right: 0;
-      top: 54px; /* year label height + gap */
+      top: 62px;
       height: 2px;
       background: var(--border);
       transform-origin: left;
       transform: scaleX(0);
-      transition: transform 1.4s cubic-bezier(0.22,1,0.36,1);
+      transition: transform 1.6s cubic-bezier(0.22,1,0.36,1);
       z-index: 0;
     }
     .tl-track.revealed::before { transform: scaleX(1); }
 
-    /* Each entry column */
+    /* Entries */
     .tl-entry {
-      flex: 0 0 190px;
+      flex: 0 0 280px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 10px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
-                  transform 0.55s cubic-bezier(0.22,1,0.36,1);
+      padding: 0 16px;
     }
-    .tl-entry.revealed { opacity: 1; transform: translateY(0); }
 
-    /* Year label above the line */
     .tl-year {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 0.7rem;
+      font-size: 0.82rem;
       color: var(--amber);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-align: center;
-      height: 38px;
+      height: 46px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Dot sitting on the line */
     .tl-node {
-      width: 14px;
-      height: 14px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: var(--amber);
-      border: 2px solid var(--cream);
+      border: 3px solid var(--cream);
       box-shadow: 0 0 0 3px var(--amber);
       flex-shrink: 0;
       position: relative;
       z-index: 2;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       margin: 1px 0;
     }
-    .tl-entry:hover .tl-node { transform: scale(1.5); }
+    .tl-entry:hover .tl-node {
+      transform: scale(1.5);
+      box-shadow: 0 0 0 5px var(--amber), 0 0 20px rgba(232,148,58,0.4);
+    }
 
-    /* Card below the dot */
     .tl-card {
-      margin-top: 18px;
+      margin-top: 22px;
       text-align: center;
-      padding: 0 4px;
+      padding: 0 6px;
       width: 100%;
     }
     .tl-card strong {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--text);
-      line-height: 1.35;
-      margin-bottom: 6px;
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
     .tl-card span {
-      font-size: 0.72rem;
+      font-size: 0.8rem;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -746,28 +751,42 @@
     .tl-logos {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 5px;
       justify-content: center;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     .tl-logo {
-      height: 28px;
+      height: 34px;
       width: auto;
-      max-width: 60px;
+      max-width: 72px;
       object-fit: contain;
-      border-radius: 6px;
+      border-radius: 7px;
       background: #fff;
-      padding: 3px 5px;
+      padding: 4px 6px;
       border: 1px solid var(--border);
       transition: transform 0.2s ease;
     }
     .tl-logo:hover { transform: scale(1.12); }
     .tl-logo.dark-bg { background: #0d2019; }
-    .tl-logo.conf { height: 24px; max-width: 52px; }
+    .tl-logo.conf { height: 28px; max-width: 60px; }
+
+    /* Progress bar across top of sticky */
+    .tl-progress {
+      position: absolute;
+      top: 0; left: 0;
+      height: 3px;
+      background: var(--amber);
+      width: 0%;
+      transition: width 0.05s linear;
+      z-index: 10;
+    }
 
     @media (max-width: 768px) {
+      .timeline-outer { height: auto !important; }
+      .timeline-sticky { position: relative; height: auto; overflow-x: auto; }
       .timeline-section { padding: 60px 0 60px 24px; }
-      .tl-entry { flex: 0 0 150px; }
+      .tl-track { padding: 0 40px 0 0; overflow-x: auto; }
+      .tl-entry { flex: 0 0 200px; }
     }
 
     /* ── SCRAPBOOK ── */
@@ -1183,6 +1202,9 @@
   <hr class="div">
 
   <!-- TIMELINE -->
+  <div class="timeline-outer" id="timeline-outer">
+  <div class="timeline-sticky" id="timeline-sticky">
+    <div class="tl-progress" id="tl-progress"></div>
   <section class="timeline-section" style="position:relative;">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WOLF-nobg.png" aria-hidden="true"
          style="height:100%;width:auto;right:0%;top:50%;transform:translateY(-50%) rotate(4deg);">
@@ -1280,6 +1302,8 @@
 
     </div>
   </section>
+  </div><!-- /.timeline-sticky -->
+  </div><!-- /.timeline-outer -->
 
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook" style="position:relative;overflow:hidden;">
@@ -1404,23 +1428,42 @@
       revealObserver.observe(el);
     });
 
-    // ── DYNAMIC TIMELINE ──
-    const track = document.getElementById('tl-track');
-    const entries = document.querySelectorAll('.tl-entry');
+    // ── SCROLL-LINKED HORIZONTAL TIMELINE ──
+    const tlOuter   = document.getElementById('timeline-outer');
+    const tlSticky  = document.getElementById('timeline-sticky');
+    const track     = document.getElementById('tl-track');
+    const tlProgress = document.getElementById('tl-progress');
 
-    // Draw horizontal line + stagger entries left→right when section appears
-    const trackObserver = new IntersectionObserver((obs) => {
-      obs.forEach(o => {
-        if (o.isIntersecting) {
-          track.classList.add('revealed');
-          entries.forEach((entry, i) => {
-            setTimeout(() => entry.classList.add('revealed'), 200 + i * 140);
-          });
-          trackObserver.unobserve(o.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    if (track) trackObserver.observe(track);
+    function setupTimeline() {
+      if (!tlOuter || !track) return;
+      // Set outer height so scroll distance = track overhang + padding
+      const overhang = track.scrollWidth - window.innerWidth;
+      tlOuter.style.height = (overhang + window.innerHeight * 1.2) + 'px';
+    }
+    setupTimeline();
+    window.addEventListener('resize', setupTimeline);
+
+    function updateTimeline() {
+      if (!tlOuter || !track) return;
+      const rect = tlOuter.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1,
+        -rect.top / (tlOuter.offsetHeight - window.innerHeight)
+      ));
+      const maxX = track.scrollWidth - window.innerWidth + 80;
+      track.style.transform = `translateX(${-maxX * progress}px)`;
+      if (tlProgress) tlProgress.style.width = (progress * 100) + '%';
+
+      // Reveal line on first entry
+      if (progress > 0.01 && !track.classList.contains('revealed')) {
+        track.classList.add('revealed');
+      }
+    }
+    // Hook into existing onScroll
+    const _origScroll = onScroll;
+    window.removeEventListener('scroll', _origScroll);
+    function onScrollFull() { _origScroll(); updateTimeline(); }
+    window.addEventListener('scroll', onScrollFull, { passive: true });
+    updateTimeline();
 
     // ── PAGE TRANSITIONS ──
     // Fade out before navigating to internal pages
