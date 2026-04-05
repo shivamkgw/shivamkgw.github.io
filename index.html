@@ -85,15 +85,23 @@
       background: var(--green);
     }
     .nav-logo {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--light);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      text-decoration: none;
     }
-    .nav-logo .star { color: var(--amber); font-size: 1.2rem; }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+    }
+    .nav-logo span {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--light);
+    }
     nav ul {
       list-style: none;
       display: flex;
@@ -761,9 +769,10 @@
   <!-- NAV -->
   <div class="nav-overlay" id="nav-overlay"></div>
   <nav class="on-hero" id="main-nav">
-    <div class="nav-logo">
-      <span class="star">✦</span> Shivam Kumar
-    </div>
+    <a href="#" class="nav-logo">
+      <img src="assets/img/logo.png" alt="Water Bottle">
+      <span>Shivam Kumar</span>
+    </a>
     <ul id="nav-menu">
       <li><a href="#about">About me</a></li>
       <li><a href="#research">Research</a></li>
@@ -799,6 +808,7 @@
     <div class="hero-text-col">
       <div class="hero-links">
         GH: <a href="https://github.com/shivamkgw" target="_blank" rel="noopener">shivamkgw</a><br>
+        YT: <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">@waterbottleshivam</a><br>
         UvA: <a href="#research">PhD Candidate</a><br>
         DIGEST: <a href="#research">Co-Lead, €18k Grant</a>
       </div>

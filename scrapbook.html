@@ -55,15 +55,18 @@
       z-index: 100;
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .nav-logo span {
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: 1rem;
       color: var(--light);
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
-    .nav-logo .star { color: var(--amber); }
     .nav-right {
       display: flex;
       align-items: center;
@@ -198,6 +201,37 @@
     }
     .art-item:hover .art-caption { opacity: 1; }
 
+    /* YOUTUBE GRID */
+    .yt-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .yt-thumb {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+    }
+    .yt-thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .yt-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    @media (max-width: 768px) { .yt-grid { grid-template-columns: 1fr; } }
+
     /* LIGHTBOX */
     .lightbox {
       display: none;
@@ -250,7 +284,10 @@
 <body>
 
   <nav>
-    <div class="nav-logo"><span class="star">✦</span> Shivam Kumar</div>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/img/logo.png" alt="Water Bottle">
+      <span>Shivam Kumar</span>
+    </a>
     <div class="nav-right">
       <a href="index.html" class="nav-back">&larr; Back to main</a>
       <button id="theme-toggle">Dark</button>
@@ -260,6 +297,46 @@
   <div class="page-hero">
     <h1>Scrapbook</h1>
     <p>Everything that doesn't fit a CV. Guitar, street photography, and a lot of illustration, mostly done during fieldwork breaks and late-night PhD procrastination.</p>
+  </div>
+
+  <!-- YOUTUBE -->
+  <div class="section">
+    <p class="section-label">Music &amp; Performance</p>
+    <h2 style="display:flex;align-items:center;gap:14px;">
+      <img src="assets/img/logo.png" alt="Water Bottle" style="height:48px;width:auto;">
+      Water Bottle
+    </h2>
+    <p style="font-size:0.93rem;color:var(--muted);max-width:520px;margin-bottom:32px;">
+      Original compositions, live performances, and covers. Subscribe on YouTube.
+    </p>
+    <div class="yt-grid">
+      <!-- Replace VIDEO_ID_1/2/3 with actual YouTube video IDs -->
+      <div class="yt-card">
+        <div class="yt-thumb">
+          <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">
+            <div class="yt-placeholder">&#9654; Video coming soon</div>
+          </a>
+        </div>
+      </div>
+      <div class="yt-card">
+        <div class="yt-thumb">
+          <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">
+            <div class="yt-placeholder">&#9654; Video coming soon</div>
+          </a>
+        </div>
+      </div>
+      <div class="yt-card">
+        <div class="yt-thumb">
+          <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">
+            <div class="yt-placeholder">&#9654; Video coming soon</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener"
+       style="display:inline-block;margin-top:28px;background:#FF0000;color:#fff;font-size:0.88rem;font-weight:600;padding:11px 24px;border-radius:100px;">
+      &#9654;&nbsp; Visit the Channel
+    </a>
   </div>
 
   <!-- STREET PHOTOGRAPHY -->
