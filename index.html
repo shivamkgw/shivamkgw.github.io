@@ -558,9 +558,15 @@
       color: var(--amber);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       display: block;
     }
+    .tl-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .tl-body { flex: 1; min-width: 0; }
     .tl-body strong {
       display: block;
       font-size: 1rem;
@@ -574,6 +580,27 @@
       color: var(--muted);
       line-height: 1.6;
     }
+    .tl-logos {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+      flex-shrink: 0;
+      width: 76px;
+    }
+    .tl-logo {
+      width: 72px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fff;
+      padding: 4px 6px;
+      border: 1px solid var(--border);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .tl-logo:hover { transform: scale(1.1); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+    .tl-logo.dark-bg { background: #0d2019; }
+    .tl-logo.conf { height: 34px; }
 
     /* ── SCRAPBOOK ── */
     .scrapbook {
@@ -979,55 +1006,100 @@
       <span class="section-num">03</span>
     </div>
     <div class="tl-track" id="tl-track">
+
       <div class="tl-entry">
         <span class="tl-year">2024 – present</span>
-        <div class="tl-body">
-          <strong>PhD Candidate, University of Amsterdam</strong>
-          <span>METAHEALTH / DIGEST — Computational Science Lab, Informatics Institute. Multiscale spatiotemporal modelling of the microbiome during the first 1000 days of life.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>PhD Candidate, University of Amsterdam</strong>
+            <span>METAHEALTH / DIGEST, Computational Science Lab, Informatics Institute. Multiscale spatiotemporal modelling of the microbiome during the first 1000 days of life.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo dark-bg" src="assets/img/logos/uva.png" alt="UvA" title="University of Amsterdam">
+            <img class="tl-logo conf" src="assets/img/portfolio/Conferences/cdsaLogos.png" alt="CDSA 2024" title="CDSA 2024">
+            <img class="tl-logo conf" src="assets/img/portfolio/Conferences/FSP2024LOGO.png" alt="FSP 2024" title="FSP 2024">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2025</span>
-        <div class="tl-body">
-          <strong>RPA-PMH Seed Grant — Co-PI, €18,000</strong>
-          <span>DIGEST: Diet Influence on Gut Microbiome and Effects on Suicide Ideation Tendencies. Collaboration between FNWI and FMG, UvA.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>RPA-PMH Seed Grant — Co-PI, €18,000</strong>
+            <span>DIGEST: Diet Influence on Gut Microbiome and Effects on Suicide Ideation Tendencies. Collaboration between FNWI and FMG, UvA.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo dark-bg" src="assets/img/logos/uva.png" alt="UvA" title="University of Amsterdam">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2023 – 2024</span>
-        <div class="tl-body">
-          <strong>MS Thesis Year — IISER Thiruvananthapuram</strong>
-          <span>Thesis conducted at IISER TVM under Prof G. Ambika and Prof Ranjeev Mishra (IUCAA). Recurrence network measures from multivariate dynamics.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>MS Thesis Year — IISER Thiruvananthapuram</strong>
+            <span>Thesis under Prof G. Ambika and Prof Ranjeev Mishra (IUCAA). Recurrence network measures from multivariate dynamics.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo" src="assets/img/logos/iiser-tvm.png" alt="IISER TVM" title="IISER Thiruvananthapuram">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2022</span>
-        <div class="tl-body">
-          <strong>IASc-NASI-INSA Summer Research Fellow — IIT Gandhinagar</strong>
-          <span>Extensional rheometry with a handheld mobile device. Dept. of Chemical Engineering, under Prof. Prachi Thareja.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>IASc-NASI-INSA Summer Research Fellow — IIT Gandhinagar</strong>
+            <span>Extensional rheometry with a handheld mobile device. Dept. of Chemical Engineering, under Prof. Prachi Thareja.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo" src="assets/img/logos/iitgn.png" alt="IIT Gandhinagar" title="IIT Gandhinagar">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2022</span>
-        <div class="tl-body">
-          <strong>State Topper — National Graduate Physics Examination</strong>
-          <span>Ranked state topper; awarded IASc-NASI-INSA Summer Research Fellowship.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>State Topper — National Graduate Physics Examination</strong>
+            <span>Ranked state topper; awarded IASc-NASI-INSA Summer Research Fellowship. Presented at CNSD 2022, IISER Pune.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo conf" src="assets/img/portfolio/Conferences/cnsd2022.jpg" alt="CNSD 2022" title="CNSD 2022">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2021</span>
-        <div class="tl-body">
-          <strong>iGEM Gold Medal + 7 award nominations</strong>
-          <span>Computational lead for Team IISER-Tirupati India. OviCloak: gene-circuit ODE modelling for synthetic biology contraceptive design.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>iGEM Gold Medal + 7 award nominations</strong>
+            <span>Computational lead for Team IISER-Tirupati India. OviCloak: gene-circuit ODE modelling for synthetic biology contraceptive design.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo" src="assets/img/logos/igem.png" alt="iGEM" title="iGEM Foundation">
+          </div>
         </div>
       </div>
+
       <div class="tl-entry">
         <span class="tl-year">2019 – 2024</span>
-        <div class="tl-body">
-          <strong>Integrated BS-MS, Physics — IISER Tirupati</strong>
-          <span>CGPA 7.9/10. Focus: Complex Systems, Nonlinear Dynamics, Soft Matter, Computational Physics. Final thesis year at IISER Thiruvananthapuram.</span>
+        <div class="tl-row">
+          <div class="tl-body">
+            <strong>Integrated BS-MS, Physics — IISER Tirupati</strong>
+            <span>CGPA 7.9/10. Complex Systems, Nonlinear Dynamics, Soft Matter, Computational Physics. Final thesis year at IISER Thiruvananthapuram.</span>
+          </div>
+          <div class="tl-logos">
+            <img class="tl-logo" src="assets/img/logos/iiser-tirupati.png" alt="IISER Tirupati" title="IISER Tirupati">
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
