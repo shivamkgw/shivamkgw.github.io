@@ -590,8 +590,9 @@
       position: relative;
       padding: 0 0 40px 36px;
       opacity: 0;
-      transform: translateX(-16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateX(90px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.65s cubic-bezier(0.22,1,0.36,1);
     }
     .tl-entry.revealed { opacity: 1; transform: translateX(0); }
     /* Dot on the line */
@@ -1251,20 +1252,28 @@
     const track = document.getElementById('tl-track');
     const entries = document.querySelectorAll('.tl-entry');
 
-    const tlObserver = new IntersectionObserver((obs) => {
+    // Draw the vertical line when track first appears
+    const trackObserver = new IntersectionObserver((obs) => {
       obs.forEach(o => {
         if (o.isIntersecting) {
           track.classList.add('revealed');
-          // Stagger each entry
-          entries.forEach((entry, i) => {
-            setTimeout(() => entry.classList.add('revealed'), i * 120);
-          });
-          tlObserver.unobserve(o.target);
+          trackObserver.unobserve(o.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
+    if (track) trackObserver.observe(track);
 
-    if (track) tlObserver.observe(track);
+    // Each entry slides in from right as it scrolls into view
+    const entryObserver = new IntersectionObserver((obs) => {
+      obs.forEach(o => {
+        if (o.isIntersecting) {
+          o.target.classList.add('revealed');
+          entryObserver.unobserve(o.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    entries.forEach(entry => entryObserver.observe(entry));
 
     // ── PAGE TRANSITIONS ──
     // Fade out before navigating to internal pages
