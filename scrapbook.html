@@ -33,13 +33,32 @@
     }
 
     html { scroll-behavior: smooth; }
-    * { cursor: none !important; }
+    /* Artwork overlays */
+    .art-overlay {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      mix-blend-mode: multiply;
+      opacity: 0.09;
+    }
+    [data-theme="dark"] .art-overlay {
+      mix-blend-mode: screen;
+      opacity: 0.04;
+      filter: invert(1);
+    }
+    .section { position: relative; overflow: hidden; }
+    .section > *:not(.art-overlay) { position: relative; z-index: 1; }
+    /* Cursor — desktop only */
+    @media (pointer: fine) { * { cursor: none !important; } }
+    @media (pointer: coarse) { #cursor-dot, #cursor-ring { display: none !important; } }
     #cursor-dot {
       position: fixed; width: 8px; height: 8px;
       background: var(--amber); border-radius: 50%;
       pointer-events: none; z-index: 9999;
       transform: translate(-50%,-50%);
       transition: width .2s, height .2s;
+      display: none;
     }
     #cursor-ring {
       position: fixed; width: 36px; height: 36px;
@@ -47,6 +66,10 @@
       pointer-events: none; z-index: 9998;
       transform: translate(-50%,-50%); opacity: .5;
       transition: width .3s cubic-bezier(.22,1,.36,1), height .3s cubic-bezier(.22,1,.36,1), opacity .3s;
+      display: none;
+    }
+    @media (pointer: fine) {
+      #cursor-dot, #cursor-ring { display: block; }
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -354,6 +377,8 @@
 
   <!-- YOUTUBE -->
   <div class="section">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/RADIOHEAD.jpg" aria-hidden="true"
+         style="width:28%;right:-2%;bottom:-5%;transform:rotate(8deg);">
     <p class="section-label">Music &amp; Performance</p>
     <h2 style="display:flex;align-items:center;gap:14px;">
       <img src="assets/img/logo.png" alt="Water Bottle" style="height:48px;width:auto;">
@@ -433,6 +458,8 @@
 
   <!-- ARTWORKS -->
   <div class="section">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/COSMOS'.jpg" aria-hidden="true"
+         style="width:34%;left:-2%;top:40%;transform:translateY(-50%) rotate(6deg);">
     <p class="section-label">Illustration</p>
     <h2>Artworks</h2>
     <div class="art-grid">

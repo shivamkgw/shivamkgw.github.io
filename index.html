@@ -59,8 +59,13 @@
 
     html { scroll-behavior: smooth; }
 
-    /* ── CUSTOM CURSOR ── */
-    * { cursor: none !important; }
+    /* ── CUSTOM CURSOR (desktop only) ── */
+    @media (pointer: fine) {
+      * { cursor: none !important; }
+    }
+    @media (pointer: coarse) {
+      #cursor-dot, #cursor-ring { display: none !important; }
+    }
     #cursor-dot {
       position: fixed;
       width: 8px;
@@ -116,6 +121,7 @@
     }
     nav.scrolled {
       background: var(--green);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.22);
     }
     .nav-logo {
       display: flex;
@@ -151,6 +157,7 @@
       background: var(--amber);
       color: #fff;
       font-size: 0.85rem;
+      box-shadow: 0 4px 14px rgba(232,148,58,0.35);
       font-weight: 600;
       padding: 8px 20px;
       border-radius: 100px;
@@ -417,6 +424,7 @@
       border-radius: 8px;
       padding: 28px;
       margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
     }
     [data-theme="dark"] .contact-card { background: #0D2019; border: 1px solid var(--border); }
     .contact-card h3 {
@@ -491,6 +499,7 @@
       border-radius: 8px;
       padding: 0;
       border: 1px solid var(--border);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       background: var(--card-bg);
       position: relative;
       overflow: hidden;
@@ -587,6 +596,7 @@
     .tool-item {
       padding: 32px 0;
       border-top: 2px solid var(--amber);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.06));
     }
     .tool-item h4 {
       font-family: 'Fraunces', serif;
@@ -887,8 +897,8 @@
                   border-color 0.2s;
     }
     .r-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.13);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 56px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08);
       border-color: var(--amber);
     }
     .r-card-img { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); }
@@ -1126,6 +1136,8 @@
 
   <!-- TOOLS -->
   <section class="tools" id="tools">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WHALE.jpg" aria-hidden="true"
+         style="width:38%;right:-4%;bottom:-5%;transform:rotate(-8deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Tools &amp; Code</h2>
       <span class="section-num">02</span>
@@ -1268,7 +1280,9 @@
   </section>
 
   <!-- SCRAPBOOK -->
-  <section class="scrapbook" id="scrapbook">
+  <section class="scrapbook" id="scrapbook" style="position:relative;overflow:hidden;">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/OWL.jpg" aria-hidden="true"
+         style="width:32%;left:0%;top:50%;transform:translateY(-50%) rotate(-5deg);">
     <div class="scrapbook-inner">
       <div data-reveal="left">
         <h2 class="section-script">Scrapbook</h2>
