@@ -7,7 +7,7 @@
   <title>Scrapbook | Shivam Kumar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -40,11 +40,14 @@
       user-select: none;
       z-index: 0;
       mix-blend-mode: multiply;
-      opacity: 0.09;
+      opacity: 0.11;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
     }
     [data-theme="dark"] .art-overlay {
       mix-blend-mode: screen;
-      opacity: 0.04;
+      opacity: 0.06;
       filter: invert(1);
     }
     .section { position: relative; overflow: hidden; }
@@ -72,7 +75,7 @@
       #cursor-dot, #cursor-ring { display: block; }
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       background: var(--cream);
       color: var(--text);
       font-size: 16px;
@@ -378,7 +381,7 @@
   <!-- YOUTUBE -->
   <div class="section">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/RADIOHEAD.jpg" aria-hidden="true"
-         style="width:28%;right:-2%;bottom:-5%;transform:rotate(8deg);">
+         style="height:110%;width:auto;right:-4%;bottom:-5%;transform:rotate(7deg);">
     <p class="section-label">Music &amp; Performance</p>
     <h2 style="display:flex;align-items:center;gap:14px;">
       <img src="assets/img/logo.png" alt="Water Bottle" style="height:48px;width:auto;">
@@ -459,7 +462,7 @@
   <!-- ARTWORKS -->
   <div class="section">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/COSMOS'.jpg" aria-hidden="true"
-         style="width:34%;left:-2%;top:40%;transform:translateY(-50%) rotate(6deg);">
+         style="height:105%;width:auto;left:-3%;top:50%;transform:translateY(-50%) rotate(5deg);">
     <p class="section-label">Illustration</p>
     <h2>Artworks</h2>
     <div class="art-grid">

@@ -21,7 +21,7 @@
   <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <script>
     // Apply theme before paint to prevent flash
     (function() {
@@ -96,7 +96,7 @@
     button:hover ~ #cursor-ring { width: 52px; height: 52px; opacity: 0.85; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       background: var(--cream);
       color: var(--text);
       font-size: 16px;
@@ -362,12 +362,14 @@
       user-select: none;
       z-index: 0;
       mix-blend-mode: multiply;
-      opacity: 0.09;
-      transition: opacity 0.4s;
+      opacity: 0.11;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
     }
     [data-theme="dark"] .art-overlay {
       mix-blend-mode: screen;
-      opacity: 0.04;
+      opacity: 0.06;
       filter: invert(1);
     }
     /* Keep section content above overlay */
@@ -1046,7 +1048,7 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/OCTOPUS.jpg" aria-hidden="true"
-         style="width:44%;right:-4%;bottom:-8%;transform:rotate(12deg);">
+         style="height:110%;width:auto;right:-6%;bottom:-5%;transform:rotate(10deg);">
     <div class="about-left" data-reveal="left">
       <h1>Hello,<br>I'm Shivam!</h1>
       <p>PhD Candidate at the Computational Science Lab, Informatics Institute, University of Amsterdam. Part of the METAHEALTH project, I design multiscale spatiotemporal frameworks to model the microbiome during the first 1000 days of life, analyzing oral and gut microbial communities across micro, meso, and macro scales.</p>
@@ -1085,7 +1087,7 @@
   <!-- RESEARCH -->
   <section class="research" id="research">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/DNA.jpg" aria-hidden="true"
-         style="width:36%;left:-3%;top:50%;transform:translateY(-50%) rotate(-6deg);">
+         style="height:105%;width:auto;left:-4%;top:50%;transform:translateY(-50%) rotate(-5deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Research</h2>
       <span class="section-num">01</span>
@@ -1137,7 +1139,7 @@
   <!-- TOOLS -->
   <section class="tools" id="tools">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WHALE.jpg" aria-hidden="true"
-         style="width:38%;right:-4%;bottom:-5%;transform:rotate(-8deg);">
+         style="height:110%;width:auto;right:-5%;bottom:-8%;transform:rotate(-7deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Tools &amp; Code</h2>
       <span class="section-num">02</span>
@@ -1183,7 +1185,7 @@
   <!-- TIMELINE -->
   <section class="timeline-section" style="position:relative;">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WOLF.jpg" aria-hidden="true"
-         style="width:30%;right:2%;top:50%;transform:translateY(-50%) rotate(5deg);">
+         style="height:100%;width:auto;right:0%;top:50%;transform:translateY(-50%) rotate(4deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Timeline</h2>
       <span class="section-num">03</span>
@@ -1282,7 +1284,7 @@
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook" style="position:relative;overflow:hidden;">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/OWL.jpg" aria-hidden="true"
-         style="width:32%;left:0%;top:50%;transform:translateY(-50%) rotate(-5deg);">
+         style="height:105%;width:auto;left:-3%;top:50%;transform:translateY(-50%) rotate(-4deg);">
     <div class="scrapbook-inner">
       <div data-reveal="left">
         <h2 class="section-script">Scrapbook</h2>
