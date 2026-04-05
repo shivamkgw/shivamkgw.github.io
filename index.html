@@ -216,22 +216,51 @@
       position: relative;
       z-index: 2;
       align-self: end;
+      grid-column: 2;
+      text-align: right;
     }
-    .hero-links {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      color: rgba(245,240,230,0.7);
-      line-height: 2.2;
-      margin-bottom: 32px;
+    .hero-role-label {
+      font-family: 'Fraunces', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 8px;
     }
-    .hero-links a { color: var(--light); font-weight: 500; }
-    .hero-links a:hover { color: var(--amber); }
+    .hero-uni {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--light);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
     .hero-bio {
-      font-size: 0.88rem;
-      color: rgba(240,235,224,0.65);
-      max-width: 340px;
-      line-height: 1.75;
+      font-size: 0.84rem;
+      color: rgba(240,235,224,0.62);
+      max-width: 360px;
+      margin-left: auto;
+      line-height: 1.8;
+      margin-bottom: 22px;
     }
+    .hero-inst-logos {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .hero-logo {
+      height: 38px;
+      width: auto;
+      max-width: 96px;
+      object-fit: contain;
+      border-radius: 8px;
+      padding: 5px 10px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.25s ease;
+    }
+    .hero-logo:hover { transform: scale(1.08); }
 
     .scroll-pill {
       position: absolute;
@@ -807,6 +836,13 @@
       .hero { grid-template-columns: 1fr; padding: 100px 24px 80px; }
       .hero-photo-col { display: none !important; }
       .hero-display .line { font-size: clamp(52px, 16vw, 90px); }
+      .hero-text-col { grid-column: 1; text-align: left; }
+      .hero-bio { margin-left: 0; }
+      .hero-inst-logos { justify-content: flex-start; }
+      .tl-row { gap: 12px; }
+      .tl-logos { width: 56px; }
+      .tl-logo { width: 52px; height: 30px; padding: 3px 4px; }
+      .tl-logo.conf { height: 26px; }
       .about, .research, .tools, .scrapbook { padding: 60px 24px; }
       .about { grid-template-columns: 1fr; gap: 40px; }
       .research-grid { grid-template-columns: 1fr; }
@@ -856,13 +892,13 @@
 
     <!-- Text col -->
     <div class="hero-text-col">
-      <div class="hero-links">
-        GH: <a href="https://github.com/shivamkgw" target="_blank" rel="noopener">shivamkgw</a><br>
-        YT: <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">@waterbottleshivam</a><br>
-        UvA: <a href="#research">PhD Candidate</a><br>
-        DIGEST: <a href="#research">Co-Lead, €18k Grant</a>
+      <p class="hero-role-label">PhD Candidate</p>
+      <p class="hero-uni">University of Amsterdam</p>
+      <p class="hero-bio">METAHEALTH / DIGEST, Computational Science Lab, Informatics Institute. Multiscale spatiotemporal modelling of the microbiome during the first 1000 days of life.</p>
+      <div class="hero-inst-logos">
+        <img src="assets/img/logos/lab42.png" alt="Lab42" class="hero-logo">
+        <img src="assets/img/logos/uva.png" alt="UvA" class="hero-logo">
       </div>
-      <p class="hero-bio">I build multiscale, spatiotemporal models to map complex biological systems, from early microbiome development to the gut-brain axis.</p>
     </div>
 
     <a class="scroll-pill" href="#about">Scroll<br>down</a>
