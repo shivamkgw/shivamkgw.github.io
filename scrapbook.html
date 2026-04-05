@@ -207,12 +207,15 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
+    .yt-card { display: flex; flex-direction: column; gap: 10px; }
     .yt-thumb {
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       aspect-ratio: 16/9;
-      background: var(--card-bg);
+      background: #000;
       border: 1px solid var(--border);
+      position: relative;
+      cursor: pointer;
     }
     .yt-thumb iframe {
       width: 100%;
@@ -220,15 +223,49 @@
       border: none;
       display: block;
     }
-    .yt-placeholder {
-      width: 100%;
-      height: 100%;
+    /* Thumbnail state */
+    .yt-thumb .yt-cover {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--muted);
-      font-size: 0.88rem;
-      font-weight: 500;
+    }
+    .yt-thumb .yt-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    .yt-thumb:hover .yt-cover img {
+      transform: scale(1.04);
+      filter: brightness(0.7);
+    }
+    .yt-thumb .play-btn {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,0,0,0.92);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.3rem;
+      z-index: 2;
+      transition: transform 0.2s ease, background 0.2s ease;
+      pointer-events: none;
+    }
+    .yt-thumb:hover .play-btn {
+      transform: scale(1.15);
+      background: #ff0000;
+    }
+    .yt-label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text);
+      padding: 0 2px;
     }
     @media (max-width: 768px) { .yt-grid { grid-template-columns: 1fr; } }
 
@@ -311,22 +348,31 @@
     </p>
     <div class="yt-grid">
       <div class="yt-card">
-        <div class="yt-thumb">
-          <iframe src="https://www.youtube.com/embed/C5ehvYNnjsM" title="Vlog" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-thumb" onclick="playVideo(this,'C5ehvYNnjsM','Bulnes — The Best 8 Hours Hike')">
+          <div class="yt-cover">
+            <img src="assets/img/yt-vlog.jpg" alt="Bulnes vlog thumbnail">
+          </div>
+          <div class="play-btn">&#9654;</div>
         </div>
-        <p class="yt-label">Vlog</p>
+        <p class="yt-label">Bulnes — The Best 8 Hours Hike</p>
       </div>
       <div class="yt-card">
-        <div class="yt-thumb">
-          <iframe src="https://www.youtube.com/embed/-coOiJtmPsk" title="Song" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-thumb" onclick="playVideo(this,'-coOiJtmPsk','the untitled — IISER Tirupati 2022')">
+          <div class="yt-cover">
+            <img src="assets/img/yt-song.jpg" alt="the untitled performance thumbnail">
+          </div>
+          <div class="play-btn">&#9654;</div>
         </div>
-        <p class="yt-label">Song</p>
+        <p class="yt-label">the untitled — IISER Tirupati 2022</p>
       </div>
       <div class="yt-card">
-        <div class="yt-thumb">
-          <iframe src="https://www.youtube.com/embed/Vdd5TDmSphs" title="Convocation" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-thumb" onclick="playVideo(this,'Vdd5TDmSphs','Convocation — IISER Tirupati 2024')">
+          <div class="yt-cover">
+            <img src="assets/img/yt-conv.jpg" alt="Convocation thumbnail">
+          </div>
+          <div class="play-btn">&#9654;</div>
         </div>
-        <p class="yt-label">Convocation</p>
+        <p class="yt-label">Convocation — IISER Tirupati 2024</p>
       </div>
     </div>
     <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener"
@@ -477,6 +523,18 @@
   </div>
 
   <script>
+    function playVideo(thumb, id, title) {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.title = title;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+      thumb.innerHTML = '';
+      thumb.appendChild(iframe);
+      thumb.style.cursor = 'default';
+    }
+
     function openLightbox(el) {
       const img = el.querySelector('img');
       document.getElementById('lightbox-img').src = img.src;
