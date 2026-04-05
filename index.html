@@ -155,30 +155,25 @@
     }
 
     .hero-photo-col {
-      position: relative;
-      z-index: 2;
-      align-self: end;
-    }
-    .photo-frame {
-      width: 280px;
-      height: 360px;
-      background: var(--amber);
-      border-radius: 4px;
-      position: relative;
-      overflow: hidden;
-    }
-    .photo-frame-inner {
       position: absolute;
-      inset: 16px 16px 0 -16px;
-      border-radius: 4px;
-      overflow: hidden;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      width: 52%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      pointer-events: none;
     }
-    .photo-frame-inner img {
+    .hero-cutout {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      filter: grayscale(20%);
+      max-width: 620px;
+      height: auto;
+      display: block;
+      mix-blend-mode: darken;
+      filter: grayscale(15%) contrast(1.05);
+      object-fit: contain;
+      object-position: bottom right;
     }
     /* Hero bg overlay */
     .hero::before {
@@ -747,7 +742,7 @@
       }
       .nav-overlay.open { display: block; }
       .hero { grid-template-columns: 1fr; padding: 100px 24px 80px; }
-      .hero-photo-col { display: none; }
+      .hero-photo-col { display: none !important; }
       .hero-display .line { font-size: clamp(52px, 16vw, 90px); }
       .about, .research, .tools, .scrapbook { padding: 60px 24px; }
       .about { grid-template-columns: 1fr; gap: 40px; }
@@ -795,13 +790,9 @@
     <span class="sparkle sparkle-2">✦</span>
     <span class="sparkle sparkle-3">✦</span>
 
-    <!-- Photo col -->
+    <!-- Photo cutout -->
     <div class="hero-photo-col">
-      <div class="photo-frame">
-        <div class="photo-frame-inner">
-          <img src="assets/img/portrait.jpg" alt="Shivam Kumar">
-        </div>
-      </div>
+      <img class="hero-cutout" src="assets/img/hero-cutout.png" alt="Shivam Kumar">
     </div>
 
     <!-- Text col -->
