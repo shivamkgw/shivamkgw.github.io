@@ -143,8 +143,8 @@
     .hero-display {
       position: absolute;
       top: 60px;
-      left: 0; right: 0;
-      text-align: center;
+      left: 45%; right: 60px;
+      text-align: right;
       pointer-events: none;
       line-height: 0.85;
     }
@@ -836,6 +836,7 @@
       .hero { grid-template-columns: 1fr; padding: 100px 24px 80px; }
       .hero-photo-col { display: none !important; }
       .hero-display .line { font-size: clamp(52px, 16vw, 90px); }
+      .hero-display { left: 20px; right: 20px; text-align: right; }
       .hero-text-col { grid-column: 1; text-align: left; }
       .hero-bio { margin-left: 0; }
       .hero-inst-logos { justify-content: flex-start; }
@@ -882,7 +883,7 @@
     <div class="hero-display">
       <span class="line solid">SHIVAM</span>
       <span class="line">KUMAR</span>
-      <span class="line" style="font-family:'Caveat',cursive;letter-spacing:0.02em;text-transform:none;font-weight:700;">Water Bottle</span>
+      <span class="line" style="font-family:'Caveat',cursive;letter-spacing:0.02em;text-transform:none;font-weight:700;font-size:clamp(32px,5vw,64px);">Water Bottle</span>
     </div>
 
     <!-- Sparkles -->
