@@ -167,21 +167,23 @@
       bottom: 0;
       right: 0;
       z-index: 2;
-      width: 52%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
+      width: 44%;
+      height: 95%;
       pointer-events: none;
+      overflow: hidden;
     }
     .hero-cutout {
       width: 100%;
-      max-width: 620px;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
       display: block;
-      mix-blend-mode: darken;
-      filter: grayscale(15%) contrast(1.05);
-      object-fit: contain;
-      object-position: bottom right;
+      mask-image: linear-gradient(to left, rgba(0,0,0,0.85) 60%, transparent 100%),
+                  linear-gradient(to top, transparent 0%, black 15%);
+      mask-composite: intersect;
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.85) 60%, transparent 100%),
+                          linear-gradient(to top, transparent 0%, black 15%);
+      -webkit-mask-composite: source-in;
     }
     /* Hero bg overlay */
     .hero::before {
@@ -799,9 +801,9 @@
     <span class="sparkle sparkle-2">✦</span>
     <span class="sparkle sparkle-3">✦</span>
 
-    <!-- Photo cutout -->
+    <!-- Hero portrait -->
     <div class="hero-photo-col">
-      <img class="hero-cutout" src="assets/img/hero-cutout.png" alt="Shivam Kumar">
+      <img class="hero-cutout" src="assets/img/hero-portrait.jpg" alt="Shivam Kumar">
     </div>
 
     <!-- Text col -->
