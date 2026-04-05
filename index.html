@@ -503,50 +503,76 @@
       color: var(--text);
     }
 
-    /* ── EXPERIENCE BAND ── */
-    .exp-band {
-      background: var(--amber);
-      padding: 70px 60px;
-    }
-    .exp-band-inner {
+    /* ── TIMELINE ── */
+    .timeline-section {
+      padding: 80px 60px;
       max-width: 1100px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 60px;
-      align-items: start;
     }
-    .exp-band h2 {
-      font-family: 'Caveat', cursive;
-      font-size: 3rem;
-      color: #fff;
-      line-height: 1.1;
+    .timeline-section .section-header { margin-bottom: 56px; }
+    .tl-track {
+      position: relative;
+      padding-left: 32px;
     }
-    .timeline { list-style: none; }
-    .timeline li {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 20px;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.25);
+    /* The vertical line */
+    .tl-track::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--border);
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 1.2s cubic-bezier(0.22,1,0.36,1);
     }
-    .timeline li:last-child { border-bottom: none; }
+    .tl-track.revealed::before { transform: scaleY(1); }
+    .tl-entry {
+      position: relative;
+      padding: 0 0 40px 36px;
+      opacity: 0;
+      transform: translateX(-16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .tl-entry.revealed { opacity: 1; transform: translateX(0); }
+    /* Dot on the line */
+    .tl-entry::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--amber);
+      border: 2px solid var(--cream);
+      box-shadow: 0 0 0 3px var(--amber);
+      transition: transform 0.3s ease;
+    }
+    .tl-entry:hover::before { transform: scale(1.4); }
     .tl-year {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1rem;
-      color: #fff;
+      font-size: 0.78rem;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+      display: block;
     }
     .tl-body strong {
       display: block;
-      font-size: 0.92rem;
+      font-size: 1rem;
       font-weight: 600;
-      color: #fff;
-      margin-bottom: 3px;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.35;
     }
     .tl-body span {
-      font-size: 0.83rem;
-      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     /* ── SCRAPBOOK ── */
@@ -758,8 +784,7 @@
       .about { grid-template-columns: 1fr; gap: 40px; }
       .research-grid { grid-template-columns: 1fr; }
       .tools-inner { grid-template-columns: 1fr; gap: 0; }
-      .exp-band { padding: 60px 24px; }
-      .exp-band-inner { grid-template-columns: 1fr; gap: 32px; }
+      .timeline-section { padding: 60px 24px; }
       .scrapbook-inner { grid-template-columns: 1fr; gap: 40px; }
       .footer-meta { flex-direction: column; gap: 8px; }
       hr.div { margin: 0 24px; }
@@ -864,7 +889,7 @@
           <h4>The DIGEST Project</h4>
           <p>RPA-PMH Seed Grant, €18,000 — Co-PI. "Diet Influence on Gut Microbiome and Effects on Suicide Ideation Tendencies." Collaboration between the Computational Science Lab (FNWI) and Clinical Psychology Group (FMG), University of Amsterdam. Part of the broader METAHEALTH project.</p>
           <div class="conf-logos">
-            <img src="assets/img/portfolio/Conferences/FSP2024.png" alt="FSP 2024">
+            <img src="assets/img/metahealth-logo.jpg" alt="METAHEALTH">
             <img src="assets/img/portfolio/Conferences/CDSA.png" alt="CDSA">
           </div>
           <div class="r-bg-text">D</div>
@@ -942,51 +967,66 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE BAND -->
-  <div class="exp-band">
-    <div class="exp-band-inner">
-      <div data-reveal="left">
-        <h2>Timeline</h2>
-      </div>
-      <ul class="timeline" data-stagger>
-        <li>
-          <span class="tl-year">2024 –</span>
-          <div class="tl-body">
-            <strong>PhD Candidate, University of Amsterdam</strong>
-            <span>METAHEALTH / DIGEST — Computational Science Lab, Informatics Institute</span>
-          </div>
-        </li>
-        <li>
-          <span class="tl-year">2022 – 24</span>
-          <div class="tl-body">
-            <strong>MS Thesis, IISER Thiruvananthapuram</strong>
-            <span>Recurrence network measures from multivariate dynamics</span>
-          </div>
-        </li>
-        <li>
-          <span class="tl-year">2022</span>
-          <div class="tl-body">
-            <strong>Summer Research Fellow, IIT Gandhinagar</strong>
-            <span>IASc-NASI-INSA Fellowship &middot; Extensional rheometry, Dept. of Chemical Engineering</span>
-          </div>
-        </li>
-        <li>
-          <span class="tl-year">2022</span>
-          <div class="tl-body">
-            <strong>State Topper, National Graduate Physics Examination</strong>
-            <span>IASc-NASI-INSA Summer Research Fellowship awarded</span>
-          </div>
-        </li>
-        <li>
-          <span class="tl-year">2021</span>
-          <div class="tl-body">
-            <strong>iGEM Gold Medal + 7 nominations</strong>
-            <span>Computational lead, OviCloak synthetic biology project</span>
-          </div>
-        </li>
-      </ul>
+  <hr class="div">
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="section-header" data-reveal>
+      <h2 class="section-script">Timeline</h2>
+      <span class="section-num">03</span>
     </div>
-  </div>
+    <div class="tl-track" id="tl-track">
+      <div class="tl-entry">
+        <span class="tl-year">2024 – present</span>
+        <div class="tl-body">
+          <strong>PhD Candidate, University of Amsterdam</strong>
+          <span>METAHEALTH / DIGEST — Computational Science Lab, Informatics Institute. Multiscale spatiotemporal modelling of the microbiome during the first 1000 days of life.</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2025</span>
+        <div class="tl-body">
+          <strong>RPA-PMH Seed Grant — Co-PI, €18,000</strong>
+          <span>DIGEST: Diet Influence on Gut Microbiome and Effects on Suicide Ideation Tendencies. Collaboration between FNWI and FMG, UvA.</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2022 – 2024</span>
+        <div class="tl-body">
+          <strong>MS Thesis, IISER Thiruvananthapuram</strong>
+          <span>Recurrence network measures from multivariate dynamics. Under Prof G. Ambika and Prof Ranjeev Mishra (IUCAA).</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2022</span>
+        <div class="tl-body">
+          <strong>IASc-NASI-INSA Summer Research Fellow — IIT Gandhinagar</strong>
+          <span>Extensional rheometry with a handheld mobile device. Dept. of Chemical Engineering, under Prof. Prachi Thareja.</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2022</span>
+        <div class="tl-body">
+          <strong>State Topper — National Graduate Physics Examination</strong>
+          <span>Ranked state topper; awarded IASc-NASI-INSA Summer Research Fellowship.</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2021</span>
+        <div class="tl-body">
+          <strong>iGEM Gold Medal + 7 award nominations</strong>
+          <span>Computational lead for Team IISER-Tirupati India. OviCloak: gene-circuit ODE modelling for synthetic biology contraceptive design.</span>
+        </div>
+      </div>
+      <div class="tl-entry">
+        <span class="tl-year">2019 – 2024</span>
+        <div class="tl-body">
+          <strong>Integrated BS-MS, Physics — IISER Tirupati</strong>
+          <span>CGPA 7.9/10. Focus: Complex Systems, Nonlinear Dynamics, Soft Matter, Computational Physics.</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook">
@@ -1052,6 +1092,25 @@
     document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
       revealObserver.observe(el);
     });
+
+    // ── DYNAMIC TIMELINE ──
+    const track = document.getElementById('tl-track');
+    const entries = document.querySelectorAll('.tl-entry');
+
+    const tlObserver = new IntersectionObserver((obs) => {
+      obs.forEach(o => {
+        if (o.isIntersecting) {
+          track.classList.add('revealed');
+          // Stagger each entry
+          entries.forEach((entry, i) => {
+            setTimeout(() => entry.classList.add('revealed'), i * 120);
+          });
+          tlObserver.unobserve(o.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    if (track) tlObserver.observe(track);
 
     // ── PAGE TRANSITIONS ──
     // Fade out before navigating to internal pages
