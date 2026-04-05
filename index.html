@@ -18,6 +18,21 @@
       --muted:   #6B7280;
       --border:  #E5E7EB;
       --card-bg: #FFFFFF;
+      --hero-p:  #374151;
+      --body-p:  #4B5563;
+      --tag-bg:  #EFF6FF;
+    }
+
+    [data-theme="dark"] {
+      --bg:      #0F1117;
+      --text:    #F3F4F6;
+      --accent:  #60A5FA;
+      --muted:   #9CA3AF;
+      --border:  #1F2937;
+      --card-bg: #161B27;
+      --hero-p:  #D1D5DB;
+      --body-p:  #9CA3AF;
+      --tag-bg:  #1E3A5F;
     }
 
     html { scroll-behavior: smooth; }
@@ -67,6 +82,21 @@
     }
     nav ul a:hover { color: var(--accent); text-decoration: none; }
 
+    /* ── THEME TOGGLE ── */
+    #theme-toggle {
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: inherit;
+      margin-left: 24px;
+      flex-shrink: 0;
+    }
+    #theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
     /* ── SECTIONS ── */
     section, header.hero {
       max-width: 860px;
@@ -91,7 +121,7 @@
     header.hero p {
       margin-top: 24px;
       max-width: 580px;
-      color: #374151;
+      color: var(--hero-p);
       font-size: 1.05rem;
     }
     .btn-group {
@@ -153,7 +183,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      background: #EFF6FF;
+      background: var(--tag-bg);
       color: var(--accent);
       border-radius: 4px;
       padding: 3px 8px;
@@ -167,7 +197,7 @@
     }
     .card p {
       font-size: 0.9rem;
-      color: #4B5563;
+      color: var(--body-p);
       line-height: 1.65;
     }
 
@@ -184,7 +214,7 @@
     }
     .tool-block p {
       font-size: 0.93rem;
-      color: #4B5563;
+      color: var(--body-p);
       max-width: 560px;
     }
     .tool-block a.tool-link {
@@ -233,6 +263,7 @@
         <li><a href="#tools">Tools &amp; Code</a></li>
         <li><a href="#scrapbook">Scrapbook</a></li>
       </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
     </div>
   </nav>
 
@@ -310,5 +341,25 @@
     <p class="footer-meta">&copy; 2026 Shivam Kumar &nbsp;&middot;&nbsp; Amsterdam</p>
   </footer>
 
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function applyTheme(dark) {
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      btn.textContent = dark ? 'Light' : 'Dark';
+    }
+
+    // Load saved preference, fallback to OS preference
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ? saved === 'dark' : prefersDark);
+
+    btn.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      applyTheme(!isDark);
+    });
+  </script>
 </body>
 </html>
