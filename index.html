@@ -4,7 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shivam Kumar | Computational Scientist</title>
-  <meta name="description" content="Shivam Kumar — PhD Candidate at UvA. Building multiscale, spatiotemporal models to map complex biological systems.">
+  <meta name="description" content="PhD Candidate at UvA building multiscale, spatiotemporal models to map complex biological systems, from early microbiome development to the gut-brain axis.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://shivamkgw.github.io/">
+  <meta property="og:title"       content="Shivam Kumar | Computational Scientist">
+  <meta property="og:description" content="PhD Candidate at UvA. Building multiscale, spatiotemporal models to map complex biological systems, from early microbiome development to the gut-brain axis.">
+  <meta property="og:image"       content="https://shivamkgw.github.io/assets/img/portrait.jpg">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Shivam Kumar | Computational Scientist">
+  <meta name="twitter:description" content="PhD Candidate at UvA. Building multiscale, spatiotemporal models to map complex biological systems.">
+  <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -679,10 +692,60 @@
     .link-pill { transition: border-color 0.2s, color 0.2s, transform 0.2s ease; }
     .link-pill:hover { transform: translateY(-2px); }
 
+    /* ── HAMBURGER ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 300;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--light);
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
-      nav ul { gap: 16px; }
+      .nav-hamburger { display: flex; }
+      nav ul {
+        position: fixed;
+        top: 0; right: 0; bottom: 0;
+        width: 260px;
+        background: var(--green);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 60px 36px;
+        gap: 28px;
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.22,1,0.36,1);
+        z-index: 250;
+        box-shadow: -8px 0 32px rgba(0,0,0,0.25);
+      }
+      nav ul.open { transform: translateX(0); }
+      nav ul a { font-size: 1.1rem; color: rgba(240,235,224,0.85); }
+      nav ul li:last-child { margin-top: 8px; }
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 240;
+      }
+      .nav-overlay.open { display: block; }
       .hero { grid-template-columns: 1fr; padding: 100px 24px 80px; }
       .hero-photo-col { display: none; }
       .hero-display .line { font-size: clamp(52px, 16vw, 90px); }
@@ -701,17 +764,21 @@
 <body>
 
   <!-- NAV -->
+  <div class="nav-overlay" id="nav-overlay"></div>
   <nav class="on-hero" id="main-nav">
     <div class="nav-logo">
       <span class="star">✦</span> Shivam Kumar
     </div>
-    <ul>
+    <ul id="nav-menu">
       <li><a href="#about">About me</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><button class="btn-cta" onclick="document.getElementById('scrapbook').scrollIntoView({behavior:'smooth'})">Scrapbook</button></li>
       <li><button id="theme-toggle">Dark</button></li>
     </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -922,6 +989,24 @@
   </section>
 
   <script>
+    // ── HAMBURGER NAV ──
+    const hamburger = document.getElementById('nav-hamburger');
+    const navMenu   = document.getElementById('nav-menu');
+    const overlay   = document.getElementById('nav-overlay');
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      navMenu.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+    hamburger.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      overlay.classList.toggle('open', isOpen);
+    });
+    overlay.addEventListener('click', closeMenu);
+    navMenu.querySelectorAll('a, button').forEach(el => el.addEventListener('click', closeMenu));
+
     // ── NAV on scroll ──
     const nav = document.getElementById('main-nav');
     const hero = document.querySelector('.hero');
