@@ -348,11 +348,34 @@
       letter-spacing: 0.05em;
     }
 
+    /* ── ARTWORK OVERLAYS ── */
+    .art-overlay {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      mix-blend-mode: multiply;
+      opacity: 0.09;
+      transition: opacity 0.4s;
+    }
+    [data-theme="dark"] .art-overlay {
+      mix-blend-mode: screen;
+      opacity: 0.04;
+      filter: invert(1);
+    }
+    /* Keep section content above overlay */
+    .about > *:not(.art-overlay),
+    .research > *:not(.art-overlay),
+    .tools > *:not(.art-overlay),
+    .timeline-section > *:not(.art-overlay) { position: relative; z-index: 1; }
+
     /* ── ABOUT ── */
     .about {
       padding: 120px 60px 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
       gap: 80px;
       align-items: start;
       max-width: 1100px;
@@ -439,6 +462,8 @@
       padding: 80px 60px;
       max-width: 1100px;
       margin: 0 auto;
+      position: relative;
+      overflow: hidden;
     }
     .section-header {
       display: flex;
@@ -550,6 +575,8 @@
       padding: 80px 60px;
       max-width: 1100px;
       margin: 0 auto;
+      position: relative;
+      overflow: hidden;
     }
     .tools-inner {
       display: grid;
@@ -817,15 +844,14 @@
     #theme-toggle:hover { background: rgba(240,235,224,0.25); }
 
     /* ── PAGE TRANSITION ── */
-    body { animation: pageIn 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+    body { animation: pageIn 0.4s ease both; }
     @keyframes pageIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
     body.page-out {
       opacity: 0;
-      transform: translateY(-8px);
-      transition: opacity 0.28s ease, transform 0.28s ease;
+      transition: opacity 0.28s ease;
       pointer-events: none;
     }
 
@@ -1009,6 +1035,8 @@
 
   <!-- ABOUT -->
   <section class="about" id="about">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/OCTOPUS.jpg" aria-hidden="true"
+         style="width:44%;right:-4%;bottom:-8%;transform:rotate(12deg);">
     <div class="about-left" data-reveal="left">
       <h1>Hello,<br>I'm Shivam!</h1>
       <p>PhD Candidate at the Computational Science Lab, Informatics Institute, University of Amsterdam. Part of the METAHEALTH project, I design multiscale spatiotemporal frameworks to model the microbiome during the first 1000 days of life, analyzing oral and gut microbial communities across micro, meso, and macro scales.</p>
@@ -1046,6 +1074,8 @@
 
   <!-- RESEARCH -->
   <section class="research" id="research">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/DNA.jpg" aria-hidden="true"
+         style="width:36%;left:-3%;top:50%;transform:translateY(-50%) rotate(-6deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Research</h2>
       <span class="section-num">01</span>
@@ -1139,7 +1169,9 @@
   <hr class="div">
 
   <!-- TIMELINE -->
-  <section class="timeline-section">
+  <section class="timeline-section" style="position:relative;">
+    <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WOLF.jpg" aria-hidden="true"
+         style="width:30%;right:2%;top:50%;transform:translateY(-50%) rotate(5deg);">
     <div class="section-header" data-reveal>
       <h2 class="section-script">Timeline</h2>
       <span class="section-num">03</span>
