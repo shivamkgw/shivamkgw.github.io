@@ -98,7 +98,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--green);
+      background: var(--green) url('assets/img/home-bg.jpg') center/cover no-repeat;
       min-height: 100vh;
       position: relative;
       overflow: hidden;
@@ -147,21 +147,29 @@
     .photo-frame-inner {
       position: absolute;
       inset: 16px 16px 0 -16px;
-      background: rgba(245,240,230,0.08);
-      border: 1.5px solid rgba(245,240,230,0.2);
       border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
     }
-    .photo-placeholder {
-      font-family: 'Fraunces', serif;
-      font-size: 0.8rem;
-      color: rgba(245,240,230,0.5);
-      text-align: center;
-      padding: 20px;
-      line-height: 1.5;
+    .photo-frame-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      filter: grayscale(20%);
     }
+    /* Hero bg overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(13,32,25,0.70);
+      z-index: 1;
+    }
+    .hero-display, .hero-photo-col, .hero-text-col, .scroll-pill, .sparkle {
+      position: relative;
+      z-index: 2;
+    }
+
     .sparkle {
       color: var(--amber);
       font-size: 1.8rem;
@@ -595,7 +603,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" style="--hero-overlay: rgba(13,32,25,0.72)">
     <!-- Stacked display text -->
     <div class="hero-display">
       <span class="line solid">SHIVAM</span>
@@ -612,7 +620,7 @@
     <div class="hero-photo-col">
       <div class="photo-frame">
         <div class="photo-frame-inner">
-          <p class="photo-placeholder">Add your photo here</p>
+          <img src="assets/img/me.jpg" alt="Shivam Kumar">
         </div>
       </div>
     </div>
