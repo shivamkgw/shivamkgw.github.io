@@ -8,6 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Apply theme before paint to prevent flash
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -162,7 +172,12 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(13,32,25,0.70);
+      background: linear-gradient(
+        135deg,
+        rgba(8,12,10,0.92) 0%,
+        rgba(13,32,25,0.88) 50%,
+        rgba(8,12,10,0.82) 100%
+      );
       z-index: 1;
     }
     .hero-display, .hero-photo-col, .hero-text-col, .scroll-pill, .sparkle {
