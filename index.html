@@ -601,6 +601,69 @@
     }
     #theme-toggle:hover { background: rgba(240,235,224,0.25); }
 
+    /* ── PAGE TRANSITION ── */
+    body { animation: pageIn 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes pageIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    body.page-out {
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+      pointer-events: none;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.65s cubic-bezier(0.22,1,0.36,1);
+    }
+    [data-reveal].revealed { opacity: 1; transform: translateY(0); }
+    [data-reveal="left"] { transform: translateX(-28px); }
+    [data-reveal="left"].revealed { transform: translateX(0); }
+    [data-reveal="right"] { transform: translateX(28px); }
+    [data-reveal="right"].revealed { transform: translateX(0); }
+
+    /* staggered children */
+    [data-stagger] > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.55s cubic-bezier(0.22,1,0.36,1);
+    }
+    [data-stagger].revealed > *:nth-child(1) { transition-delay: 0.05s; }
+    [data-stagger].revealed > *:nth-child(2) { transition-delay: 0.15s; }
+    [data-stagger].revealed > *:nth-child(3) { transition-delay: 0.25s; }
+    [data-stagger].revealed > * { opacity: 1; transform: translateY(0); }
+
+    /* ── HOVER: CARD LIFT ── */
+    .r-card {
+      transition: transform 0.28s cubic-bezier(0.22,1,0.36,1),
+                  box-shadow 0.28s cubic-bezier(0.22,1,0.36,1),
+                  border-color 0.2s;
+    }
+    .r-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.13);
+      border-color: var(--amber);
+    }
+    .r-card-img { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); }
+    .r-card:hover .r-card-img { transform: scale(1.04); }
+
+    .tool-item {
+      transition: border-color 0.2s;
+    }
+    .tool-item:hover { border-color: var(--green); }
+
+    .hobby { transition: transform 0.2s ease; }
+    .hobby:hover { transform: translateX(6px); }
+
+    .link-pill { transition: border-color 0.2s, color 0.2s, transform 0.2s ease; }
+    .link-pill:hover { transform: translateY(-2px); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
@@ -674,14 +737,14 @@
 
   <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="about-left">
+    <div class="about-left" data-reveal="left">
       <h1>Hello,<br>I'm Shivam!</h1>
       <p>PhD Candidate at the University of Amsterdam. I design computational frameworks that sit at the intersection of systems biology, network science, and machine learning — turning messy biological data into tractable mathematical structure.</p>
       <a href="https://github.com/shivamkgw" target="_blank" rel="noopener" class="link-pill">
         &#128279; &nbsp; github.com/shivamkgw
       </a>
     </div>
-    <div class="about-right">
+    <div class="about-right" data-reveal="right">
       <div class="contact-card">
         <h3>Contact</h3>
         <p>
@@ -704,11 +767,11 @@
 
   <!-- RESEARCH -->
   <section class="research" id="research">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <h2 class="section-script">Research</h2>
       <span class="section-num">01</span>
     </div>
-    <div class="research-grid">
+    <div class="research-grid" data-stagger>
 
       <div class="r-card featured">
         <div class="r-card-body">
@@ -754,25 +817,25 @@
 
   <!-- TOOLS -->
   <section class="tools" id="tools">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <h2 class="section-script">Tools &amp; Code</h2>
       <span class="section-num">02</span>
     </div>
     <div class="tools-inner">
       <div>
-        <div class="tool-item">
+        <div class="tool-item" data-reveal>
           <h4>SEEDBiomed</h4>
           <p>Scientific Explorers of Emergent Dynamics in Biomedicine — an interdisciplinary research team at UvA &amp; AmsterdamUMC. Brings together computational modellers, clinicians, and experimentalists across cancer, microbiome, mental health, and endothelial cell research. Maintains open-access tools, a Discovery Hub, and a Journal Club for computational biomedicine.</p>
           <a href="https://www.seedbiomed.com/" target="_blank" rel="noopener" class="tool-link">Visit SEEDBiomed.com &rarr;</a>
         </div>
-        <div class="tool-item">
+        <div class="tool-item" data-reveal>
           <h4>Multiscale Simulation Frameworks</h4>
           <p>Custom Python/Julia environments for agent-based and ODE/PDE hybrid models. Designed for high-throughput parameter sweeps on HPC clusters.</p>
           <a href="https://github.com/shivamkgw" target="_blank" rel="noopener" class="tool-link">View on GitHub &rarr;</a>
         </div>
       </div>
       <div>
-        <div class="tool-item">
+        <div class="tool-item" data-reveal="right">
           <h4>Technical Stack</h4>
           <p>Languages and environments I use daily in research and tool development.</p>
           <div class="skill-tags">
@@ -795,10 +858,10 @@
   <!-- EXPERIENCE BAND -->
   <div class="exp-band">
     <div class="exp-band-inner">
-      <div>
+      <div data-reveal="left">
         <h2>Timeline</h2>
       </div>
-      <ul class="timeline">
+      <ul class="timeline" data-stagger>
         <li>
           <span class="tl-year">2024 –</span>
           <div class="tl-body">
@@ -827,12 +890,12 @@
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook">
     <div class="scrapbook-inner">
-      <div>
+      <div data-reveal="left">
         <h2 class="section-script">Scrapbook</h2>
         <p>When I'm away from the terminal — guitar and street photography. The rest lives on a separate page.</p>
         <a href="scrapbook.html" class="btn-scrap">Open the scrapbook &rarr;</a>
       </div>
-      <div class="hobby-list">
+      <div class="hobby-list" data-reveal="right">
         <div class="hobby"><span class="hobby-icon">&#127928;</span> Guitar</div>
         <div class="hobby"><span class="hobby-icon">&#128247;</span> Street Photography</div>
       </div>
@@ -844,13 +907,47 @@
   </section>
 
   <script>
-    // Nav background on scroll
+    // ── NAV on scroll ──
     const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 80);
+    const hero = document.querySelector('.hero');
+
+    // ── PARALLAX ──
+    function onScroll() {
+      const y = window.scrollY;
+      nav.classList.toggle('scrolled', y > 80);
+      // Parallax: bg moves at 35% of scroll speed
+      if (hero) hero.style.backgroundPositionY = `calc(50% + ${y * 0.35}px)`;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // ── SCROLL REVEAL ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
+      revealObserver.observe(el);
     });
 
-    // Dark mode
+    // ── PAGE TRANSITIONS ──
+    // Fade out before navigating to internal pages
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto')) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          document.body.classList.add('page-out');
+          setTimeout(() => { window.location.href = href; }, 300);
+        });
+      }
+    });
+
+    // ── DARK MODE ──
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
     function applyTheme(dark) {
