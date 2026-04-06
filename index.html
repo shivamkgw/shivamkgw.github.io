@@ -1704,7 +1704,7 @@
         return;
       }
       const overhang = track.scrollWidth - window.innerWidth;
-      tlOuter.style.height = (overhang + window.innerHeight * 1.5) + 'px';
+      tlOuter.style.height = (overhang + window.innerHeight) + 'px';
     }
     setupTimeline();
     window.addEventListener('resize', setupTimeline);
