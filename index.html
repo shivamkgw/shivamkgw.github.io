@@ -796,10 +796,36 @@
       padding: 4px 6px;
       border: 1px solid var(--border);
       transition: transform 0.2s ease;
+      mix-blend-mode: multiply;
     }
     .tl-logo:hover { transform: scale(1.12); }
-    .tl-logo.dark-bg { background: #0d2019; }
+    .tl-logo.dark-bg { background: #111; mix-blend-mode: normal; }
+    [data-theme="dark"] .tl-logo:not(.dark-bg) {
+      background: transparent;
+      mix-blend-mode: screen;
+      filter: brightness(1.1);
+      border-color: rgba(255,255,255,0.12);
+    }
+    [data-theme="dark"] .tl-logo.dark-bg { filter: brightness(1.2); }
     .tl-logo.conf { height: 28px; max-width: 60px; }
+    /* IASc text badge (logo is blank) */
+    .tl-logo-badge {
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 8px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: var(--text);
+      white-space: nowrap;
+      background: transparent;
+      transition: transform 0.2s ease;
+    }
+    .tl-logo-badge:hover { transform: scale(1.12); }
 
     /* Progress bar across top of sticky */
     .tl-progress {
@@ -1280,7 +1306,7 @@
           <strong>State Topper, NGPE</strong>
           <span>Ranked state topper; awarded IASc-NASI-INSA Summer Research Fellowship.</span>
           <div class="tl-logos">
-            <img class="tl-logo" src="assets/img/logos/iasc.png" alt="IASc">
+            <span class="tl-logo-badge">IASc</span>
             <img class="tl-logo" src="assets/img/logos/insa.png" alt="INSA">
             <img class="tl-logo" src="assets/img/logos/nasi.png" alt="NASI">
           </div>
@@ -1319,7 +1345,7 @@
           <span>METAHEALTH / DIGEST. Multiscale spatiotemporal modelling of the microbiome.</span>
           <div class="tl-logos">
             <img class="tl-logo dark-bg" src="assets/img/logos/uva.png" alt="UvA">
-            <img class="tl-logo" src="assets/img/logos/lab42.png" alt="Lab42">
+            <img class="tl-logo dark-bg" src="assets/img/logos/lab42.png" alt="Lab42">
             <img class="tl-logo" src="assets/img/metahealth-logo.jpg" alt="METAHEALTH">
           </div>
         </div>
