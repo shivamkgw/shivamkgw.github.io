@@ -84,6 +84,61 @@
     }
     a { color: inherit; text-decoration: none; }
 
+    /* PROGRESS BAR */
+    #read-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--amber);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* POSTCARDS */
+    .postcard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-bottom: 60px;
+    }
+    .postcard-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      cursor: pointer;
+    }
+    .postcard-item video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .postcard-item:hover video { transform: scale(1.04); }
+    .postcard-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 50%, rgba(8,12,10,0.75));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .postcard-item:hover .postcard-overlay { opacity: 1; }
+    .postcard-label {
+      position: absolute;
+      bottom: 12px; left: 14px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--light);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .postcard-item:hover .postcard-label { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .postcard-grid { grid-template-columns: 1fr; }
+    }
+
     /* NAV */
     nav {
       background: var(--green);
@@ -390,6 +445,8 @@
   </style>
 </head>
 <body>
+
+  <div id="read-progress"></div>
 
   <nav>
     <a href="index.html" class="nav-logo">
@@ -742,6 +799,28 @@
     </div>
   </div>
 
+  <!-- POSTCARDS -->
+  <div class="section">
+    <p class="section-label">Short Films</p>
+    <h2>Postcards</h2>
+    <p style="font-size:0.93rem;color:var(--muted);max-width:540px;margin-bottom:28px;">
+      Static video shots from different places. A few seconds of somewhere.
+    </p>
+    <div class="postcard-grid">
+      <!-- Drop your video files into assets/video/ and add items here -->
+      <!-- Example:
+      <div class="postcard-item">
+        <video src="assets/video/postcard-amsterdam.mp4" autoplay muted loop playsinline></video>
+        <div class="postcard-overlay"></div>
+        <span class="postcard-label">Amsterdam</span>
+      </div>
+      -->
+      <div class="postcard-item" style="background:var(--card-bg);display:flex;align-items:center;justify-content:center;">
+        <p style="font-size:0.8rem;color:var(--muted);padding:20px;text-align:center;">Add videos via assets/video/</p>
+      </div>
+    </div>
+  </div>
+
   <div class="page-footer">
     <span>&copy; 2026 Shivam Kumar &middot; Amsterdam</span>
     <a href="index.html">&larr; Back to main site</a>
@@ -757,6 +836,16 @@
   </div>
 
   <script>
+    // ── READ PROGRESS BAR ──
+    (function() {
+      const bar = document.getElementById('read-progress');
+      window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        const total = document.body.scrollHeight - window.innerHeight;
+        bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+      }, { passive: true });
+    })();
+
     // ── CUSTOM CURSOR ──
     const dot  = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
