@@ -258,9 +258,9 @@
       inset: 0;
       background: linear-gradient(
         135deg,
-        rgba(8,12,10,0.92) 0%,
-        rgba(13,32,25,0.88) 50%,
-        rgba(8,12,10,0.82) 100%
+        rgba(8,12,10,0.72) 0%,
+        rgba(13,32,25,0.62) 50%,
+        rgba(8,12,10,0.65) 100%
       );
       z-index: 1;
     }
@@ -1574,15 +1574,15 @@
         const px = s.x * W, py = s.y * H;
         const pr = s.r * Math.min(W, H) * (1 + Math.sin(t * 0.6 + s.phase) * 0.05);
         const g = cx.createRadialGradient(px - pr*0.25, py - pr*0.25, 0, px, py, pr);
-        g.addColorStop(0,    'rgba(10,  25,  90, 0.92)');
-        g.addColorStop(0.3,  'rgba(30,  80, 185, 0.70)');
-        g.addColorStop(0.65, 'rgba(75, 140, 225, 0.38)');
-        g.addColorStop(0.88, 'rgba(140,190,255, 0.10)');
-        g.addColorStop(1,    'rgba(180,220,255, 0)');
+        g.addColorStop(0,    'rgba(90,  45,   5, 0.92)');
+        g.addColorStop(0.3,  'rgba(185, 110,  20, 0.70)');
+        g.addColorStop(0.65, 'rgba(232, 148,  58, 0.38)');
+        g.addColorStop(0.88, 'rgba(255, 210, 130, 0.10)');
+        g.addColorStop(1,    'rgba(255, 235, 180, 0)');
         cx.beginPath(); cx.arc(px, py, pr, 0, Math.PI*2);
         cx.fillStyle = g; cx.fill();
         cx.beginPath(); cx.arc(px, py, pr * 0.98, 0, Math.PI*2);
-        cx.strokeStyle = 'rgba(160,210,255,0.18)';
+        cx.strokeStyle = 'rgba(232,148,58,0.20)';
         cx.lineWidth = 1; cx.stroke();
         // thin radial spokes (like cilia)
         for (let i = 0; i < 8; i++) {
@@ -1590,7 +1590,7 @@
           cx.beginPath();
           cx.moveTo(px + Math.cos(angle)*pr*0.92, py + Math.sin(angle)*pr*0.92);
           cx.lineTo(px + Math.cos(angle)*pr*1.18, py + Math.sin(angle)*pr*1.18);
-          cx.strokeStyle = 'rgba(160,210,255,0.10)'; cx.lineWidth = 0.8; cx.stroke();
+          cx.strokeStyle = 'rgba(232,148,58,0.12)'; cx.lineWidth = 0.8; cx.stroke();
         }
       }
 
