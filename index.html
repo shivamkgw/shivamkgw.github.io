@@ -100,15 +100,15 @@
     /* ── SIDE SCROLL PROGRESS ── */
     #side-progress {
       position: fixed;
-      right: 0;
+      left: 0;
       top: 0;
-      width: 3px;
-      height: 0%;
+      width: 0%;
+      height: 3px;
       background: var(--amber);
       z-index: 9000;
       pointer-events: none;
-      transition: height 0.05s linear;
-      border-radius: 0 0 2px 2px;
+      transition: width 0.05s linear;
+      border-radius: 0 2px 2px 0;
     }
 
     body {
@@ -1542,7 +1542,7 @@
       // Side progress bar
       if (sideProgress) {
         const total = document.body.scrollHeight - window.innerHeight;
-        sideProgress.style.height = (total > 0 ? (y / total) * 100 : 0) + '%';
+        sideProgress.style.width = (total > 0 ? (y / total) * 100 : 0) + '%';
       }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
