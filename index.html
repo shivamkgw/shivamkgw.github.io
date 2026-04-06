@@ -926,6 +926,12 @@
       overflow: hidden;
       border: 1px solid var(--border);
       background: #fff;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .poster-embed:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+      transform: translateY(-3px);
     }
     .poster-embed object {
       width: 100%;
@@ -1602,22 +1608,24 @@
       <span class="section-num">04</span>
     </div>
     <div class="poster-card" data-reveal>
-      <div class="poster-embed">
-        <object data="assets/metahealth-poster.pdf" type="application/pdf">
-          <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener"
-             style="display:flex;align-items:center;justify-content:center;height:100%;font-size:0.85rem;color:var(--muted);text-align:center;padding:20px;">
-            PDF preview not available &mdash; click to open
-          </a>
+      <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener"
+         class="poster-embed" style="display:block;text-decoration:none;"
+         title="Open poster PDF">
+        <object data="assets/metahealth-poster.pdf" type="application/pdf" style="pointer-events:none;">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px;padding:20px;text-align:center;">
+            <span style="font-size:2rem;">&#128196;</span>
+            <span style="font-size:0.82rem;color:var(--muted);">Click to open PDF</span>
+          </div>
         </object>
-      </div>
+      </a>
       <div class="poster-meta">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
           <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
         </div>
         <h3>MetaHealth: Linking Microbiome Dysbiosis to Childhood Obesity and Dental Caries</h3>
-        <p>Scientific poster presented as part of the MetaHealth project &mdash; an NWO-funded research programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
-        <a href="assets/metahealth-poster.pdf" download class="poster-download">
-          &#8659;&nbsp; Download Poster (PDF)
+        <p>Scientific poster presented as part of the MetaHealth project — an NWO-funded research programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
+        <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener" class="poster-download">
+          &#8599;&nbsp; Open Poster (PDF)
         </a>
       </div>
     </div>
