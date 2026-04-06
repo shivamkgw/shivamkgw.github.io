@@ -44,6 +44,7 @@
       --cream:   #F5F0E6;
       --light:   #F5F0E6; /* always-light: for text on dark surfaces */
       --amber:   #E8943A;
+      --amber-aa: #9E6020; /* WCAG AA on cream: ~5.4:1 for small text */
       --text:    #1A1A1A;
       --muted:   #5A6A62;
       --card-bg: #EDEAE0;
@@ -54,6 +55,7 @@
       --cream:   #111815; /* page background */
       --light:   #F0EBE0; /* always-light: stays bright in dark mode */
       --amber:   #E8943A;
+      --amber-aa: #E8943A; /* amber already passes on dark bg */
       --text:    #E0DBD0;
       --muted:   #8A9E94;
       --card-bg: #1A2820;
@@ -405,6 +407,23 @@
     }
     .scroll-pill:hover .coord-text { color: var(--amber); }
     .scroll-pill:hover .coord-dot  { animation-duration: 0.8s; }
+    .section-cue {
+      display: flex;
+      justify-content: center;
+      padding: 24px 0 8px;
+    }
+    .section-cue a {
+      color: var(--border);
+      font-size: 1.1rem;
+      text-decoration: none;
+      animation: cueFloat 2s ease-in-out infinite;
+      transition: color 0.2s;
+    }
+    .section-cue a:hover { color: var(--amber); }
+    @keyframes cueFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(5px); }
+    }
 
     /* ── ARTWORK OVERLAYS ── */
     .art-overlay {
@@ -610,7 +629,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--amber);
+      color: var(--amber-aa);
       margin-bottom: 16px;
       display: block;
     }
@@ -771,7 +790,7 @@
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: 0.82rem;
-      color: var(--amber);
+      color: var(--amber-aa);
       text-transform: uppercase;
       letter-spacing: 0.1em;
       text-align: center;
@@ -917,12 +936,12 @@
     .pub-year {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      color: var(--amber);
+      color: var(--amber-aa);
       font-size: 0.78rem;
     }
     .pub-journal { font-style: italic; }
     .pub-doi {
-      color: var(--amber);
+      color: var(--amber-aa);
       text-decoration: none;
       font-size: 0.75rem;
     }
@@ -1000,12 +1019,40 @@
       font-size: 1.2rem;
       flex-shrink: 0;
     }
+    .footer-nav {
+      display: flex;
+      gap: 60px;
+      padding: 48px 0 32px;
+      border-top: 1px solid rgba(245,240,230,0.1);
+      flex-wrap: wrap;
+    }
+    .footer-nav-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-nav-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+    .footer-nav a {
+      font-size: 0.85rem;
+      color: rgba(240,235,224,0.55);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-nav a:hover { color: var(--light); }
     .footer-meta {
-      padding: 28px 0;
+      padding: 20px 0 28px;
       font-size: 0.78rem;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
+      border-top: 1px solid rgba(245,240,230,0.06);
     }
 
     /* ── THEME TOGGLE ── */
@@ -1157,6 +1204,7 @@
       .timeline-section { padding: 60px 24px; }
       .scrapbook-inner { grid-template-columns: 1fr; gap: 40px; }
       .footer-meta { flex-direction: column; gap: 8px; }
+      .footer-nav { gap: 32px; }
       hr.div { margin: 0 24px; }
     }
   </style>
@@ -1258,6 +1306,7 @@
       </div>
     </div>
   </section>
+  <div class="section-cue"><a href="#research">∨</a></div>
 
   <hr class="div">
 
@@ -1467,6 +1516,7 @@
   </section>
   </div><!-- /.timeline-sticky -->
   </div><!-- /.timeline-outer -->
+  <div class="section-cue"><a href="#publications">∨</a></div>
 
   <hr class="div">
 
@@ -1501,6 +1551,27 @@
         <div class="hobby"><span class="hobby-icon">♪</span> Guitar</div>
         <div class="hobby"><span class="hobby-icon">◎</span> Street Photography</div>
         <div class="hobby"><span class="hobby-icon">✎</span> Travel Writing</div>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-nav-group">
+        <span class="footer-nav-label">Navigate</span>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#scrapbook">Scrapbook</a>
+      </div>
+      <div class="footer-nav-group">
+        <span class="footer-nav-label">Links</span>
+        <a href="https://github.com/shivamkgw" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://orcid.org/0009-0005-6766-6565" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://shivamblogs1.blog/" target="_blank" rel="noopener">Blog</a>
+      </div>
+      <div class="footer-nav-group">
+        <span class="footer-nav-label">Contact</span>
+        <a href="mailto:s.kumar@uva.nl">s.kumar@uva.nl</a>
+        <a href="assets/Shivam_Kumar_CV_2025.pdf" target="_blank" rel="noopener">↓ CV</a>
       </div>
     </div>
     <div class="footer-meta">
