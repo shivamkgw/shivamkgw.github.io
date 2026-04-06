@@ -79,7 +79,7 @@
       background: var(--amber);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 10001;
+      z-index: 10005;
       transform: translate(-50%, -50%);
       transition: width 0.2s, height 0.2s, background 0.2s;
     }
@@ -91,7 +91,7 @@
       border: 1.5px solid var(--amber);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 10000;
+      z-index: 10004;
       transform: translate(-50%, -50%);
       opacity: 0.5;
       transition: width 0.3s cubic-bezier(0.22,1,0.36,1),
@@ -953,8 +953,6 @@
       opacity: 0.7;
     }
     #img-lightbox-close:hover { opacity: 1; }
-    body.lb-open #cursor-dot,
-    body.lb-open #cursor-ring { display: none !important; }
     .r-card-img { cursor: zoom-in; }
 
     /* ── POSTERS ── */
@@ -2126,12 +2124,10 @@
         lbImg.src = src;
         lbImg.alt = alt || '';
         lb.classList.add('open');
-        document.body.classList.add('lb-open');
         document.body.style.overflow = 'hidden';
       }
       function closeLightbox() {
         lb.classList.remove('open');
-        document.body.classList.remove('lb-open');
         document.body.style.overflow = '';
         lbImg.src = '';
       }
