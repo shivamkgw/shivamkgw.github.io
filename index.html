@@ -1687,51 +1687,38 @@
       });
     })();
 
-    // ── PUBLICATIONS (ORCID) ──
+    // ── PUBLICATIONS ── (add new entries here when needed)
     (function() {
-      const ORCID = '0009-0005-6766-6565';
-      const list  = document.getElementById('pub-list');
+      const list = document.getElementById('pub-list');
       if (!list) return;
-
-      fetch(`https://pub.orcid.org/v3.0/${ORCID}/works`, {
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(r => r.json())
-      .then(data => {
-        const groups = (data.group || []);
-        if (!groups.length) {
-          list.innerHTML = '<p class="pub-loading">No publications found yet.</p>';
-          return;
+      const pubs = [
+        {
+          title: 'Integrating Microbiome Data Visualization into FAIRDatabase using Edge Functions',
+          year: '2026',
+          type: 'Preprint',
+          doi: '10.21203/rs.3.rs-8681047/v1',
+          authors: 'Roman van Eldijk; Shivam Kumar; Vivek Sheraton M'
+        },
+        {
+          title: 'Multivariate data analysis using recurrence measures',
+          year: '2024',
+          type: 'Preprint',
+          doi: '10.48550/ARXIV.2411.01201',
+          authors: 'Shivam Kumar; R. Misra; G. Ambika'
         }
-        // Sort by year descending
-        const pubs = groups.map(g => {
-          const summary = g['work-summary'][0];
-          const title   = summary.title?.title?.value || 'Untitled';
-          const year    = summary['publication-date']?.year?.value || '';
-          const journal = summary['journal-title']?.value || '';
-          const doi     = (summary['external-ids']?.['external-id'] || [])
-                            .find(e => e['external-id-type'] === 'doi')
-                            ?.['external-id-value'] || '';
-          return { title, year, journal, doi };
-        }).sort((a, b) => (b.year || 0) - (a.year || 0));
-
-        list.innerHTML = pubs.map(p => `
-          <div class="pub-item" data-reveal>
-            <div class="pub-title">${
-              p.doi
-                ? `<a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>`
-                : p.title
-            }</div>
-            <div class="pub-meta">
-              ${p.year ? `<span class="pub-year">${p.year}</span>` : ''}
-              ${p.journal ? `<span class="pub-journal">${p.journal}</span>` : ''}
-              ${p.doi ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>` : ''}
-            </div>
-          </div>`).join('');
-      })
-      .catch(() => {
-        list.innerHTML = '<p class="pub-loading">Could not load publications.</p>';
-      });
+      ];
+      list.innerHTML = pubs.map(p => `
+        <div class="pub-item" data-reveal>
+          <div class="pub-title">
+            <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>
+          </div>
+          <div class="pub-meta">
+            <span class="pub-year">${p.year}</span>
+            <span class="pub-journal">${p.type}</span>
+            <span style="color:var(--muted)">${p.authors}</span>
+            <a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>
+          </div>
+        </div>`).join('');
     })();
 
     // ── DARK MODE ──
