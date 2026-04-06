@@ -190,12 +190,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease;
+    }
+    .hobby-photo:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 4px 10px rgba(0,0,0,0.1);
     }
     .hobby-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
     }
+    .hobby-photo:hover img { transform: scale(1.05); }
     .hobby-photo.placeholder {
       flex-direction: column;
       gap: 8px;
@@ -214,6 +221,7 @@
       column-gap: 16px;
       margin-bottom: 60px;
     }
+    .art-grid { perspective: 1200px; }
     .art-item {
       break-inside: avoid;
       margin-bottom: 16px;
@@ -222,29 +230,38 @@
       border: 1px solid var(--border);
       position: relative;
       cursor: pointer;
+      transition: box-shadow 0.4s ease, transform 0.15s ease;
+      will-change: transform;
+    }
+    .art-item:hover {
+      box-shadow: 0 22px 44px rgba(0,0,0,0.22), 0 6px 14px rgba(0,0,0,0.12);
     }
     .art-item img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), filter 0.4s ease;
       filter: grayscale(1) contrast(1.12) brightness(1.04);
     }
-    .art-item:hover img { transform: scale(1.03); }
+    .art-item:hover img {
+      transform: scale(1.06);
+      filter: grayscale(0.5) contrast(1.1) brightness(1.05);
+    }
     .art-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(13,32,25,0.85));
+      background: linear-gradient(transparent, rgba(13,32,25,0.88));
       color: var(--light);
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      padding: 24px 12px 10px;
+      padding: 28px 12px 12px;
       opacity: 0;
-      transition: opacity 0.25s;
+      transform: translateY(6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    .art-item:hover .art-caption { opacity: 1; }
+    .art-item:hover .art-caption { opacity: 1; transform: translateY(0); }
 
     /* YOUTUBE GRID */
     .yt-grid {
@@ -252,7 +269,11 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
-    .yt-card { display: flex; flex-direction: column; gap: 10px; }
+    .yt-card {
+      display: flex; flex-direction: column; gap: 10px;
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+    }
+    .yt-card:hover { transform: translateY(-5px); }
     .yt-thumb {
       border-radius: 10px;
       overflow: hidden;
@@ -395,22 +416,13 @@
     </p>
     <div class="yt-grid">
       <div class="yt-card">
-        <div class="yt-thumb" onclick="playVideo(this,'C5ehvYNnjsM','Bulnes,The Best 8 Hours Hike')">
-          <div class="yt-cover">
-            <img src="assets/img/yt-vlog.jpg" alt="Bulnes vlog thumbnail">
-          </div>
-          <div class="play-btn">&#9654;</div>
-        </div>
-        <p class="yt-label">Bulnes,The Best 8 Hours Hike</p>
-      </div>
-      <div class="yt-card">
         <div class="yt-thumb" onclick="playVideo(this,'-coOiJtmPsk','the untitled,IISER Tirupati 2022')">
           <div class="yt-cover">
             <img src="assets/img/yt-song.jpg" alt="the untitled performance thumbnail">
           </div>
           <div class="play-btn">&#9654;</div>
         </div>
-        <p class="yt-label">the untitled,IISER Tirupati 2022</p>
+        <p class="yt-label">the untitled &mdash; IISER Tirupati 2022</p>
       </div>
       <div class="yt-card">
         <div class="yt-thumb" onclick="playVideo(this,'Vdd5TDmSphs','Convocation,IISER Tirupati 2024')">
@@ -419,13 +431,37 @@
           </div>
           <div class="play-btn">&#9654;</div>
         </div>
-        <p class="yt-label">Convocation,IISER Tirupati 2024</p>
+        <p class="yt-label">Convocation &mdash; IISER Tirupati 2024</p>
+      </div>
+      <div class="yt-card">
+        <div class="yt-thumb" onclick="playVideo(this,'C5ehvYNnjsM','Bulnes,The Best 8 Hours Hike')">
+          <div class="yt-cover">
+            <img src="assets/img/yt-vlog.jpg" alt="Bulnes vlog thumbnail">
+          </div>
+          <div class="play-btn">&#9654;</div>
+        </div>
+        <p class="yt-label">Bulnes &mdash; The Best 8 Hours Hike</p>
       </div>
     </div>
-    <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener"
-       style="display:inline-block;margin-top:28px;background:#FF0000;color:#fff;font-size:0.88rem;font-weight:600;padding:11px 24px;border-radius:100px;">
-      &#9654;&nbsp; Visit the Channel
-    </a>
+    <div style="display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;">
+      <a href="https://www.youtube.com/@waterbottleshivam" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-size:0.88rem;font-weight:600;padding:11px 24px;border-radius:100px;">
+        &#9654;&nbsp; Visit the Channel
+      </a>
+    </div>
+    <!-- PODCAST -->
+    <p class="section-label" style="margin-top:48px;">Podcast</p>
+    <p style="font-size:0.93rem;color:var(--muted);max-width:520px;margin-bottom:20px;">
+      On the radio as well &mdash; listen below.
+    </p>
+    <div style="max-width:660px;">
+      <iframe style="border-radius:12px;border:1px solid var(--border);"
+        src="https://open.spotify.com/embed/episode/1OAYAgnHOdciYp7lhR7NBu?utm_source=generator&theme=0"
+        width="100%" height="152" frameborder="0"
+        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 
   <!-- STOP MOTION -->
@@ -698,6 +734,23 @@
       document.getElementById('lightbox').classList.remove('open');
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // ── 3D TILT on art items ──
+    document.querySelectorAll('.art-item').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        const rx = ((y - r.height / 2) / r.height) * -10;
+        const ry = ((x - r.width  / 2) / r.width ) *  10;
+        card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.035)`;
+        card.style.zIndex = '5';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.zIndex = '';
+      });
+    });
 
     // Dark mode
     const btn = document.getElementById('theme-toggle');
