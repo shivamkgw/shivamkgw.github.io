@@ -108,22 +108,25 @@
       gap: 10px;
     }
     .sec-nav-dot {
-      width: 8px; height: 8px;
+      width: 32px; height: 32px;
       border-radius: 50%;
-      background: rgba(245,240,230,0.3);
-      border: 1.5px solid rgba(245,240,230,0.5);
+      background: rgba(13,32,25,0.55);
+      border: 1.5px solid rgba(245,240,230,0.2);
       cursor: pointer;
       transition: background 0.2s, transform 0.2s, border-color 0.2s;
       position: relative;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      backdrop-filter: blur(4px);
     }
     .sec-nav-dot:hover, .sec-nav-dot.active {
       background: var(--amber);
       border-color: var(--amber);
-      transform: scale(1.4);
+      transform: scale(1.15);
     }
     .sec-nav-dot .dot-label {
       position: absolute;
-      right: 18px;
+      right: 40px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 0.65rem;
@@ -875,13 +878,13 @@
 
   <!-- SECTION SIDEBAR NAV -->
   <nav id="sec-nav" aria-label="Section navigation">
-    <div class="sec-nav-dot" data-target="sec-music"><span class="dot-label">Music</span></div>
-    <div class="sec-nav-dot" data-target="sec-film"><span class="dot-label">Film</span></div>
-    <div class="sec-nav-dot" data-target="sec-photo"><span class="dot-label">Photography</span></div>
-    <div class="sec-nav-dot" data-target="sec-guitar"><span class="dot-label">Guitar</span></div>
-    <div class="sec-nav-dot" data-target="sec-travel"><span class="dot-label">Travel</span></div>
-    <div class="sec-nav-dot" data-target="sec-art"><span class="dot-label">Artworks</span></div>
-    <div class="sec-nav-dot" data-target="sec-postcards"><span class="dot-label">Postcards</span></div>
+    <div class="sec-nav-dot" data-target="sec-music">&#9835;<span class="dot-label">Music</span></div>
+    <div class="sec-nav-dot" data-target="sec-film">&#9654;<span class="dot-label">Film</span></div>
+    <div class="sec-nav-dot" data-target="sec-photo">&#9728;<span class="dot-label">Photography</span></div>
+    <div class="sec-nav-dot" data-target="sec-guitar">&#127928;<span class="dot-label">Guitar</span></div>
+    <div class="sec-nav-dot" data-target="sec-travel">&#9968;<span class="dot-label">Travel</span></div>
+    <div class="sec-nav-dot" data-target="sec-art">&#9998;<span class="dot-label">Artworks</span></div>
+    <div class="sec-nav-dot" data-target="sec-postcards">&#9741;<span class="dot-label">Postcards</span></div>
   </nav>
 
   <div id="cursor-dot"></div>

@@ -209,7 +209,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--green) url('assets/img/hero-alt1.jpg') center 40%/cover no-repeat;
+      background: var(--green);
       min-height: 100vh;
       position: relative;
       overflow: hidden;
@@ -282,6 +282,13 @@
       -webkit-mask-composite: source-in;
     }
     /* Hero bg overlay */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/img/hero-alt1.jpg') center 40%/cover no-repeat;
+      filter: contrast(1.12) saturate(0.75) brightness(0.88);
+      z-index: 0;
+    }
     .hero::before {
       content: '';
       position: absolute;
@@ -1307,6 +1314,7 @@
 
   <!-- HERO -->
   <section class="hero" style="--hero-overlay: rgba(13,32,25,0.55)">
+    <div class="hero-bg"></div>
     <!-- Sparkles -->
     <span class="sparkle sparkle-1">✦</span>
     <span class="sparkle sparkle-2">✦</span>
@@ -1347,7 +1355,7 @@
           ↗ &nbsp; github.com/shivamkgw
         </a>
         <a href="assets/Shivam_Kumar_CV_2025.pdf" target="_blank" class="link-pill" style="background:var(--amber);border-color:var(--amber);color:#fff;">
-          ↓ &nbsp; Download CV
+          ↓ &nbsp; Open CV
         </a>
       </div>
     </div>
