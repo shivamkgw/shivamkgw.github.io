@@ -846,6 +846,51 @@
       .tl-entry { flex: 0 0 200px; }
     }
 
+    /* ── PUBLICATIONS ── */
+    .publications {
+      padding: 80px 60px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .pub-list { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
+    .pub-loading { color: var(--muted); font-style: italic; }
+    .pub-item {
+      border-left: 3px solid var(--amber);
+      padding: 14px 20px;
+      background: var(--card-bg);
+      border-radius: 0 10px 10px 0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pub-item:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+    .pub-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .pub-title a { color: inherit; text-decoration: none; }
+    .pub-title a:hover { color: var(--amber); }
+    .pub-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    }
+    .pub-year {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      color: var(--amber);
+      font-size: 0.78rem;
+    }
+    .pub-journal { font-style: italic; }
+    .pub-doi {
+      color: var(--amber);
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+    .pub-doi:hover { text-decoration: underline; }
+
     /* ── SCRAPBOOK ── */
     .scrapbook {
       padding: 80px 60px 40px;
@@ -1058,7 +1103,7 @@
       .tl-logos { width: 56px; }
       .tl-logo { width: 52px; height: 30px; padding: 3px 4px; }
       .tl-logo.conf { height: 26px; }
-      .about, .research, .tools, .scrapbook { padding: 60px 24px; }
+      .about, .research, .tools, .publications, .scrapbook { padding: 60px 24px; }
       .about { grid-template-columns: 1fr; gap: 40px; }
       .research-grid { grid-template-columns: 1fr; }
       .tools-inner { grid-template-columns: 1fr; gap: 0; }
@@ -1360,6 +1405,7 @@
           <div class="tl-logos">
             <img class="tl-logo dark-bg" src="assets/img/logos/uva.png" alt="UvA">
             <img class="tl-logo" src="assets/img/logos/csl.png" alt="Computational Science Lab">
+            <img class="tl-logo" src="assets/img/logos/seedbiomed.svg" alt="SeedBioMed">
           </div>
         </div>
       </div>
@@ -1368,6 +1414,21 @@
   </section>
   </div><!-- /.timeline-sticky -->
   </div><!-- /.timeline-outer -->
+
+  <hr class="div">
+
+  <!-- PUBLICATIONS -->
+  <section class="publications" id="publications">
+    <div class="section-header" data-reveal>
+      <h2 class="section-script">Publications</h2>
+      <span class="section-num">03</span>
+    </div>
+    <div id="pub-list" class="pub-list">
+      <p class="pub-loading">Loading from ORCID…</p>
+    </div>
+  </section>
+
+  <hr class="div">
 
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook" style="position:relative;overflow:hidden;">
@@ -1623,6 +1684,53 @@
       wrap.addEventListener('mouseleave', () => {
         pxCv.style.opacity = '0';
         img.style.opacity  = '1';
+      });
+    })();
+
+    // ── PUBLICATIONS (ORCID) ──
+    (function() {
+      const ORCID = '0009-0005-6766-6565';
+      const list  = document.getElementById('pub-list');
+      if (!list) return;
+
+      fetch(`https://pub.orcid.org/v3.0/${ORCID}/works`, {
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(r => r.json())
+      .then(data => {
+        const groups = (data.group || []);
+        if (!groups.length) {
+          list.innerHTML = '<p class="pub-loading">No publications found yet.</p>';
+          return;
+        }
+        // Sort by year descending
+        const pubs = groups.map(g => {
+          const summary = g['work-summary'][0];
+          const title   = summary.title?.title?.value || 'Untitled';
+          const year    = summary['publication-date']?.year?.value || '';
+          const journal = summary['journal-title']?.value || '';
+          const doi     = (summary['external-ids']?.['external-id'] || [])
+                            .find(e => e['external-id-type'] === 'doi')
+                            ?.['external-id-value'] || '';
+          return { title, year, journal, doi };
+        }).sort((a, b) => (b.year || 0) - (a.year || 0));
+
+        list.innerHTML = pubs.map(p => `
+          <div class="pub-item" data-reveal>
+            <div class="pub-title">${
+              p.doi
+                ? `<a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>`
+                : p.title
+            }</div>
+            <div class="pub-meta">
+              ${p.year ? `<span class="pub-year">${p.year}</span>` : ''}
+              ${p.journal ? `<span class="pub-journal">${p.journal}</span>` : ''}
+              ${p.doi ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>` : ''}
+            </div>
+          </div>`).join('');
+      })
+      .catch(() => {
+        list.innerHTML = '<p class="pub-loading">Could not load publications.</p>';
       });
     })();
 
