@@ -95,6 +95,53 @@
       transition: width 0.1s linear;
     }
 
+    /* SECTION SIDEBAR NAV */
+    #sec-nav {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .sec-nav-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(245,240,230,0.3);
+      border: 1.5px solid rgba(245,240,230,0.5);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .sec-nav-dot:hover, .sec-nav-dot.active {
+      background: var(--amber);
+      border-color: var(--amber);
+      transform: scale(1.4);
+    }
+    .sec-nav-dot .dot-label {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      color: var(--light);
+      background: rgba(13,32,25,0.85);
+      padding: 3px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .sec-nav-dot:hover .dot-label { opacity: 1; }
+    @media (max-width: 768px) { #sec-nav { display: none; } }
+
     /* POSTCARDS */
     .postcard-grid {
       display: grid;
@@ -465,7 +512,7 @@
   </div>
 
   <!-- YOUTUBE -->
-  <div class="section">
+  <div class="section" id="sec-music">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/RADIOHEAD-nobg.png" aria-hidden="true"
          style="height:110%;width:auto;right:-4%;bottom:-5%;transform:rotate(7deg);">
     <p class="section-label">Music &amp; Performance</p>
@@ -590,7 +637,7 @@
   </div>
 
   <!-- STOP MOTION -->
-  <div class="section">
+  <div class="section" id="sec-film">
     <p class="section-label">Film</p>
     <h2>Stop Motion</h2>
     <p style="font-size:0.93rem;color:var(--muted);max-width:540px;margin-bottom:28px;">
@@ -609,7 +656,7 @@
   </div>
 
   <!-- STREET PHOTOGRAPHY -->
-  <div class="section">
+  <div class="section" id="sec-photo">
     <p class="section-label">Photography</p>
     <h2>Street &amp; Life</h2>
     <div class="hobby-grid" style="grid-template-columns: repeat(3,1fr);">
@@ -626,7 +673,7 @@
   </div>
 
   <!-- GUITAR -->
-  <div class="section">
+  <div class="section" id="sec-guitar">
     <p class="section-label">Music</p>
     <h2>Guitar</h2>
     <div class="hobby-grid" style="grid-template-columns: 1fr 1fr 1fr;">
@@ -643,7 +690,7 @@
   </div>
 
   <!-- TRAVEL -->
-  <div class="section">
+  <div class="section" id="sec-travel">
     <p class="section-label">Travel</p>
     <h2>Out There</h2>
     <p style="font-size:0.93rem;color:var(--muted);max-width:540px;margin-bottom:28px;">
@@ -666,7 +713,7 @@
   </div>
 
   <!-- ARTWORKS -->
-  <div class="section">
+  <div class="section" id="sec-art">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/COSMOS'-nobg.png" aria-hidden="true"
          style="height:105%;width:auto;left:-3%;top:50%;transform:translateY(-50%) rotate(5deg);">
     <p class="section-label">Illustration</p>
@@ -800,7 +847,7 @@
   </div>
 
   <!-- POSTCARDS -->
-  <div class="section">
+  <div class="section" id="sec-postcards">
     <p class="section-label">Short Films</p>
     <h2>Postcards</h2>
     <p style="font-size:0.93rem;color:var(--muted);max-width:540px;margin-bottom:28px;">
@@ -826,6 +873,17 @@
     <a href="index.html">&larr; Back to main site</a>
   </div>
 
+  <!-- SECTION SIDEBAR NAV -->
+  <nav id="sec-nav" aria-label="Section navigation">
+    <div class="sec-nav-dot" data-target="sec-music"><span class="dot-label">Music</span></div>
+    <div class="sec-nav-dot" data-target="sec-film"><span class="dot-label">Film</span></div>
+    <div class="sec-nav-dot" data-target="sec-photo"><span class="dot-label">Photography</span></div>
+    <div class="sec-nav-dot" data-target="sec-guitar"><span class="dot-label">Guitar</span></div>
+    <div class="sec-nav-dot" data-target="sec-travel"><span class="dot-label">Travel</span></div>
+    <div class="sec-nav-dot" data-target="sec-art"><span class="dot-label">Artworks</span></div>
+    <div class="sec-nav-dot" data-target="sec-postcards"><span class="dot-label">Postcards</span></div>
+  </nav>
+
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
@@ -836,6 +894,29 @@
   </div>
 
   <script>
+    // ── SECTION SIDEBAR NAV ──
+    (function() {
+      const dots = document.querySelectorAll('.sec-nav-dot');
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const target = document.getElementById(dot.dataset.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      function updateActive() {
+        const mid = window.scrollY + window.innerHeight * 0.4;
+        let active = null;
+        dots.forEach(dot => {
+          const sec = document.getElementById(dot.dataset.target);
+          if (sec && sec.offsetTop <= mid) active = dot;
+        });
+        dots.forEach(d => d.classList.remove('active'));
+        if (active) active.classList.add('active');
+      }
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
     // ── READ PROGRESS BAR ──
     (function() {
       const bar = document.getElementById('read-progress');
