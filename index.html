@@ -698,16 +698,15 @@
       will-change: transform;
     }
 
-    /* Horizontal line — scroll-driven */
+    /* Horizontal line — scroll-driven, spans first→last dot */
     .tl-track::before {
       content: '';
       position: absolute;
-      left: 0; right: 0;
+      left: var(--tl-line-left, 0px);
       top: 62px;
+      width: var(--tl-line-width, 0px);
       height: 2px;
       background: var(--border);
-      transform-origin: left;
-      transform: scaleX(var(--tl-line, 0));
       z-index: 0;
     }
 
@@ -1574,8 +1573,16 @@
       ));
       const maxX = track.scrollWidth - window.innerWidth + 40;
       track.style.transform = `translateX(${-maxX * progress}px)`;
-      track.style.setProperty('--tl-line', progress);
       if (tlProgress) tlProgress.style.width = (progress * 100) + '%';
+
+      // Drive the connecting line from first dot center to last dot center
+      const entries = track.querySelectorAll('.tl-entry');
+      if (entries.length > 1) {
+        const first = entries[0].offsetLeft + entries[0].offsetWidth / 2;
+        const last  = entries[entries.length - 1].offsetLeft + entries[entries.length - 1].offsetWidth / 2;
+        track.style.setProperty('--tl-line-left', first + 'px');
+        track.style.setProperty('--tl-line-width', ((last - first) * progress) + 'px');
+      }
     }
     // Hook into existing onScroll
     const _origScroll = onScroll;
