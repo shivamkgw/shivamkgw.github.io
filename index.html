@@ -505,7 +505,6 @@
       width: 100%; height: 100%;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
-      filter: grayscale(1) contrast(1.15);
       opacity: 0;
       transition: opacity 0.2s;
     }
@@ -1701,21 +1700,55 @@
       animMb();
     })();
 
-    // ── PIXEL PORTRAIT HOVER ──
+    // ── PIXEL PORTRAIT HOVER (theme palette) ──
     (function() {
       const wrap = document.querySelector('.portrait-wrap');
       const img  = document.getElementById('portrait-img');
       const pxCv = document.getElementById('pixel-canvas');
       if (!wrap || !img || !pxCv) return;
       const pxCtx = pxCv.getContext('2d');
-      const BLOCK = 10; // pixel block size
+      const BLOCK = 10;
+
+      // 4-color palette: near-black, dark green, amber, cream
+      const PALETTE = [
+        [26,  26,  26],   // near-black
+        [29,  61,  47],   // dark green
+        [232, 148, 58],   // amber
+        [245, 240, 230],  // cream
+      ];
+
+      function nearest(r, g, b) {
+        let best = 0, bestDist = Infinity;
+        for (let i = 0; i < PALETTE.length; i++) {
+          const [pr, pg, pb] = PALETTE[i];
+          const d = (r-pr)**2 + (g-pg)**2 + (b-pb)**2;
+          if (d < bestDist) { bestDist = d; best = i; }
+        }
+        return PALETTE[best];
+      }
 
       function renderPixel() {
         const w = img.offsetWidth, h = img.offsetHeight;
-        pxCv.width  = Math.floor(w / BLOCK);
-        pxCv.height = Math.floor(h / BLOCK);
+        // sample image at block resolution into offscreen canvas
+        const off = document.createElement('canvas');
+        off.width  = Math.floor(w / BLOCK);
+        off.height = Math.floor(h / BLOCK);
+        const octx = off.getContext('2d');
+        octx.drawImage(img, 0, 0, off.width, off.height);
+        const data = octx.getImageData(0, 0, off.width, off.height);
+
+        // remap each pixel to nearest palette color
+        for (let i = 0; i < data.data.length; i += 4) {
+          const [nr, ng, nb] = nearest(data.data[i], data.data[i+1], data.data[i+2]);
+          data.data[i] = nr; data.data[i+1] = ng; data.data[i+2] = nb;
+        }
+        octx.putImageData(data, 0, 0);
+
+        // draw remapped image onto display canvas at block size
+        pxCv.width  = w;
+        pxCv.height = h;
         pxCtx.imageSmoothingEnabled = false;
-        pxCtx.drawImage(img, 0, 0, pxCv.width, pxCv.height);
+        pxCtx.drawImage(off, 0, 0, w, h);
       }
 
       wrap.addEventListener('mouseenter', () => {
