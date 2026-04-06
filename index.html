@@ -210,6 +210,7 @@
     /* ── HERO ── */
     .hero {
       background: var(--green) url('assets/img/hero-mountain.jpg') center 30%/cover no-repeat;
+      /* ALT HEROES: hero-alt1.jpg (figure+spire, back) | hero-alt2.jpg (figure+clouds+cows) */
       min-height: 100vh;
       position: relative;
       overflow: hidden;
@@ -1325,6 +1326,13 @@
       <span class="coord-dot"></span>
       <span class="coord-text">52.3676° N<br>4.9041° E</span>
     </a>
+
+    <!-- HERO COMPARE TOGGLE (remove when done picking) -->
+    <div id="hero-toggle" style="position:absolute;top:16px;right:16px;z-index:10;display:flex;gap:8px;">
+      <button onclick="setHero('hero-mountain.jpg','Current')" style="font-size:0.7rem;padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;">Current</button>
+      <button onclick="setHero('hero-alt1.jpg','Alt 1 — Spire')" style="font-size:0.7rem;padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;">Alt 1 — Spire</button>
+      <button onclick="setHero('hero-alt2.jpg','Alt 2 — Clouds')" style="font-size:0.7rem;padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;">Alt 2 — Clouds</button>
+    </div>
   </section>
 
   <!-- ABOUT -->
@@ -1671,6 +1679,16 @@
   </section>
 
   <script>
+    // ── HERO COMPARE TOGGLE ──
+    function setHero(file, label) {
+      document.querySelector('.hero').style.backgroundImage =
+        `url('assets/img/${file}')`;
+      document.querySelectorAll('#hero-toggle button').forEach(b => {
+        b.style.background = b.textContent.trim() === label
+          ? 'rgba(232,148,58,0.85)' : 'rgba(0,0,0,0.45)';
+      });
+    }
+
     // ── HAMBURGER NAV ──
     const hamburger = document.getElementById('nav-hamburger');
     const navMenu   = document.getElementById('nav-menu');
