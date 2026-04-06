@@ -889,7 +889,7 @@
       grid-template-columns: 2fr 1fr;
       gap: 60px;
       align-items: end;
-      padding-bottom: 60px;
+      padding: 0 60px 60px;
       border-bottom: 1px solid var(--border);
     }
     .scrapbook h2 {
@@ -940,7 +940,7 @@
       flex-shrink: 0;
     }
     .footer-meta {
-      padding: 28px 60px;
+      padding: 28px 0;
       font-size: 0.78rem;
       color: var(--muted);
       display: flex;
@@ -1545,9 +1545,15 @@
     const track     = document.getElementById('tl-track');
     const tlProgress = document.getElementById('tl-progress');
 
+    const isMobile = () => window.innerWidth <= 768;
+
     function setupTimeline() {
       if (!tlOuter || !track) return;
-      // Set outer height so scroll distance = track overhang + padding
+      if (isMobile()) {
+        tlOuter.style.height = '';
+        track.style.transform = '';
+        return;
+      }
       const overhang = track.scrollWidth - window.innerWidth;
       tlOuter.style.height = (overhang + window.innerHeight * 1.5) + 'px';
     }
@@ -1556,6 +1562,7 @@
 
     function updateTimeline() {
       if (!tlOuter || !track) return;
+      if (isMobile()) return;
       const rect = tlOuter.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1,
         -rect.top / (tlOuter.offsetHeight - window.innerHeight)
