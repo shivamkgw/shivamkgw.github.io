@@ -794,19 +794,15 @@
       border-radius: 7px;
       background: #fff;
       padding: 4px 6px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(0,0,0,0.10);
       transition: transform 0.2s ease;
-      mix-blend-mode: multiply;
     }
     .tl-logo:hover { transform: scale(1.12); }
-    .tl-logo.dark-bg { background: #111; mix-blend-mode: normal; }
+    .tl-logo.dark-bg { background: #111; border-color: rgba(255,255,255,0.10); }
     [data-theme="dark"] .tl-logo:not(.dark-bg) {
-      background: transparent;
-      mix-blend-mode: screen;
-      filter: brightness(1.1);
-      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.92);
+      border-color: rgba(255,255,255,0.15);
     }
-    [data-theme="dark"] .tl-logo.dark-bg { filter: brightness(1.2); }
     .tl-logo.conf { height: 28px; max-width: 60px; }
     /* IASc text badge (logo is blank) */
     .tl-logo-badge {
