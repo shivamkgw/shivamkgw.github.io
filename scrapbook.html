@@ -330,8 +330,13 @@
     .yt-label {
       font-size: 0.84rem;
       font-weight: 600;
-      color: var(--text);
+      color: var(--muted);
       padding: 0 2px;
+      transition: font-size 0.25s ease, color 0.25s ease;
+    }
+    .yt-card:hover .yt-label {
+      font-size: 0.95rem;
+      color: var(--text);
     }
     @media (max-width: 768px) { .yt-grid { grid-template-columns: 1fr; } }
 
