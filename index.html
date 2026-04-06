@@ -490,8 +490,9 @@
       width: 100%; height: 100%;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
+      filter: grayscale(1) contrast(1.15);
       opacity: 0;
-      transition: opacity 0.15s;
+      transition: opacity 0.2s;
     }
 
     /* ── RESEARCH ── */
@@ -1577,7 +1578,7 @@
       const pxCv = document.getElementById('pixel-canvas');
       if (!wrap || !img || !pxCv) return;
       const pxCtx = pxCv.getContext('2d');
-      const BLOCK = 5; // pixel block size
+      const BLOCK = 10; // pixel block size
 
       function renderPixel() {
         const w = img.offsetWidth, h = img.offsetHeight;
