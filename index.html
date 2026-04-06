@@ -21,7 +21,7 @@
   <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600&family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
   <script>
     // Apply theme before paint to prevent flash
     (function() {
@@ -166,6 +166,16 @@
       font-family: inherit;
     }
     .btn-cta:hover { background: #d47f2a; }
+
+    /* ── CIRCUIT OVERLAY ── */
+    .hero-circuit {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      color: rgba(160, 210, 180, 0.07);
+      pointer-events: none;
+      z-index: 1;
+    }
 
     /* ── HERO ── */
     .hero {
@@ -466,6 +476,32 @@
       border: none;
       border-top: 1px solid var(--border);
       margin: 0 60px;
+    }
+
+    /* ── MICROBIOME CANVAS ── */
+    #microbiome-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    /* ── PORTRAIT PIXEL HOVER ── */
+    .portrait-wrap {
+      position: relative;
+      cursor: none;
+    }
+    .portrait-wrap img { transition: opacity 0.15s; }
+    #pixel-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      opacity: 0;
+      transition: opacity 0.15s;
     }
 
     /* ── RESEARCH ── */
@@ -1046,6 +1082,30 @@
 
   <!-- HERO -->
   <section class="hero" style="--hero-overlay: rgba(13,32,25,0.55)">
+    <!-- Circuit board pattern overlay -->
+    <svg class="hero-circuit" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuit" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <!-- horizontal traces -->
+          <line x1="0" y1="20" x2="30" y2="20" stroke="currentColor" stroke-width="1"/>
+          <line x1="50" y1="20" x2="80" y2="20" stroke="currentColor" stroke-width="1"/>
+          <line x1="0" y1="60" x2="20" y2="60" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="60" x2="80" y2="60" stroke="currentColor" stroke-width="1"/>
+          <!-- vertical traces -->
+          <line x1="30" y1="20" x2="30" y2="0" stroke="currentColor" stroke-width="1"/>
+          <line x1="50" y1="20" x2="50" y2="60" stroke="currentColor" stroke-width="1"/>
+          <line x1="20" y1="60" x2="20" y2="80" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="60" x2="60" y2="80" stroke="currentColor" stroke-width="1"/>
+          <!-- nodes -->
+          <circle cx="30" cy="20" r="2.5" fill="currentColor"/>
+          <circle cx="50" cy="20" r="2.5" fill="currentColor"/>
+          <circle cx="20" cy="60" r="2.5" fill="currentColor"/>
+          <circle cx="60" cy="60" r="2.5" fill="currentColor"/>
+          <circle cx="50" cy="60" r="1.5" fill="currentColor"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit)"/>
+    </svg>
     <!-- Sparkles -->
     <span class="sparkle sparkle-1">✦</span>
     <span class="sparkle sparkle-2">✦</span>
@@ -1056,7 +1116,7 @@
       <div class="hero-display">
         <span class="line solid">SHIVAM</span>
         <span class="line">KUMAR</span>
-        <span class="line" style="font-family:'Caveat',cursive;letter-spacing:0.02em;text-transform:none;font-weight:700;font-size:clamp(32px,5vw,64px);">Water Bottle</span>
+        <span class="line" style="font-family:'Press Start 2P',monospace;letter-spacing:0.02em;text-transform:none;font-weight:400;font-size:clamp(14px,2.2vw,28px);line-height:1.6;opacity:0.85;">Water Bottle</span>
       </div>
       <p class="hero-role-label">PhD Candidate</p>
       <p class="hero-uni">University of Amsterdam</p>
@@ -1087,8 +1147,11 @@
       </div>
     </div>
     <div class="about-right" data-reveal="right">
-      <img src="assets/img/hero-portrait.jpg" alt="Shivam Kumar"
-           style="width:100%;max-width:320px;border-radius:12px;display:block;margin:0 auto 28px;">
+      <div class="portrait-wrap" style="width:100%;max-width:320px;margin:0 auto 28px;">
+        <img src="assets/img/hero-portrait.jpg" alt="Shivam Kumar" id="portrait-img"
+             style="width:100%;border-radius:12px;display:block;">
+        <canvas id="pixel-canvas" style="border-radius:12px;"></canvas>
+      </div>
       <div class="contact-card">
         <h3>Contact</h3>
         <p>
@@ -1111,6 +1174,7 @@
 
   <!-- RESEARCH -->
   <section class="research" id="research">
+    <canvas id="microbiome-canvas" aria-hidden="true"></canvas>
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/DNA-nobg.png" aria-hidden="true"
          style="height:105%;width:auto;left:-4%;top:50%;transform:translateY(-50%) rotate(-5deg);">
     <div class="section-header" data-reveal>
@@ -1486,6 +1550,94 @@
         });
       }
     });
+
+    // ── MICROBIOME CANVAS ──
+    (function() {
+      const cv = document.getElementById('microbiome-canvas');
+      if (!cv) return;
+      const cx = cv.getContext('2d');
+      function resize() { cv.width = cv.offsetWidth; cv.height = cv.offsetHeight; }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const spheres = Array.from({length: 22}, () => ({
+        x: Math.random(), y: Math.random(),
+        r: Math.random() * 0.09 + 0.025,
+        vx: (Math.random() - 0.5) * 0.00018,
+        vy: (Math.random() - 0.5) * 0.00018,
+        phase: Math.random() * Math.PI * 2
+      }));
+
+      let t = 0;
+      function drawSphere(s) {
+        const W = cv.width, H = cv.height;
+        const px = s.x * W, py = s.y * H;
+        const pr = s.r * Math.min(W, H) * (1 + Math.sin(t * 0.6 + s.phase) * 0.05);
+        const g = cx.createRadialGradient(px - pr*0.25, py - pr*0.25, 0, px, py, pr);
+        g.addColorStop(0,    'rgba(10,  25,  90, 0.92)');
+        g.addColorStop(0.3,  'rgba(30,  80, 185, 0.70)');
+        g.addColorStop(0.65, 'rgba(75, 140, 225, 0.38)');
+        g.addColorStop(0.88, 'rgba(140,190,255, 0.10)');
+        g.addColorStop(1,    'rgba(180,220,255, 0)');
+        cx.beginPath(); cx.arc(px, py, pr, 0, Math.PI*2);
+        cx.fillStyle = g; cx.fill();
+        cx.beginPath(); cx.arc(px, py, pr * 0.98, 0, Math.PI*2);
+        cx.strokeStyle = 'rgba(160,210,255,0.18)';
+        cx.lineWidth = 1; cx.stroke();
+        // thin radial spokes (like cilia)
+        for (let i = 0; i < 8; i++) {
+          const angle = (i / 8) * Math.PI * 2 + t * 0.05 + s.phase;
+          cx.beginPath();
+          cx.moveTo(px + Math.cos(angle)*pr*0.92, py + Math.sin(angle)*pr*0.92);
+          cx.lineTo(px + Math.cos(angle)*pr*1.18, py + Math.sin(angle)*pr*1.18);
+          cx.strokeStyle = 'rgba(160,210,255,0.10)'; cx.lineWidth = 0.8; cx.stroke();
+        }
+      }
+
+      function animMb() {
+        cx.clearRect(0, 0, cv.width, cv.height);
+        t += 0.016;
+        spheres.forEach(s => {
+          s.x += s.vx; s.y += s.vy;
+          if (s.x < -0.1) s.x = 1.1;
+          if (s.x > 1.1)  s.x = -0.1;
+          if (s.y < -0.1) s.y = 1.1;
+          if (s.y > 1.1)  s.y = -0.1;
+          drawSphere(s);
+        });
+        requestAnimationFrame(animMb);
+      }
+      animMb();
+    })();
+
+    // ── PIXEL PORTRAIT HOVER ──
+    (function() {
+      const wrap = document.querySelector('.portrait-wrap');
+      const img  = document.getElementById('portrait-img');
+      const pxCv = document.getElementById('pixel-canvas');
+      if (!wrap || !img || !pxCv) return;
+      const pxCtx = pxCv.getContext('2d');
+      const BLOCK = 10; // pixel block size
+
+      function renderPixel() {
+        const w = img.offsetWidth, h = img.offsetHeight;
+        pxCv.width  = Math.floor(w / BLOCK);
+        pxCv.height = Math.floor(h / BLOCK);
+        pxCtx.imageSmoothingEnabled = false;
+        pxCtx.drawImage(img, 0, 0, pxCv.width, pxCv.height);
+      }
+
+      wrap.addEventListener('mouseenter', () => {
+        if (img.complete) renderPixel();
+        else img.onload = renderPixel;
+        pxCv.style.opacity = '1';
+        img.style.opacity  = '0';
+      });
+      wrap.addEventListener('mouseleave', () => {
+        pxCv.style.opacity = '0';
+        img.style.opacity  = '1';
+      });
+    })();
 
     // ── DARK MODE ──
     const btn = document.getElementById('theme-toggle');
