@@ -1136,8 +1136,8 @@
     <!-- Right column: name + role + bio + logos -->
     <div class="hero-text-col">
       <div class="hero-display">
-        <span class="line solid">SHIVAM</span>
-        <span class="line">KUMAR</span>
+        <span class="line solid" data-scramble="SHIVAM">SHIVAM</span>
+        <span class="line" data-scramble="KUMAR">KUMAR</span>
         <span class="line" style="font-family:'Press Start 2P',monospace;letter-spacing:0.02em;text-transform:none;font-weight:400;font-size:clamp(14px,2.2vw,28px);line-height:1.6;opacity:0.85;">Water Bottle</span>
       </div>
       <p class="hero-role-label">PhD Candidate</p>
@@ -1720,6 +1720,41 @@
             <a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>
           </div>
         </div>`).join('');
+    })();
+
+    // ── HERO NAME SCRAMBLE ──
+    (function() {
+      const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%&';
+      const display = document.querySelector('.hero-display');
+      if (!display) return;
+
+      function scramble(el) {
+        const original = el.dataset.scramble;
+        let frame = 0;
+        const totalFrames = original.length * 4;
+        if (el._scrambleId) cancelAnimationFrame(el._scrambleId);
+
+        function tick() {
+          const progress = frame / totalFrames;
+          el.textContent = original.split('').map((ch, i) => {
+            if (i < Math.floor(progress * original.length)) return ch;
+            return CHARS[Math.floor(Math.random() * CHARS.length)];
+          }).join('');
+          frame++;
+          if (frame <= totalFrames) {
+            el._scrambleId = requestAnimationFrame(tick);
+          } else {
+            el.textContent = original;
+          }
+        }
+        tick();
+      }
+
+      display.addEventListener('mouseenter', () => {
+        display.querySelectorAll('[data-scramble]').forEach((el, i) => {
+          setTimeout(() => scramble(el), i * 80);
+        });
+      });
     })();
 
     // ── DARK MODE ──
