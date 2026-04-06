@@ -21,7 +21,7 @@
   <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/portrait.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script>
     // Apply theme before paint to prevent flash
     (function() {
@@ -96,6 +96,20 @@
     /* Expand ring on hover over clickable elements */
     a:hover ~ #cursor-ring,
     button:hover ~ #cursor-ring { width: 52px; height: 52px; opacity: 0.85; }
+
+    /* ── SIDE SCROLL PROGRESS ── */
+    #side-progress {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 3px;
+      height: 0%;
+      background: var(--amber);
+      z-index: 9000;
+      pointer-events: none;
+      transition: height 0.05s linear;
+      border-radius: 0 0 2px 2px;
+    }
 
     body {
       font-family: 'Open Sans', sans-serif;
@@ -202,12 +216,12 @@
       margin-bottom: 28px;
     }
     .hero-display .line {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 800;
-      font-size: clamp(80px, 13vw, 160px);
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: clamp(60px, 10vw, 130px);
       color: transparent;
       -webkit-text-stroke: 1.5px rgba(245,240,230,0.18);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       display: block;
       opacity: 0;
       animation: heroLineIn 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
@@ -332,6 +346,7 @@
       transition: transform 0.25s ease;
     }
     .hero-logo:hover { transform: scale(1.08); }
+    .hero-logo.light-bg { background: #fff; border-color: rgba(0,0,0,0.10); }
 
     .scroll-pill {
       position: absolute;
@@ -906,15 +921,28 @@
     }
     .btn-scrap {
       display: inline-block;
-      background: var(--green);
-      color: var(--light);
-      font-size: 0.88rem;
-      font-weight: 600;
-      padding: 12px 28px;
-      border-radius: 100px;
+      background: var(--text);
+      color: var(--cream);
+      font-family: 'Caveat', cursive;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 11px 30px 9px;
+      border-radius: 3px;
+      border: 2px solid var(--text);
+      box-shadow: 5px 5px 0 var(--amber);
+      letter-spacing: 0.04em;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
     }
-    [data-theme="dark"] .btn-scrap { background: var(--amber); }
-    .btn-scrap:hover { opacity: 0.85; }
+    [data-theme="dark"] .btn-scrap {
+      background: var(--light);
+      color: var(--text);
+      border-color: var(--light);
+      box-shadow: 5px 5px 0 var(--amber);
+    }
+    .btn-scrap:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--amber);
+    }
     .hobby-list {
       display: flex;
       flex-direction: column;
@@ -1102,6 +1130,9 @@
 </head>
 <body>
 
+  <!-- SIDE SCROLL PROGRESS -->
+  <div id="side-progress"></div>
+
   <!-- CUSTOM CURSOR -->
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
@@ -1144,7 +1175,7 @@
       <p class="hero-uni">University of Amsterdam</p>
       <p class="hero-bio">METAHEALTH / DIGEST, Computational Science Lab, Informatics Institute. Multiscale spatiotemporal modelling of the microbiome during the first 1000 days of life.</p>
       <div class="hero-inst-logos">
-        <img src="assets/img/logos/lab42.png" alt="Lab42" class="hero-logo">
+        <img src="assets/img/logos/lab42.png" alt="Lab42" class="hero-logo light-bg">
         <img src="assets/img/logos/uva.png" alt="UvA" class="hero-logo">
       </div>
     </div>
@@ -1502,11 +1533,17 @@
     const hero = document.querySelector('.hero');
 
     // ── PARALLAX ──
+    const sideProgress = document.getElementById('side-progress');
     function onScroll() {
       const y = window.scrollY;
       nav.classList.toggle('scrolled', y > 80);
       // Parallax: bg moves at 35% of scroll speed
       if (hero) hero.style.backgroundPositionY = `calc(50% + ${y * 0.35}px)`;
+      // Side progress bar
+      if (sideProgress) {
+        const total = document.body.scrollHeight - window.innerHeight;
+        sideProgress.style.height = (total > 0 ? (y / total) * 100 : 0) + '%';
+      }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
 
