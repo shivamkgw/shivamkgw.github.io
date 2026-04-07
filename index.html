@@ -414,9 +414,13 @@
       text-decoration: none;
     }
     .scroll-pill .coord-dot {
+      display: block;
       width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--amber);
+      flex-shrink: 0;
+      line-height: 0;
+      font-size: 0;
       animation: coordPulse 1.8s ease-in-out infinite;
     }
     @keyframes coordPulse {
