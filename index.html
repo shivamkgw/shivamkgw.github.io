@@ -94,13 +94,18 @@
       z-index: 10004;
       transform: translate(-50%, -50%);
       opacity: 0.5;
+      background: transparent;
       transition: width 0.3s cubic-bezier(0.22,1,0.36,1),
                   height 0.3s cubic-bezier(0.22,1,0.36,1),
-                  opacity 0.3s;
+                  opacity 0.3s, background 0.3s, border-width 0.3s;
     }
-    /* Expand ring on hover over clickable elements */
-    a:hover ~ #cursor-ring,
-    button:hover ~ #cursor-ring { width: 52px; height: 52px; opacity: 0.85; }
+    #cursor-ring.is-hovering {
+      width: 56px;
+      height: 56px;
+      opacity: 0.9;
+      border-width: 2px;
+      background: rgba(232,148,58,0.12);
+    }
 
     /* ── SIDE SCROLL PROGRESS ── */
     #side-progress {
@@ -809,7 +814,7 @@
       flex-direction: row;
       align-items: flex-start;
       position: relative;
-      padding: 0 120px 0 0;
+      padding: 0 280px 0 0;
       will-change: transform;
     }
 
@@ -843,7 +848,7 @@
     .tl-year {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.15rem;
       color: var(--amber-aa);
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -880,14 +885,14 @@
     }
     .tl-card strong {
       display: block;
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--text);
       line-height: 1.45;
       margin-bottom: 10px;
     }
     .tl-card span {
-      font-size: 0.92rem;
+      font-size: 1rem;
       color: var(--muted);
       line-height: 1.65;
       display: -webkit-box;
@@ -967,7 +972,7 @@
     }
     .tl-pinned-header span {
       font-family: 'Space Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       color: var(--muted);
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1855,21 +1860,22 @@
     })();
 
     // Expand on interactive elements
-    document.querySelectorAll('a, button, [onclick]').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        ring.style.width  = '54px';
-        ring.style.height = '54px';
-        ring.style.opacity = '0.9';
-        dot.style.width  = '12px';
-        dot.style.height = '12px';
-      });
-      el.addEventListener('mouseleave', () => {
-        ring.style.width  = '36px';
-        ring.style.height = '36px';
-        ring.style.opacity = '0.5';
+    function setCursorHover(on) {
+      if (on) {
+        ring.classList.add('is-hovering');
+        dot.style.width  = '4px';
+        dot.style.height = '4px';
+        dot.style.opacity = '0.6';
+      } else {
+        ring.classList.remove('is-hovering');
         dot.style.width  = '8px';
         dot.style.height = '8px';
-      });
+        dot.style.opacity = '1';
+      }
+    }
+    document.querySelectorAll('a, button, [onclick], .r-card, .nav-link, .about-social-link').forEach(el => {
+      el.addEventListener('mouseenter', () => setCursorHover(true));
+      el.addEventListener('mouseleave', () => setCursorHover(false));
     });
 
     // Hide when leaving window
@@ -1952,7 +1958,7 @@
       const progress = Math.max(0, Math.min(1,
         -rect.top / (tlOuter.offsetHeight - window.innerHeight)
       ));
-      const maxX = track.scrollWidth - window.innerWidth + 40;
+      const maxX = track.scrollWidth - window.innerWidth - 80;
       track.style.transform = `translateX(${-maxX * progress}px)`;
       if (tlProgress) tlProgress.style.width = (progress * 100) + '%';
 
