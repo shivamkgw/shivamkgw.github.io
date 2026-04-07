@@ -1,0 +1,5 @@
+pickup_images/
+.claude/
+*.tmp
+Thumbs.db
+.DS_Store
