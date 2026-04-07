@@ -816,7 +816,7 @@
       content: '';
       position: absolute;
       left: var(--tl-line-left, 0px);
-      top: 56px;
+      top: var(--tl-line-top, 68px);
       width: var(--tl-line-width, 0px);
       height: 2px;
       background: var(--border);
@@ -1947,6 +1947,12 @@
         const last  = entries[entries.length - 1].offsetLeft + entries[entries.length - 1].offsetWidth / 2;
         track.style.setProperty('--tl-line-left', first + 'px');
         track.style.setProperty('--tl-line-width', ((last - first) * progress) + 'px');
+        // Compute dot vertical center from first entry
+        const firstNode = entries[0].querySelector('.tl-node');
+        if (firstNode) {
+          const dotTop = firstNode.offsetTop + firstNode.offsetHeight / 2;
+          track.style.setProperty('--tl-line-top', dotTop + 'px');
+        }
       }
     }
     // Hook into existing onScroll
