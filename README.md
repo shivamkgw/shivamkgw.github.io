@@ -30,7 +30,6 @@ Vanilla HTML, CSS, and JavaScript, no frameworks or build tools.
 │   │   ├── portfolio/      # Artwork and guitar photos
 │   │   └── *.jpg / *.png   # Hero, research, travel, photography images
 │   └── metahealth-poster.pdf
-└── forms/
 ```
 
 ## Features
