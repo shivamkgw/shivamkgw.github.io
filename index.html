@@ -515,7 +515,7 @@
       justify-content: center;
       width: 38px;
       height: 38px;
-      border-radius: 10px;
+      border-radius: 14px;
       border: 1px solid var(--border);
       background: var(--card-bg);
       color: var(--muted);
@@ -547,7 +547,7 @@
     .contact-card {
       background: var(--green);
       color: var(--cream);
-      border-radius: 8px;
+      border-radius: 16px;
       padding: 28px;
       margin-bottom: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
@@ -662,7 +662,7 @@
       gap: 20px;
     }
     .r-card {
-      border-radius: 8px;
+      border-radius: 14px;
       padding: 0;
       border: 1px solid var(--border);
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -673,7 +673,7 @@
       flex-direction: column;
     }
     .r-card-img-wrap {
-      border-radius: 8px 8px 0 0;
+      border-radius: 14px 14px 0 0;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -834,7 +834,7 @@
       flex-direction: row;
       align-items: flex-start;
       position: relative;
-      padding: 0 280px 0 0;
+      padding: 0 420px 0 0;
       will-change: transform;
     }
 
@@ -1136,7 +1136,7 @@
     .poster-embed {
       flex: 0 0 240px;
       height: 580px;
-      border-radius: 8px;
+      border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border);
       background: #fff;
@@ -1174,7 +1174,7 @@
       font-size: 0.85rem;
       font-weight: 600;
       padding: 10px 20px;
-      border-radius: 8px;
+      border-radius: 100px;
       transition: opacity 0.2s;
     }
     .poster-download:hover { opacity: 0.85; }
@@ -2053,7 +2053,7 @@
       const progress = Math.max(0, Math.min(1,
         -rect.top / (tlOuter.offsetHeight - window.innerHeight)
       ));
-      const maxX = track.scrollWidth - window.innerWidth - 80;
+      const maxX = track.scrollWidth - window.innerWidth - 200;
       track.style.transform = `translateX(${-maxX * progress}px)`;
       if (tlProgress) tlProgress.style.width = (progress * 100) + '%';
 
