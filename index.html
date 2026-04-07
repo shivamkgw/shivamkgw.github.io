@@ -937,15 +937,38 @@
     }
     .tl-logo-badge:hover { transform: scale(1.12); }
 
-    /* Progress bar across top of sticky */
+    /* Progress bar along bottom of sticky */
     .tl-progress {
       position: absolute;
-      top: 0; left: 0;
+      bottom: 0; left: 0;
       height: 3px;
       background: var(--amber);
       width: 0%;
       transition: width 0.05s linear;
       z-index: 10;
+    }
+
+    /* Pinned timeline title */
+    .tl-pinned-header {
+      position: absolute;
+      top: 36px; left: 60px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .tl-pinned-header h2 {
+      font-family: 'Caveat', cursive;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+      margin: 0 0 2px 0;
+    }
+    .tl-pinned-header span {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     @media (max-width: 768px) {
@@ -1580,13 +1603,13 @@
   <div class="timeline-outer" id="timeline-outer">
   <div class="timeline-sticky" id="timeline-sticky">
     <div class="tl-progress" id="tl-progress"></div>
+    <div class="tl-pinned-header">
+      <h2>Timeline</h2>
+      <span>03 &nbsp;/&nbsp; scroll to explore</span>
+    </div>
   <section class="timeline-section" style="position:relative;">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/WOLF-nobg.png" aria-hidden="true"
          style="height:100%;width:auto;right:0%;top:50%;transform:translateY(-50%) rotate(4deg);">
-    <div class="section-header" data-reveal>
-      <h2 class="section-script">Timeline</h2>
-      <span class="section-num">03</span>
-    </div>
     <div class="tl-track" id="tl-track">
 
       <div class="tl-entry">
