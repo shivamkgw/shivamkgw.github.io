@@ -1,6 +1,6 @@
 # shivamkgw.github.io
 
-Personal portfolio and scrapbook of Shivam Kumar — PhD Candidate at the Computational Science Lab, University of Amsterdam.
+Personal portfolio and scrapbook of Shivam Kumar, PhD Candidate at the Computational Science Lab, University of Amsterdam.
 
 **Live:** [shivamkgw.github.io](https://shivamkgw.github.io)
 
@@ -8,12 +8,12 @@ Personal portfolio and scrapbook of Shivam Kumar — PhD Candidate at the Comput
 
 ## Pages
 
-- **index.html** — Main portfolio: About, Research, Timeline, Publications, Posters, Tools
-- **scrapbook.html** — Personal scrapbook: Music, Film, Photography, Guitar, Travel, Art, Postcards
+- **index.html**: Main portfolio: About, Research, Timeline, Publications, Posters, Tools
+- **scrapbook.html**: Personal scrapbook: Music, Film, Photography, Guitar, Travel, Art, Postcards
 
 ## Stack
 
-Vanilla HTML, CSS, and JavaScript — no frameworks or build tools.
+Vanilla HTML, CSS, and JavaScript, no frameworks or build tools.
 
 **Fonts** (Google Fonts CDN): Fraunces, Open Sans, Caveat, Space Mono
 **Assets:** Self-hosted images and PDF poster
