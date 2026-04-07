@@ -97,14 +97,15 @@
       background: transparent;
       transition: width 0.3s cubic-bezier(0.22,1,0.36,1),
                   height 0.3s cubic-bezier(0.22,1,0.36,1),
-                  opacity 0.3s, background 0.3s, border-width 0.3s;
+                  opacity 0.3s, background 0.3s, border-width 0.3s, border-color 0.3s;
     }
     #cursor-ring.is-hovering {
       width: 56px;
       height: 56px;
-      opacity: 0.9;
-      border-width: 2px;
-      background: rgba(232,148,58,0.12);
+      opacity: 1;
+      border-width: 2.5px;
+      border-color: #fff;
+      background: rgba(232,148,58,0.18);
     }
 
     /* ── SIDE SCROLL PROGRESS ── */
@@ -130,6 +131,16 @@
       transition: background 0.2s, color 0.2s;
     }
     a { color: inherit; text-decoration: none; }
+    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link) {
+      transition: color 0.2s, background 0.2s;
+    }
+    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link):hover {
+      color: var(--amber);
+      background: rgba(232,148,58,0.08);
+      border-radius: 3px;
+      outline: 2px solid rgba(232,148,58,0.15);
+      outline-offset: 2px;
+    }
 
     /* ── NAV ── */
     nav {
@@ -1863,14 +1874,16 @@
     function setCursorHover(on) {
       if (on) {
         ring.classList.add('is-hovering');
-        dot.style.width  = '4px';
-        dot.style.height = '4px';
-        dot.style.opacity = '0.6';
+        dot.style.width      = '4px';
+        dot.style.height     = '4px';
+        dot.style.opacity    = '0.7';
+        dot.style.background = '#fff';
       } else {
         ring.classList.remove('is-hovering');
-        dot.style.width  = '8px';
-        dot.style.height = '8px';
-        dot.style.opacity = '1';
+        dot.style.width      = '8px';
+        dot.style.height     = '8px';
+        dot.style.opacity    = '1';
+        dot.style.background = '';
       }
     }
     document.querySelectorAll('a, button, [onclick], .r-card, .nav-link, .about-social-link').forEach(el => {
