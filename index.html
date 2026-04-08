@@ -2054,6 +2054,14 @@
 
     const isMobile = () => window.innerWidth <= 768;
 
+    function tlMaxX() {
+      const entries = track.querySelectorAll('.tl-entry');
+      if (!entries.length) return 0;
+      const last = entries[entries.length - 1];
+      // Scroll until the last entry's right edge sits 80px from the viewport right
+      return Math.max(0, last.offsetLeft + last.offsetWidth - window.innerWidth + 80);
+    }
+
     function setupTimeline() {
       if (!tlOuter || !track) return;
       if (isMobile()) {
@@ -2061,20 +2069,20 @@
         track.style.transform = '';
         return;
       }
-      const overhang = track.scrollWidth - window.innerWidth;
-      tlOuter.style.height = (overhang + window.innerHeight) + 'px';
+      tlOuter.style.height = (tlMaxX() + window.innerHeight) + 'px';
     }
     setupTimeline();
     window.addEventListener('resize', setupTimeline);
+    window.addEventListener('load', setupTimeline);
 
     function updateTimeline() {
       if (!tlOuter || !track) return;
       if (isMobile()) return;
       const rect = tlOuter.getBoundingClientRect();
+      const maxX = tlMaxX();
       const progress = Math.max(0, Math.min(1,
-        -rect.top / (tlOuter.offsetHeight - window.innerHeight)
+        -rect.top / maxX
       ));
-      const maxX = track.scrollWidth - window.innerWidth - 200;
       track.style.transform = `translateX(${-maxX * progress}px)`;
       if (tlProgress) tlProgress.style.width = (progress * 100) + '%';
 
