@@ -1143,7 +1143,7 @@
     }
     .poster-embed {
       flex: 0 0 240px;
-      height: 580px;
+      aspect-ratio: 2384 / 3370;
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -1190,7 +1190,7 @@
     @media (max-width: 768px) {
       .posters { padding: 60px 24px; }
       .poster-card { flex-direction: column; }
-      .poster-embed { flex: none; width: 100%; height: 420px; }
+      .poster-embed { flex: none; width: 100%; aspect-ratio: 2384 / 3370; }
     }
 
     /* ── PUBLICATIONS ── */
@@ -1867,6 +1867,26 @@
         <h3>MetaHealth: Linking Microbiome Dysbiosis to Childhood Obesity and Dental Caries</h3>
         <p>Scientific poster presented as part of the MetaHealth project, an NWO-funded research programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
         <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener" class="poster-download">
+          &#8599;&nbsp; Open Poster (PDF)
+        </a>
+      </div>
+    </div>
+    <div class="poster-card" data-reveal>
+      <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener"
+         class="poster-embed" style="display:block;text-decoration:none;position:relative;"
+         title="Open poster PDF">
+        <iframe src="assets/metahealth-consortium-poster.pdf#view=Fit&zoom=page-fit&toolbar=0&navpanes=0&scrollbar=0"
+                style="width:100%;height:100%;border:none;pointer-events:none;"
+                title="MetaHealth Consortium Poster"></iframe>
+        <div style="position:absolute;inset:0;"></div>
+      </a>
+      <div class="poster-meta">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
+        </div>
+        <h3>MetaHealth Consortium: Research Plans</h3>
+        <p>Scientific poster presented at the MetaHealth Consortium meeting (April 2026), outlining research plans within the NWO-funded programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
+        <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener" class="poster-download">
           &#8599;&nbsp; Open Poster (PDF)
         </a>
       </div>
