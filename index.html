@@ -1131,20 +1131,26 @@
     .posters {
       padding: 80px 60px;
     }
+    .posters-grid {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
     .poster-card {
       display: flex;
-      gap: 32px;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+      min-width: 260px;
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 28px;
-      max-width: 860px;
     }
     .poster-embed {
-      flex: 0 0 240px;
+      width: 100%;
       aspect-ratio: 2384 / 3370;
-      border-radius: 14px;
+      border-radius: 10px;
       overflow: hidden;
       border: 1px solid var(--border);
       background: #fff;
@@ -1154,11 +1160,6 @@
     .poster-embed:hover {
       box-shadow: 0 12px 32px rgba(0,0,0,0.18);
       transform: translateY(-3px);
-    }
-    .poster-embed object {
-      width: 100%;
-      height: 100%;
-      display: block;
     }
     .poster-meta { flex: 1; }
     .poster-meta h3 {
@@ -1189,8 +1190,7 @@
     [data-theme="dark"] .poster-download { background: var(--amber); color: #1a1a1a; }
     @media (max-width: 768px) {
       .posters { padding: 60px 24px; }
-      .poster-card { flex-direction: column; }
-      .poster-embed { flex: none; width: 100%; aspect-ratio: 2384 / 3370; }
+      .posters-grid { flex-direction: column; }
     }
 
     /* ── PUBLICATIONS ── */
@@ -1851,44 +1851,46 @@
       <h2 class="section-script">Posters</h2>
       <span class="section-num">04</span>
     </div>
-    <div class="poster-card" data-reveal>
-      <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener"
-         class="poster-embed" style="display:block;text-decoration:none;position:relative;"
-         title="Open poster PDF">
-        <iframe src="assets/metahealth-poster.pdf#view=Fit&zoom=page-fit&toolbar=0&navpanes=0&scrollbar=0"
-                style="width:100%;height:100%;border:none;pointer-events:none;"
-                title="MetaHealth Poster"></iframe>
-        <div style="position:absolute;inset:0;"></div>
-      </a>
-      <div class="poster-meta">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
-        </div>
-        <h3>MetaHealth: Linking Microbiome Dysbiosis to Childhood Obesity and Dental Caries</h3>
-        <p>Scientific poster presented as part of the MetaHealth project, an NWO-funded research programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
-        <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener" class="poster-download">
-          &#8599;&nbsp; Open Poster (PDF)
+    <div class="posters-grid">
+      <div class="poster-card" data-reveal>
+        <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener"
+           class="poster-embed" style="display:block;text-decoration:none;position:relative;"
+           title="Open poster PDF">
+          <iframe src="assets/metahealth-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+                  style="width:100%;height:100%;border:none;pointer-events:none;"
+                  title="MetaHealth Poster"></iframe>
+          <div style="position:absolute;inset:0;"></div>
         </a>
+        <div class="poster-meta">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
+          </div>
+          <h3>MetaHealth: Linking Microbiome Dysbiosis to Childhood Obesity and Dental Caries</h3>
+          <p>Scientific poster presented as part of the MetaHealth project, an NWO-funded research programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
+          <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener" class="poster-download">
+            &#8599;&nbsp; Open Poster (PDF)
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="poster-card" data-reveal>
-      <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener"
-         class="poster-embed" style="display:block;text-decoration:none;position:relative;"
-         title="Open poster PDF">
-        <iframe src="assets/metahealth-consortium-poster.pdf#view=Fit&zoom=page-fit&toolbar=0&navpanes=0&scrollbar=0"
-                style="width:100%;height:100%;border:none;pointer-events:none;"
-                title="MetaHealth Consortium Poster"></iframe>
-        <div style="position:absolute;inset:0;"></div>
-      </a>
-      <div class="poster-meta">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
-        </div>
-        <h3>MetaHealth Consortium: Research Plans</h3>
-        <p>Scientific poster presented at the MetaHealth Consortium meeting (April 2026), outlining research plans within the NWO-funded programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
-        <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener" class="poster-download">
-          &#8599;&nbsp; Open Poster (PDF)
+      <div class="poster-card" data-reveal>
+        <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener"
+           class="poster-embed" style="display:block;text-decoration:none;position:relative;"
+           title="Open poster PDF">
+          <iframe src="assets/metahealth-consortium-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+                  style="width:100%;height:100%;border:none;pointer-events:none;"
+                  title="MetaHealth Consortium Poster"></iframe>
+          <div style="position:absolute;inset:0;"></div>
         </a>
+        <div class="poster-meta">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <img src="assets/img/logo-metahealth.jpg" alt="MetaHealth" style="height:36px;width:auto;border-radius:4px;">
+          </div>
+          <h3>MetaHealth Consortium: Research Plans</h3>
+          <p>Scientific poster presented at the MetaHealth Consortium meeting (April 2026), outlining research plans within the NWO-funded programme investigating the gut microbiome, dental health, and childhood obesity. Amsterdam UMC &amp; University of Amsterdam.</p>
+          <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener" class="poster-download">
+            &#8599;&nbsp; Open Poster (PDF)
+          </a>
+        </div>
       </div>
     </div>
   </section>
