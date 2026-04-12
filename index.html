@@ -1015,9 +1015,9 @@
       }
       .tl-pinned-header h2 { font-size: 2rem; }
 
-      /* Vertical stacked track */
+      /* Vertical stacked track — newest first */
       .tl-track {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: stretch;
         padding: 0 0 0 0;
         transform: none !important;
@@ -1042,7 +1042,7 @@
         position: relative;
       }
       .tl-entry:hover { transform: none !important; }
-      .tl-entry:last-child { padding-bottom: 0; }
+      .tl-entry:first-child { padding-bottom: 0; }
 
       /* Node pinned on the right rail */
       .tl-node {
@@ -1157,6 +1157,16 @@
       box-shadow: 0 12px 32px rgba(0,0,0,0.18);
       transform: translateY(-3px);
     }
+    /* Mobile thumb hidden on desktop; shown only on mobile */
+    .poster-mobile-thumb {
+      display: none;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
     .poster-meta { flex: 1; }
     .poster-meta h3 {
       font-family: 'Fraunces', serif;
@@ -1221,8 +1231,10 @@
     @media (max-width: 768px) {
       .posters { padding: 60px 24px; }
       .posters-grid { flex-direction: column; }
+      /* Show image thumbnail, hide iframe */
+      .poster-iframe { display: none; }
+      .poster-mobile-thumb { display: block; }
       .poster-embed {
-        max-height: 300px;
         clip-path: none;
         overflow: hidden;
       }
@@ -1909,8 +1921,11 @@
            class="poster-embed" style="display:block;text-decoration:none;position:relative;"
            title="Open poster PDF">
           <iframe data-src="assets/metahealth-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+                  class="poster-iframe"
                   style="width:100%;height:100%;border:none;pointer-events:none;"
                   title="MetaHealth Poster"></iframe>
+          <img src="assets/poster-metahealth-thumb.jpg" alt="MetaHealth Poster preview"
+               class="poster-mobile-thumb">
           <div class="poster-loading"></div>
           <div class="poster-tap-hint" style="position:absolute;inset:0;"></div>
         </a>
@@ -1931,8 +1946,11 @@
            class="poster-embed" style="display:block;text-decoration:none;position:relative;"
            title="Open poster PDF">
           <iframe data-src="assets/metahealth-consortium-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+                  class="poster-iframe"
                   style="width:100%;height:100%;border:none;pointer-events:none;"
                   title="MetaHealth Consortium Poster"></iframe>
+          <img src="assets/poster-consortium-thumb.jpg" alt="MetaHealth Consortium Poster preview"
+               class="poster-mobile-thumb">
           <div class="poster-loading"></div>
           <div class="poster-tap-hint" style="position:absolute;inset:0;"></div>
         </a>
