@@ -1883,7 +1883,7 @@
         <a href="assets/metahealth-poster.pdf" target="_blank" rel="noopener"
            class="poster-embed" style="display:block;text-decoration:none;position:relative;"
            title="Open poster PDF">
-          <iframe src="assets/metahealth-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+          <iframe data-src="assets/metahealth-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
                   style="width:100%;height:100%;border:none;pointer-events:none;"
                   title="MetaHealth Poster"></iframe>
           <div class="poster-loading"></div>
@@ -1905,7 +1905,7 @@
         <a href="assets/metahealth-consortium-poster.pdf" target="_blank" rel="noopener"
            class="poster-embed" style="display:block;text-decoration:none;position:relative;"
            title="Open poster PDF">
-          <iframe src="assets/metahealth-consortium-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+          <iframe data-src="assets/metahealth-consortium-poster.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
                   style="width:100%;height:100%;border:none;pointer-events:none;"
                   title="MetaHealth Consortium Poster"></iframe>
           <div class="poster-loading"></div>
@@ -2070,12 +2070,27 @@
     window.addEventListener('scroll', onScroll, { passive: true });
 
     // ── POSTER LOADING OVERLAY ──
-    document.querySelectorAll('.poster-embed iframe').forEach(iframe => {
-      const overlay = iframe.closest('.poster-embed').querySelector('.poster-loading');
-      if (!overlay) return;
-      iframe.addEventListener('load', () => overlay.classList.add('done'));
-      // Fallback: remove after 8s in case load never fires (e.g. PDF blocked)
-      setTimeout(() => overlay.classList.add('done'), 8000);
+    // Iframes use data-src so PDFs only load when scrolled into view.
+    // The overlay stays visible until the PDF has had time to render (load + 2.5s buffer).
+    document.querySelectorAll('.poster-embed').forEach(embed => {
+      const iframe  = embed.querySelector('iframe[data-src]');
+      const overlay = embed.querySelector('.poster-loading');
+      if (!iframe || !overlay) return;
+
+      const dismiss = () => overlay.classList.add('done');
+
+      const io = new IntersectionObserver(entries => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        // Kick off the load
+        iframe.src = iframe.dataset.src;
+        // Wait for network load, then give PDF renderer 2.5s extra
+        iframe.addEventListener('load', () => setTimeout(dismiss, 2500), { once: true });
+        // Hard fallback: 12s from when we started loading
+        setTimeout(dismiss, 12000);
+      }, { threshold: 0.1 });
+
+      io.observe(embed);
     });
 
     // ── CURSOR SPOTLIGHT ──
