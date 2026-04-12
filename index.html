@@ -1233,11 +1233,7 @@
       .posters-grid { flex-direction: column; }
       /* Show image thumbnail, hide iframe */
       .poster-iframe { display: none; }
-      .poster-mobile-thumb { display: block; }
-      .poster-embed {
-        clip-path: none;
-        overflow: hidden;
-      }
+      .poster-mobile-thumb { display: block; border-radius: 10px; }
       .poster-tap-hint::after {
         content: '↗ Tap to open poster';
         position: absolute;
@@ -2121,6 +2117,13 @@
       if (!iframe || !overlay) return;
 
       const dismiss = () => overlay.classList.add('done');
+
+      // Mobile: dismiss as soon as the thumbnail image loads
+      const thumb = embed.querySelector('.poster-mobile-thumb');
+      if (thumb) {
+        if (thumb.complete) dismiss();
+        else thumb.addEventListener('load', dismiss, { once: true });
+      }
 
       const io = new IntersectionObserver(entries => {
         if (!entries[0].isIntersecting) return;
