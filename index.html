@@ -2367,7 +2367,7 @@
               <div class="pub-title">${titleHtml}</div>
               <div class="pub-meta">
                 ${p.year ? `<span class="pub-year">${p.year}</span>` : ''}
-                ${p.type ? `<span class="pub-journal">${p.type}</span>` : ''}
+                ${p.journal ? `<span class="pub-journal">${p.journal}</span>` : (p.type ? `<span class="pub-journal">${p.type}</span>` : '')}
                 ${p.authors ? `<span style="color:var(--muted)">${p.authors}</span>` : ''}
                 ${doiLink}
               </div>
@@ -2387,11 +2387,12 @@
           const summary = group['work-summary']?.[0];
           if (!summary) return null;
 
-          const title = summary.title?.title?.value || '(Untitled)';
-          const year  = summary['publication-date']?.year?.value || '';
-          const type  = summary.type
+          const title   = summary.title?.title?.value || '(Untitled)';
+          const year    = summary['publication-date']?.year?.value || '';
+          const type    = summary.type
             ? summary.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
             : '';
+          const journal = summary['journal-title']?.value || '';
 
           // Extract DOI from external-ids
           const extIds = summary['external-ids']?.['external-id'] || [];
@@ -2418,7 +2419,7 @@
             }
           } catch (_) { /* skip contributor fetch errors */ }
 
-          return { title, year, type, doi, authors };
+          return { title, year, type, journal, doi, authors };
         }));
 
         return pubs
