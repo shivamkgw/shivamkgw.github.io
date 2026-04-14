@@ -2344,38 +2344,94 @@
       });
     })();
 
-    // ── PUBLICATIONS ── (add new entries here when needed)
+    // ── PUBLICATIONS ── (fetched live from ORCID public API)
     (function() {
+      const ORCID_ID = '0009-0005-6766-6565';
       const list = document.getElementById('pub-list');
       if (!list) return;
-      const pubs = [
-        {
-          title: 'Integrating Microbiome Data Visualization into FAIRDatabase using Edge Functions',
-          year: '2026',
-          type: 'Preprint',
-          doi: '10.21203/rs.3.rs-8681047/v1',
-          authors: 'Roman van Eldijk; Shivam Kumar; Vivek Sheraton M'
-        },
-        {
-          title: 'Multivariate data analysis using recurrence measures',
-          year: '2024',
-          type: 'Preprint',
-          doi: '10.48550/ARXIV.2411.01201',
-          authors: 'Shivam Kumar; R. Misra; G. Ambika'
+
+      function renderPubs(pubs) {
+        if (!pubs.length) {
+          list.innerHTML = '<p class="pub-loading">No publications found on ORCID.</p>';
+          return;
         }
-      ];
-      list.innerHTML = pubs.map(p => `
-        <div class="pub-item">
-          <div class="pub-title">
-            <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>
-          </div>
-          <div class="pub-meta">
-            <span class="pub-year">${p.year}</span>
-            <span class="pub-journal">${p.type}</span>
-            <span style="color:var(--muted)">${p.authors}</span>
-            <a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>
-          </div>
-        </div>`).join('');
+        list.innerHTML = pubs.map(p => {
+          const doiLink = p.doi
+            ? `<a class="pub-doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>`
+            : '';
+          const titleHtml = p.doi
+            ? `<a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>`
+            : p.title;
+          return `
+            <div class="pub-item">
+              <div class="pub-title">${titleHtml}</div>
+              <div class="pub-meta">
+                ${p.year ? `<span class="pub-year">${p.year}</span>` : ''}
+                ${p.type ? `<span class="pub-journal">${p.type}</span>` : ''}
+                ${p.authors ? `<span style="color:var(--muted)">${p.authors}</span>` : ''}
+                ${doiLink}
+              </div>
+            </div>`;
+        }).join('');
+      }
+
+      async function fetchOrcidWorks() {
+        const url = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
+        const res = await fetch(url, { headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error(`ORCID API error: ${res.status}`);
+        const data = await res.json();
+        const groups = (data.group || []);
+
+        const pubs = await Promise.all(groups.map(async group => {
+          // Use the first work summary for metadata
+          const summary = group['work-summary']?.[0];
+          if (!summary) return null;
+
+          const title = summary.title?.title?.value || '(Untitled)';
+          const year  = summary['publication-date']?.year?.value || '';
+          const type  = summary.type
+            ? summary.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+            : '';
+
+          // Extract DOI from external-ids
+          const extIds = summary['external-ids']?.['external-id'] || [];
+          const doiObj = extIds.find(e => e['external-id-type'] === 'doi');
+          const doi    = doiObj ? doiObj['external-id-value'] : null;
+
+          // Fetch contributor names from the full work record
+          let authors = '';
+          try {
+            const putCode = summary['put-code'];
+            const wRes = await fetch(
+              `https://pub.orcid.org/v3.0/${ORCID_ID}/work/${putCode}`,
+              { headers: { Accept: 'application/json' } }
+            );
+            if (wRes.ok) {
+              const work = await wRes.json();
+              const contributors = work.contributors?.contributor || [];
+              if (contributors.length) {
+                authors = contributors
+                  .map(c => c['credit-name']?.value || c['contributor-orcid']?.path || '')
+                  .filter(Boolean)
+                  .join('; ');
+              }
+            }
+          } catch (_) { /* skip contributor fetch errors */ }
+
+          return { title, year, type, doi, authors };
+        }));
+
+        return pubs
+          .filter(Boolean)
+          .sort((a, b) => (b.year || '0').localeCompare(a.year || '0'));
+      }
+
+      fetchOrcidWorks()
+        .then(renderPubs)
+        .catch(err => {
+          console.warn('ORCID fetch failed:', err);
+          list.innerHTML = '<p class="pub-loading">Could not load publications. <a href="https://orcid.org/0009-0005-6766-6565" target="_blank" rel="noopener">View on ORCID</a>.</p>';
+        });
     })();
 
     // ── HERO NAME SCRAMBLE ──
