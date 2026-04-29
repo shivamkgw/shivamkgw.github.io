@@ -3,3 +3,4 @@ pickup_images/
 *.tmp
 Thumbs.db
 .DS_Store
+Postcards/InShot_*.mp4

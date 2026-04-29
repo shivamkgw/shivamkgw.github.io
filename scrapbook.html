@@ -896,6 +896,11 @@
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck V</span>
       </div>
+      <div class="postcard-item">
+        <video src="Postcards/Innsbruck Postcards 6.mp4" autoplay muted loop playsinline></video>
+        <div class="postcard-overlay"></div>
+        <span class="postcard-label">Innsbruck VI</span>
+      </div>
     </div>
   </div>
 
@@ -975,6 +980,14 @@
     });
     document.addEventListener('mouseleave', () => { dot.style.opacity='0'; ring.style.opacity='0'; });
     document.addEventListener('mouseenter', () => { dot.style.opacity='1'; ring.style.opacity='.5'; });
+
+    // ── POSTCARD HOVER SOUND ──
+    document.querySelectorAll('.postcard-item').forEach(item => {
+      const video = item.querySelector('video');
+      if (!video) return;
+      item.addEventListener('mouseenter', () => { video.muted = false; });
+      item.addEventListener('mouseleave', () => { video.muted = true; });
+    });
 
     function playVideo(thumb, id, title) {
       const iframe = document.createElement('iframe');
