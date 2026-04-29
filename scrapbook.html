@@ -867,37 +867,32 @@
     </p>
     <div class="postcard-grid">
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck</span>
       </div>
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 1.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards 1.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck I</span>
       </div>
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 2.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards 2.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck II</span>
       </div>
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 3.mp4" autoplay muted loop playsinline></video>
-        <div class="postcard-overlay"></div>
-        <span class="postcard-label">Innsbruck III</span>
-      </div>
-      <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 4.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards 4.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck IV</span>
       </div>
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 5.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards 5.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck V</span>
       </div>
       <div class="postcard-item">
-        <video src="Postcards/Innsbruck Postcards 6.mp4" autoplay muted loop playsinline></video>
+        <video src="Postcards/Innsbruck Postcards 6.mp4" muted loop playsinline preload="metadata"></video>
         <div class="postcard-overlay"></div>
         <span class="postcard-label">Innsbruck VI</span>
       </div>
@@ -981,12 +976,12 @@
     document.addEventListener('mouseleave', () => { dot.style.opacity='0'; ring.style.opacity='0'; });
     document.addEventListener('mouseenter', () => { dot.style.opacity='1'; ring.style.opacity='.5'; });
 
-    // ── POSTCARD HOVER SOUND ──
+    // ── POSTCARD HOVER PLAY ──
     document.querySelectorAll('.postcard-item').forEach(item => {
       const video = item.querySelector('video');
       if (!video) return;
-      item.addEventListener('mouseenter', () => { video.muted = false; });
-      item.addEventListener('mouseleave', () => { video.muted = true; });
+      item.addEventListener('mouseenter', () => { video.muted = false; video.play(); });
+      item.addEventListener('mouseleave', () => { video.muted = true; video.pause(); });
     });
 
     function playVideo(thumb, id, title) {
