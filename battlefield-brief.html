@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <title>Is It a Tough Time to Be a Teenager in India? | Shivam Kumar</title>
+  <meta name="description" content="Four divisions for India's Gen Z and millennials navigating a world that moved the goalposts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:   #1D3D2F;
+      --cream:   #F5F0E6;
+      --light:   #F5F0E6;
+      --amber:   #E8943A;
+      --text:    #1A1A1A;
+      --muted:   #5A6A62;
+      --card-bg: #EDEAE0;
+      --border:  #D6D0C4;
+    }
+    [data-theme="dark"] {
+      --green:   #0D2019;
+      --cream:   #111815;
+      --light:   #F0EBE0;
+      --amber:   #E8943A;
+      --text:    #E0DBD0;
+      --muted:   #8A9E94;
+      --card-bg: #1A2820;
+      --border:  #2A3D32;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    @media (pointer: fine)  { * { cursor: none !important; } }
+    @media (pointer: coarse) { #cursor-dot, #cursor-ring { display: none !important; } }
+
+    #cursor-dot {
+      position: fixed; width: 8px; height: 8px;
+      background: var(--amber); border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: width .2s, height .2s;
+    }
+    #cursor-ring {
+      position: fixed; width: 36px; height: 36px;
+      border: 1.5px solid var(--amber); border-radius: 50%;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%); opacity: .5;
+      transition: width .3s cubic-bezier(.22,1,.36,1),
+                  height .3s cubic-bezier(.22,1,.36,1), opacity .3s;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.8;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* PROGRESS BAR */
+    #read-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--amber);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--green);
+      padding: 0 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+    .nav-logo span {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--light);
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-back {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(240,235,224,0.75);
+    }
+    .nav-back:hover { color: var(--light); }
+    #theme-toggle {
+      background: rgba(240,235,224,0.15);
+      border: 1px solid rgba(240,235,224,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--light);
+      font-family: inherit;
+    }
+    #theme-toggle:hover { background: rgba(240,235,224,0.25); }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 32px 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 20px;
+    }
+    .article-hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .article-hero .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+    .article-byline {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .article-byline .sep { opacity: 0.4; }
+
+    /* ARTICLE BODY */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* DIVISION */
+    .division {
+      padding: 64px 0 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+    .division:last-child {
+      border-bottom: none;
+    }
+    .division-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .division-num {
+      font-family: 'Fraunces', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--amber);
+      opacity: 0.25;
+      flex-shrink: 0;
+      margin-top: 4px;
+      user-select: none;
+    }
+    .division-titles {
+      flex: 1;
+    }
+    .division-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--amber);
+      margin-bottom: 6px;
+    }
+    .division h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .division-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .division p {
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .division p:last-child { margin-bottom: 56px; }
+
+    /* CALLOUT BOX */
+    .callout {
+      border-left: 3px solid var(--amber);
+      padding: 18px 24px;
+      background: var(--card-bg);
+      border-radius: 0 8px 8px 0;
+      margin: 32px 0;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    /* BULLET LIST */
+    .action-list {
+      list-style: none;
+      margin: 24px 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .action-list li {
+      padding-left: 0;
+    }
+    .action-list .action-title {
+      font-weight: 700;
+      color: var(--amber);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .action-list .action-body {
+      color: var(--text);
+      font-size: 0.97rem;
+      line-height: 1.75;
+    }
+
+    /* CLOSING */
+    .article-close {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 32px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .close-back {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .close-back:hover { color: var(--amber); }
+
+    /* FOOTER */
+    .page-footer {
+      padding: 32px 60px;
+      max-width: 760px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .article-hero, .article-body { padding-left: 20px; padding-right: 20px; }
+      .article-hero { padding-top: 52px; padding-bottom: 40px; }
+      .division-num { font-size: 2.8rem; }
+      .article-close { padding-left: 20px; padding-right: 20px; flex-direction: column; }
+      .page-footer { padding: 24px 20px; flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress"></div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/img/logo.png" alt="Water Bottle">
+      <span>Shivam Kumar</span>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-back">&larr; Back to main</a>
+      <button id="theme-toggle">Dark</button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <header class="article-hero">
+    <span class="article-tag">Opinion &middot; May 2026</span>
+    <h1>Is It a Tough Time to Be a Teenager in India?</h1>
+    <p class="lead">Four divisions for India's Gen Z and millennials on how to survive a world that moved the goalposts and is not moving them back.</p>
+    <div class="article-byline">
+      <span>Shivam Kumar</span>
+      <span class="sep">|</span>
+      <span>8 min read</span>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <main class="article-body">
+
+    <!-- DIVISION 1 -->
+    <div class="division">
+      <div class="division-header">
+        <span class="division-num">01</span>
+        <div class="division-titles">
+          <span class="division-label">Division 1</span>
+          <h2>The Diagnosis</h2>
+          <span class="division-sub">The Hook</span>
+        </div>
+      </div>
+
+      <p>It is a tough time to be a teenager in India.</p>
+
+      <p>Let us skip the pleasantries and look at the scoreboard in 2026. Your rent is higher, a basic basket of groceries costs more every single month, and the purchasing power of the currency in your pocket is actively eroding. If you are navigating your youth right now, you are trapped inside a hyper-inflated academic grind that forces over 600 million Gen Z and millennials to compete for a microscopic pool of traditional roles. To make matters worse, the entry-level jobs that used to absorb fresh talent, the basic coding, copywriting, and data entry roles, are actively being automated out of existence before you even get a chance to graduate.</p>
+
+      <p>This is not a temporary rough patch. As data from 2026 shows, the anxiety is deeply layered: the 24-year-olds are panicking because the starting line keeps moving, and the 34-year-olds are exhausted from chasing a target that never stops. The air quality index in major metros is hitting dangerous levels, life expectancy metrics are under pressure, and corporate layoffs are a weekly headline. The friction you feel every morning is real. The ground beneath your feet is shifting, the competition is fierce, and the old safety nets have been shredded.</p>
+
+      <div class="callout">
+        Acknowledge the state of the battlefield. Look at the wound for exactly what it is. But understand this: knowing the battlefield is dangerous does not give you permission to lie down and die on it.
+      </div>
+    </div>
+
+    <!-- DIVISION 2 -->
+    <div class="division">
+      <div class="division-header">
+        <span class="division-num">02</span>
+        <div class="division-titles">
+          <span class="division-label">Division 2</span>
+          <h2>The System Breakdown</h2>
+          <span class="division-sub">The Harsh Truth</span>
+        </div>
+      </div>
+
+      <p>The 2015 playbook is dead. The formula you were sold, study hard, get a degree, land a safe corporate job, and coast, is mathematically obsolete.</p>
+
+      <p>We are living through a massive macroeconomic shift. Between compounding inflation, global shocks that filter directly into local job markets, and the rapid integration of AI automation, companies no longer need armies of average mid-level workers. They need hyper-efficient systems and a few elite operators to run them. If your current strategy is to wait for the market to cool down, or for the economy to magically become fair again, you are actively choosing irrelevance. For millennials, instability feels like a betrayal of a promise. For Gen Z, it is simply the brutal starting condition.</p>
+
+      <p>And let us be entirely honest about how you are handling this pressure. Spending hours scrolling through social media, nodding along to videos about how the system is rigged, and leaving comments in the same vein is not political activism. It is a coping mechanism. It is a way to outsource your personal responsibility so you can feel better about your own lack of progress. Complaining about the system, or falling into the paralysis of a career that has plateaued, is just inertia dressed up as moral outrage.</p>
+
+      <p>The system does not care about your grievances. It is not coming to save you. You are either adapting, or you are choosing to be left behind.</p>
+    </div>
+
+    <!-- DIVISION 3 -->
+    <div class="division">
+      <div class="division-header">
+        <span class="division-num">03</span>
+        <div class="division-titles">
+          <span class="division-label">Division 3</span>
+          <h2>The Digital Narcotic</h2>
+          <span class="division-sub">The Social Media Trap</span>
+        </div>
+      </div>
+
+      <p>Let us talk about your greatest daily vulnerability: the screen in your hand. Social media is not a harmless escape. It is not a tool for genuine connection. It is a highly engineered digital narcotic.</p>
+
+      <p>Every time you open an app, you are willingly handing your attention to algorithms designed by the world's most capable data scientists for one explicit purpose: to break your focus and monetize your boredom. When you spend hours chasing short-form content, your brain's reward pathways are rewired. You develop a dependency that makes it biologically uncomfortable to sit with a dense textbook, a complex mathematical concept, or a challenging codebase for more than ninety seconds without reaching for a distraction. You are actively degrading your own cognitive capacity.</p>
+
+      <p>Furthermore, you are poisoning your self-perception through hyper-curated comparison. You sit in traffic under a gray smog, staring at filtered, fabricated timelines of people who seem to be effortlessly succeeding, traveling, and winning. This creates a feedback loop of phantom anxiety and paralysis. You feel left behind before you have even started, so you retreat further into the feed to numb the discomfort.</p>
+
+      <div class="callout">
+        The brutal irony: while you complain that corporations are taking away your future through automation, you are handing those exact tech monopolies your most finite resource, your attention, completely for free.
+      </div>
+    </div>
+
+    <!-- DIVISION 4 -->
+    <div class="division">
+      <div class="division-header">
+        <span class="division-num">04</span>
+        <div class="division-titles">
+          <span class="division-label">Division 4</span>
+          <h2>The Execution Framework</h2>
+          <span class="division-sub">The Next Level</span>
+        </div>
+      </div>
+
+      <p>Forget following your passion. Passion is a luxury for a stable economy. In a hyper-competitive, automated market, your objective is survival first and dominance second. That requires a cold, deliberate restructuring of your daily life.</p>
+
+      <ul class="action-list">
+        <li>
+          <span class="action-title">Build Algorithm-Proof Assets</span>
+          <span class="action-body">If a piece of software or an AI agent can replicate your skillset with a simple prompt, you are replaceable. Shift your focus immediately to deep adaptability, the capacity to master a new tool or industry inside a weekend, critical problem-solving, and complex human communication in high-stakes situations where software consistently fails.</span>
+        </li>
+        <li>
+          <span class="action-title">Radical Attention Management</span>
+          <span class="action-body">Treat your attention like a finite resource in a scarce environment. If you cannot control where your focus lands for four uninterrupted hours a day, you have already lost the war. Use your phone strictly as a tool for output, not consumption. Cut the noise, kill the notifications, delete the feeds, and protect your concentration with absolute discipline.</span>
+        </li>
+        <li>
+          <span class="action-title">Lower Comfort, Scale Up Discipline</span>
+          <span class="action-body">The expectation of comfort is your greatest vulnerability. In a world squeezed by economic disparity and environmental stress, fragility is fatal. Lower your demand for immediate rewards, leisure, and entertainment. Build a visible portfolio of real work on public platforms rather than collecting paper certificates that prove nothing. Stop waiting for optimal conditions. The easy era is over.</span>
+        </li>
+      </ul>
+
+      <p>Adapt your mindset, execute the plan, and build yourself into someone too valuable to be ignored.</p>
+    </div>
+
+  </main>
+
+  <!-- CLOSING NAV -->
+  <div class="article-close">
+    <a href="index.html" class="close-back">&larr; Back to main page</a>
+    <span style="font-size:0.8rem;color:var(--muted);">&copy; 2026 Shivam Kumar</span>
+  </div>
+
+  <script>
+    // Reading progress bar
+    const bar = document.getElementById('read-progress');
+    function updateProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      toggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      localStorage.setItem('theme', theme);
+    }
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+    toggle.addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    // Custom cursor
+    const dot  = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function tick() {
+      dot.style.left  = mx + 'px';
+      dot.style.top   = my + 'px';
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>
