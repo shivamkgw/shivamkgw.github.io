@@ -339,6 +339,58 @@
       line-height: 1.75;
     }
 
+    /* FURTHER READING */
+    .further-reading {
+      margin: 28px 0 48px;
+      padding: 18px 20px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .further-reading-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+    .further-reading ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .further-reading li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 0.84rem;
+    }
+    .further-reading li::before {
+      content: "↗";
+      color: var(--amber);
+      flex-shrink: 0;
+      font-size: 0.75rem;
+    }
+    .further-reading a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+      line-height: 1.4;
+    }
+    .further-reading a:hover {
+      color: var(--amber);
+      text-decoration-color: var(--amber);
+    }
+    .further-reading .source {
+      font-size: 0.72rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
     /* VIDEO EMBED */
     .video-wrap {
       margin: 28px 0;
@@ -493,6 +545,23 @@
           <iframe src="https://www.youtube.com/embed/pCs-VQ6J87M" title="Why Indians Can't Afford a House Anymore" allowfullscreen></iframe>
         </div>
         <p class="video-caption">Why Indians Can't Afford a House Anymore</p>
+        <div class="further-reading">
+          <p class="further-reading-label">Further Reading</p>
+          <ul>
+            <li>
+              <a href="https://clearcutmedia.co.in/india-youth-unemployment-discouraged-workers/" target="_blank" rel="noopener">India's Youth Unemployment Worsens as Millions Exit the Job Market</a>
+              <span class="source">ClearCut Media</span>
+            </li>
+            <li>
+              <a href="https://www.businesstoday.in/latest/trends/story/indias-cost-of-living-2026-with-rs-27k-monthly-base-rent-for-singles-mumbai-burns-your-wallet-kolkata-lets-you-breathe-521293-2026-03-19" target="_blank" rel="noopener">India's Cost of Living 2026: Mumbai Burns Your Wallet</a>
+              <span class="source">Business Today</span>
+            </li>
+            <li>
+              <a href="https://www.policycircle.org/society/educated-youth-unemployment/" target="_blank" rel="noopener">Educated Youth Unemployment Explains India's Jobs Crisis</a>
+              <span class="source">Policy Circle</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- DIVISION 2 -->
@@ -517,6 +586,19 @@
           <iframe src="https://www.youtube.com/embed/PLSDUsi4vY8" title="Why Your 9-5 Job Won't Exist in 10 Years" allowfullscreen></iframe>
         </div>
         <p class="video-caption">Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</p>
+        <div class="further-reading">
+          <p class="further-reading-label">Further Reading</p>
+          <ul>
+            <li>
+              <a href="https://www.lingayasvidyapeeth.edu.in/ai-layoffs-in-india/" target="_blank" rel="noopener">AI Layoffs 2025: How Automation Is Changing Tech Jobs in India</a>
+              <span class="source">Lingaya's Vidyapeeth</span>
+            </li>
+            <li>
+              <a href="https://www.drishtiias.com/blog/impact-of-ai-and-automation-on-indias-employment-landscape" target="_blank" rel="noopener">Impact of AI and Automation on India's Employment Landscape</a>
+              <span class="source">Drishti IAS</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- DIVISION 3 -->
@@ -543,6 +625,19 @@
           <iframe src="https://www.youtube.com/embed/H86iO0mtsDI" title="BRAIN ROT | Why You Are Losing Control Of Your Brain?" allowfullscreen></iframe>
         </div>
         <p class="video-caption">BRAIN ROT | Why You Are Losing Control Of Your Brain?</p>
+        <div class="further-reading">
+          <p class="further-reading-label">Further Reading</p>
+          <ul>
+            <li>
+              <a href="https://www.mayoclinic.org/healthy-lifestyle/tween-and-teen-health/in-depth/teens-and-social-media-use/art-20474437" target="_blank" rel="noopener">Teens and Social Media Use: What's the Impact?</a>
+              <span class="source">Mayo Clinic</span>
+            </li>
+            <li>
+              <a href="https://www.psychologytoday.com/us/blog/the-age-of-overindulgence/202509/screen-times-dangers-from-brain-development-to-heart-health" target="_blank" rel="noopener">Screen Time's Dangers: From Brain Development to Heart Health</a>
+              <span class="source">Psychology Today</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- DIVISION 4 -->
