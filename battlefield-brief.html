@@ -136,9 +136,9 @@
 
     /* ARTICLE HERO */
     .article-hero {
-      max-width: 760px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 80px 32px 56px;
+      padding: 80px 48px 56px;
       border-bottom: 1px solid var(--border);
     }
     .article-tag {
@@ -152,17 +152,18 @@
     }
     .article-hero h1 {
       font-family: 'Fraunces', serif;
-      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
       font-weight: 900;
       line-height: 1.1;
       color: var(--text);
       margin-bottom: 20px;
+      max-width: 820px;
     }
     .article-hero .lead {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--muted);
       line-height: 1.65;
-      max-width: 600px;
+      max-width: 640px;
       margin-bottom: 28px;
     }
     .article-byline {
@@ -174,42 +175,101 @@
     }
     .article-byline .sep { opacity: 0.4; }
 
-    /* ARTICLE BODY */
-    .article-body {
-      max-width: 760px;
+    /* PAGE LAYOUT: sidebar + content */
+    .page-layout {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 32px 80px;
+      padding: 0 48px 80px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 64px;
+      align-items: start;
     }
+
+    /* STICKY SIDEBAR */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      padding-top: 48px;
+    }
+    .sidebar-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .sidebar-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .sidebar-nav a {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .sidebar-nav a:hover {
+      background: var(--card-bg);
+      border-color: var(--border);
+    }
+    .sidebar-nav a.active {
+      background: var(--card-bg);
+      border-color: var(--amber);
+    }
+    .sidebar-nav .s-num {
+      font-family: 'Fraunces', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 2px;
+    }
+    .sidebar-nav .s-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .sidebar-nav .s-sub {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ARTICLE CONTENT */
+    .article-content { min-width: 0; }
 
     /* DIVISION */
     .division {
-      padding: 64px 0 0;
+      padding: 56px 0 0;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 0;
     }
-    .division:last-child {
-      border-bottom: none;
-    }
+    .division:last-child { border-bottom: none; }
+
     .division-header {
       display: flex;
       align-items: flex-start;
-      gap: 24px;
-      margin-bottom: 32px;
+      gap: 20px;
+      margin-bottom: 28px;
     }
     .division-num {
       font-family: 'Fraunces', serif;
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 900;
       line-height: 1;
       color: var(--amber);
-      opacity: 0.25;
+      opacity: 0.2;
       flex-shrink: 0;
       margin-top: 4px;
       user-select: none;
     }
-    .division-titles {
-      flex: 1;
-    }
+    .division-titles { flex: 1; }
     .division-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -220,7 +280,7 @@
     }
     .division h2 {
       font-family: 'Fraunces', serif;
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 900;
       line-height: 1.15;
       color: var(--text);
@@ -232,54 +292,80 @@
       font-style: italic;
     }
     .division p {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       color: var(--text);
     }
-    .division p:last-child { margin-bottom: 56px; }
+    .division p:last-child { margin-bottom: 52px; }
 
-    /* CALLOUT BOX */
+    /* CALLOUT */
     .callout {
       border-left: 3px solid var(--amber);
       padding: 18px 24px;
       background: var(--card-bg);
       border-radius: 0 8px 8px 0;
-      margin: 32px 0;
+      margin: 28px 0;
       font-size: 1.05rem;
       font-style: italic;
       color: var(--text);
+      line-height: 1.7;
     }
 
-    /* BULLET LIST */
+    /* ACTION LIST */
     .action-list {
       list-style: none;
-      margin: 24px 0 32px;
+      margin: 24px 0 28px;
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
     .action-list li {
-      padding-left: 0;
+      padding: 18px 20px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
     }
     .action-list .action-title {
       font-weight: 700;
       color: var(--amber);
       display: block;
-      margin-bottom: 6px;
-      font-size: 0.95rem;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
     .action-list .action-body {
       color: var(--text);
-      font-size: 0.97rem;
+      font-size: 0.96rem;
       line-height: 1.75;
+    }
+
+    /* VIDEO EMBED */
+    .video-wrap {
+      margin: 28px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      aspect-ratio: 16/9;
+      background: #000;
+    }
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .video-caption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+      margin-bottom: 28px;
     }
 
     /* CLOSING */
     .article-close {
-      max-width: 760px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 48px 32px 32px;
+      padding: 40px 48px 32px;
       border-top: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -291,32 +377,21 @@
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
       transition: color 0.2s;
     }
     .close-back:hover { color: var(--amber); }
 
-    /* FOOTER */
-    .page-footer {
-      padding: 32px 60px;
-      max-width: 760px;
-      margin: 0 auto;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .sidebar { display: none; }
       nav { padding: 0 20px; }
-      .article-hero, .article-body { padding-left: 20px; padding-right: 20px; }
-      .article-hero { padding-top: 52px; padding-bottom: 40px; }
-      .division-num { font-size: 2.8rem; }
-      .article-close { padding-left: 20px; padding-right: 20px; flex-direction: column; }
-      .page-footer { padding: 24px 20px; flex-direction: column; gap: 8px; }
+      .article-hero { padding-left: 24px; padding-right: 24px; padding-top: 52px; }
+      .article-close { padding-left: 24px; padding-right: 24px; flex-direction: column; }
     }
   </style>
 </head>
@@ -337,11 +412,11 @@
     </div>
   </nav>
 
-  <!-- ARTICLE HERO -->
+  <!-- HERO -->
   <header class="article-hero">
     <span class="article-tag">Opinion &middot; May 2026</span>
     <h1>Is It a Tough Time to Be a Teenager in India?</h1>
-    <p class="lead">Four divisions for India's Gen Z and millennials on how to survive a world that moved the goalposts and is not moving them back.</p>
+    <p class="lead">Four parts for India's Gen Z and millennials on how to survive a world that keeps moving the goalposts and is not going to stop.</p>
     <div class="article-byline">
       <span>Shivam Kumar</span>
       <span class="sep">|</span>
@@ -349,107 +424,162 @@
     </div>
   </header>
 
-  <!-- ARTICLE BODY -->
-  <main class="article-body">
+  <!-- LAYOUT -->
+  <div class="page-layout">
 
-    <!-- DIVISION 1 -->
-    <div class="division">
-      <div class="division-header">
-        <span class="division-num">01</span>
-        <div class="division-titles">
-          <span class="division-label">Division 1</span>
-          <h2>The Diagnosis</h2>
-          <span class="division-sub">The Hook</span>
-        </div>
-      </div>
-
-      <p>It is a tough time to be a teenager in India.</p>
-
-      <p>Let us skip the pleasantries and look at the scoreboard in 2026. Your rent is higher, a basic basket of groceries costs more every single month, and the purchasing power of the currency in your pocket is actively eroding. If you are navigating your youth right now, you are trapped inside a hyper-inflated academic grind that forces over 600 million Gen Z and millennials to compete for a microscopic pool of traditional roles. To make matters worse, the entry-level jobs that used to absorb fresh talent, the basic coding, copywriting, and data entry roles, are actively being automated out of existence before you even get a chance to graduate.</p>
-
-      <p>This is not a temporary rough patch. As data from 2026 shows, the anxiety is deeply layered: the 24-year-olds are panicking because the starting line keeps moving, and the 34-year-olds are exhausted from chasing a target that never stops. The air quality index in major metros is hitting dangerous levels, life expectancy metrics are under pressure, and corporate layoffs are a weekly headline. The friction you feel every morning is real. The ground beneath your feet is shifting, the competition is fierce, and the old safety nets have been shredded.</p>
-
-      <div class="callout">
-        Acknowledge the state of the battlefield. Look at the wound for exactly what it is. But understand this: knowing the battlefield is dangerous does not give you permission to lie down and die on it.
-      </div>
-    </div>
-
-    <!-- DIVISION 2 -->
-    <div class="division">
-      <div class="division-header">
-        <span class="division-num">02</span>
-        <div class="division-titles">
-          <span class="division-label">Division 2</span>
-          <h2>The System Breakdown</h2>
-          <span class="division-sub">The Harsh Truth</span>
-        </div>
-      </div>
-
-      <p>The 2015 playbook is dead. The formula you were sold, study hard, get a degree, land a safe corporate job, and coast, is mathematically obsolete.</p>
-
-      <p>We are living through a massive macroeconomic shift. Between compounding inflation, global shocks that filter directly into local job markets, and the rapid integration of AI automation, companies no longer need armies of average mid-level workers. They need hyper-efficient systems and a few elite operators to run them. If your current strategy is to wait for the market to cool down, or for the economy to magically become fair again, you are actively choosing irrelevance. For millennials, instability feels like a betrayal of a promise. For Gen Z, it is simply the brutal starting condition.</p>
-
-      <p>And let us be entirely honest about how you are handling this pressure. Spending hours scrolling through social media, nodding along to videos about how the system is rigged, and leaving comments in the same vein is not political activism. It is a coping mechanism. It is a way to outsource your personal responsibility so you can feel better about your own lack of progress. Complaining about the system, or falling into the paralysis of a career that has plateaued, is just inertia dressed up as moral outrage.</p>
-
-      <p>The system does not care about your grievances. It is not coming to save you. You are either adapting, or you are choosing to be left behind.</p>
-    </div>
-
-    <!-- DIVISION 3 -->
-    <div class="division">
-      <div class="division-header">
-        <span class="division-num">03</span>
-        <div class="division-titles">
-          <span class="division-label">Division 3</span>
-          <h2>The Digital Narcotic</h2>
-          <span class="division-sub">The Social Media Trap</span>
-        </div>
-      </div>
-
-      <p>Let us talk about your greatest daily vulnerability: the screen in your hand. Social media is not a harmless escape. It is not a tool for genuine connection. It is a highly engineered digital narcotic.</p>
-
-      <p>Every time you open an app, you are willingly handing your attention to algorithms designed by the world's most capable data scientists for one explicit purpose: to break your focus and monetize your boredom. When you spend hours chasing short-form content, your brain's reward pathways are rewired. You develop a dependency that makes it biologically uncomfortable to sit with a dense textbook, a complex mathematical concept, or a challenging codebase for more than ninety seconds without reaching for a distraction. You are actively degrading your own cognitive capacity.</p>
-
-      <p>Furthermore, you are poisoning your self-perception through hyper-curated comparison. You sit in traffic under a gray smog, staring at filtered, fabricated timelines of people who seem to be effortlessly succeeding, traveling, and winning. This creates a feedback loop of phantom anxiety and paralysis. You feel left behind before you have even started, so you retreat further into the feed to numb the discomfort.</p>
-
-      <div class="callout">
-        The brutal irony: while you complain that corporations are taking away your future through automation, you are handing those exact tech monopolies your most finite resource, your attention, completely for free.
-      </div>
-    </div>
-
-    <!-- DIVISION 4 -->
-    <div class="division">
-      <div class="division-header">
-        <span class="division-num">04</span>
-        <div class="division-titles">
-          <span class="division-label">Division 4</span>
-          <h2>The Execution Framework</h2>
-          <span class="division-sub">The Next Level</span>
-        </div>
-      </div>
-
-      <p>Forget following your passion. Passion is a luxury for a stable economy. In a hyper-competitive, automated market, your objective is survival first and dominance second. That requires a cold, deliberate restructuring of your daily life.</p>
-
-      <ul class="action-list">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav">
         <li>
-          <span class="action-title">Build Algorithm-Proof Assets</span>
-          <span class="action-body">If a piece of software or an AI agent can replicate your skillset with a simple prompt, you are replaceable. Shift your focus immediately to deep adaptability, the capacity to master a new tool or industry inside a weekend, critical problem-solving, and complex human communication in high-stakes situations where software consistently fails.</span>
+          <a href="#div1" class="active">
+            <span class="s-num">01</span>
+            <span class="s-title">Is the situation really that bad?</span>
+            <span class="s-sub">The Hook</span>
+          </a>
         </li>
         <li>
-          <span class="action-title">Radical Attention Management</span>
-          <span class="action-body">Treat your attention like a finite resource in a scarce environment. If you cannot control where your focus lands for four uninterrupted hours a day, you have already lost the war. Use your phone strictly as a tool for output, not consumption. Cut the noise, kill the notifications, delete the feeds, and protect your concentration with absolute discipline.</span>
+          <a href="#div2">
+            <span class="s-num">02</span>
+            <span class="s-title">Why did the old plan stop working?</span>
+            <span class="s-sub">The Harsh Truth</span>
+          </a>
         </li>
         <li>
-          <span class="action-title">Lower Comfort, Scale Up Discipline</span>
-          <span class="action-body">The expectation of comfort is your greatest vulnerability. In a world squeezed by economic disparity and environmental stress, fragility is fatal. Lower your demand for immediate rewards, leisure, and entertainment. Build a visible portfolio of real work on public platforms rather than collecting paper certificates that prove nothing. Stop waiting for optimal conditions. The easy era is over.</span>
+          <a href="#div3">
+            <span class="s-num">03</span>
+            <span class="s-title">What is your phone doing to you?</span>
+            <span class="s-sub">The Social Media Trap</span>
+          </a>
+        </li>
+        <li>
+          <a href="#div4">
+            <span class="s-num">04</span>
+            <span class="s-title">So what do you actually do?</span>
+            <span class="s-sub">The Next Level</span>
+          </a>
         </li>
       </ul>
+    </aside>
 
-      <p>Adapt your mindset, execute the plan, and build yourself into someone too valuable to be ignored.</p>
-    </div>
+    <!-- MAIN CONTENT -->
+    <main class="article-content">
 
-  </main>
+      <!-- DIVISION 1 -->
+      <div class="division" id="div1">
+        <div class="division-header">
+          <span class="division-num">01</span>
+          <div class="division-titles">
+            <span class="division-label">Division 1</span>
+            <h2>Is the situation really that bad?</h2>
+            <span class="division-sub">The Hook</span>
+          </div>
+        </div>
 
-  <!-- CLOSING NAV -->
+        <p>It is a tough time to be a teenager in India.</p>
+
+        <p>Let us look at the facts in 2026. Rent is going up. Groceries cost more every month. The money in your pocket buys less than it did a year ago. If you are young right now, you are stuck in a brutal education race where over 600 million people are fighting for a small number of good jobs. And to make it worse, many of those entry-level jobs, the basic coding work, copywriting, and data entry, are being replaced by machines before you even finish your degree.</p>
+
+        <p>This is not a phase that will pass. The stress is real at every age. 24-year-olds are panicking because the rules keep changing. 34-year-olds are worn out from running towards a finish line that keeps moving. Air quality in big cities is getting worse. Companies are laying people off every week. The pressure you feel when you wake up in the morning is not in your head. Things are genuinely harder. The ground is unstable, competition is fierce, and the old systems that used to protect people are gone.</p>
+
+        <div class="callout">
+          Face the situation for what it is. But understand this: knowing it is hard does not mean you get to stop trying.
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/IpvBrSsKoAY" title="Why Gen Z Might Never Own Anything" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Why Gen Z Might Never Own Anything</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/pCs-VQ6J87M" title="Why Indians Can't Afford a House Anymore" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Why Indians Can't Afford a House Anymore</p>
+      </div>
+
+      <!-- DIVISION 2 -->
+      <div class="division" id="div2">
+        <div class="division-header">
+          <span class="division-num">02</span>
+          <div class="division-titles">
+            <span class="division-label">Division 2</span>
+            <h2>Why did the old plan stop working?</h2>
+            <span class="division-sub">The Harsh Truth</span>
+          </div>
+        </div>
+
+        <p>The old plan is dead. The idea that you study hard, get a degree, find a stable job, and everything works out is no longer true.</p>
+
+        <p>The economy has changed in a big way. Inflation, global shocks, and AI tools have all hit at the same time. Companies today do not need large teams of average workers. They want smart systems and a small number of skilled people to run them. If your plan is to wait for things to calm down, or hope the job market becomes fair again, you are falling behind right now. For millennials, this feels like a broken promise. For Gen Z, this is just the world they were born into.</p>
+
+        <p>And let us be honest about how most people are dealing with this. Spending hours scrolling social media, watching videos about how unfair the system is, and posting angry comments is not activism. It is a way to avoid doing anything. It lets you feel like you care without actually changing anything. Complaining about the system, or sitting stuck in a job that is going nowhere, is just giving up while pretending it is someone else's fault.</p>
+
+        <p>The system does not care about your complaints. It is not going to fix itself for you. You are either changing and growing, or you are getting left behind.</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/PLSDUsi4vY8" title="Why Your 9-5 Job Won't Exist in 10 Years" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</p>
+      </div>
+
+      <!-- DIVISION 3 -->
+      <div class="division" id="div3">
+        <div class="division-header">
+          <span class="division-num">03</span>
+          <div class="division-titles">
+            <span class="division-label">Division 3</span>
+            <h2>What is your phone doing to you?</h2>
+            <span class="division-sub">The Social Media Trap</span>
+          </div>
+        </div>
+
+        <p>Let us talk about the biggest thing working against you every single day: the phone in your hand. Social media is not a way to relax. It is not a tool for real connection. It is a product built to keep you hooked.</p>
+
+        <p>Every time you open an app, you are giving your attention to a system designed by some of the world's best engineers for one purpose: to stop you from thinking clearly and make money from your time. When you spend hours watching short videos, your brain gets rewired. You start finding it hard to sit with a textbook, work through a difficult problem, or focus on anything for more than a minute without picking up your phone. You are slowly damaging your own ability to think deeply.</p>
+
+        <p>On top of that, you are hurting yourself by constantly comparing your life to what you see online. You sit in traffic in a polluted city, staring at polished, fake highlights of other people who look like they are winning at life. This builds up a loop of anxiety and inaction. You feel behind before you have even started, so you go back to scrolling to feel better for a few minutes.</p>
+
+        <div class="callout">
+          Here is the real irony: while you complain that big companies are stealing your future through automation, you are giving those same companies your attention completely for free, every single day.
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/H86iO0mtsDI" title="BRAIN ROT | Why You Are Losing Control Of Your Brain?" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">BRAIN ROT | Why You Are Losing Control Of Your Brain?</p>
+      </div>
+
+      <!-- DIVISION 4 -->
+      <div class="division" id="div4">
+        <div class="division-header">
+          <span class="division-num">04</span>
+          <div class="division-titles">
+            <span class="division-label">Division 4</span>
+            <h2>So what do you actually do?</h2>
+            <span class="division-sub">The Next Level</span>
+          </div>
+        </div>
+
+        <p>Stop waiting to feel passionate about something. Passion is a bonus when things are going well. Right now, what you need is to be useful, skilled, and consistent. That means making real changes to how you spend your time every day.</p>
+
+        <ul class="action-list">
+          <li>
+            <span class="action-title">Build Skills That Cannot Be Automated</span>
+            <span class="action-body">If an AI can do your job with a simple prompt, you can be replaced. Focus instead on learning fast, solving hard problems, and working well with people in messy, real-world situations where software falls short. These are the things that still require a human.</span>
+          </li>
+          <li>
+            <span class="action-title">Protect Your Focus</span>
+            <span class="action-body">Your ability to concentrate is your most valuable tool. If you cannot focus for several hours without checking your phone, you are already at a disadvantage. Use your phone to create and produce, not to scroll and consume. Turn off notifications. Delete what is distracting you. Guard your attention like it matters, because it does.</span>
+          </li>
+          <li>
+            <span class="action-title">Stop Waiting for the Right Moment</span>
+            <span class="action-body">The comfortable era is over. Wanting everything to be easy and rewarding right away is what holds most people back. Build real, visible work that anyone can see online instead of collecting certificates that prove very little. Do not wait until conditions are perfect. They never will be.</span>
+          </li>
+        </ul>
+
+        <p>Change how you think, take action, and become someone that cannot be ignored.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- CLOSING -->
   <div class="article-close">
     <a href="index.html" class="close-back">&larr; Back to main page</a>
     <span style="font-size:0.8rem;color:var(--muted);">&copy; 2026 Shivam Kumar</span>
@@ -458,12 +588,11 @@
   <script>
     // Reading progress bar
     const bar = document.getElementById('read-progress');
-    function updateProgress() {
+    window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
-    }
-    window.addEventListener('scroll', updateProgress, { passive: true });
+    }, { passive: true });
 
     // Theme toggle
     const toggle = document.getElementById('theme-toggle');
@@ -477,18 +606,28 @@
       applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
 
+    // Sidebar active state on scroll
+    const sections = document.querySelectorAll('.division');
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }, { passive: true });
+
     // Custom cursor
     const dot  = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
     let mx = 0, my = 0, rx = 0, ry = 0;
     document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
     (function tick() {
-      dot.style.left  = mx + 'px';
-      dot.style.top   = my + 'px';
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
+      dot.style.left  = mx + 'px'; dot.style.top = my + 'px';
+      rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
       requestAnimationFrame(tick);
     })();
   </script>
