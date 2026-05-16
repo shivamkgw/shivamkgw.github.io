@@ -1123,6 +1123,87 @@
     .r-card-img { cursor: zoom-in; }
 
     /* ── POSTERS ── */
+    /* OPINION */
+    .opinion {
+      padding: 80px 60px;
+    }
+    .opinion-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .opinion-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+    }
+    .opinion-card:hover {
+      border-color: var(--amber);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+    .opinion-num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--amber);
+      opacity: 0.25;
+      line-height: 1;
+      flex-shrink: 0;
+      user-select: none;
+      min-width: 48px;
+    }
+    .opinion-body { flex: 1; min-width: 0; }
+    .opinion-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .opinion-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .opinion-lead {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .opinion-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+    }
+    .opinion-arrow {
+      font-size: 1.2rem;
+      color: var(--amber);
+      opacity: 0;
+      flex-shrink: 0;
+      align-self: center;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .opinion-card:hover .opinion-arrow { opacity: 1; transform: translateX(4px); }
+    @media (max-width: 768px) {
+      .opinion { padding: 60px 24px; }
+      .opinion-num { font-size: 1.6rem; min-width: 32px; }
+    }
+
     .posters {
       padding: 80px 60px;
     }
@@ -1582,7 +1663,7 @@
       <li><a href="#about">About me</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#tools">Tools</a></li>
-      <li><a href="battlefield-brief.html">Writing</a></li>
+      <li><a href="#opinion">Opinion</a></li>
       <li><button class="btn-scrapnav" onclick="document.getElementById('scrapbook').scrollIntoView({behavior:'smooth'})">✦ Scrapbook</button></li>
       <li><a href="assets/Shivam_Kumar_CV_2025.pdf" target="_blank" class="btn-cta" style="text-decoration:none;">↓ CV</a></li>
       <li><button id="theme-toggle">Dark</button></li>
@@ -1966,6 +2047,32 @@
 
   <hr class="div">
 
+  <!-- OPINION -->
+  <section class="opinion" id="opinion">
+    <div class="section-header" data-reveal>
+      <h2 class="section-script">Opinion</h2>
+      <span class="section-num">05</span>
+    </div>
+    <div class="opinion-grid">
+      <a href="battlefield-brief.html" class="opinion-card" data-reveal>
+        <span class="opinion-num">01</span>
+        <div class="opinion-body">
+          <p class="opinion-tag">Opinion &middot; May 2026</p>
+          <p class="opinion-title">Is It a Tough Time to Be a Teenager in India?</p>
+          <p class="opinion-lead">Five divisions on how India's Gen Z and millennials can survive a world that keeps moving the goalposts, from systems thinking to proof-of-work portfolios.</p>
+          <div class="opinion-meta">
+            <span>Shivam Kumar</span>
+            <span>&middot;</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+        <span class="opinion-arrow">&#8599;</span>
+      </a>
+    </div>
+  </section>
+
+  <hr class="div">
+
   <!-- SCRAPBOOK -->
   <section class="scrapbook" id="scrapbook" style="position:relative;overflow:hidden;">
     <img class="art-overlay" src="assets/img/portfolio/ARTWORKS/OWL-nobg.png" aria-hidden="true"
@@ -1976,8 +2083,7 @@
         <p>When I'm away from the terminal: guitar, street photography, and writing about places. The rest lives on a separate page.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
           <a href="scrapbook.html" class="btn-scrap">Open the scrapbook &rarr;</a>
-          <a href="battlefield-brief.html" class="btn-scrap">Is It a Tough Time to Be a Teenager in India? &rarr;</a>
-          <a href="https://shivamblogs1.blog/" target="_blank" rel="noopener" class="btn-scrap">ShivAmsterdam &rarr;</a>
+<a href="https://shivamblogs1.blog/" target="_blank" rel="noopener" class="btn-scrap">ShivAmsterdam &rarr;</a>
           <a href="https://newscience849814774.wordpress.com/" target="_blank" rel="noopener" class="btn-scrap">Kerala blog &rarr;</a>
         </div>
       </div>
@@ -1994,7 +2100,7 @@
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#scrapbook">Scrapbook</a>
-        <a href="battlefield-brief.html">Writing</a>
+        <a href="#opinion">Opinion</a>
       </div>
       <div class="footer-nav-group">
         <span class="footer-nav-label">Links</span>
