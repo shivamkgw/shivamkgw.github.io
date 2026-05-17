@@ -121,6 +121,19 @@
       color: rgba(240,235,224,0.75);
     }
     .nav-back:hover { color: var(--light); }
+    .lang-switch {
+      display: flex; align-items: center; gap: 0;
+      background: rgba(240,235,224,0.12);
+      border: 1px solid rgba(240,235,224,0.2);
+      border-radius: 100px; overflow: hidden;
+    }
+    .lang-switch a {
+      padding: 5px 12px; font-size: 0.75rem; font-weight: 700;
+      color: rgba(240,235,224,0.6); text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-switch a.active { background: var(--amber); color: #1a1a1a; }
+    .lang-switch a:not(.active):hover { color: var(--light); }
     #theme-toggle {
       background: rgba(240,235,224,0.15);
       border: 1px solid rgba(240,235,224,0.25);
@@ -608,6 +621,10 @@
       <span>Shivam Kumar</span>
     </a>
     <div class="nav-right">
+      <div class="lang-switch">
+        <a href="battlefield-brief.html" class="active">EN</a>
+        <a href="battlefield-brief-hi.html">हिंदी</a>
+      </div>
       <a href="index.html" class="nav-back">&larr; Back to main</a>
       <button id="theme-toggle">Dark</button>
     </div>
