@@ -1153,6 +1153,18 @@
       box-shadow: 0 0 0 3px rgba(212,163,78,0.25), 0 12px 32px rgba(0,0,0,0.12);
       transform: scale(1.03);
     }
+    .opinion-card-img {
+      border-radius: 14px 14px 0 0;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .opinion-card-img img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
     .opinion-body {
       padding: 24px 24px 20px;
       flex: 1;
@@ -2070,6 +2082,9 @@
     </div>
     <div class="opinion-grid">
       <a href="battlefield-brief.html" class="opinion-card" data-reveal>
+        <div class="opinion-card-img">
+          <img src="assets/img/banner-battlefield-brief.png" alt="Is It a Tough Time to Be a Teenager in India?" loading="lazy">
+        </div>
         <div class="opinion-body">
           <p class="opinion-tag">Opinion &middot; May 2026</p>
           <p class="opinion-title">Is It a Tough Time to Be a Teenager in India?</p>
@@ -2084,6 +2099,9 @@
         <span class="opinion-arrow">&#8599;</span>
       </a>
       <a href="science-channels.html" class="opinion-card" data-reveal>
+        <div class="opinion-card-img">
+          <img src="assets/img/banner-science-channels.png" alt="Science on YouTube: The Channels I Keep Coming Back To" loading="lazy">
+        </div>
         <div class="opinion-body">
           <p class="opinion-tag">Picks &middot; May 2026</p>
           <p class="opinion-title">Science on <span class="yt-you">You</span><span class="yt-tube">Tube</span>: The Channels I Keep Coming Back To</p>
