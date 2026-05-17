@@ -2317,6 +2317,15 @@
       revealObserver.observe(el);
     });
 
+    window.addEventListener('pageshow', () => {
+      document.querySelectorAll('[data-reveal]:not(.revealed), [data-stagger]:not(.revealed)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('revealed');
+        }
+      });
+    });
+
     // ── SCROLL-LINKED HORIZONTAL TIMELINE ──
     const tlOuter   = document.getElementById('timeline-outer');
     const tlSticky  = document.getElementById('timeline-sticky');
