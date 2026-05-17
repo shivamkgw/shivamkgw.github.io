@@ -1126,6 +1126,10 @@
     /* OPINION */
     .opinion {
       padding: 80px 60px;
+      transition: background 0.4s ease;
+    }
+    .opinion:has(.opinion-card:hover) {
+      background: rgba(0,0,0,0.05);
     }
     .opinion-grid {
       display: grid;
