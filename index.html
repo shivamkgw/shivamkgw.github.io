@@ -1146,7 +1146,7 @@
       color: inherit;
       user-select: none;
       -webkit-tap-highlight-color: transparent;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.35s cubic-bezier(0.22,1,0.36,1), filter 0.35s ease, opacity 0.35s ease;
     }
     .opinion-card:hover {
       border-color: var(--amber);
@@ -1157,22 +1157,6 @@
       border-radius: 14px 14px 0 0;
       overflow: hidden;
       flex-shrink: 0;
-      position: relative;
-    }
-    .opinion-card-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(245,240,230,0);
-      backdrop-filter: blur(0px);
-      -webkit-backdrop-filter: blur(0px);
-      transition: backdrop-filter 0.4s ease, background 0.4s ease;
-      pointer-events: none;
-    }
-    .opinion-card:hover .opinion-card-img::after {
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      background: rgba(245,240,230,0.25);
     }
     .opinion-card-img img {
       width: 100%;
@@ -1184,6 +1168,11 @@
     }
     .opinion-card:hover .opinion-card-img img {
       transform: scale(1.05);
+    }
+    .opinion-grid:hover .opinion-card:not(:hover) {
+      filter: blur(3px);
+      opacity: 0.55;
+      transform: scale(0.98);
     }
     .opinion-body {
       padding: 24px 24px 20px;
