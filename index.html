@@ -2318,6 +2318,7 @@
     });
 
     window.addEventListener('pageshow', () => {
+      document.body.classList.remove('page-out');
       document.querySelectorAll('[data-reveal]:not(.revealed), [data-stagger]:not(.revealed)').forEach(el => {
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight) {
