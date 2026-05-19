@@ -1748,8 +1748,8 @@
     <!-- Right column: name + role + bio + logos -->
     <div class="hero-text-col">
       <div class="hero-display">
-        <span class="line solid">शिवम</span>
-        <span class="line">कुमार</span>
+        <span class="line solid" data-scramble="शिवम">शिवम</span>
+        <span class="line" data-scramble="कुमार">कुमार</span>
         <span class="line" style="font-family:'Press Start 2P',monospace;letter-spacing:0.02em;text-transform:none;font-weight:400;font-size:clamp(14px,2.2vw,28px);line-height:1.6;opacity:1;text-shadow:0 1px 8px rgba(0,0,0,0.6);">Water Bottle</span>
       </div>
       <p class="hero-name-hi">शिवम कुमार</p>
@@ -2641,19 +2641,27 @@
 
     // ── HERO NAME SCRAMBLE ──
     (function() {
-      const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%&';
+      const CHARS = 'कखगघचछजझटठडढतथदधनपफबभमयरलवशषसह';
+      const seg = typeof Intl !== 'undefined' && Intl.Segmenter
+        ? new Intl.Segmenter('hi', { granularity: 'grapheme' })
+        : null;
       const display = document.querySelector('.hero-display');
       if (!display) return;
 
+      function toGraphemes(str) {
+        if (seg) return [...seg.segment(str)].map(s => s.segment);
+        return [...str];
+      }
+
       function scramble(el) {
-        const original = el.dataset.scramble;
+        const original = toGraphemes(el.dataset.scramble);
         let frame = 0;
         const totalFrames = original.length * 4;
         if (el._scrambleId) cancelAnimationFrame(el._scrambleId);
 
         function tick() {
           const progress = frame / totalFrames;
-          el.textContent = original.split('').map((ch, i) => {
+          el.textContent = original.map((ch, i) => {
             if (i < Math.floor(progress * original.length)) return ch;
             return CHARS[Math.floor(Math.random() * CHARS.length)];
           }).join('');
@@ -2661,7 +2669,7 @@
           if (frame <= totalFrames) {
             el._scrambleId = requestAnimationFrame(tick);
           } else {
-            el.textContent = original;
+            el.textContent = original.join('');
           }
         }
         tick();
