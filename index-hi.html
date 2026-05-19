@@ -24,7 +24,7 @@
   <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/travel-valley.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Yatra+One&display=swap" rel="stylesheet">
   <script>
     // Apply theme before paint to prevent flash
     (function() {
@@ -1542,6 +1542,12 @@
     .lang-switch a { padding: 5px 12px; font-size: 0.75rem; font-weight: 700; color: rgba(240,235,224,0.6); text-decoration: none; transition: background 0.2s, color 0.2s; }
     .lang-switch a.active { background: var(--amber); color: #1a1a1a; }
     .lang-switch a:not(.active):hover { color: var(--light); }
+
+    /* ── DEVANAGARI FONTS ── */
+    body { font-family: 'Noto Sans Devanagari', 'Open Sans', sans-serif; }
+    .section-script, h1, h2, .tl-pinned-header h2 { font-family: 'Yatra One', 'Fraunces', serif; }
+    .hero-display .line { font-family: 'Bebas Neue', sans-serif; }
+    .hero-display .line:last-child { font-family: 'Press Start 2P', monospace; }
 
     /* ── PAGE TRANSITION ── */
     body { animation: pageIn 0.4s ease both; }
