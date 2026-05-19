@@ -24,7 +24,7 @@
   <meta name="twitter:image"       content="https://shivamkgw.github.io/assets/img/travel-valley.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Bebas+Neue&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
   <script>
     // Apply theme before paint to prevent flash
     (function() {
@@ -1543,6 +1543,107 @@
     .lang-switch a.active { background: var(--amber); color: #1a1a1a; }
     .lang-switch a:not(.active):hover { color: var(--light); }
 
+    /* ── LANGUAGE OVERLAY ── */
+    #lang-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      animation: langOverlayIn 0.4s ease both;
+    }
+    #lang-overlay.dismissing {
+      animation: langOverlayOut 0.35s ease forwards;
+    }
+    @keyframes langOverlayIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes langOverlayOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    .lang-overlay-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 40px 48px;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+      animation: langCardIn 0.45s cubic-bezier(0.22,1,0.36,1) both;
+      animation-delay: 0.08s;
+    }
+    @keyframes langCardIn {
+      from { opacity: 0; transform: scale(0.88) translateY(16px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .lang-overlay-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(240,235,224,0.5);
+      margin-bottom: 8px;
+    }
+    .lang-overlay-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f0ebe0;
+      margin-bottom: 32px;
+    }
+    .lang-overlay-options {
+      display: flex;
+      gap: 16px;
+    }
+    .lang-option {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 24px 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+      color: #f0ebe0;
+      text-decoration: none;
+    }
+    .lang-option:hover {
+      background: rgba(212,163,78,0.18);
+      border-color: var(--amber);
+      transform: translateY(-3px);
+    }
+    .lang-option-script {
+      font-size: 2.4rem;
+      line-height: 1;
+      display: block;
+    }
+    .lang-option-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .lang-option-sub {
+      font-size: 0.7rem;
+      color: rgba(240,235,224,0.45);
+      letter-spacing: 0.05em;
+    }
+    #lang-overlay .lang-skip {
+      display: block;
+      margin-top: 24px;
+      font-size: 0.72rem;
+      color: rgba(240,235,224,0.35);
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      transition: color 0.2s;
+    }
+    #lang-overlay .lang-skip:hover { color: rgba(240,235,224,0.7); }
+
     /* ── PAGE TRANSITION ── */
     body { animation: pageIn 0.4s ease both; }
     @keyframes pageIn {
@@ -2707,6 +2808,53 @@
       });
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+      });
+    })();
+  </script>
+
+  <!-- LANGUAGE PICKER OVERLAY -->
+  <div id="lang-overlay" style="display:none;">
+    <div class="lang-overlay-card">
+      <p class="lang-overlay-label">Welcome</p>
+      <p class="lang-overlay-title">Choose your language</p>
+      <div class="lang-overlay-options">
+        <button class="lang-option" id="lang-pick-en">
+          <span class="lang-option-script">Aa</span>
+          <span class="lang-option-name">English</span>
+          <span class="lang-option-sub">Continue in English</span>
+        </button>
+        <a class="lang-option" href="index-hi.html" id="lang-pick-hi">
+          <span class="lang-option-script" style="font-family:'Noto Sans Devanagari',sans-serif;">अ</span>
+          <span class="lang-option-name" style="font-family:'Noto Sans Devanagari',sans-serif;">हिंदी</span>
+          <span class="lang-option-sub">हिंदी में देखें</span>
+        </a>
+      </div>
+      <button class="lang-skip" id="lang-skip">skip</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const overlay = document.getElementById('lang-overlay');
+      if (!overlay) return;
+      if (localStorage.getItem('lang-pref')) return;
+
+      overlay.style.display = 'flex';
+
+      function dismiss(pref) {
+        localStorage.setItem('lang-pref', pref);
+        overlay.classList.add('dismissing');
+        overlay.addEventListener('animationend', () => overlay.remove(), { once: true });
+      }
+
+      document.getElementById('lang-pick-en').addEventListener('click', () => dismiss('en'));
+      document.getElementById('lang-pick-hi').addEventListener('click', () => {
+        localStorage.setItem('lang-pref', 'hi');
+      });
+      document.getElementById('lang-skip').addEventListener('click', () => dismiss('skip'));
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') dismiss('skip');
       });
     })();
   </script>
