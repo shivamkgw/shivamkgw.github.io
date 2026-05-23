@@ -131,7 +131,7 @@
       transition: background 0.2s, color 0.2s;
     }
     a { color: inherit; text-decoration: none; }
-    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link):not(.scroll-pill):not(.nav-logo):not(.opinion-card):not(.lang-option) {
+    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link):not(.scroll-pill):not(.nav-logo):not(.opinion-card):not(.lang-option):not(.hero-logo-text) {
       position: relative;
       display: inline;
       border-radius: 3px;
@@ -142,7 +142,7 @@
       background-position: left center;
       transition: background-size 0.35s cubic-bezier(0.22,1,0.36,1), color 0.25s;
     }
-    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link):not(.scroll-pill):not(.opinion-card):not(.lang-option):hover {
+    a[href]:not(.btn-cta):not(.about-social-link):not(.nav-link):not(.r-card-link):not(.scroll-pill):not(.opinion-card):not(.lang-option):not(.hero-logo-text):hover {
       color: var(--amber);
       background-size: 100% 100%;
     }
@@ -399,6 +399,24 @@
     }
     .hero-logo:hover { transform: scale(1.08); }
     .hero-logo.light-bg { background: #fff; border-color: rgba(0,0,0,0.10); }
+    .hero-logo-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(240,235,224,0.85);
+      text-decoration: none;
+      transition: transform 0.25s ease, border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .hero-logo-text:hover { transform: scale(1.08); border-color: var(--amber); color: var(--amber); }
 
     .scroll-pill {
       position: absolute;
@@ -1845,6 +1863,7 @@
       <div class="hero-inst-logos">
         <img src="assets/img/logos/lab42.png" alt="Lab42" class="hero-logo light-bg">
         <img src="assets/img/logos/uva.png" alt="UvA" class="hero-logo">
+        <a href="https://www.a-mec.nl/team" target="_blank" rel="noopener" class="hero-logo-text">A-MEC</a>
       </div>
     </div>
 
