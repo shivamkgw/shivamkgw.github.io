@@ -2731,8 +2731,17 @@
           return { title, year, type, journal, doi, authors };
         }));
 
+        const seen = new Set();
         return pubs
           .filter(Boolean)
+          .filter(p => {
+            const key = p.doi
+              ? `doi:${p.doi.toLowerCase()}`
+              : `title:${p.title.toLowerCase().trim()}`;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          })
           .sort((a, b) => (b.year || '0').localeCompare(a.year || '0'));
       }
 
