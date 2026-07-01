@@ -2754,9 +2754,10 @@
         }));
 
         // Second-pass dedup by title across groups (safety net)
+        const normalizeTitle = str => str.toLowerCase().replace(/[^a-z0-9]/g, '');
         const byTitle = new Map();
         for (const p of pubs.filter(Boolean)) {
-          const key = p.title.toLowerCase().trim();
+          const key = normalizeTitle(p.title);
           if (!byTitle.has(key)) {
             byTitle.set(key, p);
           } else if (isPreprint(byTitle.get(key).doi) && !isPreprint(p.doi)) {
