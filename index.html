@@ -2731,17 +2731,18 @@
           return { title, year, type, journal, doi, authors };
         }));
 
-        const seen = new Set();
-        return pubs
-          .filter(Boolean)
-          .filter(p => {
-            const key = p.doi
-              ? `doi:${p.doi.toLowerCase()}`
-              : `title:${p.title.toLowerCase().trim()}`;
-            if (seen.has(key)) return false;
-            seen.add(key);
-            return true;
-          })
+        const PREPRINT_PREFIXES = ['10.21203/', '10.48550/'];
+        const isPreprint = doi => doi && PREPRINT_PREFIXES.some(p => doi.toLowerCase().startsWith(p));
+        const byTitle = new Map();
+        for (const p of pubs.filter(Boolean)) {
+          const key = p.title.toLowerCase().trim();
+          if (!byTitle.has(key)) {
+            byTitle.set(key, p);
+          } else if (isPreprint(byTitle.get(key).doi) && !isPreprint(p.doi)) {
+            byTitle.set(key, p);
+          }
+        }
+        return [...byTitle.values()]
           .sort((a, b) => (b.year || '0').localeCompare(a.year || '0'));
       }
 
