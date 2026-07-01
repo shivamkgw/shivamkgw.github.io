@@ -2691,10 +2691,27 @@
         const data = await res.json();
         const groups = (data.group || []);
 
+        const PREPRINT_PREFIXES = ['10.21203/', '10.48550/'];
+        const isPreprint = doi => doi && PREPRINT_PREFIXES.some(pfx => doi.toLowerCase().startsWith(pfx));
+
+        function extractDoi(summary) {
+          const extIds = summary['external-ids']?.['external-id'] || [];
+          const obj = extIds.find(e => e['external-id-type'] === 'doi');
+          return obj ? obj['external-id-value'] : null;
+        }
+
+        function bestSummary(summaries) {
+          return summaries.reduce((best, s) => {
+            return (isPreprint(extractDoi(best)) && !isPreprint(extractDoi(s))) ? s : best;
+          });
+        }
+
         const pubs = await Promise.all(groups.map(async group => {
-          // Use the first work summary for metadata
-          const summary = group['work-summary']?.[0];
-          if (!summary) return null;
+          const summaries = group['work-summary'] || [];
+          if (!summaries.length) return null;
+
+          // Prefer published over preprint when multiple summaries exist in a group
+          const summary = bestSummary(summaries);
 
           const title   = summary.title?.title?.value || '(Untitled)';
           const year    = summary['publication-date']?.year?.value || '';
@@ -2702,11 +2719,7 @@
             ? summary.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
             : '';
           const journal = summary['journal-title']?.value || '';
-
-          // Extract DOI from external-ids
-          const extIds = summary['external-ids']?.['external-id'] || [];
-          const doiObj = extIds.find(e => e['external-id-type'] === 'doi');
-          const doi    = doiObj ? doiObj['external-id-value'] : null;
+          const doi     = extractDoi(summary);
 
           // Fetch contributor names from the full work record
           let authors = '';
@@ -2731,8 +2744,7 @@
           return { title, year, type, journal, doi, authors };
         }));
 
-        const PREPRINT_PREFIXES = ['10.21203/', '10.48550/'];
-        const isPreprint = doi => doi && PREPRINT_PREFIXES.some(p => doi.toLowerCase().startsWith(p));
+        // Second-pass dedup by title across groups (safety net)
         const byTitle = new Map();
         for (const p of pubs.filter(Boolean)) {
           const key = p.title.toLowerCase().trim();
