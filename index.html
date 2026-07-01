@@ -2671,6 +2671,9 @@
           const titleHtml = p.doi
             ? `<a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>`
             : p.title;
+          const preprintLink = p.preprintDoi
+            ? `<a class="pub-doi" href="https://doi.org/${p.preprintDoi}" target="_blank" rel="noopener">Read Preprint</a>`
+            : '';
           return `
             <div class="pub-item">
               <div class="pub-title">${titleHtml}</div>
@@ -2679,6 +2682,7 @@
                 ${p.journal ? `<span class="pub-journal">${p.journal}</span>` : (p.type ? `<span class="pub-journal">${p.type}</span>` : '')}
                 ${p.authors ? `<span style="color:var(--muted)">${p.authors}</span>` : ''}
                 ${doiLink}
+                ${preprintLink}
               </div>
             </div>`;
         }).join('');
@@ -2702,7 +2706,11 @@
 
         function bestSummary(summaries) {
           return summaries.reduce((best, s) => {
-            return (isPreprint(extractDoi(best)) && !isPreprint(extractDoi(s))) ? s : best;
+            if (isPreprint(extractDoi(best)) && !isPreprint(extractDoi(s))) {
+              s._preprintDoi = extractDoi(best);
+              return s;
+            }
+            return best;
           });
         }
 
@@ -2719,7 +2727,8 @@
             ? summary.type.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
             : '';
           const journal = summary['journal-title']?.value || '';
-          const doi     = extractDoi(summary);
+          const doi        = extractDoi(summary);
+          const preprintDoi = summary._preprintDoi || null;
 
           // Fetch contributor names from the full work record
           let authors = '';
@@ -2741,7 +2750,7 @@
             }
           } catch (_) { /* skip contributor fetch errors */ }
 
-          return { title, year, type, journal, doi, authors };
+          return { title, year, type, journal, doi, preprintDoi, authors };
         }));
 
         // Second-pass dedup by title across groups (safety net)
@@ -2751,6 +2760,7 @@
           if (!byTitle.has(key)) {
             byTitle.set(key, p);
           } else if (isPreprint(byTitle.get(key).doi) && !isPreprint(p.doi)) {
+            p.preprintDoi = p.preprintDoi || byTitle.get(key).doi;
             byTitle.set(key, p);
           }
         }
