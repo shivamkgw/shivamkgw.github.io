@@ -39,9 +39,6 @@
       --muted:   #5A6A62;
       --card-bg: #EDEAE0;
       --border:  #D6D0C4;
-      --cw-band-bg: #F0E2CC;
-      --cw-card-bg: #FBF4E8;
-      --cw-track-bg: #E0CBA8;
     }
     [data-theme="dark"] {
       --green:   #0D2019;
@@ -52,9 +49,6 @@
       --muted:   #8A9E94;
       --card-bg: #1A2820;
       --border:  #2A3D32;
-      --cw-band-bg: #241A10;
-      --cw-card-bg: #2E2117;
-      --cw-track-bg: #3D2C1C;
     }
 
     html { scroll-behavior: smooth; }
@@ -80,7 +74,7 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background: var(--cw-band-bg);
+      background: var(--cream);
       color: var(--text);
       font-size: 17px;
       line-height: 1.8;
@@ -175,7 +169,7 @@
     .callout {
       border-left: 3px solid #B36A1E;
       padding: 18px 24px;
-      background: var(--cw-card-bg);
+      background: var(--card-bg);
       border-radius: 0 8px 8px 0;
       margin: 0 0 32px;
       font-size: 1rem;
@@ -186,7 +180,7 @@
 
     .related-link-card {
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      background: var(--cw-card-bg); border: 1px solid var(--border); border-radius: 10px;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
       padding: 16px 20px; margin-bottom: 40px; flex-wrap: wrap;
     }
     .related-link-card .rl-text { font-size: 0.88rem; color: var(--text); }
@@ -213,12 +207,12 @@
     }
 
     .cases-women-wrap {
-      background: var(--cw-card-bg); border: 1px solid var(--border); border-radius: 12px;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
       padding: 24px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;
     }
     .cw-row { display: flex; align-items: center; gap: 12px; }
     .cw-row-label { width: 220px; flex-shrink: 0; font-size: 0.85rem; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .cw-row-bar-track { flex: 1; min-width: 60px; background: var(--cw-track-bg); border-radius: 4px; height: 14px; overflow: hidden; display: flex; }
+    .cw-row-bar-track { flex: 1; min-width: 60px; background: var(--border); border-radius: 4px; height: 14px; overflow: hidden; display: flex; }
     .cw-row-bar-mla { height: 100%; background: #B36A1E; }
     .cw-row-bar-mp { height: 100%; background: var(--amber); }
     .cw-row-stat { width: 190px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
@@ -234,7 +228,7 @@
     .further-reading {
       margin: 0 0 48px;
       padding: 18px 20px;
-      background: var(--cw-card-bg);
+      background: var(--card-bg);
       border-radius: 10px;
       border: 1px solid var(--border);
     }
@@ -255,7 +249,7 @@
     #load-error {
       display: none;
       padding: 24px;
-      background: var(--cw-card-bg);
+      background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 10px;
       color: var(--muted);
@@ -270,7 +264,7 @@
     .question-form { display: flex; flex-direction: column; gap: 16px; max-width: 600px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .question-form input, .question-form textarea {
-      width: 100%; background: var(--cw-card-bg); border: 1px solid var(--border); border-radius: 8px;
+      width: 100%; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px;
       padding: 12px 16px; font-family: inherit; font-size: 0.92rem; color: var(--text);
       transition: border-color 0.2s; resize: none;
     }
