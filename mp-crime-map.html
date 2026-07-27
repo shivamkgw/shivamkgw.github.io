@@ -258,6 +258,8 @@
     .mp-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
     table.mp-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 640px; }
     table.mp-table th, table.mp-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    td.party-cell { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+    td.party-cell img { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
     table.mp-table th {
       background: var(--card-bg);
       font-size: 0.7rem;
@@ -439,6 +441,10 @@
           <a href="https://adrindia.org/" target="_blank" rel="noopener">Association for Democratic Reforms: methodology and reports</a>
           <span class="source">ADR India</span>
         </li>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/Category:Symbols_of_political_parties_in_India" target="_blank" rel="noopener">Party election symbols shown for the largest parties, used for identification only</a>
+          <span class="source">Wikimedia Commons, CC BY-SA</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -570,6 +576,26 @@
       return 2 + Math.sqrt(count) * 0.9;
     }
 
+    const PARTY_SYMBOLS = {
+      'BJP': ['assets/img/party-symbols/bjp.svg', 'Lotus'],
+      'INC': ['assets/img/party-symbols/inc.svg', 'Hand'],
+      'SP': ['assets/img/party-symbols/cycle.png', 'Bicycle'],
+      'TDP': ['assets/img/party-symbols/cycle.png', 'Bicycle'],
+      'AITC': ['assets/img/party-symbols/aitc.svg', 'Flowers and Grass'],
+      'DMK': ['assets/img/party-symbols/dmk.svg', 'Rising Sun'],
+      'JD(U)': ['assets/img/party-symbols/jdu.svg', 'Arrow'],
+      'ShivSena (Uddhav Balasaheb Thackeray)': ['assets/img/party-symbols/ssubt.png', 'Flaming Torch'],
+      'Shiv Sena': ['assets/img/party-symbols/shivsena.svg', 'Bow and Arrow'],
+      'Lok Janshakti Party(Ram Vilas)': ['assets/img/party-symbols/ljprv.jpg', 'Helicopter'],
+      'CPI(M)': ['assets/img/party-symbols/cpim.svg', 'Hammer, Sickle and Star']
+    };
+
+    function partyCell(party) {
+      const sym = PARTY_SYMBOLS[party];
+      if (!sym) return `<td>${party}</td>`;
+      return `<td class="party-cell"><img src="${sym[0]}" alt="${sym[1]} (${party} election symbol)" loading="lazy">${party}</td>`;
+    }
+
     let mps = [];
     let stateStats = {};
     let sortKey = 'criminal_cases';
@@ -672,7 +698,7 @@
           <td>${m.name}</td>
           <td>${m.constituency}</td>
           <td>${m.state}</td>
-          <td>${m.party}</td>
+          ${partyCell(m.party)}
           <td class="cases">${m.criminal_cases}</td>
           <td class="source"><a href="${m.source_url}" target="_blank" rel="noopener">MyNeta &#8599;</a></td>
         </tr>
