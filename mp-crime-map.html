@@ -45,6 +45,9 @@
       --bucket-2: #E8943A;
       --bucket-3: #B36A1E;
       --bucket-4: #7A4212;
+      --cw-band-bg: #F0E2CC;
+      --cw-card-bg: #FBF4E8;
+      --cw-track-bg: #E0CBA8;
     }
     [data-theme="dark"] {
       --green:   #0D2019;
@@ -61,6 +64,9 @@
       --bucket-2: #E8943A;
       --bucket-3: #C97A2C;
       --bucket-4: #A85A18;
+      --cw-band-bg: #241A10;
+      --cw-card-bg: #2E2117;
+      --cw-track-bg: #3D2C1C;
     }
 
     html { scroll-behavior: smooth; }
@@ -412,8 +418,22 @@
     .further-reading a:hover { color: var(--amber); text-decoration-color: var(--amber); }
     .further-reading .source { font-size: 0.72rem; color: var(--muted); flex-shrink: 0; }
 
-    .section-divider { border: none; border-top: 2px dashed var(--border); margin: 56px 0; }
-    .cases-women-callout { border-left-color: #B36A1E; margin-bottom: 24px; }
+    .cw-band {
+      background: var(--cw-band-bg);
+      border-top: 4px solid #B36A1E;
+      border-bottom: 4px solid #B36A1E;
+      padding: 48px 0 8px;
+      margin: 56px 0;
+    }
+    .cw-band-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .cw-band-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #B36A1E; color: #1a1a1a; font-weight: 700; font-size: 0.8rem;
+      padding: 8px 18px; border-radius: 100px; margin-bottom: 28px;
+    }
+    .cases-women-callout { border-left-color: #B36A1E; margin-bottom: 24px; background: var(--cw-card-bg); }
+    .cw-band .cases-women-wrap, .cw-band .further-reading { background: var(--cw-card-bg); }
+    .cw-band .cw-row-bar-track { background: var(--cw-track-bg); }
     .cases-women-wrap {
       background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
       padding: 24px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;
@@ -630,30 +650,33 @@
         </li>
       </ul>
     </div>
+  </div>
 
-    <hr class="section-divider">
-
-    <section id="cases-women-section">
-      <p class="section-label">A Different Dataset &middot; MPs and MLAs, All India</p>
-      <h2 class="section-title">Crimes Against Women: Sitting MPs and MLAs</h2>
-      <div class="callout cases-women-callout">
-        <strong>This is not the Lok Sabha dataset above.</strong> Everything on this page so far covers 484 sitting Lok Sabha MPs and general declared criminal cases. This section is a separate report from ADR / National Election Watch, published 21 August 2024, covering a specific serious-crime category (crimes against women, including rape) across a wider population: <span id="cases-women-total">755</span> sitting MPs (Lok Sabha and Rajya Sabha) and <span id="cases-women-mla-total">3,938</span> sitting MLAs nationwide. The two datasets are <strong>not directly comparable</strong>: different scope, different source report, different population size. Of <span id="cases-women-grand-total">151</span> lawmakers with declared cases in this category, <span id="cases-women-mla-count">135</span> are MLAs and <span id="cases-women-mp-count">16</span> are MPs; <span id="cases-women-rape-count">16</span> have declared cases specifically under rape charges (IPC 376). These are cases filed, not convictions; under Indian law, an accused is presumed innocent until proven guilty. Every figure here was independently verified against ADR's own published PDF report, not taken from a secondary source.
-      </div>
-      <div class="cases-women-wrap" id="cases-women-chart"></div>
-      <div class="further-reading">
-        <p class="further-reading-label">Source</p>
-        <ul>
-          <li>
-            <a href="https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf" target="_blank" rel="noopener">Full ADR report (PDF): Analysis of Sitting MPs/MLAs with Declared Cases Related to Crimes against Women, 2024</a>
-            <span class="source">ADR / National Election Watch</span>
-          </li>
-          <li>
-            <a href="assets/data/mp-mla-crimes-against-women.json" target="_blank" rel="noopener">Download this section's dataset (JSON)</a>
-            <span class="source">23 parties, 151 lawmakers</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <div class="cw-band">
+    <div class="cw-band-inner">
+      <div class="cw-band-badge">&#9888; Different dataset below: MPs + MLAs, all India &mdash; not Lok Sabha only</div>
+      <section id="cases-women-section">
+        <p class="section-label">A Different Dataset &middot; MPs and MLAs, All India</p>
+        <h2 class="section-title">Crimes Against Women: Sitting MPs and MLAs</h2>
+        <div class="callout cases-women-callout">
+          <strong>This is not the Lok Sabha dataset above.</strong> Everything above this band covers 484 sitting Lok Sabha MPs and general declared criminal cases. This section is a separate report from ADR / National Election Watch, published 21 August 2024, covering a specific serious-crime category (crimes against women, including rape) across a wider population: <span id="cases-women-total">755</span> sitting MPs (Lok Sabha and Rajya Sabha) and <span id="cases-women-mla-total">3,938</span> sitting MLAs nationwide. The two datasets are <strong>not directly comparable</strong>: different scope, different source report, different population size. Of <span id="cases-women-grand-total">151</span> lawmakers with declared cases in this category, <span id="cases-women-mla-count">135</span> are MLAs and <span id="cases-women-mp-count">16</span> are MPs; <span id="cases-women-rape-count">16</span> have declared cases specifically under rape charges (IPC 376). These are cases filed, not convictions; under Indian law, an accused is presumed innocent until proven guilty. Every figure here was independently verified against ADR's own published PDF report, not taken from a secondary source.
+        </div>
+        <div class="cases-women-wrap" id="cases-women-chart"></div>
+        <div class="further-reading">
+          <p class="further-reading-label">Source</p>
+          <ul>
+            <li>
+              <a href="https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf" target="_blank" rel="noopener">Full ADR report (PDF): Analysis of Sitting MPs/MLAs with Declared Cases Related to Crimes against Women, 2024</a>
+              <span class="source">ADR / National Election Watch</span>
+            </li>
+            <li>
+              <a href="assets/data/mp-mla-crimes-against-women.json" target="_blank" rel="noopener">Download this section's dataset (JSON)</a>
+              <span class="source">23 parties, 151 lawmakers</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </div>
 
   <section class="question-section">
