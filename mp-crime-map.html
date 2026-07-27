@@ -276,6 +276,7 @@
     .wealth-dot:hover { opacity: 1 !important; stroke: var(--text); stroke-width: 1.5; }
     .wealth-quadrant-line { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 5 5; opacity: 0.6; }
     .wealth-quadrant-label { font-size: 11px; fill: var(--muted); font-family: 'Open Sans', sans-serif; font-style: italic; }
+    .wealth-label-plate { fill: var(--card-bg); opacity: 0.88; }
     .wealth-party-filter { margin-bottom: 16px; flex-wrap: wrap; border-radius: 10px; width: fit-content; gap: 4px; }
     .wealth-party-filter .view-toggle-btn { padding: 5px 14px; font-size: 0.75rem; }
 
@@ -995,8 +996,14 @@
       const avgY = yPos(nationalAvg);
       html += `<line class="wealth-quadrant-line" x1="${medianX}" y1="${marginTop}" x2="${medianX}" y2="${marginTop + plotH}"></line>`;
       html += `<line class="wealth-quadrant-line" x1="${marginLeft}" y1="${avgY}" x2="${marginLeft + plotW}" y2="${avgY}"></line>`;
-      html += `<text class="wealth-quadrant-label" x="${medianX + 6}" y="${marginTop + 12}">Median wealth (≈₹7.2 Cr)</text>`;
-      html += `<text class="wealth-quadrant-label" x="${marginLeft + plotW - 4}" y="${avgY - 6}" text-anchor="end">National avg cases (${nationalAvg.toFixed(1)})</text>`;
+      function labelWithPlate(text, x, y, anchor) {
+        const w = text.length * 5.6 + 12;
+        const rectX = anchor === 'end' ? x - w + 4 : x - 8;
+        return `<rect class="wealth-label-plate" x="${rectX}" y="${y - 12}" width="${w}" height="16" rx="3"></rect>`
+          + `<text class="wealth-quadrant-label" x="${x}" y="${y}" text-anchor="${anchor}">${text}</text>`;
+      }
+      html += labelWithPlate('Median wealth (≈₹7.2 Cr)', medianX + 6, marginTop + 12, 'start');
+      html += labelWithPlate(`National avg cases (${nationalAvg.toFixed(1)})`, marginLeft + plotW - 4, avgY - 6, 'end');
 
       html += `<line class="wealth-axis-line" x1="${marginLeft}" y1="${marginTop + plotH}" x2="${marginLeft + plotW}" y2="${marginTop + plotH}"></line>`;
       html += `<line class="wealth-axis-line" x1="${marginLeft}" y1="${marginTop}" x2="${marginLeft}" y2="${marginTop + plotH}"></line>`;
