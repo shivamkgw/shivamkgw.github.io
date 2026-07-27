@@ -184,6 +184,54 @@
       margin-bottom: 24px;
     }
 
+    /* VIEW TOGGLE */
+    .section-header-row {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap;
+    }
+    .view-toggle {
+      display: flex; background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 100px; padding: 3px; flex-shrink: 0;
+    }
+    .view-toggle-btn {
+      background: none; border: none; font-family: inherit; font-size: 0.8rem;
+      font-weight: 700; color: var(--muted); padding: 7px 16px; border-radius: 100px;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
+    }
+    .view-toggle-btn.active { background: var(--amber); color: #1a1a1a; }
+    .view-toggle-btn:not(.active):hover { color: var(--text); }
+    .benchmark-line {
+      font-size: 0.85rem; color: var(--muted); margin: 4px 0 20px;
+    }
+    .benchmark-line strong { color: var(--amber); }
+
+    /* PARTY VIEW */
+    .party-view {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+      padding: 24px; display: flex; flex-direction: column; gap: 10px;
+      max-height: 620px; overflow-y: auto;
+    }
+    .party-row {
+      display: flex; align-items: center; gap: 12px; cursor: pointer;
+      padding: 6px; border-radius: 8px; transition: background 0.15s;
+    }
+    .party-row:hover { background: rgba(232,148,58,0.1); }
+    .party-row.filtered-active { background: rgba(232,148,58,0.18); }
+    .party-row img {
+      width: 22px; height: 22px; object-fit: contain; flex-shrink: 0;
+      background: #fff; border-radius: 50%; padding: 2px; border: 1px solid var(--border);
+      box-sizing: border-box;
+    }
+    .party-row-icon-placeholder { width: 22px; height: 22px; flex-shrink: 0; }
+    .party-row-label {
+      width: 220px; flex-shrink: 0; font-size: 0.85rem; color: var(--text);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .party-row-bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
+    .party-row-bar-fill { display: block; height: 100%; background: var(--amber); border-radius: 4px; }
+    .party-row-stat { width: 150px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
+    .party-row-stat strong { color: var(--amber); }
+
     /* MAP */
     .map-wrap {
       display: grid;
@@ -400,12 +448,22 @@
     <div id="load-error">Could not load the MP dataset right now. Please refresh, or check back later.</div>
 
     <section id="map-section">
-      <p class="section-label">Full Dataset Map</p>
-      <h2 class="section-title">Average declared criminal cases by state</h2>
-      <div class="map-wrap">
+      <div class="section-header-row">
+        <div>
+          <p class="section-label">Full Dataset Map</p>
+          <h2 class="section-title" id="view-title">Average declared criminal cases by state</h2>
+        </div>
+        <div class="view-toggle" id="view-toggle">
+          <button class="view-toggle-btn active" data-view="state">By State</button>
+          <button class="view-toggle-btn" data-view="party">By Party</button>
+        </div>
+      </div>
+      <p class="benchmark-line" id="benchmark-line"></p>
+      <div class="map-wrap" id="state-view">
         <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="Map of India with states colored by average declared criminal cases per sitting MP"></svg>
         <div class="legend" id="legend"></div>
       </div>
+      <div class="party-view" id="party-view" style="display:none;"></div>
       <div class="filter-chip" id="filter-chip">
         <span id="filter-chip-label"></span>
         <button id="filter-chip-clear" aria-label="Clear filter">&times;</button>
@@ -602,10 +660,29 @@
 
     let mps = [];
     let stateStats = {};
+    let partyStats = {};
+    let nationalAvg = 0;
     let sortKey = 'criminal_cases';
     let sortAsc = false;
     let activeFilter = null;
+    let activeFilterType = null;
     let searchTerm = '';
+    let currentView = 'state';
+
+    function computeGroupStats(records, key) {
+      const stats = {};
+      records.forEach(m => {
+        const k = m[key];
+        if (!stats[k]) stats[k] = { count: 0, total: 0, zeroCount: 0, max: 0, maxName: '' };
+        const s = stats[k];
+        s.count += 1;
+        s.total += m.criminal_cases;
+        if (m.criminal_cases === 0) s.zeroCount += 1;
+        if (m.criminal_cases > s.max) { s.max = m.criminal_cases; s.maxName = m.name; }
+      });
+      Object.values(stats).forEach(s => { s.avg = s.total / s.count; });
+      return stats;
+    }
 
     function renderLegend() {
       const legend = document.getElementById('legend');
@@ -623,18 +700,19 @@
       let html = '';
       STATE_TILES.forEach(s => {
         const stat = stateStats[s.name];
-        const avg = stat ? stat.total / stat.count : 0;
+        const avg = stat ? stat.avg : 0;
         const bucket = bucketFor(avg);
         const fill = bucket.color;
         const isZero = bucket.max === 0;
         const textColor = bucket.dark ? '#1a1a1a' : '#fff';
         const stroke = isZero ? 'var(--bucket-0-stroke)' : 'var(--cream)';
         const strokeWidth = isZero ? 0.7 : 0.4;
-        const isActive = activeFilter === s.name;
+        const isActive = activeFilterType === 'state' && activeFilter === s.name;
         const r = stat ? radiusFor(stat.count) : 2;
         const totalSeats = STATE_SEATS[s.name];
+        const vsNational = stat ? (avg > nationalAvg ? 'above' : avg < nationalAvg ? 'below' : 'at') : '';
         const tooltip = stat
-          ? `${s.name}: ${stat.count} of ${totalSeats} seats counted, average ${avg.toFixed(1)} declared cases`
+          ? `${s.name}: ${stat.count} of ${totalSeats} seats counted, average ${avg.toFixed(1)} declared cases (${vsNational} the ${nationalAvg.toFixed(1)} national average). ${stat.zeroCount} of ${stat.count} counted MPs have 0 cases; highest is ${stat.max} (${stat.maxName}).`
           : `${s.name}: no data collected (0 of ${totalSeats} seats)`;
         html += `<g class="state-tile${isActive ? ' filtered-active' : ''}" data-state="${s.name}">
           <title>${tooltip}</title>
@@ -647,26 +725,67 @@
         tile.addEventListener('click', () => {
           const state = tile.getAttribute('data-state');
           if (!stateStats[state]) return;
-          setFilter(activeFilter === state ? null : state);
+          setFilter(activeFilterType === 'state' && activeFilter === state ? null : state, 'state');
         });
       });
     }
 
-    function setFilter(state) {
-      activeFilter = state;
+    function renderPartyView() {
+      const container = document.getElementById('party-view');
+      const parties = Object.keys(partyStats).sort((a, b) => partyStats[b].avg - partyStats[a].avg);
+      const maxAvg = Math.max(...parties.map(p => partyStats[p].avg), 1);
+      container.innerHTML = parties.map(p => {
+        const s = partyStats[p];
+        const isActive = activeFilterType === 'party' && activeFilter === p;
+        const sym = PARTY_SYMBOLS[p];
+        const icon = sym
+          ? `<img src="${sym[0]}" alt="${sym[1]} (${p} election symbol)" loading="lazy">`
+          : `<span class="party-row-icon-placeholder"></span>`;
+        const pct = Math.max(3, (s.avg / maxAvg) * 100);
+        return `<div class="party-row${isActive ? ' filtered-active' : ''}" data-party="${p.replace(/"/g, '&quot;')}">
+          ${icon}
+          <span class="party-row-label" title="${p}">${p}</span>
+          <span class="party-row-bar-track"><span class="party-row-bar-fill" style="width:${pct}%"></span></span>
+          <span class="party-row-stat"><strong>${s.avg.toFixed(1)}</strong> avg &middot; ${s.count} MP${s.count === 1 ? '' : 's'} &middot; ${s.zeroCount} with 0 cases</span>
+        </div>`;
+      }).join('');
+      container.querySelectorAll('.party-row').forEach(row => {
+        row.addEventListener('click', () => {
+          const party = row.getAttribute('data-party');
+          setFilter(activeFilterType === 'party' && activeFilter === party ? null : party, 'party');
+        });
+      });
+    }
+
+    function setFilter(value, type) {
+      activeFilter = value;
+      activeFilterType = value ? type : null;
       const chip = document.getElementById('filter-chip');
       const label = document.getElementById('filter-chip-label');
-      if (state) {
+      if (value) {
         chip.classList.add('active');
-        label.textContent = 'Showing: ' + state;
+        label.textContent = 'Showing: ' + value;
       } else {
         chip.classList.remove('active');
       }
       renderMap();
+      renderPartyView();
       renderTable();
     }
 
-    document.getElementById('filter-chip-clear').addEventListener('click', () => setFilter(null));
+    document.getElementById('filter-chip-clear').addEventListener('click', () => setFilter(null, null));
+
+    document.querySelectorAll('.view-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentView = btn.getAttribute('data-view');
+        document.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
+        document.getElementById('state-view').style.display = currentView === 'state' ? 'grid' : 'none';
+        document.getElementById('party-view').style.display = currentView === 'party' ? 'flex' : 'none';
+        document.getElementById('view-title').textContent = currentView === 'state'
+          ? 'Average declared criminal cases by state'
+          : 'Average declared criminal cases by party';
+      });
+    });
     document.getElementById('mp-search').addEventListener('input', e => {
       searchTerm = e.target.value.trim();
       renderTable();
@@ -675,7 +794,9 @@
     function renderTable() {
       const tbody = document.getElementById('mp-tbody');
       const empty = document.getElementById('table-empty');
-      let rows = activeFilter ? mps.filter(m => m.state === activeFilter) : mps.slice();
+      let rows = activeFilter
+        ? mps.filter(m => (activeFilterType === 'party' ? m.party : m.state) === activeFilter)
+        : mps.slice();
       if (searchTerm) {
         const q = searchTerm.toLowerCase();
         rows = rows.filter(m =>
@@ -729,19 +850,21 @@
       .then(r => { if (!r.ok) throw new Error('bad response'); return r.json(); })
       .then(data => {
         mps = data.mps;
-        stateStats = {};
-        mps.forEach(m => {
-          if (!stateStats[m.state]) stateStats[m.state] = { count: 0, total: 0 };
-          stateStats[m.state].count += 1;
-          stateStats[m.state].total += m.criminal_cases;
-        });
+        stateStats = computeGroupStats(mps, 'state');
+        partyStats = computeGroupStats(mps, 'party');
         const n = mps.length;
+        nationalAvg = mps.reduce((sum, m) => sum + m.criminal_cases, 0) / n;
+        const nationalZero = mps.filter(m => m.criminal_cases === 0).length;
         document.getElementById('byline-count').textContent = `${n} of 543 sitting MPs`;
         document.getElementById('callout-count').textContent = n;
         document.getElementById('table-count-label').textContent = `Full List (${n} MPs) · Collected 27 July 2026`;
+        document.getElementById('benchmark-line').innerHTML =
+          `National average: <strong>${nationalAvg.toFixed(1)} declared cases per MP</strong> across all ${n} counted &middot; ${nationalZero} of ${n} (${Math.round(nationalZero / n * 100)}%) have 0 declared cases. Use this as your baseline when reading any state or party number below.`;
         renderLegend();
         renderMap();
+        renderPartyView();
         renderTable();
+        if (location.hash === '#party') document.querySelector('[data-view="party"]').click();
       })
       .catch(() => {
         document.getElementById('load-error').style.display = 'block';
