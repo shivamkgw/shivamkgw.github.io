@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
-  <title>Who's Facing the Most Criminal Cases in the Lok Sabha? | Shivam Kumar</title>
-  <meta name="description" content="A mapped, sourced look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
+  <title>Who's Facing the Most Criminal Cases in the 18th Lok Sabha? | Shivam Kumar</title>
+  <meta name="description" content="A mapped, sourced look at declared criminal cases among sitting 18th Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Who's Facing the Most Criminal Cases in the Lok Sabha?">
-  <meta property="og:description" content="A mapped, sourced look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
+  <meta property="og:title" content="Who's Facing the Most Criminal Cases in the 18th Lok Sabha?">
+  <meta property="og:description" content="A mapped, sourced look at declared criminal cases among sitting 18th Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
   <meta property="og:image" content="https://shivamkgw.github.io/assets/img/banner-mp-crime-map.png">
   <meta property="og:url" content="https://shivamkgw.github.io/mp-crime-map.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Who's Facing the Most Criminal Cases in the Lok Sabha?">
-  <meta name="twitter:description" content="A mapped, sourced look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
+  <meta name="twitter:title" content="Who's Facing the Most Criminal Cases in the 18th Lok Sabha?">
+  <meta name="twitter:description" content="A mapped, sourced look at declared criminal cases among sitting 18th Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
   <meta name="twitter:image" content="https://shivamkgw.github.io/assets/img/banner-mp-crime-map.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,9 +45,6 @@
       --bucket-2: #E8943A;
       --bucket-3: #B36A1E;
       --bucket-4: #7A4212;
-      --cw-band-bg: #F0E2CC;
-      --cw-card-bg: #FBF4E8;
-      --cw-track-bg: #E0CBA8;
     }
     [data-theme="dark"] {
       --green:   #0D2019;
@@ -64,9 +61,6 @@
       --bucket-2: #E8943A;
       --bucket-3: #C97A2C;
       --bucket-4: #A85A18;
-      --cw-band-bg: #241A10;
-      --cw-card-bg: #2E2117;
-      --cw-track-bg: #3D2C1C;
     }
 
     html { scroll-behavior: smooth; }
@@ -418,39 +412,16 @@
     .further-reading a:hover { color: var(--amber); text-decoration-color: var(--amber); }
     .further-reading .source { font-size: 0.72rem; color: var(--muted); flex-shrink: 0; }
 
-    .cw-band {
-      background: var(--cw-band-bg);
-      border-top: 4px solid #B36A1E;
-      border-bottom: 4px solid #B36A1E;
-      padding: 48px 0 8px;
-      margin: 56px 0;
+    .related-link-card {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 20px; margin: 48px 0; flex-wrap: wrap;
     }
-    .cw-band-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
-    .cw-band-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #B36A1E; color: #1a1a1a; font-weight: 700; font-size: 0.8rem;
-      padding: 8px 18px; border-radius: 100px; margin-bottom: 28px;
-    }
-    .cases-women-callout { border-left-color: #B36A1E; margin-bottom: 24px; background: var(--cw-card-bg); }
-    .cw-band .cases-women-wrap, .cw-band .further-reading { background: var(--cw-card-bg); }
-    .cw-band .cw-row-bar-track { background: var(--cw-track-bg); }
-    .cases-women-wrap {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-      padding: 24px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;
-    }
-    .cw-row { display: flex; align-items: center; gap: 12px; }
-    .cw-row-label { width: 220px; flex-shrink: 0; font-size: 0.85rem; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .cw-row-bar-track { flex: 1; min-width: 60px; background: var(--border); border-radius: 4px; height: 14px; overflow: hidden; display: flex; }
-    .cw-row-bar-mla { height: 100%; background: #B36A1E; }
-    .cw-row-bar-mp { height: 100%; background: var(--amber); }
-    .cw-row-stat { width: 190px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
-    .cw-row-stat strong { color: var(--amber); }
-    .cw-legend { display: flex; gap: 20px; margin-bottom: 6px; font-size: 0.78rem; color: var(--muted); }
-    .cw-legend-item { display: flex; align-items: center; gap: 8px; }
-    .cw-legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
-    @media (max-width: 900px) {
-      .cw-row-label { width: 130px; font-size: 0.78rem; }
-      .cw-row-stat { width: 130px; font-size: 0.7rem; }
+    .related-link-card .rl-text { font-size: 0.88rem; color: var(--text); }
+    .related-link-card .rl-text strong { display: block; margin-bottom: 2px; color: #B36A1E; }
+    .related-link-card a.rl-btn {
+      background: #B36A1E; color: #fff; padding: 9px 20px; border-radius: 100px;
+      font-size: 0.82rem; font-weight: 700; white-space: nowrap;
     }
 
     #load-error {
@@ -535,7 +506,7 @@
 
   <header class="article-hero">
     <span class="article-tag">Data &middot; July 2026</span>
-    <h1>Who's Facing the Most Criminal Cases in the Lok Sabha?</h1>
+    <h1>Who's Facing the Most Criminal Cases in the 18th Lok Sabha?</h1>
     <p class="lead">Every sitting Lok Sabha MP with a digitized criminal-case entry on their election affidavit, mapped by state. Every figure below links back to its source.</p>
     <div class="article-byline">
       <span>Shivam Kumar</span>
@@ -650,32 +621,13 @@
         </li>
       </ul>
     </div>
-  </div>
 
-  <div class="cw-band">
-    <div class="cw-band-inner">
-      <div class="cw-band-badge">&#9888; Different dataset below: MPs + MLAs, all India &mdash; not Lok Sabha only</div>
-      <section id="cases-women-section">
-        <p class="section-label">A Different Dataset &middot; MPs and MLAs, All India</p>
-        <h2 class="section-title">Crimes Against Women: Sitting MPs and MLAs</h2>
-        <div class="callout cases-women-callout">
-          <strong>This is not the Lok Sabha dataset above.</strong> Everything above this band covers 484 sitting Lok Sabha MPs and general declared criminal cases. This section is a separate report from ADR / National Election Watch, published 21 August 2024, covering a specific serious-crime category (crimes against women, including rape) across a wider population: <span id="cases-women-total">755</span> sitting MPs (Lok Sabha and Rajya Sabha) and <span id="cases-women-mla-total">3,938</span> sitting MLAs nationwide. The two datasets are <strong>not directly comparable</strong>: different scope, different source report, different population size. Of <span id="cases-women-grand-total">151</span> lawmakers with declared cases in this category, <span id="cases-women-mla-count">135</span> are MLAs and <span id="cases-women-mp-count">16</span> are MPs; <span id="cases-women-rape-count">16</span> have declared cases specifically under rape charges (IPC 376). These are cases filed, not convictions; under Indian law, an accused is presumed innocent until proven guilty. Every figure here was independently verified against ADR's own published PDF report, not taken from a secondary source.
-        </div>
-        <div class="cases-women-wrap" id="cases-women-chart"></div>
-        <div class="further-reading">
-          <p class="further-reading-label">Source</p>
-          <ul>
-            <li>
-              <a href="https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf" target="_blank" rel="noopener">Full ADR report (PDF): Analysis of Sitting MPs/MLAs with Declared Cases Related to Crimes against Women, 2024</a>
-              <span class="source">ADR / National Election Watch</span>
-            </li>
-            <li>
-              <a href="assets/data/mp-mla-crimes-against-women.json" target="_blank" rel="noopener">Download this section's dataset (JSON)</a>
-              <span class="source">23 parties, 151 lawmakers</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div class="related-link-card">
+      <div class="rl-text">
+        <strong>Looking for crimes against women specifically?</strong>
+        That's a separate, wider dataset: 151 MPs and MLAs nationwide, not just the 18th Lok Sabha.
+      </div>
+      <a class="rl-btn" href="crimes-against-women.html">Open that dataset &rarr;</a>
     </div>
   </div>
 
@@ -688,7 +640,7 @@
         <input type="email" name="email" placeholder="Your email" required>
       </div>
       <textarea name="question" placeholder="Write your question here..." required></textarea>
-      <input type="hidden" name="_subject" value="Question on: Who's Facing the Most Criminal Cases in the Lok Sabha?">
+      <input type="hidden" name="_subject" value="Question on: Who's Facing the Most Criminal Cases in the 18th Lok Sabha?">
       <button type="submit" class="form-submit">Send question &rarr;</button>
       <p class="form-note">Your email will only be used to reply to your question.</p>
     </form>
@@ -1195,41 +1147,6 @@
       })
       .catch(() => {
         document.getElementById('load-error').style.display = 'block';
-      });
-
-    fetch('assets/data/mp-mla-crimes-against-women.json')
-      .then(r => { if (!r.ok) throw new Error('bad response'); return r.json(); })
-      .then(data => {
-        const container = document.getElementById('cases-women-chart');
-        const parties = data.parties.slice().sort((a, b) => b.total - a.total);
-        const maxTotal = Math.max(...parties.map(p => p.total));
-        let html = `<div class="cw-legend">
-          <span class="cw-legend-item"><span class="cw-legend-dot" style="background:#B36A1E;"></span>MLAs</span>
-          <span class="cw-legend-item"><span class="cw-legend-dot" style="background:var(--amber);"></span>MPs</span>
-        </div>`;
-        html += parties.map(p => {
-          const pct = Math.max(4, (p.total / maxTotal) * 100);
-          const mlaPct = p.total ? (p.mlas / p.total) * pct : 0;
-          const mpPct = p.total ? (p.mps / p.total) * pct : 0;
-          return `<div class="cw-row">
-            <span class="cw-row-label" title="${p.party}">${p.party}</span>
-            <span class="cw-row-bar-track">
-              <span class="cw-row-bar-mla" style="width:${mlaPct}%"></span>
-              <span class="cw-row-bar-mp" style="width:${mpPct}%"></span>
-            </span>
-            <span class="cw-row-stat"><strong>${p.total}</strong> total &middot; ${p.mlas} MLA${p.mlas === 1 ? '' : 's'}, ${p.mps} MP${p.mps === 1 ? '' : 's'}</span>
-          </div>`;
-        }).join('');
-        container.innerHTML = html;
-        document.getElementById('cases-women-total').textContent = '755';
-        document.getElementById('cases-women-mla-total').textContent = '3,938';
-        document.getElementById('cases-women-grand-total').textContent = data.meta.total;
-        document.getElementById('cases-women-mla-count').textContent = data.meta.total_mlas;
-        document.getElementById('cases-women-mp-count').textContent = data.meta.total_mps;
-        document.getElementById('cases-women-rape-count').textContent = data.meta.rape_cases_total;
-      })
-      .catch(() => {
-        document.getElementById('cases-women-chart').innerHTML = '<p style="color:var(--muted);padding:12px;">Could not load this dataset right now.</p>';
       });
   </script>
 </body>
