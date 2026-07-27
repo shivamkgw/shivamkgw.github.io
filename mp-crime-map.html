@@ -258,8 +258,8 @@
     .mp-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
     table.mp-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 640px; }
     table.mp-table th, table.mp-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
-    td.party-cell { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
-    td.party-cell img {
+    .party-wrap { display: flex; align-items: center; gap: 8px; }
+    .party-wrap img {
       width: 20px; height: 20px; object-fit: contain; flex-shrink: 0;
       background: #fff; border-radius: 50%; padding: 2px;
       border: 1px solid var(--border); box-sizing: border-box;
@@ -597,7 +597,7 @@
     function partyCell(party) {
       const sym = PARTY_SYMBOLS[party];
       if (!sym) return `<td>${party}</td>`;
-      return `<td class="party-cell"><img src="${sym[0]}" alt="${sym[1]} (${party} election symbol)" loading="lazy">${party}</td>`;
+      return `<td><div class="party-wrap"><img src="${sym[0]}" alt="${sym[1]} (${party} election symbol)" loading="lazy">${party}</div></td>`;
     }
 
     let mps = [];
