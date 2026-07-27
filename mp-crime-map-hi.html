@@ -253,6 +253,20 @@
     }
     .party-row-stat strong { color: var(--amber); }
 
+    /* WEALTH SCATTER */
+    .wealth-note { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin: 0 0 16px; max-width: 780px; }
+    .wealth-wrap {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px; margin-bottom: 48px;
+    }
+    #wealth-scatter { width: 100%; height: auto; display: block; }
+    .wealth-axis-line { stroke: var(--border); stroke-width: 1.5; }
+    .wealth-gridline { stroke: var(--border); stroke-width: 1; opacity: 0.5; }
+    .wealth-tick-label { font-size: 12px; fill: var(--muted); font-family: 'Open Sans', sans-serif; }
+    .wealth-axis-label { font-size: 13px; fill: var(--text); font-weight: 700; font-family: 'Hind', 'Open Sans', sans-serif; }
+    .wealth-dot { cursor: pointer; transition: opacity 0.15s; }
+    .wealth-dot:hover { opacity: 1 !important; stroke: var(--text); stroke-width: 1.5; }
+
     /* MAP */
     .map-wrap {
       display: grid;
@@ -498,6 +512,15 @@
       <div class="filter-chip" id="filter-chip">
         <span id="filter-chip-label"></span>
         <button id="filter-chip-clear" aria-label="फ़िल्टर हटाएं">&times;</button>
+      </div>
+    </section>
+
+    <section id="wealth-section">
+      <p class="section-label">संपत्ति बनाम मामले</p>
+      <h2 class="section-title">दर्ज संपत्ति बनाम दर्ज आपराधिक मामले</h2>
+      <p class="wealth-note">दाखिल करने के समय दर्ज संपत्ति अक्सर बही-मूल्य या खरीद-मूल्य दर्शाती है, मौजूदा बाज़ार मूल्य नहीं, खासकर लंबे समय से रखी गई कृषि या शहरी ज़मीन के मामले में। इस अक्ष को असली संपत्ति की न्यूनतम सीमा मानें, सटीक आंकड़ा नहीं। संपत्ति की धुरी लघुगणकीय (log) पैमाने पर है, क्योंकि आंकड़े कुछ लाख से लेकर सैकड़ों करोड़ तक फैले हैं; सामान्य पैमाने पर लगभग हर सांसद एक ही कोने में सिमट जाता।</p>
+      <div class="wealth-wrap">
+        <svg id="wealth-scatter" viewBox="0 0 1000 560" role="img" aria-label="हर गिने गए सांसद की दर्ज संपत्ति और दर्ज आपराधिक मामलों का स्कैटर प्लॉट"></svg>
       </div>
     </section>
 
@@ -886,6 +909,66 @@
       `).join('');
     }
 
+    function formatRupees(rs) {
+      const crore = rs / 10000000;
+      if (crore >= 1) return crore.toFixed(crore >= 100 ? 0 : 1) + ' करोड़';
+      const lakh = rs / 100000;
+      return lakh.toFixed(1) + ' लाख';
+    }
+
+    function renderWealthScatter() {
+      const svg = document.getElementById('wealth-scatter');
+      const marginLeft = 80, marginRight = 20, marginTop = 20, marginBottom = 55;
+      const width = 1000, height = 560;
+      const plotW = width - marginLeft - marginRight;
+      const plotH = height - marginTop - marginBottom;
+      const xDomainMin = 5.3, xDomainMax = 11;
+      const maxCases = Math.max(...mps.map(m => m.criminal_cases));
+      const yDomainMax = Math.ceil((maxCases + 1) / 10) * 10;
+
+      function xPos(assets) {
+        const lg = Math.log10(Math.max(assets, 1));
+        const clamped = Math.min(Math.max(lg, xDomainMin), xDomainMax);
+        return marginLeft + ((clamped - xDomainMin) / (xDomainMax - xDomainMin)) * plotW;
+      }
+      function yPos(cases) {
+        return marginTop + plotH - (cases / yDomainMax) * plotH;
+      }
+
+      const xTicks = [
+        [1e6, '10 लाख'], [1e7, '1 करोड़'], [1e8, '10 करोड़'], [1e9, '100 करोड़'], [1e10, '1,000 करोड़']
+      ].filter(t => Math.log10(t[0]) >= xDomainMin && Math.log10(t[0]) <= xDomainMax);
+      const yStep = yDomainMax <= 50 ? 10 : 20;
+      const yTicks = [];
+      for (let v = 0; v <= yDomainMax; v += yStep) yTicks.push(v);
+
+      let html = '';
+      xTicks.forEach(([v, label]) => {
+        const x = xPos(v);
+        html += `<line class="wealth-gridline" x1="${x}" y1="${marginTop}" x2="${x}" y2="${marginTop + plotH}"></line>`;
+        html += `<text class="wealth-tick-label" x="${x}" y="${marginTop + plotH + 22}" text-anchor="middle">${label}</text>`;
+      });
+      yTicks.forEach(v => {
+        const y = yPos(v);
+        html += `<line class="wealth-gridline" x1="${marginLeft}" y1="${y}" x2="${marginLeft + plotW}" y2="${y}"></line>`;
+        html += `<text class="wealth-tick-label" x="${marginLeft - 12}" y="${y + 4}" text-anchor="end">${v}</text>`;
+      });
+      html += `<line class="wealth-axis-line" x1="${marginLeft}" y1="${marginTop + plotH}" x2="${marginLeft + plotW}" y2="${marginTop + plotH}"></line>`;
+      html += `<line class="wealth-axis-line" x1="${marginLeft}" y1="${marginTop}" x2="${marginLeft}" y2="${marginTop + plotH}"></line>`;
+      html += `<text class="wealth-axis-label" x="${marginLeft + plotW / 2}" y="${height - 8}" text-anchor="middle">दर्ज संपत्ति (log पैमाना)</text>`;
+      html += `<text class="wealth-axis-label" x="${-(marginTop + plotH / 2)}" y="18" text-anchor="middle" transform="rotate(-90)">दर्ज आपराधिक मामले</text>`;
+
+      mps.forEach(m => {
+        const bucket = BUCKETS.find(b => m.criminal_cases <= b.max) || BUCKETS[BUCKETS.length - 1];
+        const cx = xPos(m.total_assets);
+        const cy = yPos(m.criminal_cases);
+        const tooltip = `${m.name} (${m.party}, ${STATE_NAME_HI[m.state] || m.state}): ${formatRupees(m.total_assets)} दर्ज संपत्ति, ${m.criminal_cases} दर्ज मामले`;
+        html += `<circle class="wealth-dot" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="5" fill="${bucket.color}" fill-opacity="0.75" stroke="var(--cream)" stroke-width="0.6"><title>${tooltip}</title></circle>`;
+      });
+
+      svg.innerHTML = html;
+    }
+
     document.querySelectorAll('table.mp-table th[data-key]').forEach(th => {
       th.addEventListener('click', () => {
         const key = th.getAttribute('data-key');
@@ -920,6 +1003,7 @@
         renderMap();
         renderPartyView();
         renderTable();
+        renderWealthScatter();
         if (location.hash === '#party') document.querySelector('[data-view="party"]').click();
       })
       .catch(() => {
