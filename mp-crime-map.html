@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <title>Who's Facing the Most Criminal Cases in the Lok Sabha? | Shivam Kumar</title>
-  <meta name="description" content="A mapped, sourced pilot look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
+  <meta name="description" content="A mapped, sourced look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,8 +30,11 @@
       --muted:   #5A6A62;
       --card-bg: #EDEAE0;
       --border:  #D6D0C4;
-      --sampled:  #E8943A;
-      --nodata:  #DAD5C8;
+      --bucket-0: #EDEAE0;
+      --bucket-1: #F3C989;
+      --bucket-2: #E8943A;
+      --bucket-3: #B36A1E;
+      --bucket-4: #7A4212;
     }
     [data-theme="dark"] {
       --green:   #0D2019;
@@ -42,8 +45,11 @@
       --muted:   #8A9E94;
       --card-bg: #1A2820;
       --border:  #2A3D32;
-      --sampled:  #E8943A;
-      --nodata:  #26332C;
+      --bucket-0: #1A2820;
+      --bucket-1: #B98A46;
+      --bucket-2: #E8943A;
+      --bucket-3: #C97A2C;
+      --bucket-4: #A85A18;
     }
 
     html { scroll-behavior: smooth; }
@@ -232,6 +238,21 @@
 
     /* TABLE */
     .table-section { margin: 56px 0; }
+    .mp-search {
+      width: 100%;
+      max-width: 360px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      color: var(--text);
+      margin: 16px 0;
+      display: block;
+    }
+    .mp-search:focus { outline: none; border-color: var(--amber); }
+    .mp-search::placeholder { color: var(--muted); }
     .mp-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
     table.mp-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 640px; }
     table.mp-table th, table.mp-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
@@ -355,26 +376,26 @@
   <header class="article-hero">
     <span class="article-tag">Data &middot; July 2026</span>
     <h1>Who's Facing the Most Criminal Cases in the Lok Sabha?</h1>
-    <p class="lead">A mapped, sourced pilot of 18 sitting MPs, ranked by one objective number: how many criminal cases they declared on their own election affidavit. Every figure below links back to its source.</p>
+    <p class="lead">Every sitting Lok Sabha MP with a digitized criminal-case entry on their election affidavit, mapped by state. Every figure below links back to its source.</p>
     <div class="article-byline">
       <span>Shivam Kumar</span>
       <span class="sep">|</span>
-      <span>Pilot dataset &middot; 18 of 543 MPs</span>
+      <span id="byline-count">Loading dataset&hellip;</span>
     </div>
   </header>
 
   <div class="page-body">
     <div class="callout">
-      <strong>Read this before the map:</strong> these are cases <em>filed</em> against an MP in their sworn ECI affidavit, not convictions. Under Indian law, an accused is presumed innocent until proven guilty. This page covers a hand-verified pilot of 18 sitting Lok Sabha MPs out of 543 &mdash; the 18 with the most declared cases nationally, not a representative sample of any state. Because of that, the map below only marks <em>which states happen to have a sampled MP</em>, not a state-by-state comparison: with 1-4 MPs per state, an "average" would be statistically meaningless and would unfairly tar whichever states this specific pilot happened to sample. Source for every number: <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener" style="text-decoration:underline;">MyNeta / ADR</a>, based on public ECI election affidavits. <strong>Data last verified: 27 July 2026</strong> &mdash; MyNeta records can change after court dispositions, so treat this as a point-in-time snapshot, not a live feed.
+      <strong>Read this before the map:</strong> these are cases <em>filed</em> against an MP in their sworn ECI affidavit, not convictions. Under Indian law, an accused is presumed innocent until proven guilty. This covers <span id="callout-count">484</span> of 543 winning candidates: the rest did not have a digitized criminal-case entry in the source list at the time of collection, so they are left out rather than guessed at. Zero declared cases is shown as a plain fact, not a "good" score. The map colors each state by its true average across every MP counted there, since this is now a full count of that state's MPs, not a small sample, so an average is statistically sound. Source for every number: <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener" style="text-decoration:underline;">MyNeta / ADR</a>, based on public ECI election affidavits. The first 18 rows (the highest case counts) were individually cross-checked against their affidavit pages; the rest are sourced directly from MyNeta's published list, each linked to its own affidavit page for independent verification. <strong>Data collected: 27 July 2026.</strong> MyNeta records can change after court dispositions, so treat this as a point-in-time snapshot, not a live feed.
     </div>
 
     <div id="load-error">Could not load the MP dataset right now. Please refresh, or check back later.</div>
 
     <section id="map-section">
-      <p class="section-label">Pilot Map</p>
-      <h2 class="section-title">Which states have a sampled MP in this pilot</h2>
+      <p class="section-label">Full Dataset Map</p>
+      <h2 class="section-title">Average declared criminal cases by state</h2>
       <div class="map-wrap">
-        <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="Map of India with states colored by average declared criminal cases among pilot MPs"></svg>
+        <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="Map of India with states colored by average declared criminal cases per sitting MP"></svg>
         <div class="legend" id="legend"></div>
       </div>
       <div class="filter-chip" id="filter-chip">
@@ -384,8 +405,9 @@
     </section>
 
     <section class="table-section" id="table-section">
-      <p class="section-label">Full Pilot List &middot; Verified 27 July 2026</p>
-      <h2 class="section-title">All 18 MPs, sorted by declared criminal cases</h2>
+      <p class="section-label" id="table-count-label">Full List &middot; Collected 27 July 2026</p>
+      <h2 class="section-title">All MPs, sorted by declared criminal cases</h2>
+      <input type="text" id="mp-search" class="mp-search" placeholder="Search by name, constituency, or party...">
       <div class="mp-table-wrap">
         <table class="mp-table">
           <thead>
@@ -412,7 +434,7 @@
           <span class="source">MyNeta.info</span>
         </li>
         <li>
-          <a href="https://adrindia.org/" target="_blank" rel="noopener">Association for Democratic Reforms &mdash; methodology and reports</a>
+          <a href="https://adrindia.org/" target="_blank" rel="noopener">Association for Democratic Reforms: methodology and reports</a>
           <span class="source">ADR India</span>
         </li>
       </ul>
@@ -480,7 +502,7 @@
     })();
 
     const STATE_TILES = [
-      { name: 'Jammu & Kashmir', abbr: 'JK', x: 28.8, y: 10.3 },
+      { name: 'Jammu and Kashmir', abbr: 'JK', x: 28.8, y: 10.3 },
       { name: 'Ladakh', abbr: 'LA', x: 33.5, y: 8.5 },
       { name: 'Himachal Pradesh', abbr: 'HP', x: 31.2, y: 17.9 },
       { name: 'Punjab', abbr: 'PB', x: 23.5, y: 20.7 },
@@ -511,11 +533,27 @@
       { name: 'Andhra Pradesh', abbr: 'AP', x: 39.7, y: 72.8 },
       { name: 'Tamil Nadu', abbr: 'TN', x: 36.3, y: 89.0 },
       { name: 'Kerala', abbr: 'KL', x: 28.1, y: 91.0 },
-      { name: 'Puducherry', abbr: 'PY', x: 40.0, y: 86.2 }
+      { name: 'Puducherry', abbr: 'PY', x: 40.0, y: 86.2 },
+      { name: 'Chandigarh', abbr: 'CH', x: 25.5, y: 22.5 },
+      { name: 'Dadra and Nagar Haveli and Daman and Diu', abbr: 'DN', x: 15.5, y: 55.5 },
+      { name: 'Andaman and Nicobar Islands', abbr: 'AN', x: 83.7, y: 87.2 },
+      { name: 'Lakshadweep', abbr: 'LD', x: 15.6, y: 91.0 }
     ];
 
+    const BUCKETS = [
+      { max: 0,        color: 'var(--bucket-0)', label: '0 avg cases',        dark: true },
+      { max: 1.99,     color: 'var(--bucket-1)', label: '< 2 avg cases',      dark: true },
+      { max: 4.99,     color: 'var(--bucket-2)', label: '2-5 avg cases',      dark: true },
+      { max: 9.99,     color: 'var(--bucket-3)', label: '5-10 avg cases',     dark: false },
+      { max: Infinity, color: 'var(--bucket-4)', label: '10+ avg cases',      dark: false }
+    ];
+
+    function bucketFor(avg) {
+      return BUCKETS.find(b => avg <= b.max);
+    }
+
     function radiusFor(count) {
-      return 2.2 + Math.min(count, 4) * 0.9;
+      return 2 + Math.sqrt(count) * 0.9;
     }
 
     let mps = [];
@@ -523,13 +561,15 @@
     let sortKey = 'criminal_cases';
     let sortAsc = false;
     let activeFilter = null;
+    let searchTerm = '';
 
     function renderLegend() {
       const legend = document.getElementById('legend');
       let html = '';
-      html += `<div class="legend-item"><span class="legend-swatch" style="background:var(--sampled)"></span>Has a sampled MP (dot size = MPs sampled)</div>`;
-      html += `<div class="legend-item"><span class="legend-swatch" style="background:var(--nodata)"></span>Not in this pilot</div>`;
-      html += `<div class="legend-note">Color marks presence in this 18-MP pilot only. With 1-4 MPs per state, this pilot cannot support a state-by-state severity comparison &mdash; see each MP's individual case count in the table.</div>`;
+      BUCKETS.forEach(b => {
+        html += `<div class="legend-item"><span class="legend-swatch" style="background:${b.color}"></span>${b.label}</div>`;
+      });
+      html += `<div class="legend-note">Dot size = number of MPs counted from that state. Color = average declared cases per MP there, across every MP counted, not a sample.</div>`;
       legend.innerHTML = html;
     }
 
@@ -538,13 +578,15 @@
       let html = '';
       STATE_TILES.forEach(s => {
         const stat = stateStats[s.name];
-        const fill = stat ? 'var(--sampled)' : 'var(--nodata)';
-        const textColor = stat ? '#1a1a1a' : 'var(--muted)';
+        const avg = stat ? stat.total / stat.count : 0;
+        const bucket = bucketFor(avg);
+        const fill = bucket.color;
+        const textColor = bucket.dark ? '#1a1a1a' : '#fff';
         const isActive = activeFilter === s.name;
-        const r = stat ? radiusFor(stat.count) : 2.2;
+        const r = stat ? radiusFor(stat.count) : 2;
         const tooltip = stat
-          ? `${s.name}: ${stat.count} pilot MP(s) — ${stat.names.join(', ')}`
-          : `${s.name}: not in this pilot`;
+          ? `${s.name}: ${stat.count} MP(s), average ${avg.toFixed(1)} declared cases`
+          : `${s.name}: no data collected`;
         html += `<g class="state-tile${isActive ? ' filtered-active' : ''}" data-state="${s.name}">
           <title>${tooltip}</title>
           <circle cx="${s.x}" cy="${s.y}" r="${r}" fill="${fill}" stroke="var(--cream)" stroke-width="0.4"></circle>
@@ -576,11 +618,23 @@
     }
 
     document.getElementById('filter-chip-clear').addEventListener('click', () => setFilter(null));
+    document.getElementById('mp-search').addEventListener('input', e => {
+      searchTerm = e.target.value.trim();
+      renderTable();
+    });
 
     function renderTable() {
       const tbody = document.getElementById('mp-tbody');
       const empty = document.getElementById('table-empty');
       let rows = activeFilter ? mps.filter(m => m.state === activeFilter) : mps.slice();
+      if (searchTerm) {
+        const q = searchTerm.toLowerCase();
+        rows = rows.filter(m =>
+          m.name.toLowerCase().includes(q) ||
+          m.constituency.toLowerCase().includes(q) ||
+          m.party.toLowerCase().includes(q)
+        );
+      }
       rows.sort((a, b) => {
         let av = a[sortKey], bv = b[sortKey];
         if (typeof av === 'string') { av = av.toLowerCase(); bv = bv.toLowerCase(); }
@@ -628,10 +682,14 @@
         mps = data.mps;
         stateStats = {};
         mps.forEach(m => {
-          if (!stateStats[m.state]) stateStats[m.state] = { count: 0, names: [] };
+          if (!stateStats[m.state]) stateStats[m.state] = { count: 0, total: 0 };
           stateStats[m.state].count += 1;
-          stateStats[m.state].names.push(`${m.name} (${m.criminal_cases})`);
+          stateStats[m.state].total += m.criminal_cases;
         });
+        const n = mps.length;
+        document.getElementById('byline-count').textContent = `${n} of 543 sitting MPs`;
+        document.getElementById('callout-count').textContent = n;
+        document.getElementById('table-count-label').textContent = `Full List (${n} MPs) · Collected 27 July 2026`;
         renderLegend();
         renderMap();
         renderTable();

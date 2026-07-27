@@ -5,18 +5,20 @@
     "source_list_url": "https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal",
     "election": "Lok Sabha 2024 General Election",
     "as_of": "2026-07-27",
-    "methodology_note": "Case counts are self-declared by candidates in their sworn Form 26 affidavits filed with the Election Commission of India ahead of the 2024 general election. MyNeta/ADR digitizes these public filings. A case count reflects cases FILED against the MP, not convictions — under Indian law an accused is presumed innocent until proven guilty. This is a pilot of 18 MPs, not a comprehensive ranking of all 543 sitting members."
+    "total_seats": 543,
+    "records_available": 484,
+    "methodology_note": "Case counts are self-declared by candidates in their sworn Form 26 affidavits filed with the Election Commission of India ahead of the 2024 general election. MyNeta/ADR digitizes these public filings. A case count reflects cases filed against the MP, not convictions. Under Indian law, an accused is presumed innocent until proven guilty. This covers 484 of 543 winning candidates: the remainder did not have a digitized criminal-case entry in the source list at the time of collection. Each row links to its own source affidavit page."
   },
   "mps": [
     {
-      "id": "idukki-dean-kuriakose",
-      "name": "Dean Kuriakose",
+      "id": "idukki-adv-dean-kuriakose",
+      "name": "Adv. Dean Kuriakose",
       "constituency": "Idukki",
       "state": "Kerala",
       "party": "INC",
       "criminal_cases": 88,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2275",
-      "source_label": "MyNeta — Idukki, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Idukki, Lok Sabha 2024 affidavit"
     },
     {
       "id": "vadakara-shafi-parambil",
@@ -26,7 +28,7 @@
       "party": "INC",
       "criminal_cases": 47,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3121",
-      "source_label": "MyNeta — Vadakara, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Vadakara, Lok Sabha 2024 affidavit"
     },
     {
       "id": "malkajgiri-eatala-rajender",
@@ -36,7 +38,7 @@
       "party": "BJP",
       "criminal_cases": 45,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5238",
-      "source_label": "MyNeta — Malkajgiri, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Malkajgiri, Lok Sabha 2024 affidavit"
     },
     {
       "id": "karimnagar-bandi-sanjay-kumar",
@@ -46,37 +48,37 @@
       "party": "BJP",
       "criminal_cases": 42,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230",
-      "source_label": "MyNeta — Karimnagar, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Karimnagar, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "purnia-rajesh-ranjan",
-      "name": "Rajesh Ranjan (Pappu Yadav)",
+      "id": "purnia-rajesh-ranjan-alias-pappu-yadav",
+      "name": "Rajesh Ranjan Alias Pappu Yadav",
       "constituency": "Purnia",
       "state": "Bihar",
       "party": "IND",
       "criminal_cases": 41,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2710",
-      "source_label": "MyNeta — Purnia, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Purnia, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "madha-dhairyasheel-mohite-patil",
-      "name": "Dhairyasheel Mohite-Patil",
+      "id": "madha-mohite-patil-dhairyasheel-rajsinh",
+      "name": "Mohite-Patil Dhairyasheel Rajsinh",
       "constituency": "Madha",
       "state": "Maharashtra",
-      "party": "NCP-SP",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
       "criminal_cases": 36,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4929",
-      "source_label": "MyNeta — Madha, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Madha, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "nagina-chandrashekhar-azad",
-      "name": "Chandrashekhar Azad",
-      "constituency": "Nagina",
+      "id": "nagina-sc-chandrashekhar",
+      "name": "Chandrashekhar",
+      "constituency": "Nagina (SC)",
       "state": "Uttar Pradesh",
-      "party": "ASP",
+      "party": "Aazad Samaj Party (Kanshi Ram)",
       "criminal_cases": 36,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=39",
-      "source_label": "MyNeta — Nagina, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Nagina (SC), Lok Sabha 2024 affidavit"
     },
     {
       "id": "medak-madhavaneni-raghunandan-rao",
@@ -86,17 +88,17 @@
       "party": "BJP",
       "criminal_cases": 29,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5239",
-      "source_label": "MyNeta — Medak, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Medak, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "bangaon-shantanu-thakur",
+      "id": "bangaon-sc-shantanu-thakur",
       "name": "Shantanu Thakur",
-      "constituency": "Bangaon",
+      "constituency": "Bangaon (SC)",
       "state": "West Bengal",
       "party": "BJP",
       "criminal_cases": 23,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7112",
-      "source_label": "MyNeta — Bangaon, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Bangaon (SC), Lok Sabha 2024 affidavit"
     },
     {
       "id": "nizamabad-arvind-dharmapuri",
@@ -106,7 +108,7 @@
       "party": "BJP",
       "criminal_cases": 22,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5246",
-      "source_label": "MyNeta — Nizamabad, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Nizamabad, Lok Sabha 2024 affidavit"
     },
     {
       "id": "dhanbad-dulu-mahato",
@@ -116,17 +118,17 @@
       "party": "BJP",
       "criminal_cases": 22,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8469",
-      "source_label": "MyNeta — Dhanbad, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Dhanbad, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "raebareli-rahul-gandhi",
+      "id": "rae-bareli-rahul-gandhi",
       "name": "Rahul Gandhi",
       "constituency": "Rae Bareli",
       "state": "Uttar Pradesh",
       "party": "INC",
       "criminal_cases": 18,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7651",
-      "source_label": "MyNeta — Rae Bareli, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Rae Bareli, Lok Sabha 2024 affidavit"
     },
     {
       "id": "theni-thanga-tamilselvan",
@@ -136,7 +138,7 @@
       "party": "DMK",
       "criminal_cases": 17,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1225",
-      "source_label": "MyNeta — Theni, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Theni, Lok Sabha 2024 affidavit"
     },
     {
       "id": "balurghat-sukanta-majumdar",
@@ -146,7 +148,7 @@
       "party": "BJP",
       "criminal_cases": 16,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2211",
-      "source_label": "MyNeta — Balurghat, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Balurghat, Lok Sabha 2024 affidavit"
     },
     {
       "id": "aurangabad-abhay-kumar-sinha",
@@ -156,17 +158,17 @@
       "party": "RJD",
       "criminal_cases": 16,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1702",
-      "source_label": "MyNeta — Aurangabad, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Aurangabad, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "hindupur-bk-parthasarathi",
+      "id": "hindupur-b-k-parthasarathi",
       "name": "B K Parthasarathi",
       "constituency": "Hindupur",
       "state": "Andhra Pradesh",
       "party": "TDP",
       "criminal_cases": 15,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5109",
-      "source_label": "MyNeta — Hindupur, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Hindupur, Lok Sabha 2024 affidavit"
     },
     {
       "id": "kannur-k-sudhakaran",
@@ -176,17 +178,4677 @@
       "party": "INC",
       "criminal_cases": 14,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2279",
-      "source_label": "MyNeta — Kannur, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Kannur, Lok Sabha 2024 affidavit"
     },
     {
-      "id": "attingal-adoor-prakash",
-      "name": "Adoor Prakash",
+      "id": "daman-diu-patel-umeshbhai-babubhai",
+      "name": "Patel Umeshbhai Babubhai",
+      "constituency": "Daman & Diu",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "party": "IND",
+      "criminal_cases": 14,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3667",
+      "source_label": "MyNeta: Daman & Diu, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "attingal-adv-adoor-prakash",
+      "name": "Adv Adoor Prakash",
       "constituency": "Attingal",
       "state": "Kerala",
       "party": "INC",
       "criminal_cases": 13,
       "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3084",
-      "source_label": "MyNeta — Attingal, Lok Sabha 2024 affidavit"
+      "source_label": "MyNeta: Attingal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "akbarpur-devendra-singh-alias-bhole-singh",
+      "name": "Devendra Singh Alias Bhole Singh",
+      "constituency": "Akbarpur",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 13,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5083",
+      "source_label": "MyNeta: Akbarpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khagaria-rajesh-verma",
+      "name": "Rajesh Verma",
+      "constituency": "Khagaria",
+      "state": "Bihar",
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "criminal_cases": 12,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3633",
+      "source_label": "MyNeta: Khagaria, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khadoor-sahib-amritpal-singh",
+      "name": "Amritpal Singh",
+      "constituency": "Khadoor Sahib",
+      "state": "Punjab",
+      "party": "IND",
+      "criminal_cases": 12,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9665",
+      "source_label": "MyNeta: Khadoor Sahib, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thiruvananthapuram-shashi-tharoor",
+      "name": "Shashi Tharoor",
+      "constituency": "Thiruvananthapuram",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 12,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2313",
+      "source_label": "MyNeta: Thiruvananthapuram, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nagpur-nitin-jairam-gadkari",
+      "name": "Nitin Jairam Gadkari",
+      "constituency": "Nagpur",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 10,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=329",
+      "source_label": "MyNeta: Nagpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ernakulam-hibi-eden",
+      "name": "Hibi Eden",
+      "constituency": "Ernakulam",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 10,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3093",
+      "source_label": "MyNeta: Ernakulam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mayiladuthurai-sudha-r",
+      "name": "Sudha R",
+      "constituency": "Mayiladuthurai",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 10,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1575",
+      "source_label": "MyNeta: Mayiladuthurai, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dindigul-sachithanantham-r",
+      "name": "Sachithanantham R",
+      "constituency": "Dindigul",
+      "state": "Tamil Nadu",
+      "party": "CPI(M)",
+      "criminal_cases": 9,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=834",
+      "source_label": "MyNeta: Dindigul, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kurukshetra-naveen-jindal",
+      "name": "Naveen Jindal",
+      "constituency": "Kurukshetra",
+      "state": "Haryana",
+      "party": "BJP",
+      "criminal_cases": 9,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8542",
+      "source_label": "MyNeta: Kurukshetra, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "berhampur-dr-pradeep-kumar-panigrahy",
+      "name": "Dr Pradeep Kumar Panigrahy",
+      "constituency": "Berhampur",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 9,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5309",
+      "source_label": "MyNeta: Berhampur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sangli-vishal-dada-prakashbapu-patil",
+      "name": "Vishal (Dada) Prakashbapu Patil",
+      "constituency": "Sangli",
+      "state": "Maharashtra",
+      "party": "IND",
+      "criminal_cases": 9,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3856",
+      "source_label": "MyNeta: Sangli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bansgaon-sc-kamlesh-paswan",
+      "name": "Kamlesh Paswan",
+      "constituency": "Bansgaon (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 9,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8799",
+      "source_label": "MyNeta: Bansgaon (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bargarh-pradeep-purohit",
+      "name": "Pradeep Purohit",
+      "constituency": "Bargarh",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7148",
+      "source_label": "MyNeta: Bargarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "godda-nishikant-dubey",
+      "name": "Nishikant Dubey",
+      "constituency": "Godda",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8770",
+      "source_label": "MyNeta: Godda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kendrapara-baijayant-panda",
+      "name": "Baijayant Panda",
+      "constituency": "Kendrapara",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9427",
+      "source_label": "MyNeta: Kendrapara, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dhenkanal-rudra-narayan-pany",
+      "name": "Rudra Narayan Pany",
+      "constituency": "Dhenkanal",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8008",
+      "source_label": "MyNeta: Dhenkanal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mandi-kangna-ranaut",
+      "name": "Kangna Ranaut",
+      "constituency": "Mandi",
+      "state": "Himachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8764",
+      "source_label": "MyNeta: Mandi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ananthapur-ambica-g-lakshminarayana-valmiki",
+      "name": "Ambica G Lakshminarayana Valmiki",
+      "constituency": "Ananthapur",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5097",
+      "source_label": "MyNeta: Ananthapur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sultanpur-rambhual-nishad",
+      "name": "Rambhual Nishad",
+      "constituency": "Sultanpur",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8073",
+      "source_label": "MyNeta: Sultanpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "saharanpur-imran-masood",
+      "name": "Imran Masood",
+      "constituency": "Saharanpur",
+      "state": "Uttar Pradesh",
+      "party": "INC",
+      "criminal_cases": 8,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=298",
+      "source_label": "MyNeta: Saharanpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chidambaram-sc-thirumaavalavan-thol",
+      "name": "Thirumaavalavan Thol",
+      "constituency": "Chidambaram (SC)",
+      "state": "Tamil Nadu",
+      "party": "Viduthalai Chiruthaigal Katchi",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=816",
+      "source_label": "MyNeta: Chidambaram (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "maldaha-uttar-khagen-murmu",
+      "name": "Khagen Murmu",
+      "constituency": "Maldaha Uttar",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3375",
+      "source_label": "MyNeta: Maldaha Uttar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jahanabad-surendra-prasad-yadav",
+      "name": "Surendra Prasad Yadav",
+      "constituency": "Jahanabad",
+      "state": "Bihar",
+      "party": "RJD",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9601",
+      "source_label": "MyNeta: Jahanabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ratnagiri-sindhudurg-narayan-tatu-rane",
+      "name": "Narayan Tatu Rane",
+      "constituency": "Ratnagiri-Sindhudurg",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4619",
+      "source_label": "MyNeta: Ratnagiri-Sindhudurg, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-north-central-gaikwad-varsha-eknath",
+      "name": "Gaikwad Varsha Eknath",
+      "constituency": "Mumbai North-Central",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7096",
+      "source_label": "MyNeta: Mumbai North-Central, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nilgiris-sc-raja-a",
+      "name": "Raja A",
+      "constituency": "Nilgiris (SC)",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 7,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1167",
+      "source_label": "MyNeta: Nilgiris (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kasaragod-rajmohan-unnithan",
+      "name": "Rajmohan Unnithan",
+      "constituency": "Kasaragod",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2287",
+      "source_label": "MyNeta: Kasaragod, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "alipurduars-st-manoj-tigga",
+      "name": "Manoj Tigga",
+      "constituency": "Alipurduars (ST)",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=13",
+      "source_label": "MyNeta: Alipurduars (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pataliputra-misha-bharti",
+      "name": "Misha Bharti",
+      "constituency": "Pataliputra",
+      "state": "Bihar",
+      "party": "RJD",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9528",
+      "source_label": "MyNeta: Pataliputra, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sambhal-zia-ur-rehman",
+      "name": "Zia Ur Rehman",
+      "constituency": "Sambhal",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4084",
+      "source_label": "MyNeta: Sambhal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mahabubabad-st-balram-naik-porika",
+      "name": "Balram Naik Porika",
+      "constituency": "Mahabubabad (ST)",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5297",
+      "source_label": "MyNeta: Mahabubabad (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nellore-prabhakar-reddy-vemireddy",
+      "name": "Prabhakar Reddy Vemireddy",
+      "constituency": "Nellore",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5118",
+      "source_label": "MyNeta: Nellore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thanjavur-murasoli-s",
+      "name": "Murasoli S",
+      "constituency": "Thanjavur",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1451",
+      "source_label": "MyNeta: Thanjavur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nagarkurnool-sc-dr-mallu-ravi",
+      "name": "Dr.Mallu Ravi",
+      "constituency": "Nagarkurnool (SC)",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5241",
+      "source_label": "MyNeta: Nagarkurnool (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gaya-sc-jitan-ram-manjhi",
+      "name": "Jitan Ram Manjhi",
+      "constituency": "Gaya (SC)",
+      "state": "Bihar",
+      "party": "Hindustani Awam Morcha (Secular)",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1678",
+      "source_label": "MyNeta: Gaya (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mahbubnagar-aruna-d-k",
+      "name": "Aruna. D. K",
+      "constituency": "Mahbubnagar",
+      "state": "Telangana",
+      "party": "BJP",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5236",
+      "source_label": "MyNeta: Mahbubnagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kanthi-adhikari-soumendu",
+      "name": "Adhikari Soumendu",
+      "constituency": "Kanthi",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 6,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7922",
+      "source_label": "MyNeta: Kanthi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kottayam-adv-k-francis-george",
+      "name": "Adv K Francis George",
+      "constituency": "Kottayam",
+      "state": "Kerala",
+      "party": "Kerala Congress",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3137",
+      "source_label": "MyNeta: Kottayam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "vellore-dm-kathir-anand",
+      "name": "Dm Kathir Anand",
+      "constituency": "Vellore",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=216",
+      "source_label": "MyNeta: Vellore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sambalpur-dharmendra-pradhan",
+      "name": "Dharmendra Pradhan",
+      "constituency": "Sambalpur",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8053",
+      "source_label": "MyNeta: Sambalpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kollam-n-k-premachandran",
+      "name": "N K Premachandran",
+      "constituency": "Kollam",
+      "state": "Kerala",
+      "party": "Revolutionary Socialist Party",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3132",
+      "source_label": "MyNeta: Kollam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chalakudy-benny-behanan",
+      "name": "Benny Behanan",
+      "constituency": "Chalakudy",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2272",
+      "source_label": "MyNeta: Chalakudy, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "palakkad-v-k-sreekandan",
+      "name": "V K Sreekandan",
+      "constituency": "Palakkad",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2305",
+      "source_label": "MyNeta: Palakkad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "maharajganj-janardan-singh-sigriwal",
+      "name": "Janardan Singh (Sigriwal)",
+      "constituency": "Maharajganj",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8177",
+      "source_label": "MyNeta: Maharajganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pathanamthitta-anto-antony",
+      "name": "Anto Antony",
+      "constituency": "Pathanamthitta",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2309",
+      "source_label": "MyNeta: Pathanamthitta, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hyderabad-asaduddin-owaisi",
+      "name": "Asaduddin Owaisi",
+      "constituency": "Hyderabad",
+      "state": "Telangana",
+      "party": "All India Majlis-E-Ittehadul Muslimeen",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5228",
+      "source_label": "MyNeta: Hyderabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bangalore-north-shobha-karandlaje",
+      "name": "Shobha Karandlaje",
+      "constituency": "Bangalore North",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178",
+      "source_label": "MyNeta: Bangalore North, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "paschim-champaran-dr-sanjay-jaiswal",
+      "name": "Dr.Sanjay Jaiswal",
+      "constituency": "Paschim Champaran",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7852",
+      "source_label": "MyNeta: Paschim Champaran, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "anakapalle-c-m-ramesh",
+      "name": "C.M.Ramesh",
+      "constituency": "Anakapalle",
+      "state": "Andhra Pradesh",
+      "party": "BJP",
+      "criminal_cases": 5,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5268",
+      "source_label": "MyNeta: Anakapalle, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "srikakulam-kinjarapu-rammohan-naidu",
+      "name": "Kinjarapu Rammohan Naidu",
+      "constituency": "Srikakulam",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6620",
+      "source_label": "MyNeta: Srikakulam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "basti-ram-prasad-chaudhary",
+      "name": "Ram Prasad Chaudhary",
+      "constituency": "Basti",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8150",
+      "source_label": "MyNeta: Basti, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kandhamal-sukanta-kumar-panigrahi",
+      "name": "Sukanta Kumar Panigrahi",
+      "constituency": "Kandhamal",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7157",
+      "source_label": "MyNeta: Kandhamal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kallakurichi-malaiyarasan-d",
+      "name": "Malaiyarasan D",
+      "constituency": "Kallakurichi",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=133",
+      "source_label": "MyNeta: Kallakurichi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "azamgarh-dharmendra-yadav",
+      "name": "Dharmendra Yadav",
+      "constituency": "Azamgarh",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8128",
+      "source_label": "MyNeta: Azamgarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dhaurahra-anand-bhadauriya",
+      "name": "Anand Bhadauriya",
+      "constituency": "Dhaurahra",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5215",
+      "source_label": "MyNeta: Dhaurahra, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ranaghat-sc-jagannath-sarkar",
+      "name": "Jagannath Sarkar",
+      "constituency": "Ranaghat (SC)",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5202",
+      "source_label": "MyNeta: Ranaghat (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thrissur-suresh-gopi",
+      "name": "Suresh Gopi",
+      "constituency": "Thrissur",
+      "state": "Kerala",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2125",
+      "source_label": "MyNeta: Thrissur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "satara-shrimant-chh-udayanraje-pratapsinhamaharaj-bhonsle",
+      "name": "Shrimant Chh Udayanraje Pratapsinhamaharaj Bhonsle",
+      "constituency": "Satara",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4320",
+      "source_label": "MyNeta: Satara, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "araria-pradeep-kumar-singh",
+      "name": "Pradeep Kumar Singh",
+      "constituency": "Araria",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3627",
+      "source_label": "MyNeta: Araria, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "aurangabad-bhumare-sandipanrao-asaram",
+      "name": "Bhumare Sandipanrao Asaram",
+      "constituency": "Aurangabad",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5323",
+      "source_label": "MyNeta: Aurangabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kozhikode-m-k-raghavan",
+      "name": "M. K. Raghavan",
+      "constituency": "Kozhikode",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1855",
+      "source_label": "MyNeta: Kozhikode, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhopal-alok-sharma",
+      "name": "Alok Sharma",
+      "constituency": "Bhopal",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 4,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3941",
+      "source_label": "MyNeta: Bhopal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhongir-chamala-kiran-kumar-reddy",
+      "name": "Chamala Kiran Kumar Reddy",
+      "constituency": "Bhongir",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5299",
+      "source_label": "MyNeta: Bhongir, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jagatsinghpur-sc-bibhu-prasad-tarai",
+      "name": "Bibhu Prasad Tarai",
+      "constituency": "Jagatsinghpur (SC)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9616",
+      "source_label": "MyNeta: Jagatsinghpur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pune-murlidhar-mohol",
+      "name": "Murlidhar Mohol",
+      "constituency": "Pune",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6044",
+      "source_label": "MyNeta: Pune, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kannauj-akhilesh-yadav",
+      "name": "Akhilesh Yadav",
+      "constituency": "Kannauj",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6236",
+      "source_label": "MyNeta: Kannauj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rampur-mohibbullah",
+      "name": "Mohibbullah",
+      "constituency": "Rampur",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=902",
+      "source_label": "MyNeta: Rampur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "satna-ganesh-singh",
+      "name": "Ganesh Singh",
+      "constituency": "Satna",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1836",
+      "source_label": "MyNeta: Satna, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sundargarh-st-jual-oram",
+      "name": "Jual Oram",
+      "constituency": "Sundargarh (ST)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7296",
+      "source_label": "MyNeta: Sundargarh (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "solapur-sc-praniti-sushilkumar-shinde",
+      "name": "Praniti Sushilkumar Shinde",
+      "constituency": "Solapur (SC)",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4321",
+      "source_label": "MyNeta: Solapur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "madurai-venkatesan-s",
+      "name": "Venkatesan S",
+      "constituency": "Madurai",
+      "state": "Tamil Nadu",
+      "party": "CPI(M)",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1568",
+      "source_label": "MyNeta: Madurai, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "baghpat-dr-rajkumar-sangwan",
+      "name": "Dr Rajkumar Sangwan",
+      "constituency": "Baghpat",
+      "state": "Uttar Pradesh",
+      "party": "Rashtriya Lok Dal",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1808",
+      "source_label": "MyNeta: Baghpat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "koppal-k-rajashekar-basavaraj-hitnal",
+      "name": "K. Rajashekar Basavaraj Hitnal",
+      "constituency": "Koppal",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3400",
+      "source_label": "MyNeta: Koppal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-north-west-ravindra-dattaram-waikar",
+      "name": "Ravindra Dattaram Waikar",
+      "constituency": "Mumbai North-West",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7481",
+      "source_label": "MyNeta: Mumbai North-West, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bangalore-south-tejasvi-surya",
+      "name": "Tejasvi Surya",
+      "constituency": "Bangalore South",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2629",
+      "source_label": "MyNeta: Bangalore South, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bijnor-chandan-chauhan",
+      "name": "Chandan Chauhan",
+      "constituency": "Bijnor",
+      "state": "Uttar Pradesh",
+      "party": "Rashtriya Lok Dal",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=869",
+      "source_label": "MyNeta: Bijnor, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mandya-h-d-kumaraswamy",
+      "name": "H.D. Kumaraswamy",
+      "constituency": "Mandya",
+      "state": "Karnataka",
+      "party": "Janata Dal (Secular)",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2651",
+      "source_label": "MyNeta: Mandya, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "namakkal-matheswaran-v-s",
+      "name": "Matheswaran V S",
+      "constituency": "Namakkal",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=164",
+      "source_label": "MyNeta: Namakkal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "baramulla-abdul-rashid-sheikh",
+      "name": "Abdul Rashid Sheikh",
+      "constituency": "Baramulla",
+      "state": "Jammu and Kashmir",
+      "party": "IND",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7591",
+      "source_label": "MyNeta: Baramulla, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rajkot-parshottambhai-rupala",
+      "name": "Parshottambhai Rupala",
+      "constituency": "Rajkot",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3595",
+      "source_label": "MyNeta: Rajkot, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sant-kabir-nagar-laxmikant-pappu-nishad",
+      "name": "Laxmikant Pappu Nishad",
+      "constituency": "Sant Kabir Nagar",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8387",
+      "source_label": "MyNeta: Sant Kabir Nagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "vaishali-veena-devi",
+      "name": "Veena Devi",
+      "constituency": "Vaishali",
+      "state": "Bihar",
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8070",
+      "source_label": "MyNeta: Vaishali, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "karakat-raja-ram-singh",
+      "name": "Raja Ram Singh",
+      "constituency": "Karakat",
+      "state": "Bihar",
+      "party": "CPI(ML)(L)",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9587",
+      "source_label": "MyNeta: Karakat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ujiarpur-nityanand-rai",
+      "name": "Nityanand Rai",
+      "constituency": "Ujiarpur",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152",
+      "source_label": "MyNeta: Ujiarpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "arrah-sudama-prasad",
+      "name": "Sudama Prasad",
+      "constituency": "Arrah",
+      "state": "Bihar",
+      "party": "CPI(ML)(L)",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9539",
+      "source_label": "MyNeta: Arrah, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "maval-shrirang-appa-chandu-barne",
+      "name": "Shrirang Appa Chandu Barne",
+      "constituency": "Maval",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5325",
+      "source_label": "MyNeta: Maval, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gandhinagar-amit-shah",
+      "name": "Amit Shah",
+      "constituency": "Gandhinagar",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4427",
+      "source_label": "MyNeta: Gandhinagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "murshidabad-abu-taher-khan",
+      "name": "Abu Taher Khan",
+      "constituency": "Murshidabad",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3377",
+      "source_label": "MyNeta: Murshidabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "purulia-jyotirmay-singh-mahato",
+      "name": "Jyotirmay Singh Mahato",
+      "constituency": "Purulia",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7961",
+      "source_label": "MyNeta: Purulia, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "begusarai-giriraj-singh",
+      "name": "Giriraj Singh",
+      "constituency": "Begusarai",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058",
+      "source_label": "MyNeta: Begusarai, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chandauli-birendra-singh",
+      "name": "Birendra Singh",
+      "constituency": "Chandauli",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8803",
+      "source_label": "MyNeta: Chandauli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "lalganj-sc-daroga-prasad-saroj",
+      "name": "Daroga Prasad Saroj",
+      "constituency": "Lalganj (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8140",
+      "source_label": "MyNeta: Lalganj (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "wayanad-priyanka-gandhi-vadra",
+      "name": "Priyanka Gandhi Vadra",
+      "constituency": "Wayanad",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 3,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9673",
+      "source_label": "MyNeta: Wayanad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ramtek-sc-shyamkumar-daulat-barve",
+      "name": "Shyamkumar Daulat Barve",
+      "constituency": "Ramtek (SC)",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=675",
+      "source_label": "MyNeta: Ramtek (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bareilly-chhatra-pal-singh-gangwar",
+      "name": "Chhatra Pal Singh Gangwar",
+      "constituency": "Bareilly",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3486",
+      "source_label": "MyNeta: Bareilly, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ranchi-sanjay-seth",
+      "name": "Sanjay Seth",
+      "constituency": "Ranchi",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8561",
+      "source_label": "MyNeta: Ranchi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "madhubani-ashok-kumar-yadav",
+      "name": "Ashok Kumar Yadav",
+      "constituency": "Madhubani",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7275",
+      "source_label": "MyNeta: Madhubani, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "giridih-chandra-prakash-choudhary",
+      "name": "Chandra Prakash Choudhary",
+      "constituency": "Giridih",
+      "state": "Jharkhand",
+      "party": "AJSU Party",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8523",
+      "source_label": "MyNeta: Giridih, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chatra-kali-charan-singh",
+      "name": "Kali Charan Singh",
+      "constituency": "Chatra",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7142",
+      "source_label": "MyNeta: Chatra, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hazaribagh-manish-jaiswal",
+      "name": "Manish Jaiswal",
+      "constituency": "Hazaribagh",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7144",
+      "source_label": "MyNeta: Hazaribagh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "buldhana-jadhav-prataprao-ganpatrao",
+      "name": "Jadhav Prataprao Ganpatrao",
+      "constituency": "Buldhana",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958",
+      "source_label": "MyNeta: Buldhana, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dumka-st-nalin-soren",
+      "name": "Nalin Soren",
+      "constituency": "Dumka (ST)",
+      "state": "Jharkhand",
+      "party": "JMM",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9321",
+      "source_label": "MyNeta: Dumka (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nandyal-dr-byreddy-shabari",
+      "name": "Dr Byreddy Shabari",
+      "constituency": "Nandyal",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5114",
+      "source_label": "MyNeta: Nandyal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mirzapur-anupriya-patel",
+      "name": "Anupriya Patel",
+      "constituency": "Mirzapur",
+      "state": "Uttar Pradesh",
+      "party": "Apna Dal (Soneylal)",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380",
+      "source_label": "MyNeta: Mirzapur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dewas-sc-mahendra-singh-solanky",
+      "name": "Mahendra Singh Solanky",
+      "constituency": "Dewas (SC)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5160",
+      "source_label": "MyNeta: Dewas (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bangalore-central-p-c-mohan",
+      "name": "P C Mohan",
+      "constituency": "Bangalore Central",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1866",
+      "source_label": "MyNeta: Bangalore Central, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "fatehpur-sikri-rajkumar-chahar",
+      "name": "Rajkumar Chahar",
+      "constituency": "Fatehpur Sikri",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4223",
+      "source_label": "MyNeta: Fatehpur Sikri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nabarangpur-st-balabhadra-majhi",
+      "name": "Balabhadra Majhi",
+      "constituency": "Nabarangpur (ST)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6335",
+      "source_label": "MyNeta: Nabarangpur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nalgonda-kunduru-raghuveer",
+      "name": "Kunduru Raghuveer",
+      "constituency": "Nalgonda",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5294",
+      "source_label": "MyNeta: Nalgonda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kolkata-uttar-bandyopadhyay-sudip",
+      "name": "Bandyopadhyay Sudip",
+      "constituency": "Kolkata Uttar",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9027",
+      "source_label": "MyNeta: Kolkata Uttar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "diamond-harbour-abhishek-banerjee",
+      "name": "Abhishek Banerjee",
+      "constituency": "Diamond Harbour",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9008",
+      "source_label": "MyNeta: Diamond Harbour, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "north-east-delhi-manoj-tiwari",
+      "name": "Manoj Tiwari",
+      "constituency": "North East Delhi",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7903",
+      "source_label": "MyNeta: North East Delhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "machhlishahr-sc-priya-saroj",
+      "name": "Priya Saroj",
+      "constituency": "Machhlishahr (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8097",
+      "source_label": "MyNeta: Machhlishahr (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "purvi-champaran-radha-mohan-singh",
+      "name": "Radha Mohan Singh",
+      "constituency": "Purvi Champaran",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7856",
+      "source_label": "MyNeta: Purvi Champaran, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dhule-bachhav-shobha-dinesh",
+      "name": "Bachhav Shobha Dinesh",
+      "constituency": "Dhule",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7088",
+      "source_label": "MyNeta: Dhule, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "osmanabad-omprakash-bhupalsinh-alias-pavan-rajenimbalkar",
+      "name": "Omprakash Bhupalsinh Alias Pavan Rajenimbalkar",
+      "constituency": "Osmanabad",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3849",
+      "source_label": "MyNeta: Osmanabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thane-naresh-ganpat-mhaske",
+      "name": "Naresh Ganpat Mhaske",
+      "constituency": "Thane",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7462",
+      "source_label": "MyNeta: Thane, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thoothukkudi-kanimozhi-karunanidhi",
+      "name": "Kanimozhi Karunanidhi",
+      "constituency": "Thoothukkudi",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=566",
+      "source_label": "MyNeta: Thoothukkudi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalna-kalyan-vaijinathrao-kale",
+      "name": "Kalyan Vaijinathrao Kale",
+      "constituency": "Jalna",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5320",
+      "source_label": "MyNeta: Jalna, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kushi-nagar-vijay-kumar-dubay",
+      "name": "Vijay Kumar Dubay",
+      "constituency": "Kushi Nagar",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9114",
+      "source_label": "MyNeta: Kushi Nagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "machilipatnam-balashowry-vallabhaneni",
+      "name": "Balashowry Vallabhaneni",
+      "constituency": "Machilipatnam",
+      "state": "Andhra Pradesh",
+      "party": "Janasena Party",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6657",
+      "source_label": "MyNeta: Machilipatnam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "darjeeling-raju-bista",
+      "name": "Raju Bista",
+      "constituency": "Darjeeling",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2218",
+      "source_label": "MyNeta: Darjeeling, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ahmednagar-nilesh-dnyandev-lanke",
+      "name": "Nilesh Dnyandev Lanke",
+      "constituency": "Ahmednagar",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5328",
+      "source_label": "MyNeta: Ahmednagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ambedkar-nagar-lalji-verma",
+      "name": "Lalji Verma",
+      "constituency": "Ambedkar Nagar",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8171",
+      "source_label": "MyNeta: Ambedkar Nagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mohanlalganj-sc-r-k-chaudhary",
+      "name": "R.K. Chaudhary",
+      "constituency": "Mohanlalganj (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7161",
+      "source_label": "MyNeta: Mohanlalganj (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "north-west-delhi-sc-yogender-chandoliya",
+      "name": "Yogender Chandoliya",
+      "constituency": "North West Delhi (SC)",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7905",
+      "source_label": "MyNeta: North West Delhi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sangrur-gurmeet-singh-hayer",
+      "name": "Gurmeet Singh Hayer",
+      "constituency": "Sangrur",
+      "state": "Punjab",
+      "party": "AAP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8730",
+      "source_label": "MyNeta: Sangrur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "unnao-swami-sachchidanand-hari-sakshi",
+      "name": "Swami Sachchidanand Hari Sakshi",
+      "constituency": "Unnao",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5376",
+      "source_label": "MyNeta: Unnao, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "barrackpur-partha-bhowmick",
+      "name": "Partha Bhowmick",
+      "constituency": "Barrackpur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7118",
+      "source_label": "MyNeta: Barrackpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kadapa-y-s-avinash-reddy",
+      "name": "Y. S. Avinash Reddy",
+      "constituency": "Kadapa",
+      "state": "Andhra Pradesh",
+      "party": "YSRCP",
+      "criminal_cases": 2,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5111",
+      "source_label": "MyNeta: Kadapa, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mathurapur-sc-bapi-haldar",
+      "name": "Bapi Haldar",
+      "constituency": "Mathurapur (SC)",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9088",
+      "source_label": "MyNeta: Mathurapur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "salem-selvaganapathi-t-m",
+      "name": "Selvaganapathi T M",
+      "constituency": "Salem",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=176",
+      "source_label": "MyNeta: Salem, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khammam-ramasahayam-raghuram-reddy",
+      "name": "Ramasahayam Raghuram Reddy",
+      "constituency": "Khammam",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5716",
+      "source_label": "MyNeta: Khammam, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sitamarhi-devesh-chandra-thakur",
+      "name": "Devesh Chandra Thakur",
+      "constituency": "Sitamarhi",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7129",
+      "source_label": "MyNeta: Sitamarhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "adilabad-st-godam-nagesh",
+      "name": "Godam Nagesh",
+      "constituency": "Adilabad (ST)",
+      "state": "Telangana",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5395",
+      "source_label": "MyNeta: Adilabad (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bolangir-sangeeta-kumari-singh-deo",
+      "name": "Sangeeta Kumari Singh Deo",
+      "constituency": "Bolangir",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7154",
+      "source_label": "MyNeta: Bolangir, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "muzaffarnagar-harendra-singh-malik",
+      "name": "Harendra Singh Malik",
+      "constituency": "Muzaffarnagar",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=286",
+      "source_label": "MyNeta: Muzaffarnagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "keonjhar-st-ananta-nayak",
+      "name": "Ananta Nayak",
+      "constituency": "Keonjhar (ST)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8000",
+      "source_label": "MyNeta: Keonjhar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tiruppur-k-subbarayan",
+      "name": "K Subbarayan",
+      "constituency": "Tiruppur",
+      "state": "Tamil Nadu",
+      "party": "CPI",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=204",
+      "source_label": "MyNeta: Tiruppur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "guntur-dr-chandra-sekhar-pemmasani",
+      "name": "Dr Chandra Sekhar Pemmasani",
+      "constituency": "Guntur",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5106",
+      "source_label": "MyNeta: Guntur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khajuraho-vishnu-datt-sharma-v-d-sharma",
+      "name": "Vishnu Datt Sharma (V.D.Sharma)",
+      "constituency": "Khajuraho",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2455",
+      "source_label": "MyNeta: Khajuraho, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sidhi-dr-rajesh-mishra",
+      "name": "Dr. Rajesh Mishra",
+      "constituency": "Sidhi",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1",
+      "source_label": "MyNeta: Sidhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "vidisha-shivraj-singh-chouhan",
+      "name": "Shivraj Singh Chouhan",
+      "constituency": "Vidisha",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4448",
+      "source_label": "MyNeta: Vidisha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nanded-vasantrao-balwantrao-chavan",
+      "name": "Vasantrao Balwantrao Chavan",
+      "constituency": "Nanded",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1782",
+      "source_label": "MyNeta: Nanded, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhilwara-damodar-agarwal",
+      "name": "Damodar Agarwal",
+      "constituency": "Bhilwara",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2743",
+      "source_label": "MyNeta: Bhilwara, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "barpeta-phani-bhusan-choudhury",
+      "name": "Phani Bhusan Choudhury",
+      "constituency": "Barpeta",
+      "state": "Assam",
+      "party": "Asom Gana Parishad",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4099",
+      "source_label": "MyNeta: Barpeta, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "howrah-prasun-banerjee",
+      "name": "Prasun Banerjee",
+      "constituency": "Howrah",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7195",
+      "source_label": "MyNeta: Howrah, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kokrajhar-st-joyanta-basumatary",
+      "name": "Joyanta Basumatary",
+      "constituency": "Kokrajhar (ST)",
+      "state": "Assam",
+      "party": "United Peoples Party, Liberal",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3672",
+      "source_label": "MyNeta: Kokrajhar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "cuddalore-m-k-vishnuprasad",
+      "name": "M.K. Vishnuprasad",
+      "constituency": "Cuddalore",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=554",
+      "source_label": "MyNeta: Cuddalore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tirunelveli-robert-bruce-c",
+      "name": "Robert Bruce C",
+      "constituency": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1480",
+      "source_label": "MyNeta: Tirunelveli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nagapattinam-sc-selvaraj-v",
+      "name": "Selvaraj V",
+      "constituency": "Nagapattinam (SC)",
+      "state": "Tamil Nadu",
+      "party": "CPI",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=161",
+      "source_label": "MyNeta: Nagapattinam (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ramanathapuram-k-navaskani",
+      "name": "K Navaskani",
+      "constituency": "Ramanathapuram",
+      "state": "Tamil Nadu",
+      "party": "Indian Union Muslim League",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=234",
+      "source_label": "MyNeta: Ramanathapuram, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jorhat-gaurav-gogoi",
+      "name": "Gaurav Gogoi",
+      "constituency": "Jorhat",
+      "state": "Assam",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=260",
+      "source_label": "MyNeta: Jorhat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "virudhunagar-manickam-tagore-b",
+      "name": "Manickam Tagore B",
+      "constituency": "Virudhunagar",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=230",
+      "source_label": "MyNeta: Virudhunagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-south-arvind-ganpat-sawant",
+      "name": "Arvind Ganpat Sawant",
+      "constituency": "Mumbai South",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7097",
+      "source_label": "MyNeta: Mumbai South, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "zahirabad-suresh-kumar-shetkar",
+      "name": "Suresh Kumar Shetkar",
+      "constituency": "Zahirabad",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5254",
+      "source_label": "MyNeta: Zahirabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "coimbatore-ganapathy-rajkumar-p",
+      "name": "Ganapathy Rajkumar P",
+      "constituency": "Coimbatore",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1352",
+      "source_label": "MyNeta: Coimbatore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "darbhanga-gopal-jee-thakur",
+      "name": "Gopal Jee Thakur",
+      "constituency": "Darbhanga",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5055",
+      "source_label": "MyNeta: Darbhanga, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "krishnanagar-mahua-moitra",
+      "name": "Mahua Moitra",
+      "constituency": "Krishnanagar",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5085",
+      "source_label": "MyNeta: Krishnanagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khandwa-gyaneshwar-patil",
+      "name": "Gyaneshwar Patil",
+      "constituency": "Khandwa",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5069",
+      "source_label": "MyNeta: Khandwa, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dum-dum-sougata-ray",
+      "name": "Sougata Ray",
+      "constituency": "Dum Dum",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8964",
+      "source_label": "MyNeta: Dum Dum, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "supaul-dileshwar-kamait",
+      "name": "Dileshwar Kamait",
+      "constituency": "Supaul",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3589",
+      "source_label": "MyNeta: Supaul, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pollachi-eswarasamy-k",
+      "name": "Eswarasamy K",
+      "constituency": "Pollachi",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=174",
+      "source_label": "MyNeta: Pollachi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "burdwan-durgapur-azad-kirti-jha",
+      "name": "Azad Kirti Jha",
+      "constituency": "Burdwan-Durgapur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5195",
+      "source_label": "MyNeta: Burdwan-Durgapur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "akola-anup-sanjay-dhotre",
+      "name": "Anup Sanjay Dhotre",
+      "constituency": "Akola",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2367",
+      "source_label": "MyNeta: Akola, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "karur-jothimani-s",
+      "name": "Jothimani. S",
+      "constituency": "Karur",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1264",
+      "source_label": "MyNeta: Karur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rajahmundry-daggubati-purandheshwari",
+      "name": "Daggubati Purandheshwari",
+      "constituency": "Rajahmundry",
+      "state": "Andhra Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5122",
+      "source_label": "MyNeta: Rajahmundry, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "junagadh-chudasama-rajeshbhai-naranbhai",
+      "name": "Chudasama Rajeshbhai Naranbhai",
+      "constituency": "Junagadh",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3766",
+      "source_label": "MyNeta: Junagadh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "lohardaga-st-sukhdeo-bhagat",
+      "name": "Sukhdeo Bhagat",
+      "constituency": "Lohardaga (ST)",
+      "state": "Jharkhand",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6277",
+      "source_label": "MyNeta: Lohardaga (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hamirpur-anurag-singh-thakur",
+      "name": "Anurag Singh Thakur",
+      "constituency": "Hamirpur",
+      "state": "Himachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8760",
+      "source_label": "MyNeta: Hamirpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jamshedpur-bidyut-baran-mahato",
+      "name": "Bidyut Baran Mahato",
+      "constituency": "Jamshedpur",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8563",
+      "source_label": "MyNeta: Jamshedpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "etah-devesh-shakya",
+      "name": "Devesh Shakya",
+      "constituency": "Etah",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3703",
+      "source_label": "MyNeta: Etah, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hassan-shreyas-m-patel",
+      "name": "Shreyas. M. Patel",
+      "constituency": "Hassan",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1890",
+      "source_label": "MyNeta: Hassan, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tumkur-v-somanna",
+      "name": "V. Somanna",
+      "constituency": "Tumkur",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1904",
+      "source_label": "MyNeta: Tumkur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kakinada-tangella-uday-srinivas-tea-time-uday",
+      "name": "Tangella Uday Srinivas (Tea Time Uday)",
+      "constituency": "Kakinada",
+      "state": "Andhra Pradesh",
+      "party": "Janasena Party",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5302",
+      "source_label": "MyNeta: Kakinada, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dharmapuri-mani-a",
+      "name": "Mani. A.",
+      "constituency": "Dharmapuri",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=121",
+      "source_label": "MyNeta: Dharmapuri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sitapur-rakesh-rathor",
+      "name": "Rakesh Rathor",
+      "constituency": "Sitapur",
+      "state": "Uttar Pradesh",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5381",
+      "source_label": "MyNeta: Sitapur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "south-delhi-ramvir-singh-bidhuri",
+      "name": "Ramvir Singh Bidhuri",
+      "constituency": "South Delhi",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7907",
+      "source_label": "MyNeta: South Delhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "south-goa-captain-viriato-fernandes",
+      "name": "Captain Viriato Fernandes",
+      "constituency": "South Goa",
+      "state": "Goa",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3876",
+      "source_label": "MyNeta: South Goa, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nagaur-hanuman-beniwal",
+      "name": "Hanuman Beniwal",
+      "constituency": "Nagaur",
+      "state": "Rajasthan",
+      "party": "Rashtriya Loktantrik Party",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=454",
+      "source_label": "MyNeta: Nagaur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "faizabad-awadhesh-prasad",
+      "name": "Awadhesh Prasad",
+      "constituency": "Faizabad",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7190",
+      "source_label": "MyNeta: Faizabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "karauli-dholpur-sc-bhajan-lal-jatav",
+      "name": "Bhajan Lal Jatav",
+      "constituency": "Karauli-dholpur (SC)",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=451",
+      "source_label": "MyNeta: Karauli-dholpur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chhota-udaipur-st-jashubhai-bhilubhai-rathva",
+      "name": "Jashubhai Bhilubhai Rathva",
+      "constituency": "Chhota Udaipur (ST)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3744",
+      "source_label": "MyNeta: Chhota Udaipur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "banswara-st-raj-kumar-roat",
+      "name": "Raj Kumar Roat",
+      "constituency": "Banswara (ST)",
+      "state": "Rajasthan",
+      "party": "Bharat Adivasi Party",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1771",
+      "source_label": "MyNeta: Banswara (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chamarajanagar-sc-sunil-bose",
+      "name": "Sunil Bose",
+      "constituency": "Chamarajanagar (SC)",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2193",
+      "source_label": "MyNeta: Chamarajanagar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "domariyaganj-jagdambika-pal",
+      "name": "Jagdambika Pal",
+      "constituency": "Domariyaganj",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8151",
+      "source_label": "MyNeta: Domariyaganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "banaskantha-geniben-nagaji-thakor",
+      "name": "Geniben Nagaji Thakor",
+      "constituency": "Banaskantha",
+      "state": "Gujarat",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3453",
+      "source_label": "MyNeta: Banaskantha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kolar-sc-m-mallesh-babu",
+      "name": "M. Mallesh Babu",
+      "constituency": "Kolar (SC)",
+      "state": "Karnataka",
+      "party": "Janata Dal (Secular)",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1894",
+      "source_label": "MyNeta: Kolar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhubaneswar-aparajita-sarangi",
+      "name": "Aparajita Sarangi",
+      "constituency": "Bhubaneswar",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8040",
+      "source_label": "MyNeta: Bhubaneswar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "puri-sambit-patra",
+      "name": "Sambit Patra",
+      "constituency": "Puri",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8026",
+      "source_label": "MyNeta: Puri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "alappuzha-k-c-venugopal",
+      "name": "K. C Venugopal",
+      "constituency": "Alappuzha",
+      "state": "Kerala",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3079",
+      "source_label": "MyNeta: Alappuzha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mayurbhanj-st-naba-charan-majhi",
+      "name": "Naba Charan Majhi",
+      "constituency": "Mayurbhanj (ST)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9392",
+      "source_label": "MyNeta: Mayurbhanj (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rajnandgaon-santosh-pandey",
+      "name": "Santosh Pandey",
+      "constituency": "Rajnandgaon",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1936",
+      "source_label": "MyNeta: Rajnandgaon, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "amroha-kanwar-singh-tanwar",
+      "name": "Kanwar Singh Tanwar",
+      "constituency": "Amroha",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1807",
+      "source_label": "MyNeta: Amroha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ponnani-dr-m-p-abdussamad-samadani",
+      "name": "Dr. M.P Abdussamad Samadani",
+      "constituency": "Ponnani",
+      "state": "Kerala",
+      "party": "Indian Union Muslim League",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2310",
+      "source_label": "MyNeta: Ponnani, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "malappuram-e-t-mohammed-basheer",
+      "name": "E.T. Mohammed Basheer",
+      "constituency": "Malappuram",
+      "state": "Kerala",
+      "party": "Indian Union Muslim League",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2303",
+      "source_label": "MyNeta: Malappuram, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shimoga-b-y-raghavendra",
+      "name": "B.Y.Raghavendra",
+      "constituency": "Shimoga",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4005",
+      "source_label": "MyNeta: Shimoga, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sasaram-sc-manoj-kumar",
+      "name": "Manoj Kumar",
+      "constituency": "Sasaram (SC)",
+      "state": "Bihar",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9567",
+      "source_label": "MyNeta: Sasaram (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "cooch-behar-sc-jagadish-chandra-barma-basunia",
+      "name": "Jagadish Chandra Barma Basunia",
+      "constituency": "Cooch Behar (SC)",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=957",
+      "source_label": "MyNeta: Cooch Behar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kolkata-dakshin-mala-roy",
+      "name": "Mala Roy",
+      "constituency": "Kolkata Dakshin",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9045",
+      "source_label": "MyNeta: Kolkata Dakshin, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hathras-sc-anoop-pradhan-balmiki",
+      "name": "Anoop Pradhan Balmiki",
+      "constituency": "Hathras (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3697",
+      "source_label": "MyNeta: Hathras (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bulandshahr-sc-dr-bhola-singh",
+      "name": "Dr Bhola Singh",
+      "constituency": "Bulandshahr (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2502",
+      "source_label": "MyNeta: Bulandshahr (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "cuttack-bhartruhari-mahtab",
+      "name": "Bhartruhari Mahtab",
+      "constituency": "Cuttack",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8022",
+      "source_label": "MyNeta: Cuttack, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ghosi-rajeev-rai",
+      "name": "Rajeev Rai",
+      "constituency": "Ghosi",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9348",
+      "source_label": "MyNeta: Ghosi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gulbarga-sc-radhakrishna",
+      "name": "Radhakrishna",
+      "constituency": "Gulbarga (SC)",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 1,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3398",
+      "source_label": "MyNeta: Gulbarga (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "medinipur-june-maliah",
+      "name": "June Maliah",
+      "constituency": "Medinipur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7950",
+      "source_label": "MyNeta: Medinipur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "udaipur-st-manna-lal-rawat",
+      "name": "Manna Lal Rawat",
+      "constituency": "Udaipur (ST)",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1854",
+      "source_label": "MyNeta: Udaipur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pali-p-p-chaudhary",
+      "name": "P. P. Chaudhary",
+      "constituency": "Pali",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2574",
+      "source_label": "MyNeta: Pali, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalore-lumbaram",
+      "name": "Lumbaram",
+      "constituency": "Jalore",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2557",
+      "source_label": "MyNeta: Jalore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jodhpur-gajendra-singh-shekhawat",
+      "name": "Gajendra Singh Shekhawat",
+      "constituency": "Jodhpur",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843",
+      "source_label": "MyNeta: Jodhpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bankura-arup-chakraborty",
+      "name": "Arup Chakraborty",
+      "constituency": "Bankura",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7977",
+      "source_label": "MyNeta: Bankura, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "barmer-ummeda-ram-beniwal",
+      "name": "Ummeda Ram Beniwal",
+      "constituency": "Barmer",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2547",
+      "source_label": "MyNeta: Barmer, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rajsamand-mahima-kumari-mewar",
+      "name": "Mahima Kumari Mewar",
+      "constituency": "Rajsamand",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2577",
+      "source_label": "MyNeta: Rajsamand, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kota-om-birla",
+      "name": "Om Birla",
+      "constituency": "Kota",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2567",
+      "source_label": "MyNeta: Kota, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tiruvannamalai-c-n-annadurai",
+      "name": "C N Annadurai",
+      "constituency": "Tiruvannamalai",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1155",
+      "source_label": "MyNeta: Tiruvannamalai, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "krishnagiri-gopinath-k",
+      "name": "Gopinath K",
+      "constituency": "Krishnagiri",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1531",
+      "source_label": "MyNeta: Krishnagiri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "perambalur-arun-nehru",
+      "name": "Arun Nehru",
+      "constituency": "Perambalur",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=16",
+      "source_label": "MyNeta: Perambalur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "erode-k-e-prakash",
+      "name": "K E Prakash",
+      "constituency": "Erode",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=127",
+      "source_label": "MyNeta: Erode, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jaynagar-sc-pratima-mondal",
+      "name": "Pratima Mondal",
+      "constituency": "Jaynagar (SC)",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9628",
+      "source_label": "MyNeta: Jaynagar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "viluppuram-sc-ravikumar-d",
+      "name": "Ravikumar. D",
+      "constituency": "Viluppuram (SC)",
+      "state": "Tamil Nadu",
+      "party": "Viduthalai Chiruthaigal Katchi",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=221",
+      "source_label": "MyNeta: Viluppuram (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sriperumbudur-t-r-baalu",
+      "name": "T R Baalu",
+      "constituency": "Sriperumbudur",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=184",
+      "source_label": "MyNeta: Sriperumbudur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "andaman-and-nicobar-islands-bishnu-pada-ray",
+      "name": "Bishnu Pada Ray",
+      "constituency": "Andaman And Nicobar Islands",
+      "state": "Andaman and Nicobar Islands",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=17",
+      "source_label": "MyNeta: Andaman And Nicobar Islands, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chennai-south-sumathy-t",
+      "name": "Sumathy T",
+      "constituency": "Chennai South",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=100",
+      "source_label": "MyNeta: Chennai South, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kancheepuram-sc-selvam-g",
+      "name": "Selvam. G",
+      "constituency": "Kancheepuram (SC)",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=134",
+      "source_label": "MyNeta: Kancheepuram (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tiruvallur-sc-sasikanth-senthil",
+      "name": "Sasikanth Senthil",
+      "constituency": "Tiruvallur (SC)",
+      "state": "Tamil Nadu",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1464",
+      "source_label": "MyNeta: Tiruvallur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tiruchirappalli-durai-vaiko",
+      "name": "Durai Vaiko",
+      "constituency": "Tiruchirappalli",
+      "state": "Tamil Nadu",
+      "party": "Marumalarchi Dravida Munnetra Kazhagam",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=196",
+      "source_label": "MyNeta: Tiruchirappalli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sikkim-indra-hang-subba",
+      "name": "Indra Hang Subba",
+      "constituency": "Sikkim",
+      "state": "Sikkim",
+      "party": "Sikkim Krantikari Morcha",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=484",
+      "source_label": "MyNeta: Sikkim, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jhalawar-baran-dushyant-singh",
+      "name": "Dushyant Singh",
+      "constituency": "Jhalawar-baran",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2013",
+      "source_label": "MyNeta: Jhalawar-baran, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "arani-tharaniventhan-m-s",
+      "name": "Tharaniventhan M S",
+      "constituency": "Arani",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=703",
+      "source_label": "MyNeta: Arani, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shahjahanpur-sc-arun-kumar-sagar",
+      "name": "Arun Kumar Sagar",
+      "constituency": "Shahjahanpur (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5206",
+      "source_label": "MyNeta: Shahjahanpur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "aonla-neeraj-maurya",
+      "name": "Neeraj Maurya",
+      "constituency": "Aonla",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3586",
+      "source_label": "MyNeta: Aonla, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhadohi-dr-vinod-kumar-bind",
+      "name": "Dr. Vinod Kumar Bind",
+      "constituency": "Bhadohi",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8081",
+      "source_label": "MyNeta: Bhadohi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "badaun-aditya-yadav",
+      "name": "Aditya Yadav",
+      "constituency": "Badaun",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3490",
+      "source_label": "MyNeta: Badaun, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mainpuri-dimple-yadav",
+      "name": "Dimple Yadav",
+      "constituency": "Mainpuri",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3607",
+      "source_label": "MyNeta: Mainpuri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "maharajganj-pankaj-chaudhary",
+      "name": "Pankaj Chaudhary",
+      "constituency": "Maharajganj",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8774",
+      "source_label": "MyNeta: Maharajganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gorakhpur-ravindra-shukla-alias-ravi-kishan",
+      "name": "Ravindra Shukla Alias Ravi Kishan",
+      "constituency": "Gorakhpur",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8791",
+      "source_label": "MyNeta: Gorakhpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "allahabad-ujjwal-raman-singh",
+      "name": "Ujjwal Raman Singh",
+      "constituency": "Allahabad",
+      "state": "Uttar Pradesh",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8371",
+      "source_label": "MyNeta: Allahabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "agra-sc-prof-s-p-singh-baghel",
+      "name": "Prof S P Singh Baghel",
+      "constituency": "Agra (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3493",
+      "source_label": "MyNeta: Agra (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mathura-hemamalini-dharmendra-deol",
+      "name": "Hemamalini Dharmendra Deol",
+      "constituency": "Mathura",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2797",
+      "source_label": "MyNeta: Mathura, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "aligarh-satish-kumar-gautam",
+      "name": "Satish Kumar Gautam",
+      "constituency": "Aligarh",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1806",
+      "source_label": "MyNeta: Aligarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "salempur-ramashankar-rajbhar",
+      "name": "Ramashankar Rajbhar",
+      "constituency": "Salempur",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9455",
+      "source_label": "MyNeta: Salempur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gautam-buddha-nagar-dr-mahesh-sharma",
+      "name": "Dr. Mahesh Sharma",
+      "constituency": "Gautam Buddha Nagar",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2512",
+      "source_label": "MyNeta: Gautam Buddha Nagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kheri-utkarsh-verma-madhur",
+      "name": "Utkarsh Verma (Madhur)",
+      "constituency": "Kheri",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5211",
+      "source_label": "MyNeta: Kheri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hardoi-sc-jai-prakash",
+      "name": "Jai Prakash",
+      "constituency": "Hardoi (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5076",
+      "source_label": "MyNeta: Hardoi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "misrikh-sc-ashok-kumar-rawat",
+      "name": "Ashok Kumar Rawat",
+      "constituency": "Misrikh (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5077",
+      "source_label": "MyNeta: Misrikh (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shrawasti-ram-shiromani-verma",
+      "name": "Ram Shiromani Verma",
+      "constituency": "Shrawasti",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8159",
+      "source_label": "MyNeta: Shrawasti, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kaiserganj-karan-bhushan-singh",
+      "name": "Karan Bhushan Singh",
+      "constituency": "Kaiserganj",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7440",
+      "source_label": "MyNeta: Kaiserganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kaushambi-sc-pushpendra-saroj",
+      "name": "Pushpendra Saroj",
+      "constituency": "Kaushambi (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7611",
+      "source_label": "MyNeta: Kaushambi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "fatehpur-naresh-chandra-uttam-patel",
+      "name": "Naresh Chandra Uttam Patel",
+      "constituency": "Fatehpur",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7595",
+      "source_label": "MyNeta: Fatehpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "banda-krishna-devi-shivshanker-patel",
+      "name": "Krishna Devi Shivshanker Patel",
+      "constituency": "Banda",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7448",
+      "source_label": "MyNeta: Banda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hamirpur-ajendra-singh-lodhi",
+      "name": "Ajendra Singh Lodhi",
+      "constituency": "Hamirpur",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7179",
+      "source_label": "MyNeta: Hamirpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jhansi-anurag-sharma",
+      "name": "Anurag Sharma",
+      "constituency": "Jhansi",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7176",
+      "source_label": "MyNeta: Jhansi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalaun-sc-narayan-das-ahirwar",
+      "name": "Narayan Das Ahirwar",
+      "constituency": "Jalaun (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7173",
+      "source_label": "MyNeta: Jalaun (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bahraich-sc-anand-kumar",
+      "name": "Anand Kumar",
+      "constituency": "Bahraich (SC)",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5217",
+      "source_label": "MyNeta: Bahraich (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kanpur-ramesh-awasthi",
+      "name": "Ramesh Awasthi",
+      "constituency": "Kanpur",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5080",
+      "source_label": "MyNeta: Kanpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "etawah-sc-jitendra-kumar-dohare",
+      "name": "Jitendra Kumar Dohare",
+      "constituency": "Etawah (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5079",
+      "source_label": "MyNeta: Etawah (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "farrukhabad-mukesh-rajput",
+      "name": "Mukesh Rajput",
+      "constituency": "Farrukhabad",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5214",
+      "source_label": "MyNeta: Farrukhabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ghaziabad-atul-garg",
+      "name": "Atul Garg",
+      "constituency": "Ghaziabad",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2518",
+      "source_label": "MyNeta: Ghaziabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "meerut-arun-govil",
+      "name": "Arun Govil",
+      "constituency": "Meerut",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1923",
+      "source_label": "MyNeta: Meerut, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "varanasi-narendra-modi",
+      "name": "Narendra Modi",
+      "constituency": "Varanasi",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8974",
+      "source_label": "MyNeta: Varanasi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bardhaman-purba-sc-dr-sharmila-sarkar",
+      "name": "Dr. Sharmila Sarkar",
+      "constituency": "Bardhaman Purba (SC)",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5087",
+      "source_label": "MyNeta: Bardhaman Purba (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "asansol-shatrughan-prasad-sinha",
+      "name": "Shatrughan Prasad Sinha",
+      "constituency": "Asansol",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5179",
+      "source_label": "MyNeta: Asansol, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bolpur-asit-kumar-mal",
+      "name": "Asit Kumar Mal",
+      "constituency": "Bolpur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5192",
+      "source_label": "MyNeta: Bolpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "birbhum-satabdi-roy",
+      "name": "Satabdi Roy",
+      "constituency": "Birbhum",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5187",
+      "source_label": "MyNeta: Birbhum, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "peddapalle-sc-vamsi-krishna-gaddam",
+      "name": "Vamsi Krishna Gaddam",
+      "constituency": "Peddapalle (SC)",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5248",
+      "source_label": "MyNeta: Peddapalle (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "pilibhit-jitin-prasada",
+      "name": "Jitin Prasada",
+      "constituency": "Pilibhit",
+      "state": "Uttar Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899",
+      "source_label": "MyNeta: Pilibhit, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "uluberia-sajda-ahmed",
+      "name": "Sajda Ahmed",
+      "constituency": "Uluberia",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7200",
+      "source_label": "MyNeta: Uluberia, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sreerampur-kalyan-banerjee",
+      "name": "Kalyan Banerjee",
+      "constituency": "Sreerampur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7205",
+      "source_label": "MyNeta: Sreerampur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hooghly-rachna-banerjee",
+      "name": "Rachna Banerjee",
+      "constituency": "Hooghly",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7209",
+      "source_label": "MyNeta: Hooghly, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tenkasi-sc-dr-rani-sri-kumar",
+      "name": "Dr Rani Sri Kumar",
+      "constituency": "Tenkasi (SC)",
+      "state": "Tamil Nadu",
+      "party": "DMK",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1440",
+      "source_label": "MyNeta: Tenkasi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tamluk-abhijit-gangopadhyay",
+      "name": "Abhijit Gangopadhyay",
+      "constituency": "Tamluk",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7912",
+      "source_label": "MyNeta: Tamluk, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ghatal-adhikari-deepak-dev",
+      "name": "Adhikari Deepak (Dev)",
+      "constituency": "Ghatal",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7933",
+      "source_label": "MyNeta: Ghatal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "baharampur-pathan-yusuf",
+      "name": "Pathan Yusuf",
+      "constituency": "Baharampur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5183",
+      "source_label": "MyNeta: Baharampur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "warangal-sc-kadiyam-kavya",
+      "name": "Kadiyam Kavya",
+      "constituency": "Warangal (SC)",
+      "state": "Telangana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5252",
+      "source_label": "MyNeta: Warangal (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tripura-west-biplab-kumar-deb",
+      "name": "Biplab Kumar Deb",
+      "constituency": "Tripura West",
+      "state": "Tripura",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1156",
+      "source_label": "MyNeta: Tripura West, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "robertsganj-sc-chhotelal",
+      "name": "Chhotelal",
+      "constituency": "Robertsganj (SC)",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9098",
+      "source_label": "MyNeta: Robertsganj (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalpaiguri-sc-dr-jayanta-kumar-roy",
+      "name": "Dr Jayanta Kumar Roy",
+      "constituency": "Jalpaiguri (SC)",
+      "state": "West Bengal",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=970",
+      "source_label": "MyNeta: Jalpaiguri (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "maldaha-dakshin-isha-khan-choudhury",
+      "name": "Isha Khan Choudhury",
+      "constituency": "Maldaha Dakshin",
+      "state": "West Bengal",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3465",
+      "source_label": "MyNeta: Maldaha Dakshin, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "moradabad-ruchi-vira",
+      "name": "Ruchi Vira",
+      "constituency": "Moradabad",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=877",
+      "source_label": "MyNeta: Moradabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jangipur-khalilur-rahaman",
+      "name": "Khalilur Rahaman",
+      "constituency": "Jangipur",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3378",
+      "source_label": "MyNeta: Jangipur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "amethi-kishori-lal",
+      "name": "Kishori Lal",
+      "constituency": "Amethi",
+      "state": "Uttar Pradesh",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7521",
+      "source_label": "MyNeta: Amethi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kairana-iqra-choudhary",
+      "name": "Iqra Choudhary",
+      "constituency": "Kairana",
+      "state": "Uttar Pradesh",
+      "party": "SP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=289",
+      "source_label": "MyNeta: Kairana, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "haridwar-trivendra-singh-rawat",
+      "name": "Trivendra Singh Rawat",
+      "constituency": "Haridwar",
+      "state": "Uttarakhand",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=277",
+      "source_label": "MyNeta: Haridwar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nainital-udham-singh-nagar-ajay-bhatt",
+      "name": "Ajay Bhatt",
+      "constituency": "Nainital-udham Singh Nagar",
+      "state": "Uttarakhand",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=997",
+      "source_label": "MyNeta: Nainital-udham Singh Nagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "almora-sc-ajay-tamta",
+      "name": "Ajay Tamta",
+      "constituency": "Almora (SC)",
+      "state": "Uttarakhand",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=20",
+      "source_label": "MyNeta: Almora (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tehri-garhwal-mala-rajya-lakshmi-shah",
+      "name": "Mala Rajya Lakshmi Shah",
+      "constituency": "Tehri Garhwal",
+      "state": "Uttarakhand",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=283",
+      "source_label": "MyNeta: Tehri Garhwal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tripura-east-st-kriti-devi-debbarman",
+      "name": "Kriti Devi Debbarman",
+      "constituency": "Tripura East (ST)",
+      "state": "Tripura",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1765",
+      "source_label": "MyNeta: Tripura East (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jhargram-st-kalipada-saren-kherwal",
+      "name": "Kalipada Saren Kherwal",
+      "constituency": "Jhargram (ST)",
+      "state": "West Bengal",
+      "party": "AITC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7941",
+      "source_label": "MyNeta: Jhargram (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "korba-jyotsna-charandas-mahant",
+      "name": "Jyotsna Charandas Mahant",
+      "constituency": "Korba",
+      "state": "Chhattisgarh",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3647",
+      "source_label": "MyNeta: Korba, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sabarkantha-shobhanaben-mahendrasinh-baraiya",
+      "name": "Shobhanaben Mahendrasinh Baraiya",
+      "constituency": "Sabarkantha",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3782",
+      "source_label": "MyNeta: Sabarkantha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ahmedabad-east-hasmukhbhai-patel-h-s-patel",
+      "name": "Hasmukhbhai Patel (H.S.Patel)",
+      "constituency": "Ahmedabad East",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3452",
+      "source_label": "MyNeta: Ahmedabad East, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ahmedabad-west-sc-dineshbhai-makwana-advocate",
+      "name": "Dineshbhai Makwana (Advocate)",
+      "constituency": "Ahmedabad West (SC)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3735",
+      "source_label": "MyNeta: Ahmedabad West (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "surendranagar-chandubhai-chhaganbhai-shihora",
+      "name": "Chandubhai Chhaganbhai Shihora",
+      "constituency": "Surendranagar",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3501",
+      "source_label": "MyNeta: Surendranagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jamnagar-poonamben-hematbhai-maadam",
+      "name": "Poonamben Hematbhai Maadam",
+      "constituency": "Jamnagar",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5028",
+      "source_label": "MyNeta: Jamnagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "amreli-bharatbhai-manubhai-sutariya",
+      "name": "Bharatbhai Manubhai Sutariya",
+      "constituency": "Amreli",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4067",
+      "source_label": "MyNeta: Amreli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhavnagar-nimuben-jayantibhai-bambhaniya-nimuben-bambhaniya",
+      "name": "Nimuben Jayantibhai Bambhaniya (Nimuben Bambhaniya)",
+      "constituency": "Bhavnagar",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3743",
+      "source_label": "MyNeta: Bhavnagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "anand-mitesh-patel-bakabhai",
+      "name": "Mitesh Patel (Bakabhai)",
+      "constituency": "Anand",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3596",
+      "source_label": "MyNeta: Anand, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kheda-devusinh-chauhan",
+      "name": "Devusinh Chauhan",
+      "constituency": "Kheda",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3772",
+      "source_label": "MyNeta: Kheda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mahesana-haribhai-patel",
+      "name": "Haribhai Patel",
+      "constituency": "Mahesana",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3774",
+      "source_label": "MyNeta: Mahesana, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "patan-dabhi-bharatsinhji-shankarji",
+      "name": "Dabhi Bharatsinhji Shankarji",
+      "constituency": "Patan",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3603",
+      "source_label": "MyNeta: Patan, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bilaspur-tokhan-sahu",
+      "name": "Tokhan Sahu",
+      "constituency": "Bilaspur",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3590",
+      "source_label": "MyNeta: Bilaspur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "raipur-brijmohan-agrawal",
+      "name": "Brijmohan Agrawal",
+      "constituency": "Raipur",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3427",
+      "source_label": "MyNeta: Raipur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dadar-nagar-haveli-st-delkar-kalaben-mohanbhai",
+      "name": "Delkar Kalaben Mohanbhai",
+      "constituency": "Dadar & Nagar Haveli (ST)",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3666",
+      "source_label": "MyNeta: Dadar & Nagar Haveli (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chandni-chowk-praveen-khandelwal",
+      "name": "Praveen Khandelwal",
+      "constituency": "Chandni Chowk",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7896",
+      "source_label": "MyNeta: Chandni Chowk, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "east-delhi-harsh-malhotra",
+      "name": "Harsh Malhotra",
+      "constituency": "East Delhi",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7899",
+      "source_label": "MyNeta: East Delhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "new-delhi-bansuri-swaraj",
+      "name": "Bansuri Swaraj",
+      "constituency": "New Delhi",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7901",
+      "source_label": "MyNeta: New Delhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "west-delhi-kamaljeet-sehrawat",
+      "name": "Kamaljeet Sehrawat",
+      "constituency": "West Delhi",
+      "state": "Delhi",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7909",
+      "source_label": "MyNeta: West Delhi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "north-goa-shripad-yesso-naik",
+      "name": "Shripad Yesso Naik",
+      "constituency": "North Goa",
+      "state": "Goa",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3668",
+      "source_label": "MyNeta: North Goa, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kachchh-sc-chavda-vinod-lakhamshi",
+      "name": "Chavda Vinod Lakhamshi",
+      "constituency": "Kachchh (SC)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3769",
+      "source_label": "MyNeta: Kachchh (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dahod-st-jaswantsinh-sumanbhai-bhabhor",
+      "name": "Jaswantsinh Sumanbhai Bhabhor",
+      "constituency": "Dahod (ST)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3748",
+      "source_label": "MyNeta: Dahod (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "vadodara-dr-hemang-joshi",
+      "name": "Dr. Hemang Joshi",
+      "constituency": "Vadodara",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3606",
+      "source_label": "MyNeta: Vadodara, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gurgaon-rao-inderjit-singh",
+      "name": "Rao Inderjit Singh",
+      "constituency": "Gurgaon",
+      "state": "Haryana",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448",
+      "source_label": "MyNeta: Gurgaon, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "faridabad-krishan-pal",
+      "name": "Krishan Pal",
+      "constituency": "Faridabad",
+      "state": "Haryana",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8425",
+      "source_label": "MyNeta: Faridabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kangra-dr-rajeev-bhardwaj",
+      "name": "Dr Rajeev Bhardwaj",
+      "constituency": "Kangra",
+      "state": "Himachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8762",
+      "source_label": "MyNeta: Kangra, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shimla-sc-suresh-kumar-kashyap",
+      "name": "Suresh Kumar Kashyap",
+      "constituency": "Shimla (SC)",
+      "state": "Himachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8766",
+      "source_label": "MyNeta: Shimla (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "udhampur-dr-jitendra-singh",
+      "name": "Dr Jitendra Singh",
+      "constituency": "Udhampur",
+      "state": "Jammu and Kashmir",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8",
+      "source_label": "MyNeta: Udhampur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jammu-jugal-kishore",
+      "name": "Jugal Kishore",
+      "constituency": "Jammu",
+      "state": "Jammu and Kashmir",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1712",
+      "source_label": "MyNeta: Jammu, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "srinagar-aga-syed-ruhullah-mehdi",
+      "name": "Aga Syed Ruhullah Mehdi",
+      "constituency": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "party": "Jammu & Kashmir National Conference",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6318",
+      "source_label": "MyNeta: Srinagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "singhbhum-st-joba-majhi",
+      "name": "Joba Majhi",
+      "constituency": "Singhbhum (ST)",
+      "state": "Jharkhand",
+      "party": "JMM",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5157",
+      "source_label": "MyNeta: Singhbhum (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khunti-st-kali-charan-munda",
+      "name": "Kali Charan Munda",
+      "constituency": "Khunti (ST)",
+      "state": "Jharkhand",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5153",
+      "source_label": "MyNeta: Khunti (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhiwani-mahendragarh-dharambir-singh",
+      "name": "Dharambir Singh",
+      "constituency": "Bhiwani-mahendragarh",
+      "state": "Haryana",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8558",
+      "source_label": "MyNeta: Bhiwani-mahendragarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rohtak-deepender-singh-hooda",
+      "name": "Deepender Singh Hooda",
+      "constituency": "Rohtak",
+      "state": "Haryana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8497",
+      "source_label": "MyNeta: Rohtak, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bharuch-mansukhbhai-dhanjibhai-vasava",
+      "name": "Mansukhbhai Dhanjibhai Vasava",
+      "constituency": "Bharuch",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3455",
+      "source_label": "MyNeta: Bharuch, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bardoli-st-parbhubhai-nagarbhai-vasava",
+      "name": "Parbhubhai Nagarbhai Vasava",
+      "constituency": "Bardoli (ST)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3740",
+      "source_label": "MyNeta: Bardoli (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "surat-mukeshkumar-chandrakaant-dalal",
+      "name": "Mukeshkumar Chandrakaant Dalal",
+      "constituency": "Surat",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3783",
+      "source_label": "MyNeta: Surat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "valsad-st-dhaval-laxmanbhai-patel",
+      "name": "Dhaval Laxmanbhai Patel",
+      "constituency": "Valsad (ST)",
+      "state": "Gujarat",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3502",
+      "source_label": "MyNeta: Valsad (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ambala-sc-varun-chaudhry",
+      "name": "Varun Chaudhry",
+      "constituency": "Ambala (SC)",
+      "state": "Haryana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8414",
+      "source_label": "MyNeta: Ambala (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sirsa-sc-selja",
+      "name": "Selja",
+      "constituency": "Sirsa (SC)",
+      "state": "Haryana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8546",
+      "source_label": "MyNeta: Sirsa (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hisar-jai-parkash-j-p-s-o-harikesh",
+      "name": "Jai Parkash (J P) S/O Harikesh",
+      "constituency": "Hisar",
+      "state": "Haryana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8547",
+      "source_label": "MyNeta: Hisar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "karnal-manohar-lal",
+      "name": "Manohar Lal",
+      "constituency": "Karnal",
+      "state": "Haryana",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8552",
+      "source_label": "MyNeta: Karnal, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sonipat-satpal-brahamchari",
+      "name": "Satpal Brahamchari",
+      "constituency": "Sonipat",
+      "state": "Haryana",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8557",
+      "source_label": "MyNeta: Sonipat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "palamu-sc-vishnu-dayal-ram",
+      "name": "Vishnu Dayal Ram",
+      "constituency": "Palamu (SC)",
+      "state": "Jharkhand",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6264",
+      "source_label": "MyNeta: Palamu (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "janjgir-champa-sc-kamlesh-jangde",
+      "name": "Kamlesh Jangde",
+      "constituency": "Janjgir-champa (SC)",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3677",
+      "source_label": "MyNeta: Janjgir-champa (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kaziranga-kamakhya-prasad-tasa",
+      "name": "Kamakhya Prasad Tasa",
+      "constituency": "Kaziranga",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=732",
+      "source_label": "MyNeta: Kaziranga, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sonitpur-ranjit-dutta",
+      "name": "Ranjit Dutta",
+      "constituency": "Sonitpur",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=741",
+      "source_label": "MyNeta: Sonitpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "lakhimpur-pradan-baruah",
+      "name": "Pradan Baruah",
+      "constituency": "Lakhimpur",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=239",
+      "source_label": "MyNeta: Lakhimpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dibrugarh-sarbananda-sonowal",
+      "name": "Sarbananda Sonowal",
+      "constituency": "Dibrugarh",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=259",
+      "source_label": "MyNeta: Dibrugarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "darrang-udalguri-dilip-saikia",
+      "name": "Dilip Saikia",
+      "constituency": "Darrang-udalguri",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2753",
+      "source_label": "MyNeta: Darrang-udalguri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "diphu-st-amarsing-tisso",
+      "name": "Amarsing Tisso",
+      "constituency": "Diphu (ST)",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1924",
+      "source_label": "MyNeta: Diphu (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "karimganj-kripanath-mallah",
+      "name": "Kripanath Mallah",
+      "constituency": "Karimganj",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2206",
+      "source_label": "MyNeta: Karimganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "silchar-sc-parimal-suklabaidya",
+      "name": "Parimal Suklabaidya",
+      "constituency": "Silchar (SC)",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2210",
+      "source_label": "MyNeta: Silchar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dhubri-rakibul-hussain",
+      "name": "Rakibul Hussain",
+      "constituency": "Dhubri",
+      "state": "Assam",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4100",
+      "source_label": "MyNeta: Dhubri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "arunachal-east-tapir-gao",
+      "name": "Tapir Gao",
+      "constituency": "Arunachal East",
+      "state": "Arunachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=257",
+      "source_label": "MyNeta: Arunachal East, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "arunachal-west-kiren-rijiju",
+      "name": "Kiren Rijiju",
+      "constituency": "Arunachal West",
+      "state": "Arunachal Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251",
+      "source_label": "MyNeta: Arunachal West, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "amalapuram-sc-g-m-harish-balayogi",
+      "name": "G M Harish (Balayogi)",
+      "constituency": "Amalapuram (SC)",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5300",
+      "source_label": "MyNeta: Amalapuram (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "narsapuram-bhupathi-raju-srinivasa-varma",
+      "name": "Bhupathi Raju Srinivasa Varma",
+      "constituency": "Narsapuram",
+      "state": "Andhra Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5273",
+      "source_label": "MyNeta: Narsapuram, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "vijayawada-kesineni-sivanath-chinni",
+      "name": "Kesineni Sivanath (Chinni)",
+      "constituency": "Vijayawada",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5128",
+      "source_label": "MyNeta: Vijayawada, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "narsaraopet-lavu-srikrishna-devarayalu",
+      "name": "Lavu Srikrishna Devarayalu",
+      "constituency": "Narsaraopet",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5116",
+      "source_label": "MyNeta: Narsaraopet, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bapatla-sc-krishna-prasad-tenneti",
+      "name": "Krishna Prasad Tenneti",
+      "constituency": "Bapatla (SC)",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5102",
+      "source_label": "MyNeta: Bapatla (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kurnool-bastipati-nagaraju-panchalingala",
+      "name": "Bastipati Nagaraju Panchalingala",
+      "constituency": "Kurnool",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6787",
+      "source_label": "MyNeta: Kurnool, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "thirupathi-sc-gurumoorthy-maddila",
+      "name": "Gurumoorthy Maddila",
+      "constituency": "Thirupathi (SC)",
+      "state": "Andhra Pradesh",
+      "party": "YSRCP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5125",
+      "source_label": "MyNeta: Thirupathi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rajampet-p-v-midhun-reddy",
+      "name": "P V Midhun Reddy",
+      "constituency": "Rajampet",
+      "state": "Andhra Pradesh",
+      "party": "YSRCP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5123",
+      "source_label": "MyNeta: Rajampet, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chittoor-sc-daggumalla-prasada-rao",
+      "name": "Daggumalla Prasada Rao",
+      "constituency": "Chittoor (SC)",
+      "state": "Andhra Pradesh",
+      "party": "TDP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5104",
+      "source_label": "MyNeta: Chittoor (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "guwahati-bijuli-kalita-medhi",
+      "name": "Bijuli Kalita Medhi",
+      "constituency": "Guwahati",
+      "state": "Assam",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4548",
+      "source_label": "MyNeta: Guwahati, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nawada-vivek-thakur",
+      "name": "Vivek Thakur",
+      "constituency": "Nawada",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1695",
+      "source_label": "MyNeta: Nawada, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jamui-sc-arun-bharti",
+      "name": "Arun Bharti",
+      "constituency": "Jamui (SC)",
+      "state": "Bihar",
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1681",
+      "source_label": "MyNeta: Jamui (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sheohar-lovely-anand",
+      "name": "Lovely Anand",
+      "constituency": "Sheohar",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7890",
+      "source_label": "MyNeta: Sheohar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "siwan-vijaylakshmi-devi",
+      "name": "Vijaylakshmi Devi",
+      "constituency": "Siwan",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8120",
+      "source_label": "MyNeta: Siwan, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nalanda-kaushalendra-kumar",
+      "name": "Kaushalendra Kumar",
+      "constituency": "Nalanda",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9494",
+      "source_label": "MyNeta: Nalanda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "patna-sahib-ravi-shankar-prasad",
+      "name": "Ravi Shankar Prasad",
+      "constituency": "Patna Sahib",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9505",
+      "source_label": "MyNeta: Patna Sahib, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chandigarh-manish-tewari",
+      "name": "Manish Tewari",
+      "constituency": "Chandigarh",
+      "state": "Chandigarh",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8819",
+      "source_label": "MyNeta: Chandigarh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bastar-st-mahesh-kashyap",
+      "name": "Mahesh Kashyap",
+      "constituency": "Bastar (ST)",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=268",
+      "source_label": "MyNeta: Bastar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mahasamund-roop-kumari-choudhary",
+      "name": "Roop Kumari Choudhary",
+      "constituency": "Mahasamund",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2129",
+      "source_label": "MyNeta: Mahasamund, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kanker-st-bhojraj-nag",
+      "name": "Bhojraj Nag",
+      "constituency": "Kanker (ST)",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1932",
+      "source_label": "MyNeta: Kanker (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "surguja-st-chintamani-maharaj",
+      "name": "Chintamani Maharaj",
+      "constituency": "Surguja (ST)",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3450",
+      "source_label": "MyNeta: Surguja (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hajipur-sc-chirag-paswan",
+      "name": "Chirag Paswan",
+      "constituency": "Hajipur (SC)",
+      "state": "Bihar",
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281",
+      "source_label": "MyNeta: Hajipur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kishanganj-mohammad-jawed",
+      "name": "Mohammad Jawed",
+      "constituency": "Kishanganj",
+      "state": "Bihar",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2240",
+      "source_label": "MyNeta: Kishanganj, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "katihar-tariq-anwar",
+      "name": "Tariq Anwar",
+      "constituency": "Katihar",
+      "state": "Bihar",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2239",
+      "source_label": "MyNeta: Katihar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhagalpur-ajay-kumar-mandal",
+      "name": "Ajay Kumar Mandal",
+      "constituency": "Bhagalpur",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1930",
+      "source_label": "MyNeta: Bhagalpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "banka-giridhari-yadav",
+      "name": "Giridhari Yadav",
+      "constituency": "Banka",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2229",
+      "source_label": "MyNeta: Banka, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jhanjharpur-ramprit-mandal",
+      "name": "Ramprit Mandal",
+      "constituency": "Jhanjharpur",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3437",
+      "source_label": "MyNeta: Jhanjharpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "madhepura-dinesh-chandra-yadav",
+      "name": "Dinesh Chandra Yadav",
+      "constituency": "Madhepura",
+      "state": "Bihar",
+      "party": "JD(U)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3423",
+      "source_label": "MyNeta: Madhepura, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "samastipur-sc-shambhavi",
+      "name": "Shambhavi",
+      "constituency": "Samastipur (SC)",
+      "state": "Bihar",
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5057",
+      "source_label": "MyNeta: Samastipur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "muzaffarpur-raj-bhushan-choudhary",
+      "name": "Raj Bhushan Choudhary",
+      "constituency": "Muzaffarpur",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7133",
+      "source_label": "MyNeta: Muzaffarpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "saran-rajiv-pratap-rudy",
+      "name": "Rajiv Pratap Rudy",
+      "constituency": "Saran",
+      "state": "Bihar",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7279",
+      "source_label": "MyNeta: Saran, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "raigarh-st-radheshyam-rathiya",
+      "name": "Radheshyam Rathiya",
+      "constituency": "Raigarh (ST)",
+      "state": "Chhattisgarh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3425",
+      "source_label": "MyNeta: Raigarh (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalgaon-smita-uday-wagh",
+      "name": "Smita Uday Wagh",
+      "constituency": "Jalgaon",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5317",
+      "source_label": "MyNeta: Jalgaon, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-south-central-anil-yeshwant-desai",
+      "name": "Anil Yeshwant Desai",
+      "constituency": "Mumbai South-Central",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7098",
+      "source_label": "MyNeta: Mumbai South-Central, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "inner-manipur-angomcha-bimol-akoijam",
+      "name": "Angomcha Bimol Akoijam",
+      "constituency": "Inner Manipur",
+      "state": "Manipur",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=337",
+      "source_label": "MyNeta: Inner Manipur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "outer-manipur-st-alfred-kanngam-s-arthur",
+      "name": "Alfred Kanngam S Arthur",
+      "constituency": "Outer Manipur (ST)",
+      "state": "Manipur",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=340",
+      "source_label": "MyNeta: Outer Manipur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shillong-st-dr-ricky-andrew-j-syngkon",
+      "name": "Dr. Ricky Andrew J. Syngkon",
+      "constituency": "Shillong (ST)",
+      "state": "Meghalaya",
+      "party": "Voice of the People Party",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=344",
+      "source_label": "MyNeta: Shillong (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mizoram-st-richard-vanlalhmangaiha",
+      "name": "Richard Vanlalhmangaiha",
+      "constituency": "Mizoram (ST)",
+      "state": "Mizoram",
+      "party": "Zoram Peoples Movement",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=60",
+      "source_label": "MyNeta: Mizoram (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nagaland-s-supongmeren-jamir",
+      "name": "S Supongmeren Jamir",
+      "constituency": "Nagaland",
+      "state": "Nagaland",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=356",
+      "source_label": "MyNeta: Nagaland, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kalahandi-malvika-devi",
+      "name": "Malvika Devi",
+      "constituency": "Kalahandi",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5174",
+      "source_label": "MyNeta: Kalahandi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "koraput-st-saptagiri-sankar-ulaka",
+      "name": "Saptagiri Sankar Ulaka",
+      "constituency": "Koraput (ST)",
+      "state": "Odisha",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5071",
+      "source_label": "MyNeta: Koraput (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "aska-anita-subhadarshini",
+      "name": "Anita Subhadarshini",
+      "constituency": "Aska",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7158",
+      "source_label": "MyNeta: Aska, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-north-east-sanjay-dina-patil",
+      "name": "Sanjay Dina Patil",
+      "constituency": "Mumbai North-East",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7094",
+      "source_label": "MyNeta: Mumbai North-East, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mumbai-north-piyush-goyal",
+      "name": "Piyush Goyal",
+      "constituency": "Mumbai North",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7093",
+      "source_label": "MyNeta: Mumbai North, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "raver-khadse-raksha-nikhil",
+      "name": "Khadse Raksha Nikhil",
+      "constituency": "Raver",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6921",
+      "source_label": "MyNeta: Raver, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shirur-dr-amol-ramsing-kolhe",
+      "name": "Dr. Amol Ramsing Kolhe",
+      "constituency": "Shirur",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5327",
+      "source_label": "MyNeta: Shirur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shirdi-sc-bhausaheb-rajaram-wakchaure",
+      "name": "Bhausaheb Rajaram Wakchaure",
+      "constituency": "Shirdi (SC)",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5331",
+      "source_label": "MyNeta: Shirdi (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "beed-bajrang-manohar-sonwane",
+      "name": "Bajrang Manohar Sonwane",
+      "constituency": "Beed",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5333",
+      "source_label": "MyNeta: Beed, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dindori-st-bhaskar-murlidhar-bhagare",
+      "name": "Bhaskar Murlidhar Bhagare",
+      "constituency": "Dindori (ST)",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7089",
+      "source_label": "MyNeta: Dindori (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nashik-rajabhau-parag-prakash-waje",
+      "name": "Rajabhau (Parag) Prakash Waje",
+      "constituency": "Nashik",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7124",
+      "source_label": "MyNeta: Nashik, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "palghar-st-dr-hemant-vishnu-savara",
+      "name": "Dr. Hemant Vishnu Savara",
+      "constituency": "Palghar (ST)",
+      "state": "Maharashtra",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7349",
+      "source_label": "MyNeta: Palghar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhiwandi-suresh-gopinath-mhatre-alias-balya-mama",
+      "name": "Suresh Gopinath Mhatre Alias Balya Mama",
+      "constituency": "Bhiwandi",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7090",
+      "source_label": "MyNeta: Bhiwandi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "kalyan-dr-shrikant-eknath-shinde",
+      "name": "Dr Shrikant Eknath Shinde",
+      "constituency": "Kalyan",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7216",
+      "source_label": "MyNeta: Kalyan, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jajpur-sc-rabindra-narayan-behera",
+      "name": "Rabindra Narayan Behera",
+      "constituency": "Jajpur (SC)",
+      "state": "Odisha",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9604",
+      "source_label": "MyNeta: Jajpur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "puducherry-ve-vaithilingam",
+      "name": "Ve Vaithilingam",
+      "constituency": "Puducherry",
+      "state": "Puducherry",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=531",
+      "source_label": "MyNeta: Puducherry, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bikaner-sc-arjun-ram-meghwal",
+      "name": "Arjun Ram Meghwal",
+      "constituency": "Bikaner (SC)",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381",
+      "source_label": "MyNeta: Bikaner (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "churu-rahul-kaswan",
+      "name": "Rahul Kaswan",
+      "constituency": "Churu",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=395",
+      "source_label": "MyNeta: Churu, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jhunjhunu-brijendra-singh-ola",
+      "name": "Brijendra Singh Ola",
+      "constituency": "Jhunjhunu",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=444",
+      "source_label": "MyNeta: Jhunjhunu, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sikar-amraram",
+      "name": "Amraram",
+      "constituency": "Sikar",
+      "state": "Rajasthan",
+      "party": "CPI(M)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=476",
+      "source_label": "MyNeta: Sikar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jaipur-rural-rao-rajendra-singh",
+      "name": "Rao Rajendra Singh",
+      "constituency": "Jaipur Rural",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=436",
+      "source_label": "MyNeta: Jaipur Rural, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jaipur-manju-sharma",
+      "name": "Manju Sharma",
+      "constituency": "Jaipur",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=417",
+      "source_label": "MyNeta: Jaipur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bharatpur-sc-sanjna-jatav",
+      "name": "Sanjna Jatav",
+      "constituency": "Bharatpur (SC)",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=371",
+      "source_label": "MyNeta: Bharatpur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dausa-st-murari-lal-meena",
+      "name": "Murari Lal Meena",
+      "constituency": "Dausa (ST)",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=401",
+      "source_label": "MyNeta: Dausa (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tonk-sawai-madhopur-harish-chandra-meena",
+      "name": "Harish Chandra Meena",
+      "constituency": "Tonk-sawai Madhopur",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2583",
+      "source_label": "MyNeta: Tonk-sawai Madhopur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ganganagar-sc-kuldeep-indora",
+      "name": "Kuldeep Indora",
+      "constituency": "Ganganagar (SC)",
+      "state": "Rajasthan",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=409",
+      "source_label": "MyNeta: Ganganagar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "patiala-dr-dharamvira-gandhi",
+      "name": "Dr Dharamvira Gandhi",
+      "constituency": "Patiala",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8759",
+      "source_label": "MyNeta: Patiala, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gurdaspur-sukhjinder-singh-randhawa",
+      "name": "Sukhjinder Singh Randhawa",
+      "constituency": "Gurdaspur",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8728",
+      "source_label": "MyNeta: Gurdaspur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "amritsar-gurjeet-singh-aujla",
+      "name": "Gurjeet Singh Aujla",
+      "constituency": "Amritsar",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8734",
+      "source_label": "MyNeta: Amritsar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jalandhar-sc-charanjit-singh-channi",
+      "name": "Charanjit Singh Channi",
+      "constituency": "Jalandhar (SC)",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8738",
+      "source_label": "MyNeta: Jalandhar (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "anandpur-sahib-malvinder-singh-kang",
+      "name": "Malvinder Singh Kang",
+      "constituency": "Anandpur Sahib",
+      "state": "Punjab",
+      "party": "AAP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8744",
+      "source_label": "MyNeta: Anandpur Sahib, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ludhiana-amrinder-singh-raja-warring",
+      "name": "Amrinder Singh Raja Warring",
+      "constituency": "Ludhiana",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8745",
+      "source_label": "MyNeta: Ludhiana, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "fatehgarh-sahib-sc-amar-singh",
+      "name": "Amar Singh",
+      "constituency": "Fatehgarh Sahib (SC)",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8748",
+      "source_label": "MyNeta: Fatehgarh Sahib (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "faridkot-sc-sarabjeet-singh-khalsa",
+      "name": "Sarabjeet Singh Khalsa",
+      "constituency": "Faridkot (SC)",
+      "state": "Punjab",
+      "party": "IND",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9256",
+      "source_label": "MyNeta: Faridkot (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "firozpur-sher-singh-ghubaya",
+      "name": "Sher Singh Ghubaya",
+      "constituency": "Firozpur",
+      "state": "Punjab",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8940",
+      "source_label": "MyNeta: Firozpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bathinda-harsimrat-kaur-badal",
+      "name": "Harsimrat Kaur Badal",
+      "constituency": "Bathinda",
+      "state": "Punjab",
+      "party": "SAD",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8951",
+      "source_label": "MyNeta: Bathinda, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ajmer-bhagirath-choudhary",
+      "name": "Bhagirath Choudhary",
+      "constituency": "Ajmer",
+      "state": "Rajasthan",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2038",
+      "source_label": "MyNeta: Ajmer, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nandurbar-st-adv-gowaal-kagada-padavi",
+      "name": "Adv Gowaal Kagada Padavi",
+      "constituency": "Nandurbar (ST)",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6007",
+      "source_label": "MyNeta: Nandurbar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dharwad-pralhad-joshi",
+      "name": "Pralhad Joshi",
+      "constituency": "Dharwad",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3567",
+      "source_label": "MyNeta: Dharwad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "uttara-kannada-hegde-vishweshwar",
+      "name": "Hegde Vishweshwar",
+      "constituency": "Uttara Kannada",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3407",
+      "source_label": "MyNeta: Uttara Kannada, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "davanagere-dr-prabha-mallikarjun",
+      "name": "Dr. Prabha Mallikarjun",
+      "constituency": "Davanagere",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3393",
+      "source_label": "MyNeta: Davanagere, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "alathur-sc-k-radhakrishnan",
+      "name": "K.Radhakrishnan",
+      "constituency": "Alathur (SC)",
+      "state": "Kerala",
+      "party": "CPI(M)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2268",
+      "source_label": "MyNeta: Alathur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ladakh-mohmad-haneefa",
+      "name": "Mohmad Haneefa",
+      "constituency": "Ladakh",
+      "state": "Ladakh",
+      "party": "IND",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7512",
+      "source_label": "MyNeta: Ladakh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "lakshadweep-muhammed-hamdullah-sayeed",
+      "name": "Muhammed Hamdullah Sayeed",
+      "constituency": "Lakshadweep",
+      "state": "Lakshadweep",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=764",
+      "source_label": "MyNeta: Lakshadweep, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "shahdol-st-smt-himadri-singh",
+      "name": "Smt. Himadri Singh",
+      "constituency": "Shahdol (ST)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3",
+      "source_label": "MyNeta: Shahdol (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "jabalpur-ashish-dubey",
+      "name": "Ashish Dubey",
+      "constituency": "Jabalpur",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=240",
+      "source_label": "MyNeta: Jabalpur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "balaghat-bharti-pardhi",
+      "name": "Bharti Pardhi",
+      "constituency": "Balaghat",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=45",
+      "source_label": "MyNeta: Balaghat, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "haveri-basavaraj-bommai",
+      "name": "Basavaraj Bommai",
+      "constituency": "Haveri",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3579",
+      "source_label": "MyNeta: Haveri, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bellary-st-e-tukaram",
+      "name": "E. Tukaram",
+      "constituency": "Bellary (ST)",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3386",
+      "source_label": "MyNeta: Bellary (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "udupi-chikmagalur-kota-srinivas-poojary",
+      "name": "Kota Srinivas Poojary",
+      "constituency": "Udupi Chikmagalur",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2323",
+      "source_label": "MyNeta: Udupi Chikmagalur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chitradurga-sc-govind-makthappa-karjol",
+      "name": "Govind Makthappa Karjol",
+      "constituency": "Chitradurga (SC)",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1886",
+      "source_label": "MyNeta: Chitradurga (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "mysore-yaduveer-krishnadatta-chamaraja-wadiyar",
+      "name": "Yaduveer Krishnadatta Chamaraja Wadiyar",
+      "constituency": "Mysore",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1900",
+      "source_label": "MyNeta: Mysore, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bangalore-rural-dr-c-n-manjunath",
+      "name": "Dr C N Manjunath",
+      "constituency": "Bangalore Rural",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2597",
+      "source_label": "MyNeta: Bangalore Rural, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chikkodi-priyanka-satish-jarkiholi",
+      "name": "Priyanka Satish Jarkiholi",
+      "constituency": "Chikkodi",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4024",
+      "source_label": "MyNeta: Chikkodi, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bagalkot-gaddigoudar-parvatgouda-chandangouda",
+      "name": "Gaddigoudar Parvatgouda Chandangouda",
+      "constituency": "Bagalkot",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3930",
+      "source_label": "MyNeta: Bagalkot, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bijapur-sc-ramesh-jigajinagi",
+      "name": "Ramesh Jigajinagi",
+      "constituency": "Bijapur (SC)",
+      "state": "Karnataka",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3797",
+      "source_label": "MyNeta: Bijapur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "raichur-st-g-kumar-naik",
+      "name": "G. Kumar Naik",
+      "constituency": "Raichur (ST)",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3585",
+      "source_label": "MyNeta: Raichur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bidar-sagar-eshwar-khandre",
+      "name": "Sagar Eshwar Khandre",
+      "constituency": "Bidar",
+      "state": "Karnataka",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3793",
+      "source_label": "MyNeta: Bidar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "tikamgarh-sc-dr-virendra-kumar",
+      "name": "Dr. Virendra Kumar",
+      "constituency": "Tikamgarh (SC)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2473",
+      "source_label": "MyNeta: Tikamgarh (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "damoh-rahul-singh-lodhi",
+      "name": "Rahul Singh Lodhi",
+      "constituency": "Damoh",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1831",
+      "source_label": "MyNeta: Damoh, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "rewa-janardan-mishra-s-o-ramdhar-prasad-mishra",
+      "name": "Janardan Mishra S/O Ramdhar Prasad Mishra",
+      "constituency": "Rewa",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2094",
+      "source_label": "MyNeta: Rewa, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "khargone-st-gajendra-singh-patel",
+      "name": "Gajendra Singh Patel",
+      "constituency": "Khargone (ST)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6416",
+      "source_label": "MyNeta: Khargone (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gadchiroli-chimur-st-dr-kirsan-namdeo",
+      "name": "Dr. Kirsan Namdeo",
+      "constituency": "Gadchiroli-Chimur (ST)",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=317",
+      "source_label": "MyNeta: Gadchiroli-Chimur (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "chandrapur-dhanorkar-pratibha-suresh-alias-balubhau",
+      "name": "Dhanorkar Pratibha Suresh Alias Balubhau",
+      "constituency": "Chandrapur",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=300",
+      "source_label": "MyNeta: Chandrapur, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "wardha-amar-sharadrao-kale",
+      "name": "Amar Sharadrao Kale",
+      "constituency": "Wardha",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1969",
+      "source_label": "MyNeta: Wardha, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "yavatmal-washim-sanjay-uttamrao-deshmukh",
+      "name": "Sanjay Uttamrao Deshmukh",
+      "constituency": "Yavatmal-Washim",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1978",
+      "source_label": "MyNeta: Yavatmal-Washim, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hingoli-aashtikar-patil-nagesh-bapurao",
+      "name": "Aashtikar Patil Nagesh Bapurao",
+      "constituency": "Hingoli",
+      "state": "Maharashtra",
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2408",
+      "source_label": "MyNeta: Hingoli, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "raigad-tatkare-sunil-dattatrey",
+      "name": "Tatkare Sunil Dattatrey",
+      "constituency": "Raigad",
+      "state": "Maharashtra",
+      "party": "NCP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4319",
+      "source_label": "MyNeta: Raigad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "baramati-supriya-sule",
+      "name": "Supriya Sule",
+      "constituency": "Baramati",
+      "state": "Maharashtra",
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4316",
+      "source_label": "MyNeta: Baramati, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "latur-sc-dr-kalge-shivaji-bandappa",
+      "name": "Dr. Kalge Shivaji Bandappa",
+      "constituency": "Latur (SC)",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4318",
+      "source_label": "MyNeta: Latur (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "dhar-st-savitri-thakur",
+      "name": "Savitri Thakur",
+      "constituency": "Dhar (ST)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5162",
+      "source_label": "MyNeta: Dhar (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hoshangabad-darshan-singh-choudhary",
+      "name": "Darshan Singh Choudhary",
+      "constituency": "Hoshangabad",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1833",
+      "source_label": "MyNeta: Hoshangabad, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "betul-st-durgadas-d-d-uikey",
+      "name": "Durgadas (D. D.) Uikey",
+      "constituency": "Betul (ST)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1830",
+      "source_label": "MyNeta: Betul (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "morena-shivmangal-singh-tomar",
+      "name": "Shivmangal Singh Tomar",
+      "constituency": "Morena",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3618",
+      "source_label": "MyNeta: Morena, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "bhind-sc-sandhya-ray",
+      "name": "Sandhya Ray",
+      "constituency": "Bhind (SC)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4175",
+      "source_label": "MyNeta: Bhind (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "gwalior-bharat-singh-kushwah",
+      "name": "Bharat Singh Kushwah",
+      "constituency": "Gwalior",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3554",
+      "source_label": "MyNeta: Gwalior, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "guna-jyotiraditya-m-scindia",
+      "name": "Jyotiraditya M. Scindia",
+      "constituency": "Guna",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613",
+      "source_label": "MyNeta: Guna, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "sagar-dr-lata-wankhede",
+      "name": "Dr. Lata Wankhede",
+      "constituency": "Sagar",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3547",
+      "source_label": "MyNeta: Sagar, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ujjain-sc-anil-firojiya",
+      "name": "Anil Firojiya",
+      "constituency": "Ujjain (SC)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5170",
+      "source_label": "MyNeta: Ujjain (SC), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "ratlam-st-anita-nagarsingh-chouhan",
+      "name": "Anita Nagarsingh Chouhan",
+      "constituency": "Ratlam (ST)",
+      "state": "Madhya Pradesh",
+      "party": "BJP",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5066",
+      "source_label": "MyNeta: Ratlam (ST), Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "hatkanangale-dhairyasheel-sambhajirao-mane",
+      "name": "Dhairyasheel Sambhajirao Mane",
+      "constituency": "Hatkanangale",
+      "state": "Maharashtra",
+      "party": "Shiv Sena",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3537",
+      "source_label": "MyNeta: Hatkanangale, Lok Sabha 2024 affidavit"
+    },
+    {
+      "id": "nanded-chavan-ravindra-vasantrao",
+      "name": "Chavan Ravindra Vasantrao",
+      "constituency": "Nanded",
+      "state": "Maharashtra",
+      "party": "INC",
+      "criminal_cases": 0,
+      "source_url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9677",
+      "source_label": "MyNeta: Nanded, Lok Sabha 2024 affidavit"
     }
   ]
 }
