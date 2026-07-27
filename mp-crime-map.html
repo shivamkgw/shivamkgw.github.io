@@ -30,7 +30,8 @@
       --muted:   #5A6A62;
       --card-bg: #EDEAE0;
       --border:  #D6D0C4;
-      --bucket-0: #EDEAE0;
+      --bucket-0: #FFFFFF;
+      --bucket-0-stroke: #8A9E94;
       --bucket-1: #F3C989;
       --bucket-2: #E8943A;
       --bucket-3: #B36A1E;
@@ -45,7 +46,8 @@
       --muted:   #8A9E94;
       --card-bg: #1A2820;
       --border:  #2A3D32;
-      --bucket-0: #1A2820;
+      --bucket-0: #D8D3C4;
+      --bucket-0-stroke: #5A6A62;
       --bucket-1: #B98A46;
       --bucket-2: #E8943A;
       --bucket-3: #C97A2C;
@@ -502,43 +504,55 @@
     })();
 
     const STATE_TILES = [
-      { name: 'Jammu and Kashmir', abbr: 'JK', x: 28.8, y: 10.3 },
-      { name: 'Ladakh', abbr: 'LA', x: 33.5, y: 8.5 },
-      { name: 'Himachal Pradesh', abbr: 'HP', x: 31.2, y: 17.9 },
-      { name: 'Punjab', abbr: 'PB', x: 23.5, y: 20.7 },
-      { name: 'Uttarakhand', abbr: 'UK', x: 37.3, y: 23.8 },
-      { name: 'Haryana', abbr: 'HR', x: 27.5, y: 27.5 },
-      { name: 'Delhi', abbr: 'DL', x: 31.5, y: 29.5 },
-      { name: 'Rajasthan', abbr: 'RJ', x: 19.5, y: 34.5 },
-      { name: 'Uttar Pradesh', abbr: 'UP', x: 43.7, y: 34.5 },
-      { name: 'Bihar', abbr: 'BR', x: 57.9, y: 38.3 },
-      { name: 'Sikkim', abbr: 'SK', x: 69.5, y: 32.4 },
-      { name: 'West Bengal', abbr: 'WB', x: 67.1, y: 45.5 },
-      { name: 'Jharkhand', abbr: 'JH', x: 58.6, y: 46.2 },
-      { name: 'Assam', abbr: 'AS', x: 84.4, y: 37.2 },
-      { name: 'Arunachal Pradesh', abbr: 'AR', x: 90.5, y: 30.3 },
-      { name: 'Nagaland', abbr: 'NL', x: 91.5, y: 37.2 },
-      { name: 'Manipur', abbr: 'MN', x: 88.5, y: 42.4 },
-      { name: 'Mizoram', abbr: 'MZ', x: 84.1, y: 47.2 },
-      { name: 'Tripura', abbr: 'TR', x: 79.7, y: 45.2 },
-      { name: 'Meghalaya', abbr: 'ML', x: 79.3, y: 39.7 },
-      { name: 'Madhya Pradesh', abbr: 'MP', x: 35.6, y: 46.6 },
-      { name: 'Gujarat', abbr: 'GJ', x: 12.5, y: 50.7 },
-      { name: 'Maharashtra', abbr: 'MH', x: 26.1, y: 59.7 },
-      { name: 'Chhattisgarh', abbr: 'CG', x: 46.8, y: 54.1 },
-      { name: 'Odisha', abbr: 'OD', x: 55.9, y: 56.9 },
-      { name: 'Goa', abbr: 'GA', x: 20.3, y: 74.1 },
-      { name: 'Karnataka', abbr: 'KA', x: 26.1, y: 74.8 },
-      { name: 'Telangana', abbr: 'TS', x: 37.3, y: 65.5 },
-      { name: 'Andhra Pradesh', abbr: 'AP', x: 39.7, y: 72.8 },
-      { name: 'Tamil Nadu', abbr: 'TN', x: 36.3, y: 89.0 },
-      { name: 'Kerala', abbr: 'KL', x: 28.1, y: 91.0 },
-      { name: 'Puducherry', abbr: 'PY', x: 40.0, y: 86.2 },
-      { name: 'Chandigarh', abbr: 'CH', x: 25.5, y: 22.5 },
-      { name: 'Dadra and Nagar Haveli and Daman and Diu', abbr: 'DN', x: 15.5, y: 55.5 },
+      { name: 'Jammu and Kashmir', abbr: 'JK', x: 27.7, y: 10.4 },
+      { name: 'Ladakh', abbr: 'LA', x: 34.4, y: 8.2 },
+      { name: 'Himachal Pradesh', abbr: 'HP', x: 32.8, y: 16.4 },
+      { name: 'Punjab', abbr: 'PB', x: 20.0, y: 17.4 },
+      { name: 'Uttarakhand', abbr: 'UK', x: 37.5, y: 22.8 },
+      { name: 'Haryana', abbr: 'HR', x: 22.4, y: 27.4 },
+      { name: 'Delhi', abbr: 'DL', x: 31.8, y: 29.0 },
+      { name: 'Rajasthan', abbr: 'RJ', x: 17.0, y: 37.5 },
+      { name: 'Uttar Pradesh', abbr: 'UP', x: 44.5, y: 35.4 },
+      { name: 'Bihar', abbr: 'BR', x: 61.7, y: 34.8 },
+      { name: 'Sikkim', abbr: 'SK', x: 71.8, y: 31.7 },
+      { name: 'West Bengal', abbr: 'WB', x: 69.4, y: 47.8 },
+      { name: 'Jharkhand', abbr: 'JH', x: 56.5, y: 47.3 },
+      { name: 'Assam', abbr: 'AS', x: 84.3, y: 35.6 },
+      { name: 'Arunachal Pradesh', abbr: 'AR', x: 91.0, y: 29.8 },
+      { name: 'Nagaland', abbr: 'NL', x: 92.6, y: 37.3 },
+      { name: 'Manipur', abbr: 'MN', x: 89.3, y: 42.9 },
+      { name: 'Mizoram', abbr: 'MZ', x: 85.8, y: 48.3 },
+      { name: 'Tripura', abbr: 'TR', x: 80.1, y: 45.4 },
+      { name: 'Meghalaya', abbr: 'ML', x: 76.9, y: 39.7 },
+      { name: 'Madhya Pradesh', abbr: 'MP', x: 34.5, y: 48.2 },
+      { name: 'Gujarat', abbr: 'GJ', x: 10.4, y: 48.7 },
+      { name: 'Maharashtra', abbr: 'MH', x: 25.7, y: 60.1 },
+      { name: 'Chhattisgarh', abbr: 'CG', x: 46.2, y: 53.9 },
+      { name: 'Odisha', abbr: 'OD', x: 56.3, y: 58.6 },
+      { name: 'Goa', abbr: 'GA', x: 17.9, y: 73.8 },
+      { name: 'Karnataka', abbr: 'KA', x: 27.9, y: 75.1 },
+      { name: 'Telangana', abbr: 'TS', x: 39.1, y: 63.1 },
+      { name: 'Andhra Pradesh', abbr: 'AP', x: 40.7, y: 74.8 },
+      { name: 'Tamil Nadu', abbr: 'TN', x: 37.6, y: 91.8 },
+      { name: 'Kerala', abbr: 'KL', x: 24.2, y: 91.5 },
+      { name: 'Puducherry', abbr: 'PY', x: 43.4, y: 83.7 },
+      { name: 'Chandigarh', abbr: 'CH', x: 27.9, y: 21.5 },
+      { name: 'Dadra and Nagar Haveli and Daman and Diu', abbr: 'DN', x: 14.3, y: 57.8 },
       { name: 'Andaman and Nicobar Islands', abbr: 'AN', x: 83.7, y: 87.2 },
-      { name: 'Lakshadweep', abbr: 'LD', x: 15.6, y: 91.0 }
+      { name: 'Lakshadweep', abbr: 'LD', x: 15.1, y: 91.0 }
     ];
+
+    const STATE_SEATS = {
+      'Jammu and Kashmir': 5, 'Ladakh': 1, 'Himachal Pradesh': 4, 'Punjab': 13,
+      'Uttarakhand': 5, 'Haryana': 10, 'Delhi': 7, 'Rajasthan': 25, 'Uttar Pradesh': 80,
+      'Bihar': 40, 'Sikkim': 1, 'West Bengal': 42, 'Jharkhand': 14, 'Assam': 14,
+      'Arunachal Pradesh': 2, 'Nagaland': 1, 'Manipur': 2, 'Mizoram': 1, 'Tripura': 2,
+      'Meghalaya': 2, 'Madhya Pradesh': 29, 'Gujarat': 26, 'Maharashtra': 48,
+      'Chhattisgarh': 11, 'Odisha': 21, 'Goa': 2, 'Karnataka': 28, 'Telangana': 17,
+      'Andhra Pradesh': 25, 'Tamil Nadu': 39, 'Kerala': 20, 'Puducherry': 1,
+      'Chandigarh': 1, 'Dadra and Nagar Haveli and Daman and Diu': 2,
+      'Andaman and Nicobar Islands': 1, 'Lakshadweep': 1
+    };
 
     const BUCKETS = [
       { max: 0,        color: 'var(--bucket-0)', label: '0 avg cases',        dark: true },
@@ -567,9 +581,10 @@
       const legend = document.getElementById('legend');
       let html = '';
       BUCKETS.forEach(b => {
-        html += `<div class="legend-item"><span class="legend-swatch" style="background:${b.color}"></span>${b.label}</div>`;
+        const border = b.max === 0 ? 'border:1px solid var(--bucket-0-stroke)' : '';
+        html += `<div class="legend-item"><span class="legend-swatch" style="background:${b.color};${border}"></span>${b.label}</div>`;
       });
-      html += `<div class="legend-note">Dot size = number of MPs counted from that state. Color = average declared cases per MP there, across every MP counted, not a sample.</div>`;
+      html += `<div class="legend-note">Dot size = MPs counted from that state, out of its total seats (hover for the exact count). Color = average declared cases per MP counted there, across every MP counted, not a sample.</div>`;
       legend.innerHTML = html;
     }
 
@@ -581,15 +596,19 @@
         const avg = stat ? stat.total / stat.count : 0;
         const bucket = bucketFor(avg);
         const fill = bucket.color;
+        const isZero = bucket.max === 0;
         const textColor = bucket.dark ? '#1a1a1a' : '#fff';
+        const stroke = isZero ? 'var(--bucket-0-stroke)' : 'var(--cream)';
+        const strokeWidth = isZero ? 0.7 : 0.4;
         const isActive = activeFilter === s.name;
         const r = stat ? radiusFor(stat.count) : 2;
+        const totalSeats = STATE_SEATS[s.name];
         const tooltip = stat
-          ? `${s.name}: ${stat.count} MP(s), average ${avg.toFixed(1)} declared cases`
-          : `${s.name}: no data collected`;
+          ? `${s.name}: ${stat.count} of ${totalSeats} seats counted, average ${avg.toFixed(1)} declared cases`
+          : `${s.name}: no data collected (0 of ${totalSeats} seats)`;
         html += `<g class="state-tile${isActive ? ' filtered-active' : ''}" data-state="${s.name}">
           <title>${tooltip}</title>
-          <circle cx="${s.x}" cy="${s.y}" r="${r}" fill="${fill}" stroke="var(--cream)" stroke-width="0.4"></circle>
+          <circle cx="${s.x}" cy="${s.y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"></circle>
           <text class="state-label" x="${s.x}" y="${s.y}" fill="${textColor}">${s.abbr}</text>
         </g>`;
       });
