@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="hi" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
-  <title>Who's Facing the Most Criminal Cases in the Lok Sabha? | Shivam Kumar</title>
-  <meta name="description" content="A mapped, sourced look at declared criminal cases among sitting Lok Sabha MPs, pulled from their ECI election affidavits via MyNeta.">
+  <title>लोकसभा में सबसे ज़्यादा आपराधिक मामलों का सामना कौन कर रहा है? | Shivam Kumar</title>
+  <meta name="description" content="लोकसभा के मौजूदा सांसदों पर दर्ज आपराधिक मामलों का एक नक्शा-आधारित, स्रोत सहित विश्लेषण, MyNeta के ज़रिए उनके चुनावी हलफनामों से लिया गया।">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Hind:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     (function() {
       var saved = localStorage.getItem('theme');
@@ -55,6 +55,7 @@
     }
 
     html { scroll-behavior: smooth; }
+    body { font-family: 'Hind', 'Open Sans', sans-serif; }
 
     @media (pointer: fine)  { * { cursor: none !important; } }
     @media (pointer: coarse) { #cursor-dot, #cursor-ring { display: none !important; } }
@@ -76,7 +77,6 @@
     }
 
     body {
-      font-family: 'Open Sans', sans-serif;
       background: var(--cream);
       color: var(--text);
       font-size: 17px;
@@ -146,9 +146,9 @@
     }
     .article-hero h1 {
       font-family: 'Fraunces', serif;
-      font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+      font-size: clamp(2.1rem, 4.4vw, 3.1rem);
       font-weight: 900;
-      line-height: 1.1;
+      line-height: 1.25;
       color: var(--text);
       margin-bottom: 20px;
       max-width: 820px;
@@ -156,7 +156,7 @@
     .article-hero .lead {
       font-size: 1.1rem;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.75;
       max-width: 680px;
       margin-bottom: 28px;
     }
@@ -177,7 +177,7 @@
       margin: 0 0 48px;
       font-size: 1rem;
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.85;
     }
     .callout strong { color: var(--amber); }
 
@@ -191,10 +191,11 @@
     }
     .section-title {
       font-family: 'Fraunces', serif;
-      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
       font-weight: 900;
       color: var(--text);
       margin-bottom: 24px;
+      line-height: 1.4;
     }
 
     /* VIEW TOGGLE */
@@ -245,10 +246,10 @@
     }
     .party-row-bar-track { flex: 1; min-width: 60px; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
     .party-row-bar-fill { display: block; height: 100%; background: var(--amber); border-radius: 4px; }
-    .party-row-stat { width: 160px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
+    .party-row-stat { width: 180px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
     @media (max-width: 900px) {
       .party-row-label { width: 140px; font-size: 0.78rem; }
-      .party-row-stat { width: 110px; font-size: 0.7rem; }
+      .party-row-stat { width: 130px; font-size: 0.7rem; }
     }
     .party-row-stat strong { color: var(--amber); }
 
@@ -278,7 +279,7 @@
     .legend { display: flex; flex-direction: column; gap: 10px; justify-content: center; }
     .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--text); }
     .legend-swatch { width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; border: 1px solid var(--border); }
-    .legend-note { font-size: 0.72rem; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .legend-note { font-size: 0.72rem; color: var(--muted); margin-top: 4px; line-height: 1.6; }
 
     .filter-chip {
       display: none;
@@ -368,7 +369,7 @@
     .further-reading li::before { content: "\2197"; color: var(--amber); flex-shrink: 0; font-size: 0.75rem; }
     .further-reading a {
       color: var(--text); text-decoration: underline; text-decoration-color: var(--border);
-      text-underline-offset: 3px; transition: color 0.2s, text-decoration-color 0.2s; line-height: 1.4;
+      text-underline-offset: 3px; transition: color 0.2s, text-decoration-color 0.2s; line-height: 1.5;
     }
     .further-reading a:hover { color: var(--amber); text-decoration-color: var(--amber); }
     .further-reading .source { font-size: 0.72rem; color: var(--muted); flex-shrink: 0; }
@@ -386,8 +387,8 @@
     .question-section {
       max-width: 1100px; margin: 0 auto; padding: 56px 48px 64px; border-top: 1px solid var(--border);
     }
-    .question-section h3 { font-family: 'Fraunces', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--text); margin-bottom: 8px; }
-    .question-section .q-sub { font-size: 0.9rem; color: var(--muted); margin-bottom: 32px; max-width: 520px; line-height: 1.6; }
+    .question-section h3 { font-family: 'Fraunces', serif; font-size: clamp(1.35rem, 2.8vw, 1.8rem); font-weight: 900; color: var(--text); margin-bottom: 8px; }
+    .question-section .q-sub { font-size: 0.9rem; color: var(--muted); margin-bottom: 32px; max-width: 520px; line-height: 1.7; }
     .question-form { display: flex; flex-direction: column; gap: 16px; max-width: 600px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .question-form input, .question-form textarea {
@@ -445,96 +446,96 @@
     </a>
     <div class="nav-right">
       <div class="lang-switch">
-        <a href="mp-crime-map.html" class="active">EN</a>
-        <a href="mp-crime-map-hi.html">हिंदी</a>
+        <a href="mp-crime-map.html">EN</a>
+        <a href="mp-crime-map-hi.html" class="active">हिंदी</a>
       </div>
-      <a href="index.html" class="nav-back">&larr; Back to main</a>
+      <a href="index.html" class="nav-back">&larr; वापस</a>
       <button id="theme-toggle">Dark</button>
     </div>
   </nav>
 
   <header class="article-hero">
-    <span class="article-tag">Data &middot; July 2026</span>
-    <h1>Who's Facing the Most Criminal Cases in the Lok Sabha?</h1>
-    <p class="lead">Every sitting Lok Sabha MP with a digitized criminal-case entry on their election affidavit, mapped by state. Every figure below links back to its source.</p>
+    <span class="article-tag">डेटा &middot; जुलाई 2026</span>
+    <h1>लोकसभा में सबसे ज़्यादा आपराधिक मामलों का सामना कौन कर रहा है?</h1>
+    <p class="lead">हर मौजूदा लोकसभा सांसद जिसके चुनावी हलफनामे में आपराधिक मामलों की डिजिटल जानकारी दर्ज है, राज्य के अनुसार नक्शे पर। नीचे हर आंकड़ा अपने स्रोत से जुड़ा है।</p>
     <div class="article-byline">
-      <span>Shivam Kumar</span>
+      <span>शिवम कुमार</span>
       <span class="sep">|</span>
-      <span id="byline-count">Loading dataset&hellip;</span>
+      <span id="byline-count">डेटासेट लोड हो रहा है&hellip;</span>
     </div>
   </header>
 
   <div class="page-body">
     <div class="callout">
-      <strong>Read this before the map:</strong> these are cases <em>filed</em> against an MP in their sworn ECI affidavit, not convictions. Under Indian law, an accused is presumed innocent until proven guilty. Data reflects self-declared pending cases in sworn ECI affidavits (Form 26) at nomination time; cases filed after the election, or never declared by the candidate, fall outside this scope. This covers <span id="callout-count">484</span> of 543 winning candidates: the rest did not have a digitized criminal-case entry in the source list at the time of collection, so they are left out rather than guessed at. Zero declared cases is shown as a plain fact, not a "good" score. The map colors each state by its true average across every MP counted there, since this is now a full count of that state's MPs, not a small sample, so an average is statistically sound. Source for every number: <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener" style="text-decoration:underline;">MyNeta / ADR</a>, based on public ECI election affidavits. The first 18 rows (the highest case counts) were individually cross-checked against their affidavit pages; the rest are sourced directly from MyNeta's published list, each linked to its own affidavit page for independent verification. <strong>Data collected: 27 July 2026.</strong> MyNeta records can change after court dispositions, so treat this as a point-in-time snapshot, not a live feed. This dataset stays largely static until the next full refresh: the 18th Lok Sabha's term runs to around mid-2029, when the next general election forces every MP to file a fresh affidavit. Between now and then, expect only occasional single-seat updates from bye-elections; state assembly election data does not apply to this page, since it tracks Lok Sabha (national) MPs only.
+      <strong>नक्शा देखने से पहले यह पढ़ें:</strong> ये मामले सांसद के शपथ-पत्र (ECI affidavit) में <em>दर्ज</em> हैं, दोषसिद्ध नहीं। भारतीय कानून के तहत, दोष साबित होने तक व्यक्ति निर्दोष माना जाता है। यह डेटा नामांकन के समय शपथ-पत्र (फॉर्म 26) में स्वयं-घोषित लंबित मामलों को दर्शाता है; चुनाव के बाद दर्ज हुए या उम्मीदवार द्वारा कभी न बताए गए मामले इसके दायरे से बाहर हैं। यह डेटा 543 में से <span id="callout-count">484</span> विजयी उम्मीदवारों को कवर करता है: बाकी को शामिल नहीं किया गया, क्योंकि डेटा एकत्र करते समय स्रोत सूची में उनके आपराधिक मामलों की डिजिटल जानकारी उपलब्ध नहीं थी, इसलिए अंदाज़ा लगाने के बजाय उन्हें छोड़ दिया गया। शून्य दर्ज मामलों को सिर्फ एक तथ्य के रूप में दिखाया गया है, किसी "अच्छे" अंक के तौर पर नहीं। नक्शा हर राज्य को वहां गिने गए सभी सांसदों के सही औसत के अनुसार रंग देता है, क्योंकि अब यह उस राज्य के सांसदों की पूरी गिनती है, कोई छोटा नमूना नहीं, इसलिए औसत आंकड़ों के लिहाज़ से सही ठहरता है। हर आंकड़े का स्रोत: <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener" style="text-decoration:underline;">MyNeta / ADR</a>, सार्वजनिक ECI चुनावी हलफनामों पर आधारित। सबसे ज़्यादा मामलों वाली शुरुआती 18 पंक्तियों को उनके हलफनामे के पन्नों से मिलाकर अलग से जांचा गया; बाकी सीधे MyNeta की प्रकाशित सूची से ली गई हैं, हर एक को स्वतंत्र सत्यापन के लिए अपने हलफनामे के पन्ने से जोड़ा गया है। <strong>डेटा एकत्र किया गया: 27 जुलाई 2026।</strong> अदालती फैसलों के बाद MyNeta के रिकॉर्ड बदल सकते हैं, इसलिए इसे एक तय समय की झलक मानें, लगातार अपडेट होने वाला फ़ीड नहीं। यह डेटासेट अगले पूर्ण अपडेट तक ज़्यादातर स्थिर रहेगा: 18वीं लोकसभा का कार्यकाल लगभग मध्य-2029 तक है, जब अगला आम चुनाव हर सांसद को नया हलफनामा दाखिल करने पर मजबूर करेगा। तब तक, केवल उपचुनावों से इक्का-दुक्का सीटों के अपडेट की उम्मीद करें; राज्य विधानसभा चुनावों का डेटा इस पेज पर लागू नहीं होता, क्योंकि यह सिर्फ लोकसभा (राष्ट्रीय) सांसदों को ट्रैक करता है।
     </div>
 
-    <div id="load-error">Could not load the MP dataset right now. Please refresh, or check back later.</div>
+    <div id="load-error">अभी MP डेटासेट लोड नहीं हो सका। कृपया पेज रीफ्रेश करें, या बाद में दोबारा देखें।</div>
 
     <section id="map-section">
       <div class="section-header-row">
         <div>
-          <p class="section-label">Full Dataset Map</p>
-          <h2 class="section-title" id="view-title">Average declared criminal cases by state</h2>
+          <p class="section-label">पूरा डेटासेट नक्शा</p>
+          <h2 class="section-title" id="view-title">राज्य के अनुसार औसत दर्ज आपराधिक मामले</h2>
         </div>
         <div class="view-toggle" id="view-toggle">
-          <button class="view-toggle-btn active" data-view="state">By State</button>
-          <button class="view-toggle-btn" data-view="party">By Party</button>
+          <button class="view-toggle-btn active" data-view="state">राज्य अनुसार</button>
+          <button class="view-toggle-btn" data-view="party">पार्टी अनुसार</button>
         </div>
       </div>
       <p class="benchmark-line" id="benchmark-line"></p>
       <div class="view-toggle party-min-seats" id="party-min-seats" style="display:none;">
-        <button class="view-toggle-btn active" data-minseats="0">All parties</button>
-        <button class="view-toggle-btn" data-minseats="5">5+ MPs</button>
-        <button class="view-toggle-btn" data-minseats="10">10+ MPs</button>
+        <button class="view-toggle-btn active" data-minseats="0">सभी पार्टियां</button>
+        <button class="view-toggle-btn" data-minseats="5">5+ सांसद</button>
+        <button class="view-toggle-btn" data-minseats="10">10+ सांसद</button>
       </div>
       <p class="party-filter-note" id="party-filter-note" style="display:none;"></p>
       <div class="map-wrap" id="state-view">
-        <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="Map of India with states colored by average declared criminal cases per sitting MP"></svg>
+        <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="भारत का नक्शा, हर राज्य के मौजूदा सांसदों के औसत दर्ज आपराधिक मामलों के अनुसार रंगीन"></svg>
         <div class="legend" id="legend"></div>
       </div>
       <div class="party-view" id="party-view" style="display:none;"></div>
       <div class="filter-chip" id="filter-chip">
         <span id="filter-chip-label"></span>
-        <button id="filter-chip-clear" aria-label="Clear filter">&times;</button>
+        <button id="filter-chip-clear" aria-label="फ़िल्टर हटाएं">&times;</button>
       </div>
     </section>
 
     <section class="table-section" id="table-section">
-      <p class="section-label" id="table-count-label">Full List &middot; Collected 27 July 2026</p>
-      <h2 class="section-title">All MPs, sorted by declared criminal cases</h2>
-      <input type="text" id="mp-search" class="mp-search" placeholder="Search by name, constituency, or party...">
+      <p class="section-label" id="table-count-label">पूरी सूची &middot; 27 जुलाई 2026 को एकत्र</p>
+      <h2 class="section-title">सभी सांसद, दर्ज आपराधिक मामलों के अनुसार क्रमबद्ध</h2>
+      <input type="text" id="mp-search" class="mp-search" placeholder="नाम, निर्वाचन क्षेत्र, या पार्टी से खोजें...">
       <div class="mp-table-wrap">
         <table class="mp-table">
           <thead>
             <tr>
-              <th data-key="name">MP</th>
-              <th data-key="constituency">Constituency</th>
-              <th data-key="state">State</th>
-              <th data-key="party">Party</th>
-              <th data-key="criminal_cases" class="sorted">Cases</th>
-              <th>Source</th>
+              <th data-key="name">सांसद</th>
+              <th data-key="constituency">निर्वाचन क्षेत्र</th>
+              <th data-key="state">राज्य</th>
+              <th data-key="party">पार्टी</th>
+              <th data-key="criminal_cases" class="sorted">मामले</th>
+              <th>स्रोत</th>
             </tr>
           </thead>
           <tbody id="mp-tbody"></tbody>
         </table>
-        <div id="table-empty">No MPs match this filter.</div>
+        <div id="table-empty">इस फ़िल्टर से कोई सांसद मेल नहीं खाता।</div>
       </div>
     </section>
 
     <div class="further-reading">
-      <p class="further-reading-label">Further Reading</p>
+      <p class="further-reading-label">और पढ़ें</p>
       <ul>
         <li>
-          <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener">Full Lok Sabha 2024 winners list, sorted by criminal cases</a>
+          <a href="https://www.myneta.info/LokSabha2024/index.php?action=show_winners&sort=criminal" target="_blank" rel="noopener">आपराधिक मामलों के अनुसार क्रमबद्ध, पूरी लोकसभा 2024 विजेता सूची</a>
           <span class="source">MyNeta.info</span>
         </li>
         <li>
-          <a href="https://adrindia.org/" target="_blank" rel="noopener">Association for Democratic Reforms: methodology and reports</a>
+          <a href="https://adrindia.org/" target="_blank" rel="noopener">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स: कार्यप्रणाली और रिपोर्ट्स</a>
           <span class="source">ADR India</span>
         </li>
         <li>
-          <a href="https://commons.wikimedia.org/wiki/Category:Symbols_of_political_parties_in_India" target="_blank" rel="noopener">Party election symbols shown for the largest parties, used for identification only</a>
+          <a href="https://commons.wikimedia.org/wiki/Category:Symbols_of_political_parties_in_India" target="_blank" rel="noopener">सबसे बड़ी पार्टियों के लिए दिखाए गए चुनाव चिन्ह, केवल पहचान के लिए इस्तेमाल किए गए</a>
           <span class="source">Wikimedia Commons, CC BY-SA</span>
         </li>
       </ul>
@@ -542,25 +543,25 @@
   </div>
 
   <section class="question-section">
-    <h3>Have a question?</h3>
-    <p class="q-sub">Spotted an error in a source link, or think this is worth expanding to more states? Send your question. I read everything sent to s.kumar@uva.nl and I will do my best to respond.</p>
+    <h3>कोई सवाल है?</h3>
+    <p class="q-sub">किसी स्रोत लिंक में गड़बड़ी दिखी, या लगता है कि इसे और राज्यों तक बढ़ाना चाहिए? अपना सवाल भेजें। मैं s.kumar@uva.nl पर आने वाला हर संदेश पढ़ता हूं और जवाब देने की पूरी कोशिश करूंगा।</p>
     <form class="question-form" action="https://formspree.io/f/xdajnabl" method="POST">
       <div class="form-row">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
+        <input type="text" name="name" placeholder="आपका नाम" required>
+        <input type="email" name="email" placeholder="आपका ईमेल" required>
       </div>
-      <textarea name="question" placeholder="Write your question here..." required></textarea>
-      <input type="hidden" name="_subject" value="Question on: Who's Facing the Most Criminal Cases in the Lok Sabha?">
-      <button type="submit" class="form-submit">Send question &rarr;</button>
-      <p class="form-note">Your email will only be used to reply to your question.</p>
+      <textarea name="question" placeholder="अपना सवाल यहां लिखें..." required></textarea>
+      <input type="hidden" name="_subject" value="Question on: लोकसभा में सबसे ज़्यादा आपराधिक मामलों का सामना कौन कर रहा है?">
+      <button type="submit" class="form-submit">सवाल भेजें &rarr;</button>
+      <p class="form-note">आपके ईमेल का इस्तेमाल सिर्फ आपके सवाल का जवाब देने के लिए किया जाएगा।</p>
     </form>
   </section>
 
   <div class="article-close">
-    <a href="index.html" class="close-back">&larr; Back to main page</a>
+    <a href="index.html" class="close-back">&larr; मुख्य पेज पर वापस जाएं</a>
     <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-      <button class="share-btn" id="share-btn" onclick="shareArticle()">&#8679; Share this page</button>
-      <span style="font-size:0.8rem;color:var(--muted);">&copy; 2026 Shivam Kumar</span>
+      <button class="share-btn" id="share-btn" onclick="shareArticle()">&#8679; यह पेज शेयर करें</button>
+      <span style="font-size:0.8rem;color:var(--muted);">&copy; 2026 शिवम कुमार</span>
     </div>
   </div>
 
@@ -583,9 +584,9 @@
         navigator.share({ title: document.title, url });
       } else {
         navigator.clipboard.writeText(url).then(() => {
-          btn.textContent = '✓ Link copied!';
+          btn.textContent = '✓ लिंक कॉपी हो गया!';
           btn.classList.add('copied');
-          setTimeout(() => { btn.innerHTML = '&#8679; Share this page'; btn.classList.remove('copied'); }, 2000);
+          setTimeout(() => { btn.innerHTML = '&#8679; यह पेज शेयर करें'; btn.classList.remove('copied'); }, 2000);
         });
       }
     }
@@ -602,43 +603,45 @@
     })();
 
     const STATE_TILES = [
-      { name: 'Jammu and Kashmir', abbr: 'JK', x: 27.7, y: 10.4 },
-      { name: 'Ladakh', abbr: 'LA', x: 34.4, y: 8.2 },
-      { name: 'Himachal Pradesh', abbr: 'HP', x: 32.8, y: 16.4 },
-      { name: 'Punjab', abbr: 'PB', x: 20.0, y: 17.4 },
-      { name: 'Uttarakhand', abbr: 'UK', x: 37.5, y: 22.8 },
-      { name: 'Haryana', abbr: 'HR', x: 22.4, y: 27.4 },
-      { name: 'Delhi', abbr: 'DL', x: 31.8, y: 29.0 },
-      { name: 'Rajasthan', abbr: 'RJ', x: 17.0, y: 37.5 },
-      { name: 'Uttar Pradesh', abbr: 'UP', x: 44.5, y: 35.4 },
-      { name: 'Bihar', abbr: 'BR', x: 61.7, y: 34.8 },
-      { name: 'Sikkim', abbr: 'SK', x: 71.8, y: 31.7 },
-      { name: 'West Bengal', abbr: 'WB', x: 69.4, y: 47.8 },
-      { name: 'Jharkhand', abbr: 'JH', x: 56.5, y: 47.3 },
-      { name: 'Assam', abbr: 'AS', x: 84.3, y: 35.6 },
-      { name: 'Arunachal Pradesh', abbr: 'AR', x: 91.0, y: 29.8 },
-      { name: 'Nagaland', abbr: 'NL', x: 92.6, y: 37.3 },
-      { name: 'Manipur', abbr: 'MN', x: 89.3, y: 42.9 },
-      { name: 'Mizoram', abbr: 'MZ', x: 85.8, y: 48.3 },
-      { name: 'Tripura', abbr: 'TR', x: 80.1, y: 45.4 },
-      { name: 'Meghalaya', abbr: 'ML', x: 76.9, y: 39.7 },
-      { name: 'Madhya Pradesh', abbr: 'MP', x: 34.5, y: 48.2 },
-      { name: 'Gujarat', abbr: 'GJ', x: 10.4, y: 48.7 },
-      { name: 'Maharashtra', abbr: 'MH', x: 25.7, y: 60.1 },
-      { name: 'Chhattisgarh', abbr: 'CG', x: 46.2, y: 53.9 },
-      { name: 'Odisha', abbr: 'OD', x: 56.3, y: 58.6 },
-      { name: 'Goa', abbr: 'GA', x: 17.9, y: 73.8 },
-      { name: 'Karnataka', abbr: 'KA', x: 27.9, y: 75.1 },
-      { name: 'Telangana', abbr: 'TS', x: 39.1, y: 63.1 },
-      { name: 'Andhra Pradesh', abbr: 'AP', x: 40.7, y: 74.8 },
-      { name: 'Tamil Nadu', abbr: 'TN', x: 37.6, y: 91.8 },
-      { name: 'Kerala', abbr: 'KL', x: 24.2, y: 91.5 },
-      { name: 'Puducherry', abbr: 'PY', x: 43.4, y: 83.7 },
-      { name: 'Chandigarh', abbr: 'CH', x: 27.9, y: 21.5 },
-      { name: 'Dadra and Nagar Haveli and Daman and Diu', abbr: 'DN', x: 14.3, y: 57.8 },
-      { name: 'Andaman and Nicobar Islands', abbr: 'AN', x: 83.7, y: 87.2 },
-      { name: 'Lakshadweep', abbr: 'LD', x: 15.1, y: 91.0 }
+      { name: 'Jammu and Kashmir', nameHi: 'जम्मू और कश्मीर', abbr: 'JK', x: 27.7, y: 10.4 },
+      { name: 'Ladakh', nameHi: 'लद्दाख', abbr: 'LA', x: 34.4, y: 8.2 },
+      { name: 'Himachal Pradesh', nameHi: 'हिमाचल प्रदेश', abbr: 'HP', x: 32.8, y: 16.4 },
+      { name: 'Punjab', nameHi: 'पंजाब', abbr: 'PB', x: 20.0, y: 17.4 },
+      { name: 'Uttarakhand', nameHi: 'उत्तराखंड', abbr: 'UK', x: 37.5, y: 22.8 },
+      { name: 'Haryana', nameHi: 'हरियाणा', abbr: 'HR', x: 22.4, y: 27.4 },
+      { name: 'Delhi', nameHi: 'दिल्ली', abbr: 'DL', x: 31.8, y: 29.0 },
+      { name: 'Rajasthan', nameHi: 'राजस्थान', abbr: 'RJ', x: 17.0, y: 37.5 },
+      { name: 'Uttar Pradesh', nameHi: 'उत्तर प्रदेश', abbr: 'UP', x: 44.5, y: 35.4 },
+      { name: 'Bihar', nameHi: 'बिहार', abbr: 'BR', x: 61.7, y: 34.8 },
+      { name: 'Sikkim', nameHi: 'सिक्किम', abbr: 'SK', x: 71.8, y: 31.7 },
+      { name: 'West Bengal', nameHi: 'पश्चिम बंगाल', abbr: 'WB', x: 69.4, y: 47.8 },
+      { name: 'Jharkhand', nameHi: 'झारखंड', abbr: 'JH', x: 56.5, y: 47.3 },
+      { name: 'Assam', nameHi: 'असम', abbr: 'AS', x: 84.3, y: 35.6 },
+      { name: 'Arunachal Pradesh', nameHi: 'अरुणाचल प्रदेश', abbr: 'AR', x: 91.0, y: 29.8 },
+      { name: 'Nagaland', nameHi: 'नागालैंड', abbr: 'NL', x: 92.6, y: 37.3 },
+      { name: 'Manipur', nameHi: 'मणिपुर', abbr: 'MN', x: 89.3, y: 42.9 },
+      { name: 'Mizoram', nameHi: 'मिज़ोरम', abbr: 'MZ', x: 85.8, y: 48.3 },
+      { name: 'Tripura', nameHi: 'त्रिपुरा', abbr: 'TR', x: 80.1, y: 45.4 },
+      { name: 'Meghalaya', nameHi: 'मेघालय', abbr: 'ML', x: 76.9, y: 39.7 },
+      { name: 'Madhya Pradesh', nameHi: 'मध्य प्रदेश', abbr: 'MP', x: 34.5, y: 48.2 },
+      { name: 'Gujarat', nameHi: 'गुजरात', abbr: 'GJ', x: 10.4, y: 48.7 },
+      { name: 'Maharashtra', nameHi: 'महाराष्ट्र', abbr: 'MH', x: 25.7, y: 60.1 },
+      { name: 'Chhattisgarh', nameHi: 'छत्तीसगढ़', abbr: 'CG', x: 46.2, y: 53.9 },
+      { name: 'Odisha', nameHi: 'ओडिशा', abbr: 'OD', x: 56.3, y: 58.6 },
+      { name: 'Goa', nameHi: 'गोवा', abbr: 'GA', x: 17.9, y: 73.8 },
+      { name: 'Karnataka', nameHi: 'कर्नाटक', abbr: 'KA', x: 27.9, y: 75.1 },
+      { name: 'Telangana', nameHi: 'तेलंगाना', abbr: 'TS', x: 39.1, y: 63.1 },
+      { name: 'Andhra Pradesh', nameHi: 'आंध्र प्रदेश', abbr: 'AP', x: 40.7, y: 74.8 },
+      { name: 'Tamil Nadu', nameHi: 'तमिलनाडु', abbr: 'TN', x: 37.6, y: 91.8 },
+      { name: 'Kerala', nameHi: 'केरल', abbr: 'KL', x: 24.2, y: 91.5 },
+      { name: 'Puducherry', nameHi: 'पुदुचेरी', abbr: 'PY', x: 43.4, y: 83.7 },
+      { name: 'Chandigarh', nameHi: 'चंडीगढ़', abbr: 'CH', x: 27.9, y: 21.5 },
+      { name: 'Dadra and Nagar Haveli and Daman and Diu', nameHi: 'दादरा और नगर हवेली और दमन और दीव', abbr: 'DN', x: 14.3, y: 57.8 },
+      { name: 'Andaman and Nicobar Islands', nameHi: 'अंडमान और निकोबार द्वीप समूह', abbr: 'AN', x: 83.7, y: 87.2 },
+      { name: 'Lakshadweep', nameHi: 'लक्षद्वीप', abbr: 'LD', x: 15.1, y: 91.0 }
     ];
+    const STATE_NAME_HI = {};
+    STATE_TILES.forEach(s => { STATE_NAME_HI[s.name] = s.nameHi; });
 
     const STATE_SEATS = {
       'Jammu and Kashmir': 5, 'Ladakh': 1, 'Himachal Pradesh': 4, 'Punjab': 13,
@@ -653,11 +656,11 @@
     };
 
     const BUCKETS = [
-      { max: 0,        color: 'var(--bucket-0)', label: '0 avg cases',        dark: true },
-      { max: 1.99,     color: 'var(--bucket-1)', label: '< 2 avg cases',      dark: true },
-      { max: 4.99,     color: 'var(--bucket-2)', label: '2-5 avg cases',      dark: true },
-      { max: 9.99,     color: 'var(--bucket-3)', label: '5-10 avg cases',     dark: false },
-      { max: Infinity, color: 'var(--bucket-4)', label: '10+ avg cases',      dark: false }
+      { max: 0,        color: 'var(--bucket-0)', label: '0 औसत मामले',        dark: true },
+      { max: 1.99,     color: 'var(--bucket-1)', label: '2 से कम औसत मामले',   dark: true },
+      { max: 4.99,     color: 'var(--bucket-2)', label: '2-5 औसत मामले',      dark: true },
+      { max: 9.99,     color: 'var(--bucket-3)', label: '5-10 औसत मामले',     dark: false },
+      { max: Infinity, color: 'var(--bucket-4)', label: '10+ औसत मामले',      dark: false }
     ];
 
     function bucketFor(avg) {
@@ -669,23 +672,23 @@
     }
 
     const PARTY_SYMBOLS = {
-      'BJP': ['assets/img/party-symbols/bjp.svg', 'Lotus'],
-      'INC': ['assets/img/party-symbols/inc.svg', 'Hand'],
-      'SP': ['assets/img/party-symbols/cycle.png', 'Bicycle'],
-      'TDP': ['assets/img/party-symbols/cycle.png', 'Bicycle'],
-      'AITC': ['assets/img/party-symbols/aitc.svg', 'Flowers and Grass'],
-      'DMK': ['assets/img/party-symbols/dmk.svg', 'Rising Sun'],
-      'JD(U)': ['assets/img/party-symbols/jdu.svg', 'Arrow'],
-      'ShivSena (Uddhav Balasaheb Thackeray)': ['assets/img/party-symbols/ssubt.png', 'Flaming Torch'],
-      'Shiv Sena': ['assets/img/party-symbols/shivsena.svg', 'Bow and Arrow'],
-      'Lok Janshakti Party(Ram Vilas)': ['assets/img/party-symbols/ljprv.jpg', 'Helicopter'],
-      'CPI(M)': ['assets/img/party-symbols/cpim.svg', 'Hammer, Sickle and Star']
+      'BJP': ['assets/img/party-symbols/bjp.svg', 'कमल'],
+      'INC': ['assets/img/party-symbols/inc.svg', 'हाथ'],
+      'SP': ['assets/img/party-symbols/cycle.png', 'साइकिल'],
+      'TDP': ['assets/img/party-symbols/cycle.png', 'साइकिल'],
+      'AITC': ['assets/img/party-symbols/aitc.svg', 'फूल और घास'],
+      'DMK': ['assets/img/party-symbols/dmk.svg', 'उगता सूरज'],
+      'JD(U)': ['assets/img/party-symbols/jdu.svg', 'तीर'],
+      'ShivSena (Uddhav Balasaheb Thackeray)': ['assets/img/party-symbols/ssubt.png', 'जलती मशाल'],
+      'Shiv Sena': ['assets/img/party-symbols/shivsena.svg', 'धनुष-बाण'],
+      'Lok Janshakti Party(Ram Vilas)': ['assets/img/party-symbols/ljprv.jpg', 'हेलीकॉप्टर'],
+      'CPI(M)': ['assets/img/party-symbols/cpim.svg', 'हथौड़ा, हंसिया और तारा']
     };
 
     function partyCell(party) {
       const sym = PARTY_SYMBOLS[party];
       if (!sym) return `<td>${party}</td>`;
-      return `<td><div class="party-wrap"><img src="${sym[0]}" alt="${sym[1]} (${party} election symbol)" loading="lazy">${party}</div></td>`;
+      return `<td><div class="party-wrap"><img src="${sym[0]}" alt="${sym[1]} (${party} चुनाव चिन्ह)" loading="lazy">${party}</div></td>`;
     }
 
     let mps = [];
@@ -722,7 +725,7 @@
         const border = b.max === 0 ? 'border:1px solid var(--bucket-0-stroke)' : '';
         html += `<div class="legend-item"><span class="legend-swatch" style="background:${b.color};${border}"></span>${b.label}</div>`;
       });
-      html += `<div class="legend-note">Dot size = MPs counted from that state, out of its total seats (hover for the exact count). Color = average declared cases per MP counted there, across every MP counted, not a sample.</div>`;
+      html += `<div class="legend-note">बिंदु का आकार = उस राज्य से गिने गए सांसद, उसकी कुल सीटों में से (सटीक गिनती के लिए होवर करें)। रंग = वहां गिने गए हर सांसद का औसत दर्ज मामला, नमूना नहीं बल्कि पूरी गिनती पर आधारित।</div>`;
       legend.innerHTML = html;
     }
 
@@ -741,10 +744,10 @@
         const isActive = activeFilterType === 'state' && activeFilter === s.name;
         const r = stat ? radiusFor(stat.count) : 2;
         const totalSeats = STATE_SEATS[s.name];
-        const vsNational = stat ? (avg > nationalAvg ? 'above' : avg < nationalAvg ? 'below' : 'at') : '';
+        const vsNational = stat ? (avg > nationalAvg ? 'ज़्यादा' : avg < nationalAvg ? 'कम' : 'बराबर') : '';
         const tooltip = stat
-          ? `${s.name}: ${stat.count} of ${totalSeats} seats counted, average ${avg.toFixed(1)} declared cases (${vsNational} the ${nationalAvg.toFixed(1)} national average). ${stat.zeroCount} of ${stat.count} counted MPs have 0 cases; highest is ${stat.max} (${stat.maxName}).`
-          : `${s.name}: no data collected (0 of ${totalSeats} seats)`;
+          ? `${s.nameHi}: कुल ${totalSeats} सीटों में से ${stat.count} की गिनती, औसत ${avg.toFixed(1)} दर्ज मामले (राष्ट्रीय औसत ${nationalAvg.toFixed(1)} से ${vsNational})। गिने गए ${stat.count} में से ${stat.zeroCount} सांसदों के पास शून्य मामले हैं; सबसे ज़्यादा ${stat.max} (${stat.maxName}) के पास हैं।`
+          : `${s.nameHi}: कोई डेटा एकत्र नहीं (कुल ${totalSeats} सीटों में से 0)`;
         html += `<g class="state-tile${isActive ? ' filtered-active' : ''}" data-state="${s.name}">
           <title>${tooltip}</title>
           <circle cx="${s.x}" cy="${s.y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"></circle>
@@ -770,10 +773,10 @@
       const note = document.getElementById('party-filter-note');
       if (partyMinSeats > 0) {
         note.style.display = 'block';
-        note.textContent = `Showing ${parties.length} of ${allParties.length} parties with ${partyMinSeats}+ MPs. Small parties can look extreme on 1-2 MPs; widen the filter to see everyone.`;
+        note.textContent = `${allParties.length} में से ${parties.length} पार्टियां दिखाई जा रही हैं, जिनके पास ${partyMinSeats}+ सांसद हैं। 1-2 सांसदों वाली छोटी पार्टियां असल से ज़्यादा गंभीर लग सकती हैं; सभी को देखने के लिए फ़िल्टर बढ़ाएं।`;
       } else {
         note.style.display = 'block';
-        note.textContent = `Showing all ${allParties.length} parties, including several with just 1 MP, whose "average" is really just that one person's count.`;
+        note.textContent = `सभी ${allParties.length} पार्टियां दिखाई जा रही हैं, जिनमें कई ऐसी हैं जिनके पास सिर्फ 1 सांसद है, जिनका "औसत" असल में उसी एक व्यक्ति की गिनती है।`;
       }
       const maxAvg = Math.max(...parties.map(p => partyStats[p].avg), 1);
       container.innerHTML = parties.map(p => {
@@ -781,14 +784,14 @@
         const isActive = activeFilterType === 'party' && activeFilter === p;
         const sym = PARTY_SYMBOLS[p];
         const icon = sym
-          ? `<img src="${sym[0]}" alt="${sym[1]} (${p} election symbol)" loading="lazy">`
+          ? `<img src="${sym[0]}" alt="${sym[1]} (${p} चुनाव चिन्ह)" loading="lazy">`
           : `<span class="party-row-icon-placeholder"></span>`;
         const pct = Math.max(3, (s.avg / maxAvg) * 100);
         return `<div class="party-row${isActive ? ' filtered-active' : ''}" data-party="${p.replace(/"/g, '&quot;')}">
           ${icon}
           <span class="party-row-label" title="${p}">${p}</span>
           <span class="party-row-bar-track"><span class="party-row-bar-fill" style="width:${pct}%"></span></span>
-          <span class="party-row-stat"><strong>${s.avg.toFixed(1)}</strong> avg &middot; ${s.count} MP${s.count === 1 ? '' : 's'} &middot; ${s.zeroCount} with 0 cases</span>
+          <span class="party-row-stat"><strong>${s.avg.toFixed(1)}</strong> औसत &middot; ${s.count} सांसद &middot; ${s.zeroCount} के पास शून्य मामले</span>
         </div>`;
       }).join('');
       container.querySelectorAll('.party-row').forEach(row => {
@@ -806,7 +809,8 @@
       const label = document.getElementById('filter-chip-label');
       if (value) {
         chip.classList.add('active');
-        label.textContent = 'Showing: ' + value;
+        const display = type === 'state' ? (STATE_NAME_HI[value] || value) : value;
+        label.textContent = 'दिखा रहे हैं: ' + display;
       } else {
         chip.classList.remove('active');
       }
@@ -826,8 +830,8 @@
         document.getElementById('party-min-seats').style.display = currentView === 'party' ? 'flex' : 'none';
         document.getElementById('party-filter-note').style.display = currentView === 'party' ? 'block' : 'none';
         document.getElementById('view-title').textContent = currentView === 'state'
-          ? 'Average declared criminal cases by state'
-          : 'Average declared criminal cases by party';
+          ? 'राज्य के अनुसार औसत दर्ज आपराधिक मामले'
+          : 'पार्टी के अनुसार औसत दर्ज आपराधिक मामले';
       });
     });
 
@@ -874,7 +878,7 @@
         <tr>
           <td>${m.name}</td>
           <td>${m.constituency}</td>
-          <td>${m.state}</td>
+          <td>${STATE_NAME_HI[m.state] || m.state}</td>
           ${partyCell(m.party)}
           <td class="cases">${m.criminal_cases}</td>
           <td class="source"><a href="${m.source_url}" target="_blank" rel="noopener">MyNeta &#8599;</a></td>
@@ -907,11 +911,11 @@
         const n = mps.length;
         nationalAvg = mps.reduce((sum, m) => sum + m.criminal_cases, 0) / n;
         const nationalZero = mps.filter(m => m.criminal_cases === 0).length;
-        document.getElementById('byline-count').textContent = `${n} of 543 sitting MPs`;
+        document.getElementById('byline-count').textContent = `543 में से ${n} मौजूदा सांसद`;
         document.getElementById('callout-count').textContent = n;
-        document.getElementById('table-count-label').textContent = `Full List (${n} MPs) · Collected 27 July 2026`;
+        document.getElementById('table-count-label').textContent = `पूरी सूची (${n} सांसद) · 27 जुलाई 2026 को एकत्र`;
         document.getElementById('benchmark-line').innerHTML =
-          `National average: <strong>${nationalAvg.toFixed(1)} declared cases per MP</strong> across all ${n} counted &middot; ${nationalZero} of ${n} (${Math.round(nationalZero / n * 100)}%) have 0 declared cases. Use this as your baseline when reading any state or party number below.`;
+          `राष्ट्रीय औसत: <strong>${nationalAvg.toFixed(1)} दर्ज मामले प्रति सांसद</strong>, कुल गिने गए ${n} सांसदों में से &middot; ${n} में से ${nationalZero} (${Math.round(nationalZero / n * 100)}%) के पास शून्य दर्ज मामले हैं। नीचे किसी भी राज्य या पार्टी के आंकड़े को समझने के लिए इसे आधार मानें।`;
         renderLegend();
         renderMap();
         renderPartyView();
