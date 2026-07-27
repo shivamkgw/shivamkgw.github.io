@@ -204,6 +204,9 @@
       font-size: 0.85rem; color: var(--muted); margin: 4px 0 20px;
     }
     .benchmark-line strong { color: var(--amber); }
+    .party-min-seats { margin-bottom: 12px; }
+    .party-min-seats .view-toggle-btn { padding: 5px 12px; font-size: 0.72rem; }
+    .party-filter-note { font-size: 0.78rem; color: var(--muted); margin: -4px 0 16px; }
 
     /* PARTY VIEW */
     .party-view {
@@ -224,12 +227,16 @@
     }
     .party-row-icon-placeholder { width: 22px; height: 22px; flex-shrink: 0; }
     .party-row-label {
-      width: 220px; flex-shrink: 0; font-size: 0.85rem; color: var(--text);
+      width: 280px; flex-shrink: 0; font-size: 0.85rem; color: var(--text);
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
-    .party-row-bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
+    .party-row-bar-track { flex: 1; min-width: 60px; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
     .party-row-bar-fill { display: block; height: 100%; background: var(--amber); border-radius: 4px; }
-    .party-row-stat { width: 150px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
+    .party-row-stat { width: 160px; flex-shrink: 0; font-size: 0.78rem; color: var(--muted); text-align: right; }
+    @media (max-width: 900px) {
+      .party-row-label { width: 140px; font-size: 0.78rem; }
+      .party-row-stat { width: 110px; font-size: 0.7rem; }
+    }
     .party-row-stat strong { color: var(--amber); }
 
     /* MAP */
@@ -459,6 +466,12 @@
         </div>
       </div>
       <p class="benchmark-line" id="benchmark-line"></p>
+      <div class="view-toggle party-min-seats" id="party-min-seats" style="display:none;">
+        <button class="view-toggle-btn active" data-minseats="0">All parties</button>
+        <button class="view-toggle-btn" data-minseats="5">5+ MPs</button>
+        <button class="view-toggle-btn" data-minseats="10">10+ MPs</button>
+      </div>
+      <p class="party-filter-note" id="party-filter-note" style="display:none;"></p>
       <div class="map-wrap" id="state-view">
         <svg id="india-map" viewBox="0 0 100 100" role="img" aria-label="Map of India with states colored by average declared criminal cases per sitting MP"></svg>
         <div class="legend" id="legend"></div>
@@ -668,6 +681,7 @@
     let activeFilterType = null;
     let searchTerm = '';
     let currentView = 'state';
+    let partyMinSeats = 0;
 
     function computeGroupStats(records, key) {
       const stats = {};
@@ -732,7 +746,18 @@
 
     function renderPartyView() {
       const container = document.getElementById('party-view');
-      const parties = Object.keys(partyStats).sort((a, b) => partyStats[b].avg - partyStats[a].avg);
+      const allParties = Object.keys(partyStats);
+      const parties = allParties
+        .filter(p => partyStats[p].count >= partyMinSeats)
+        .sort((a, b) => partyStats[b].avg - partyStats[a].avg);
+      const note = document.getElementById('party-filter-note');
+      if (partyMinSeats > 0) {
+        note.style.display = 'block';
+        note.textContent = `Showing ${parties.length} of ${allParties.length} parties with ${partyMinSeats}+ MPs. Small parties can look extreme on 1-2 MPs; widen the filter to see everyone.`;
+      } else {
+        note.style.display = 'block';
+        note.textContent = `Showing all ${allParties.length} parties, including several with just 1 MP, whose "average" is really just that one person's count.`;
+      }
       const maxAvg = Math.max(...parties.map(p => partyStats[p].avg), 1);
       container.innerHTML = parties.map(p => {
         const s = partyStats[p];
@@ -775,15 +800,25 @@
 
     document.getElementById('filter-chip-clear').addEventListener('click', () => setFilter(null, null));
 
-    document.querySelectorAll('.view-toggle-btn').forEach(btn => {
+    document.querySelectorAll('#view-toggle .view-toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         currentView = btn.getAttribute('data-view');
-        document.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
+        document.querySelectorAll('#view-toggle .view-toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
         document.getElementById('state-view').style.display = currentView === 'state' ? 'grid' : 'none';
         document.getElementById('party-view').style.display = currentView === 'party' ? 'flex' : 'none';
+        document.getElementById('party-min-seats').style.display = currentView === 'party' ? 'flex' : 'none';
+        document.getElementById('party-filter-note').style.display = currentView === 'party' ? 'block' : 'none';
         document.getElementById('view-title').textContent = currentView === 'state'
           ? 'Average declared criminal cases by state'
           : 'Average declared criminal cases by party';
+      });
+    });
+
+    document.querySelectorAll('#party-min-seats .view-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        partyMinSeats = parseInt(btn.getAttribute('data-minseats'), 10);
+        document.querySelectorAll('#party-min-seats .view-toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
+        renderPartyView();
       });
     });
     document.getElementById('mp-search').addEventListener('input', e => {
