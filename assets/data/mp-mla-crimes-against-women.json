@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Sitting MPs and MLAs with Declared Cases Related to Crimes Against Women",
+    "source_label": "Association for Democratic Reforms (ADR) / National Election Watch",
+    "source_pdf_url": "https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf",
+    "source_page_url": "https://adrindia.org/content/151-mps-and-mlas-face-charges-of-crimes-against-women-including-16-accused-of-rape",
+    "report_date": "2024-08-21",
+    "scope_note": "Covers 755 sitting MPs (Lok Sabha and Rajya Sabha) and 3,938 sitting MLAs analyzed nationwide, not just Lok Sabha MPs. This is a different population and a different report than the main dataset on this page, verified independently against ADR's own PDF.",
+    "total_mlas": 135,
+    "total_mps": 16,
+    "total": 151,
+    "rape_cases_total": 16
+  },
+  "parties": [
+    { "party": "BJP", "mlas": 44, "mps": 10, "total": 54 },
+    { "party": "INC", "mlas": 22, "mps": 1, "total": 23 },
+    { "party": "TDP", "mlas": 17, "mps": 0, "total": 17 },
+    { "party": "AAP", "mlas": 13, "mps": 0, "total": 13 },
+    { "party": "AITC", "mlas": 10, "mps": 0, "total": 10 },
+    { "party": "Independent", "mlas": 5, "mps": 1, "total": 6 },
+    { "party": "RJD", "mlas": 4, "mps": 1, "total": 5 },
+    { "party": "SHS", "mlas": 2, "mps": 1, "total": 3 },
+    { "party": "BJD", "mlas": 2, "mps": 0, "total": 2 },
+    { "party": "DMK", "mlas": 2, "mps": 0, "total": 2 },
+    { "party": "Janasena Party", "mlas": 2, "mps": 0, "total": 2 },
+    { "party": "SP", "mlas": 1, "mps": 1, "total": 2 },
+    { "party": "YSRCP", "mlas": 2, "mps": 0, "total": 2 },
+    { "party": "AIUDF", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "Bharat Adivasi Party", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "CPI(M)", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "CPI(ML)(L)", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "Hindustani Awam Morcha (Secular)", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "JD(U)", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "NCP", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "Prahar Janshakti Party", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "Rashtriya Samaj Paksha", "mlas": 1, "mps": 0, "total": 1 },
+    { "party": "Viduthalai Chiruthaigal Katchi", "mlas": 0, "mps": 1, "total": 1 }
+  ]
+}
