@@ -45,6 +45,9 @@
       --bucket-2: #E8943A;
       --bucket-3: #B36A1E;
       --bucket-4: #7A4212;
+      --cw-band-bg: #F0E2CC;
+      --cw-card-bg: #FBF4E8;
+      --cw-track-bg: #E0CBA8;
     }
     [data-theme="dark"] {
       --green:   #0D2019;
@@ -61,6 +64,9 @@
       --bucket-2: #E8943A;
       --bucket-3: #C97A2C;
       --bucket-4: #A85A18;
+      --cw-band-bg: #241A10;
+      --cw-card-bg: #2E2117;
+      --cw-track-bg: #3D2C1C;
     }
 
     html { scroll-behavior: smooth; }
@@ -285,8 +291,22 @@
     .wealth-legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
     .wealth-outlier-label { font-size: 11px; fill: var(--text); font-weight: 700; font-family: 'Hind', 'Open Sans', sans-serif; }
     .wealth-outlier-line { stroke: var(--muted); stroke-width: 1; opacity: 0.7; }
-    .section-divider { border: none; border-top: 2px dashed var(--border); margin: 56px 0; }
-    .cases-women-callout { border-left-color: #B36A1E; margin-bottom: 24px; }
+    .cw-band {
+      background: var(--cw-band-bg);
+      border-top: 4px solid #B36A1E;
+      border-bottom: 4px solid #B36A1E;
+      padding: 48px 0 8px;
+      margin: 56px 0;
+    }
+    .cw-band-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .cw-band-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #B36A1E; color: #1a1a1a; font-weight: 700; font-size: 0.8rem;
+      padding: 8px 18px; border-radius: 100px; margin-bottom: 28px;
+    }
+    .cases-women-callout { border-left-color: #B36A1E; margin-bottom: 24px; background: var(--cw-card-bg); }
+    .cw-band .cases-women-wrap, .cw-band .further-reading { background: var(--cw-card-bg); }
+    .cw-band .cw-row-bar-track { background: var(--cw-track-bg); }
     .cases-women-wrap {
       background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
       padding: 24px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;
@@ -630,30 +650,33 @@
         </li>
       </ul>
     </div>
+  </div>
 
-    <hr class="section-divider">
-
-    <section id="cases-women-section">
-      <p class="section-label">एक अलग डेटासेट &middot; सांसद और विधायक, पूरे भारत में</p>
-      <h2 class="section-title">महिलाओं के खिलाफ अपराध: मौजूदा सांसद और विधायक</h2>
-      <div class="callout cases-women-callout">
-        <strong>यह ऊपर वाला लोकसभा डेटासेट नहीं है।</strong> इस पेज पर अब तक जो कुछ भी दिखाया गया है वह 484 मौजूदा लोकसभा सांसदों और सामान्य दर्ज आपराधिक मामलों को कवर करता है। यह हिस्सा ADR / नेशनल इलेक्शन वॉच की एक अलग रिपोर्ट (21 अगस्त 2024 को प्रकाशित) पर आधारित है, जो एक खास गंभीर अपराध श्रेणी (महिलाओं के खिलाफ अपराध, बलात्कार सहित) को एक बड़ी आबादी में कवर करती है: पूरे भारत में <span id="cases-women-total">755</span> मौजूदा सांसद (लोकसभा और राज्यसभा) और <span id="cases-women-mla-total">3,938</span> मौजूदा विधायक। दोनों डेटासेट <strong>सीधे तुलना योग्य नहीं हैं</strong>: अलग दायरा, अलग स्रोत रिपोर्ट, अलग आबादी का आकार। इस श्रेणी में दर्ज मामलों वाले <span id="cases-women-grand-total">151</span> जनप्रतिनिधियों में से <span id="cases-women-mla-count">135</span> विधायक हैं और <span id="cases-women-mp-count">16</span> सांसद; <span id="cases-women-rape-count">16</span> के खिलाफ विशेष रूप से बलात्कार के आरोप (IPC 376) दर्ज हैं। ये दर्ज मामले हैं, दोषसिद्ध नहीं; भारतीय कानून के तहत, दोष साबित होने तक व्यक्ति निर्दोष माना जाता है। यहां हर आंकड़े को ADR की अपनी प्रकाशित PDF रिपोर्ट के विरुद्ध स्वतंत्र रूप से सत्यापित किया गया है, किसी दूसरे स्रोत से नहीं लिया गया।
-      </div>
-      <div class="cases-women-wrap" id="cases-women-chart"></div>
-      <div class="further-reading">
-        <p class="further-reading-label">स्रोत</p>
-        <ul>
-          <li>
-            <a href="https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf" target="_blank" rel="noopener">पूरी ADR रिपोर्ट (PDF): महिलाओं के खिलाफ अपराध से जुड़े दर्ज मामलों वाले मौजूदा सांसदों/विधायकों का विश्लेषण, 2024</a>
-            <span class="source">ADR / National Election Watch</span>
-          </li>
-          <li>
-            <a href="assets/data/mp-mla-crimes-against-women.json" target="_blank" rel="noopener">इस हिस्से का डेटासेट डाउनलोड करें (JSON)</a>
-            <span class="source">23 पार्टियां, 151 जनप्रतिनिधि</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <div class="cw-band">
+    <div class="cw-band-inner">
+      <div class="cw-band-badge">&#9888; नीचे अलग डेटासेट: सांसद + विधायक, पूरे भारत में &mdash; सिर्फ लोकसभा नहीं</div>
+      <section id="cases-women-section">
+        <p class="section-label">एक अलग डेटासेट &middot; सांसद और विधायक, पूरे भारत में</p>
+        <h2 class="section-title">महिलाओं के खिलाफ अपराध: मौजूदा सांसद और विधायक</h2>
+        <div class="callout cases-women-callout">
+          <strong>यह ऊपर वाला लोकसभा डेटासेट नहीं है।</strong> इस बैंड से ऊपर जो कुछ भी दिखाया गया है वह 484 मौजूदा लोकसभा सांसदों और सामान्य दर्ज आपराधिक मामलों को कवर करता है। यह हिस्सा ADR / नेशनल इलेक्शन वॉच की एक अलग रिपोर्ट (21 अगस्त 2024 को प्रकाशित) पर आधारित है, जो एक खास गंभीर अपराध श्रेणी (महिलाओं के खिलाफ अपराध, बलात्कार सहित) को एक बड़ी आबादी में कवर करती है: पूरे भारत में <span id="cases-women-total">755</span> मौजूदा सांसद (लोकसभा और राज्यसभा) और <span id="cases-women-mla-total">3,938</span> मौजूदा विधायक। दोनों डेटासेट <strong>सीधे तुलना योग्य नहीं हैं</strong>: अलग दायरा, अलग स्रोत रिपोर्ट, अलग आबादी का आकार। इस श्रेणी में दर्ज मामलों वाले <span id="cases-women-grand-total">151</span> जनप्रतिनिधियों में से <span id="cases-women-mla-count">135</span> विधायक हैं और <span id="cases-women-mp-count">16</span> सांसद; <span id="cases-women-rape-count">16</span> के खिलाफ विशेष रूप से बलात्कार के आरोप (IPC 376) दर्ज हैं। ये दर्ज मामले हैं, दोषसिद्ध नहीं; भारतीय कानून के तहत, दोष साबित होने तक व्यक्ति निर्दोष माना जाता है। यहां हर आंकड़े को ADR की अपनी प्रकाशित PDF रिपोर्ट के विरुद्ध स्वतंत्र रूप से सत्यापित किया गया है, किसी दूसरे स्रोत से नहीं लिया गया।
+        </div>
+        <div class="cases-women-wrap" id="cases-women-chart"></div>
+        <div class="further-reading">
+          <p class="further-reading-label">स्रोत</p>
+          <ul>
+            <li>
+              <a href="https://adrindia.org/sites/default/files/Analysis_of_Sitting_MPs_and_MLAs_with_Declared_Cases_Related_to_Crimes_against_Women_2024_FinalVer_English.pdf" target="_blank" rel="noopener">पूरी ADR रिपोर्ट (PDF): महिलाओं के खिलाफ अपराध से जुड़े दर्ज मामलों वाले मौजूदा सांसदों/विधायकों का विश्लेषण, 2024</a>
+              <span class="source">ADR / National Election Watch</span>
+            </li>
+            <li>
+              <a href="assets/data/mp-mla-crimes-against-women.json" target="_blank" rel="noopener">इस हिस्से का डेटासेट डाउनलोड करें (JSON)</a>
+              <span class="source">23 पार्टियां, 151 जनप्रतिनिधि</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </div>
 
   <section class="question-section">
